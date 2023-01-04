@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: 302f72c03baf5e04b82b8f060d8a0e62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Toombstones_Spriteshop_Helmet#Round.StoneSwap_0
+  - first:
+      213: 21300002
+    second: Toombstones_Spriteshop_Helmet#Pointy.StoneSwap_0
+  - first:
+      213: 21300004
+    second: Toombstones_Spriteshop_Helmet#Kettle.StoneSwap_0
+  - first:
+      213: 21300006
+    second: Toombstones_Spriteshop_Helmet#Square.StoneSwap_0
+  - first:
+      213: 21300008
+    second: Toombstones_Spriteshop_Helmet#Beanie.StoneSwap_0
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 512
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Toombstones_Spriteshop_Helmet#Round.StoneSwap_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 2
+        width: 54
+        height: 129
+      alignment: 9
+      pivot: {x: 0.462963, y: 0.3100775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: -64.5}
+        - {x: -27, y: -64.5}
+        - {x: -27, y: 55.5}
+        - {x: -16, y: 64.5}
+        - {x: 17, y: 64.5}
+        - {x: 27, y: 55.5}
+      physicsShape:
+      - - {x: -22, y: 64.5}
+        - {x: -27, y: 56.5}
+        - {x: -27, y: -64.5}
+        - {x: 27, y: -64.5}
+        - {x: 27, y: 60.5}
+        - {x: 16, y: 64.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c870a0fc51bb4f329e8fdaec164bc81f
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toombstones_Spriteshop_Helmet#Pointy.StoneSwap_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 54
+        height: 141
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.2836879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: -70.5}
+        - {x: -27, y: -70.5}
+        - {x: -27, y: 50.5}
+        - {x: -15, y: 70.5}
+        - {x: 9, y: 70.5}
+        - {x: 27, y: 58.5}
+      physicsShape:
+      - - {x: -13, y: 69.5}
+        - {x: -27, y: 49.49999}
+        - {x: -27, y: -70.5}
+        - {x: 27, y: -70.5}
+        - {x: 27, y: 54.5}
+        - {x: 5, y: 69.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dff3a2b83146ce8c7ff58007c69508
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toombstones_Spriteshop_Helmet#Kettle.StoneSwap_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 62
+        height: 118
+      alignment: 9
+      pivot: {x: 0.483871, y: 0.3389831}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: -59}
+        - {x: -31, y: -59}
+        - {x: -31, y: 59}
+        - {x: 27, y: 59}
+        - {x: 31, y: 53}
+      physicsShape:
+      - - {x: -26, y: 59}
+        - {x: -31, y: 50}
+        - {x: -31, y: -59}
+        - {x: 31, y: -59}
+        - {x: 31, y: 46}
+        - {x: 26, y: 59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2169b67c194a09bdb7be362de9e3de
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toombstones_Spriteshop_Helmet#Square.StoneSwap_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 124
+        width: 59
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4576271, y: 0.3389831}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29.5, y: -59}
+        - {x: -29.5, y: -59}
+        - {x: -29.5, y: 59}
+        - {x: 29.5, y: 59}
+      physicsShape:
+      - - {x: -28.5, y: 59}
+        - {x: -29.5, y: 58}
+        - {x: -29.5, y: -59}
+        - {x: 29.5, y: -59}
+        - {x: 29.5, y: 58}
+        - {x: 28.5, y: 59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e06e333d29c44f69dc74cdc34478b6c
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toombstones_Spriteshop_Helmet#Beanie.StoneSwap_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2
+        width: 60
+        height: 161
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.2484472}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: -80.5}
+        - {x: -30, y: -80.5}
+        - {x: -30, y: 80.5}
+        - {x: 26, y: 80.5}
+        - {x: 30, y: 78.50001}
+      physicsShape:
+      - - {x: 19, y: 59.5}
+        - {x: 12, y: 80.49999}
+        - {x: -14, y: 80.49999}
+        - {x: -25, y: 58.49999}
+        - {x: -23, y: 40.5}
+        - {x: -30, y: 29.5}
+        - {x: -30, y: -80.5}
+        - {x: 30, y: -80.5}
+        - {x: 30, y: 11.5}
+        - {x: 21, y: 34.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b503548f1e6448b876f516ebde076dd
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

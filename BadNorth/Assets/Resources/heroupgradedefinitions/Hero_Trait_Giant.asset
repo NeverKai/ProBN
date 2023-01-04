@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b7511ddcfe71c4fbf21a3c7e447e87, type: 3}
+  m_Name: Hero_Trait_Giant
+  m_EditorClassIdentifier:
+  upgradeType: {fileID: 11400000, guid: f763b9d818c830545bb8ac4e161521ad, type: 2}
+  infoSprite: {fileID: 21300138, guid: fcb916a2289ef3d46879b240834bb4c7, type: 3}
+  unlockValue: 1
+  nameTerm: HERO_TRAITS/GIANT/NAME
+  shortDescription: HERO_TRAITS/GIANT/DESC_SHORT
+  affectsPortrait: 1
+  levels:
+  - cost: 0
+    description: HERO_TRAITS/GIANT/DESC
+    prepurchaseDescription:
+  _uiPurchaseAudioId:
+    _name:
+  prerequisite: {fileID: 0}
+  AbilityPrefab: {fileID: 0}
+  maleVoice: {fileID: 11400000, guid: f0d750b5a741b754c954e797d70ca9b5, type: 2}
+  femaleVoice: {fileID: 11400000, guid: adaa730e5bec2854cb4bd852d152d79b, type: 2}
+  agentScale:
+  - 1.2
+  - 1.225
+  - 1.245
+  - 1.255
+  armorLevels:
+  - 3
+  - 6
+  - 8
+  - 10
+  attackLevels:
+  - damage: 1.8
+    knockback: 3
+    launchImpulse: 0
+    stun: 1.3
+  - damage: 2.2
+    knockback: 6
+    launchImpulse: 0
+    stun: 1.7
+  - damage: 2.6
+    knockback: 9
+    launchImpulse: 0
+    stun: 2.1
+  - damage: 3
+    knockback: 12
+    launchImpulse: 0
+    stun: 2.5
+  stunMultiplierLevels:
+  - 0.8
+  - 0.75
+  - 0.7
+  - 0.65

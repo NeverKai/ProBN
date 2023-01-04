@@ -1,0 +1,450 @@
+fileFormatVersion: 2
+guid: 8d1a09a0162135844a09139965e54e1a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: PartTex_Archer
+  - first:
+      213: 21300002
+    second: PartTex_Unknown
+  - first:
+      213: 21300004
+    second: PartTex_Tank
+  - first:
+      213: 21300006
+    second: PartTex_TankArcher
+  - first:
+      213: 21300008
+    second: PartTex_AxeThrower
+  - first:
+      213: 21300010
+    second: PartTex_Berzerker
+  - first:
+      213: 21300012
+    second: PartTex_SwordShield
+  - first:
+      213: 21300014
+    second: PartTex_Sword
+  - first:
+      213: 21300016
+    second: PartTex_Antlers
+  - first:
+      213: 21300018
+    second: PartTex_English
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 512
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PartTex_Archer
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: 15, y: 42}
+        - {x: 2, y: 54}
+        - {x: -2, y: 53}
+        - {x: -6, y: 50}
+        - {x: -23, y: 33}
+        - {x: -32, y: 12}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 12}
+        - {x: 22, y: 29}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440f34646cca424a931f0ef9b2e72bb1
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_Unknown
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: 9, y: 39}
+        - {x: 5, y: 41}
+        - {x: -12, y: 41}
+        - {x: -19, y: 33}
+        - {x: -19, y: -13}
+        - {x: -1, y: -27}
+        - {x: 5, y: -27}
+        - {x: 19, y: -9}
+        - {x: 19, y: 25}
+        - {x: 17, y: 31}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2616fbf870224a9b9993157a3972cbfe
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_Tank
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -32, y: 12}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 26}
+        - {x: 31, y: 41}
+        - {x: 13, y: 51}
+        - {x: -6, y: 51}
+        - {x: -13, y: 42}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea9a7d2f9894c2fa6784216165a4a4e
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_TankArcher
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -18, y: 47}
+        - {x: -32, y: 23}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 17}
+        - {x: 16, y: 47}
+      - - {x: 6, y: 53}
+        - {x: 9, y: 54}
+        - {x: 9, y: 57}
+        - {x: 6, y: 58}
+        - {x: 4, y: 56}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad393b611344f5dbc6508fcf414f736
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_AxeThrower
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -32, y: 21}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 22}
+        - {x: 31, y: 41}
+        - {x: 7, y: 59}
+        - {x: -9.999999, y: 59}
+        - {x: -30, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af227add0f6b4c6f8ba499217a0b7e86
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_Berzerker
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: 17, y: 28}
+        - {x: -24, y: 28}
+        - {x: -32, y: 18}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 12}
+        - {x: 25, y: 26}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca559ff5fee4ac097e557b9e0b8ecdb
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_SwordShield
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -16, y: 38}
+        - {x: -32, y: 24}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 20}
+        - {x: 22, y: 38}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0f744adf8c476282ab450799a2a6b7
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_Sword
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -16, y: 45}
+        - {x: -32, y: 16}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 12}
+        - {x: 17, y: 45}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf4dbb05003448783e769466153fd82
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_Antlers
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -9, y: 46}
+        - {x: -32, y: 21}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 12}
+        - {x: 5, y: 46}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4818cebe5baf4d53adaf782b3c3b907f
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PartTex_English
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -63}
+        - {x: -32, y: 63}
+        - {x: 32, y: 63}
+        - {x: 32, y: -63}
+      physicsShape:
+      - - {x: -3, y: 56}
+        - {x: -32, y: 13}
+        - {x: -32, y: -63}
+        - {x: 32, y: -63}
+        - {x: 32, y: 12}
+        - {x: 3, y: 56}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb918e79b542ecad816d881f7bb625
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

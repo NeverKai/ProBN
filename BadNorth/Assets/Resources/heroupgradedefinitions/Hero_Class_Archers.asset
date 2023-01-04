@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61b2e357648efb458342485a43b6ea1, type: 3}
+  m_Name: Hero_Class_Archers
+  m_EditorClassIdentifier:
+  upgradeType: {fileID: 11400000, guid: 50d62f410c7d7e84e92f49a472120d47, type: 2}
+  infoSprite: {fileID: 21300000, guid: 48987e6937d9ea346ac3c8cdb536e95e, type: 3}
+  unlockValue: 0
+  nameTerm: UPGRADES/ARCHER/CLASS/NAME
+  shortDescription:
+  affectsPortrait: 0
+  levels:
+  - cost: 6
+    description: UPGRADES/ARCHER/CLASS/DESC
+    prepurchaseDescription: UPGRADES/ARCHER/CLASS/DESC
+  - cost: 12
+    description: UPGRADES/ARCHER/CLASS/DESC
+    prepurchaseDescription: UPGRADES/ARCHER/VETERAN/DESC
+  - cost: 20
+    description: UPGRADES/ARCHER/CLASS/DESC
+    prepurchaseDescription: UPGRADES/ARCHER/ELITE/DESC
+  _uiPurchaseAudioId:
+    _name: UI/Upgrade/Bows
+  prerequisite: {fileID: 0}
+  AbilityPrefab: {fileID: 1059020983727381, guid: 9703a5ae90e3888488a68b26abba8866, type: 2}
+  squadLevelTerms:
+  - UPGRADES/GENERIC/LEVEL_CLASS/MILITIA
+  - UPGRADES/GENERIC/LEVEL_CLASS/ARCHERS
+  - UPGRADES/GENERIC/LEVEL_CLASS/VETERAN_ARCHERS
+  - UPGRADES/GENERIC/LEVEL_CLASS/ELITE_ARCHERS
+  minionAgentPrefab: {fileID: 114424573815008355, guid: 84edcd3071103674793d4d6a6e99f7db, type: 2}

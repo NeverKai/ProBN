@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+PrefabInstance:
+  serializedVersion: 2
+  m_RootGameObject: {fileID: 1930257767896375}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+--- !u!1 &1930257767896375
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4834075043145698}
+  - component: {fileID: 114261409897882209}
+  - component: {fileID: 114502091023613837}
+  - component: {fileID: 114890850033790151}
+  m_Layer: 0
+  m_Name: WarhammerAbility
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4834075043145698
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930257767896375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 381.5651, y: -11.22461, z: 0.116394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114261409897882209
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930257767896375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8623221bcca97548bb7af635585a711, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _abilityNameTerm: UPGRADES/ITEM/WARHAMMER/GROUND_POUND
+  _tooltipDescription:
+  _buttonColor: {r: 0.8823529, g: 0.3698097, b: 0.3698097, a: 1}
+  _cooldownCompleteColor: {r: 0.7647059, g: 0.3317474, b: 0.3317474, a: 1}
+  _iconSprite: {fileID: 21300000, guid: 554c6266e6111394bb57d9e6bf4b82e3, type: 3}
+  _effectDuration: 0
+  _isCancelable: 0
+  _chargesPerIsland: 0
+  _cooldownPeriod: 45
+  _cancelMoveOnUse: 0
+  _cancelEffectOnMove: 0
+  _blocksMove: 0
+  actionConfirmAudioID: UI/Menu/SelectAbility
+  cooldownCompleteAudioID: Sfx/Ability/GroundPound/Ready
+  targetNavspotPrefab: {fileID: 114510540114382039, guid: 928941d784ed8bf4e95ef93c4fbff25c, type: 2}
+  levelSettings:
+  - explosionDefinition: {fileID: 11400000, guid: 1f1a217392f57cf42b67620963ad5fa0, type: 2}
+  - explosionDefinition: {fileID: 11400000, guid: 15a2ba13fd120f141bbfe26c0f225890, type: 2}
+  - explosionDefinition: {fileID: 11400000, guid: acce18391795010498a1e52ac315c1db, type: 2}
+  distanceLerp: 0.65
+--- !u!114 &114502091023613837
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930257767896375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf6b7da006f46340809258bb6c67922, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  allowSelf: 0
+--- !u!114 &114890850033790151
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930257767896375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35e2dc55b512e745991f965f6d99939, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  projectilePeakHeight: 0.6
+  projectilePeakError: 0
+  peakMeasuredFrom: 2

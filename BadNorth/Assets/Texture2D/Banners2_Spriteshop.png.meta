@@ -1,0 +1,857 @@
+fileFormatVersion: 2
+guid: 6be2b7ac051368d409e35ef34e6b3971
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Banners2_Spriteshop_FlagX#Claw_0
+  - first:
+      213: 21300002
+    second: Banners2_Spriteshop_FlagX#Spike_0
+  - first:
+      213: 21300004
+    second: Banners2_Spriteshop_FlagY#Spike_0
+  - first:
+      213: 21300006
+    second: Banners2_Spriteshop_FlagYMaybe#Spike_0
+  - first:
+      213: 21300008
+    second: Banners2_Spriteshop_FlagY#Spike_0
+  - first:
+      213: 21300010
+    second: Banners2_Spriteshop_FlagX#Tip_0
+  - first:
+      213: 21300012
+    second: Banners2_Spriteshop_FlagX#Plate_0
+  - first:
+      213: 21300014
+    second: Banners2_Spriteshop_FlagXFlagY#Rect_0
+  - first:
+      213: 21300016
+    second: Banners2_Spriteshop_FlagXFlagY#Flag_0
+  - first:
+      213: 21300018
+    second: Banners2_Spriteshop_FlagY#MidTop_0
+  - first:
+      213: 21300020
+    second: Banners2_Spriteshop_FlagY#Top_0
+  - first:
+      213: 21300022
+    second: Banners2_Spriteshop_FlagY#Top_0
+  - first:
+      213: 21300024
+    second: Banners2_Spriteshop_FlagXFlagY#Flag_0
+  - first:
+      213: 21300026
+    second: Banners2_Spriteshop_FlagXFlagY#Flag_0
+  - first:
+      213: 21300028
+    second: Banners2_Spriteshop_FlagX#Spike_0
+  - first:
+      213: 21300030
+    second: Banners2_Spriteshop_BannerFieldMaybeFlipYDecal_0
+  - first:
+      213: 21300032
+    second: Banners2_Spriteshop_BannerFieldDecal_0
+  - first:
+      213: 21300034
+    second: Banners2_Spriteshop_BannerFieldDecal_0
+  - first:
+      213: 21300036
+    second: Banners2_Spriteshop_BannerFieldDecal_0
+  - first:
+      213: 21300038
+    second: Banners2_Spriteshop_BannerFieldMaybeFlipYDecal_0
+  - first:
+      213: 21300040
+    second: Banners2_Spriteshop_BannerFieldMaybeFlipYDecal_0
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 1024
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagX#Claw_0
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 295
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.990099, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: -60}
+        - {x: -50.5, y: -60}
+        - {x: -50.5, y: 60}
+        - {x: 50.5, y: 60}
+        - {x: 50.5, y: 40}
+        - {x: 44.5, y: -27}
+        - {x: 50.5, y: -49}
+      physicsShape:
+      - - {x: 44.5, y: 23}
+        - {x: 50.5, y: 53}
+        - {x: 50.5, y: 60}
+        - {x: -50.5, y: 60}
+        - {x: -50.5, y: -60}
+        - {x: 50.5, y: -60}
+        - {x: 50.5, y: -52}
+        - {x: 36.5, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff6a084ca8b4d2b84e859e0304fa68d
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagX#Spike_0
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 578
+        width: 156
+        height: 125
+      alignment: 9
+      pivot: {x: 0.9935898, y: 0.976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: -62.5}
+        - {x: -78, y: -62.5}
+        - {x: -78, y: 62.5}
+        - {x: 78, y: 62.5}
+      physicsShape:
+      - - {x: 4.000008, y: -5.5}
+        - {x: 0, y: 2.5}
+        - {x: 5, y: 5.500004}
+        - {x: 16, y: 13.5}
+        - {x: 31, y: 25.5}
+        - {x: 35, y: 27.5}
+        - {x: 58, y: 44.5}
+        - {x: 70, y: 53.5}
+        - {x: 78, y: 60.5}
+        - {x: 78, y: 62.5}
+        - {x: -78, y: 62.5}
+        - {x: -78, y: -62.5}
+        - {x: 78, y: -62.5}
+        - {x: 78, y: -59.49999}
+        - {x: 39, y: -30.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b521622ee44c65af9b3bb5915ce390
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagY#Spike_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 419
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -104.5, y: -23}
+        - {x: -209.5, y: -23}
+        - {x: -209.5, y: 23}
+        - {x: -133.5, y: 23}
+        - {x: 209.5, y: 4}
+        - {x: 209.5, y: -4}
+      physicsShape:
+      - - {x: -96.5, y: -19}
+        - {x: -58.5, y: -18}
+        - {x: -22.5, y: -16}
+        - {x: -5.5, y: -14}
+        - {x: 13.5, y: -13}
+        - {x: 50.5, y: -12}
+        - {x: 86.5, y: -9.999999}
+        - {x: 123.5, y: -8}
+        - {x: 159.5, y: -6}
+        - {x: 195.5, y: -3}
+        - {x: 197.5, y: -1}
+        - {x: 197.5, y: 1}
+        - {x: 195.5, y: 3}
+        - {x: -169.5, y: 23}
+        - {x: -209.5, y: 23}
+        - {x: -209.5, y: -23}
+        - {x: -169.5, y: -23}
+        - {x: -150.5, y: -22}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff67c7a82d174f28b661df8f700fae1f
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagYMaybe#Spike_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 52
+        width: 419
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -104.5, y: -23}
+        - {x: -209.5, y: -23}
+        - {x: -209.5, y: 23}
+        - {x: -133.5, y: 23}
+        - {x: 209.5, y: 4}
+        - {x: 209.5, y: -4}
+      physicsShape:
+      - - {x: -96.5, y: -19}
+        - {x: -58.5, y: -18}
+        - {x: -22.5, y: -16}
+        - {x: -5.5, y: -14}
+        - {x: 13.5, y: -13}
+        - {x: 50.5, y: -12}
+        - {x: 86.5, y: -9.999999}
+        - {x: 123.5, y: -8}
+        - {x: 159.5, y: -6}
+        - {x: 195.5, y: -3}
+        - {x: 197.5, y: -1}
+        - {x: 197.5, y: 1}
+        - {x: 195.5, y: 3}
+        - {x: -169.5, y: 23}
+        - {x: -209.5, y: 23}
+        - {x: -209.5, y: -23}
+        - {x: -169.5, y: -23}
+        - {x: -150.5, y: -22}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e10cc1b2b7643538b351473ab0f7b25
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagY#Spike_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 102
+        width: 419
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -104.5, y: -23}
+        - {x: -209.5, y: -23}
+        - {x: -209.5, y: 23}
+        - {x: -133.5, y: 23}
+        - {x: 209.5, y: 4}
+        - {x: 209.5, y: -4}
+      physicsShape:
+      - - {x: -96.5, y: -19}
+        - {x: -58.5, y: -18}
+        - {x: -22.5, y: -16}
+        - {x: -5.5, y: -14}
+        - {x: 13.5, y: -13}
+        - {x: 50.5, y: -12}
+        - {x: 86.5, y: -9.999999}
+        - {x: 123.5, y: -8}
+        - {x: 159.5, y: -6}
+        - {x: 195.5, y: -3}
+        - {x: 197.5, y: -1}
+        - {x: 197.5, y: 1}
+        - {x: 195.5, y: 3}
+        - {x: -169.5, y: 23}
+        - {x: -209.5, y: 23}
+        - {x: -209.5, y: -23}
+        - {x: -169.5, y: -23}
+        - {x: -150.5, y: -22}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b183efef1c2b4a27b25a607039610c37
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagX#Tip_0
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 152
+        width: 65
+        height: 138
+      alignment: 9
+      pivot: {x: 0.3076923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: -69}
+        - {x: -32.5, y: -69}
+        - {x: -32.5, y: 69}
+        - {x: -7.5, y: 69}
+        - {x: 32.5, y: 9}
+        - {x: 32.5, y: -9}
+      physicsShape:
+      - - {x: 16.5, y: -29}
+        - {x: 23.5, y: -19}
+        - {x: 27.5, y: -13}
+        - {x: 32.5, y: -5}
+        - {x: 32.5, y: 3}
+        - {x: 31.5, y: 4}
+        - {x: 24.5, y: 16}
+        - {x: 10.5, y: 37}
+        - {x: 1.5, y: 51}
+        - {x: -8.5, y: 65}
+        - {x: -11.5, y: 69}
+        - {x: -32.5, y: 69}
+        - {x: -32.5, y: -69}
+        - {x: -11.5, y: -69}
+        - {x: -10.5, y: -68}
+        - {x: 2.499999, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a85bdb5c626462083696e8e60f5e1aa
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagX#Plate_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 889
+        width: 231
+        height: 96
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 115.5, y: -48}
+        - {x: -115.5, y: -48}
+        - {x: -115.5, y: 48}
+        - {x: 115.5, y: 48}
+      physicsShape:
+      - - {x: -115.5, y: 48}
+        - {x: -115.5, y: -48}
+        - {x: 115.5, y: -48}
+        - {x: 115.5, y: 48}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f42c55fc174a44bd629887927b1e95
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagXFlagY#Rect_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 578
+        width: 248
+        height: 138
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 124, y: -69}
+        - {x: -124, y: -69}
+        - {x: -124, y: 69}
+        - {x: 124, y: 69}
+      physicsShape:
+      - - {x: -124, y: 69}
+        - {x: -124, y: -69}
+        - {x: 124, y: -69}
+        - {x: 124, y: 69}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe84fdb916504363a35418616b1d27c6
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagXFlagY#Flag_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 434
+        width: 277
+        height: 140
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 138.5, y: -70}
+        - {x: -138.5, y: -70}
+        - {x: -138.5, y: 70}
+        - {x: 138.5, y: 70}
+      physicsShape:
+      - - {x: -138.5, y: 70}
+        - {x: -138.5, y: -70}
+        - {x: 138.5, y: -70}
+        - {x: 138.5, y: 70}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7a764f4ee84eb7894e53beedbee7bb
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagY#MidTop_0
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 434
+        width: 33
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: -17}
+        - {x: -16.5, y: -17}
+        - {x: -16.5, y: 17}
+        - {x: 16.5, y: 17}
+      physicsShape:
+      - - {x: -16.5, y: 17}
+        - {x: -16.5, y: -17}
+        - {x: 16.5, y: -17}
+        - {x: 16.5, y: 17}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9837f563fd5c4d76b8c80707f8e02db5
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagY#Top_0
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 472
+        width: 33
+        height: 21
+      alignment: 9
+      pivot: {x: 0.3939394, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -10.5}
+        - {x: -16.5, y: 10.5}
+        - {x: 16.5, y: 10.5}
+        - {x: 16.5, y: -10.5}
+      physicsShape:
+      - - {x: -16.5, y: 10.5}
+        - {x: -16.5, y: -10.5}
+        - {x: 16.5, y: -10.5}
+        - {x: 16.5, y: 10.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274f3f27112e4249b29d351e9e2b462c
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagY#Top_0
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 497
+        width: 33
+        height: 21
+      alignment: 9
+      pivot: {x: 0.3939394, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -10.5}
+        - {x: -16.5, y: 10.5}
+        - {x: 16.5, y: 10.5}
+        - {x: 16.5, y: -10.5}
+      physicsShape:
+      - - {x: -16.5, y: 10.5}
+        - {x: -16.5, y: -10.5}
+        - {x: 16.5, y: -10.5}
+        - {x: 16.5, y: 10.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31ce2bdba6f4cb9803b0cb82fdf9132
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagXFlagY#Flag_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 152
+        width: 337
+        height: 139
+      alignment: 9
+      pivot: {x: 0, y: 0.5035971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: -69.5}
+        - {x: -168.5, y: -69.5}
+        - {x: -168.5, y: 69.5}
+        - {x: -28.5, y: 69.5}
+        - {x: 167.5, y: 65.5}
+        - {x: 168.5, y: 64.5}
+        - {x: 168.5, y: 58.5}
+        - {x: 65.49998, y: -59.5}
+        - {x: 168.5, y: -59.5}
+        - {x: 168.5, y: -64.5}
+        - {x: 167.5, y: -65.5}
+        - {x: 71.50002, y: -67.5}
+      physicsShape:
+      - - {x: 168.5, y: 66.5}
+        - {x: -17.5, y: 69.5}
+        - {x: -168.5, y: 69.5}
+        - {x: -168.5, y: -69.5}
+        - {x: 0.5, y: -69.5}
+        - {x: 36.5, y: -68.5}
+        - {x: 167.5, y: -64.5}
+        - {x: 168.5, y: -63.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03fc89a952d497db7f1a696922a86bc
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagXFlagY#Flag_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 295
+        width: 285
+        height: 135
+      alignment: 9
+      pivot: {x: 0, y: 0.5111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93.49998, y: 65.50001}
+        - {x: 141.5, y: 64.50001}
+        - {x: 142.5, y: 63.50001}
+        - {x: 142.5, y: 57.50001}
+        - {x: 95.50002, y: -57.49999}
+        - {x: 142.5, y: -57.49999}
+        - {x: 142.5, y: -62.49999}
+        - {x: 141.5, y: -63.49999}
+        - {x: -23.49999, y: -67.49999}
+        - {x: -142.5, y: -67.49999}
+        - {x: -142.5, y: 67.50001}
+        - {x: -1.5, y: 67.50001}
+      physicsShape:
+      - - {x: -142.5, y: 67.50001}
+        - {x: -142.5, y: -67.49999}
+        - {x: -38.5, y: -67.49999}
+        - {x: 142.5, y: -62.49999}
+        - {x: 142.5, y: 66.50001}
+        - {x: 6.5, y: 67.50001}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ad966e4c234dda817e0c99027bfc18
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_FlagX#Spike_0
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 434
+        width: 101
+        height: 121
+      alignment: 9
+      pivot: {x: 0.6435643, y: 0.5041322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: -60.5}
+        - {x: -50.5, y: -60.5}
+        - {x: -50.5, y: 60.5}
+        - {x: -8.5, y: 60.5}
+        - {x: 50.5, y: 3.499996}
+        - {x: 50.5, y: -3.500004}
+        - {x: 20.5, y: -32.5}
+        - {x: 4.5, y: -47.5}
+      physicsShape:
+      - - {x: -50.5, y: 60.49999}
+        - {x: -50.5, y: -60.5}
+        - {x: -9.5, y: -60.5}
+        - {x: 50.5, y: -5.500004}
+        - {x: 50.5, y: 3.499996}
+        - {x: -9.5, y: 60.49999}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88b4d59ee4e45879e8f96793baf6046
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_BannerFieldMaybeFlipYDecal_0
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 164
+        width: 209
+        height: 80
+      alignment: 9
+      pivot: {x: 0.03221957, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -101.5, y: -40}
+        - {x: -104.5, y: -37}
+        - {x: -104.5, y: 39}
+        - {x: -102.5, y: 40}
+        - {x: 104.5, y: 40}
+        - {x: 104.5, y: -40}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0a9d002ce846f698480fe7d255115a
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_BannerFieldDecal_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 805
+        width: 234
+        height: 80
+      alignment: 9
+      pivot: {x: 0.06289978, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: -40}
+        - {x: -117, y: -40}
+        - {x: -117, y: 40}
+        - {x: 117, y: 40}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4189209659841c1bf10bd7e5fb7ec64
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_BannerFieldDecal_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 720
+        width: 242
+        height: 81
+      alignment: 9
+      pivot: {x: 0.01340206, y: 0.4783951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -115, y: -40.5}
+        - {x: -121, y: -34.5}
+        - {x: -121, y: 29.5}
+        - {x: -110, y: 40.5}
+        - {x: 121, y: 40.5}
+        - {x: 121, y: -40.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30b5b8d396b49a5ad686cd8e13f3855
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_BannerFieldDecal_0
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2
+        width: 231
+        height: 73
+      alignment: 9
+      pivot: {x: 0.04535637, y: 0.5068493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89.5, y: -36.5}
+        - {x: -115.5, y: -13.5}
+        - {x: -115.5, y: 7.5}
+        - {x: -110.5, y: 20.5}
+        - {x: -89.5, y: 36.5}
+        - {x: 115.5, y: 36.5}
+        - {x: 115.5, y: -36.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be644b96a7a34023a7341c1bc0ed08f6
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_BannerFieldMaybeFlipYDecal_0
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 79
+        width: 228
+        height: 81
+      alignment: 9
+      pivot: {x: 0.1028446, y: 0.5061728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 114, y: -40.5}
+        - {x: -114, y: -40.5}
+        - {x: -114, y: -34.5}
+        - {x: -103, y: -11.5}
+        - {x: -76, y: 40.5}
+        - {x: 114, y: 40.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7752152b41472db532a4f0647e4001
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banners2_Spriteshop_BannerFieldMaybeFlipYDecal_0
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 248
+        width: 204
+        height: 78
+      alignment: 9
+      pivot: {x: 0.008578432, y: 0.5031847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 102, y: -39}
+        - {x: -102, y: -39}
+        - {x: -102, y: 39}
+        - {x: 102, y: 39}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e325d494064396a160006380ead82e
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

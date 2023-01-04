@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: 541646a9c046a1142bd20eaa3098fb1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: TencentLogos_BlurAlpha_0
+  - first:
+      213: 21300002
+    second: TencentLogos_BlurAlpha_1
+  - first:
+      213: 21300004
+    second: TencentLogos_BlurAlpha_3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 256
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TencentLogos_BlurAlpha_0
+      rect:
+        serializedVersion: 2
+        x: 17.07612
+        y: 146.0761
+        width: 92.84776
+        height: 92.84776
+      alignment: 9
+      pivot: {x: 0.5053852, y: 0.4946148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: -46.50001}
+        - {x: -46.5, y: -23.50001}
+        - {x: -46.5, y: 33.49999}
+        - {x: -23.5, y: 46.49999}
+        - {x: 30.5, y: 46.49999}
+        - {x: 41.5, y: 31.49999}
+        - {x: 46.5, y: 21.49999}
+        - {x: 46.5, y: -22.50001}
+        - {x: 30.5, y: -46.50001}
+      physicsShape:
+      - - {x: -21.5, y: -35.50001}
+        - {x: -15.5, y: -39.50001}
+        - {x: 2.5, y: -39.50001}
+        - {x: 2.5, y: -34.50001}
+        - {x: -10.5, y: -10.50001}
+        - {x: -16.5, y: -10.50001}
+        - {x: -21.5, y: -24.50001}
+      - - {x: 2.5, y: -16.50001}
+        - {x: -3.5, y: -16.50001}
+        - {x: -3.5, y: -21.50001}
+        - {x: 5.5, y: -38.50001}
+        - {x: 14.5, y: -38.50001}
+        - {x: 27.5, y: -30.50001}
+        - {x: 27.5, y: -23.50001}
+        - {x: 26.5, y: -21.50001}
+      - - {x: -38.5, y: -13.50001}
+        - {x: -28.5, y: -28.50001}
+        - {x: -25.5, y: -28.50001}
+        - {x: -23.5, y: -27.50001}
+        - {x: -15.5, y: -15.50001}
+        - {x: -15.5, y: 3.499992}
+        - {x: -22.5, y: 3.499992}
+        - {x: -38.5, y: -6.500008}
+      - - {x: 25.5, y: 0.4999924}
+        - {x: 9.5, y: -12.50001}
+        - {x: 9.5, y: -18.50001}
+        - {x: 19.5, y: -22.50001}
+        - {x: 32.5, y: -22.50001}
+        - {x: 38.5, y: -19.50001}
+        - {x: 39.5, y: -10.50001}
+        - {x: 39.5, y: 0.4999924}
+      - - {x: 24.5, y: 27.49999}
+        - {x: 16.5, y: 9.499991}
+        - {x: 15.5, y: -1.500008}
+        - {x: 15.5, y: -2.500008}
+        - {x: 17.5, y: -4.500008}
+        - {x: 38.5, y: 6.499992}
+        - {x: 38.5, y: 13.49999}
+        - {x: 28.5, y: 27.49999}
+      - - {x: -34.5, y: 21.49999}
+        - {x: -36.5, y: 20.49999}
+        - {x: -39.5, y: 6.499992}
+        - {x: -39.5, y: -2.500008}
+        - {x: -30.5, y: -2.500008}
+        - {x: -10.5, y: 7.499992}
+        - {x: -10.5, y: 16.49999}
+        - {x: -22.5, y: 21.49999}
+      - - {x: 4.5, y: 39.49999}
+        - {x: -0.5, y: 39.49999}
+        - {x: -1.5, y: 37.49999}
+        - {x: -1.5, y: 32.49999}
+        - {x: 8.5, y: 15.49999}
+        - {x: 11.5, y: 9.499991}
+        - {x: 14.5, y: 9.499991}
+        - {x: 21.5, y: 15.49999}
+        - {x: 22.5, y: 24.49999}
+        - {x: 22.5, y: 32.49999}
+        - {x: 13.5, y: 38.49999}
+      - - {x: -13.5, y: 38.49999}
+        - {x: -27.5, y: 29.49999}
+        - {x: -27.5, y: 24.49999}
+        - {x: -24.5, y: 22.49999}
+        - {x: 0.5, y: 15.49999}
+        - {x: 1.5, y: 15.49999}
+        - {x: 4.5, y: 17.49999}
+        - {x: -1.5, y: 30.49999}
+        - {x: -6.5, y: 38.49999}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29101e17338240ffb105cec45d398cf9
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TencentLogos_BlurAlpha_1
+      rect:
+        serializedVersion: 2
+        x: 149.0267
+        y: 147.0267
+        width: 83.9465
+        height: 95.89713
+      alignment: 9
+      pivot: {x: 0.5119123, y: 0.4689739}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: -47.97532}
+        - {x: -42, y: -47.97532}
+        - {x: -42, y: 38.02468}
+        - {x: -21, y: 48.02468}
+        - {x: 25, y: 48.02468}
+        - {x: 42, y: 5.024685}
+        - {x: 42, y: -22.97532}
+        - {x: 35, y: -42.97532}
+      physicsShape:
+      - - {x: 28, y: -31.97532}
+        - {x: 35, y: -20.97532}
+        - {x: 35, y: -4.975315}
+        - {x: 26, y: 26.02468}
+        - {x: 15, y: 37.02468}
+        - {x: 10, y: 41.02468}
+        - {x: -8, y: 41.02468}
+        - {x: -16, y: 39.02468}
+        - {x: -26, y: 29.02468}
+        - {x: -35, y: -1.975315}
+        - {x: -35, y: -19.97532}
+        - {x: -33, y: -22.97531}
+        - {x: -26, y: -34.97532}
+        - {x: -22, y: -40.97532}
+        - {x: 23, y: -40.97532}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775a953eb9c94075b27c50fa8c1e0d7a
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TencentLogos_BlurAlpha_3
+      rect:
+        serializedVersion: 2
+        x: 132.0761
+        y: 15.03629
+        width: 119.8478
+        height: 99.8876
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.4901881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.00001, y: -33.98008}
+        - {x: -60.00001, y: -6.980083}
+        - {x: -60.00001, y: 25.01992}
+        - {x: -57.00001, y: 40.01992}
+        - {x: -50.00001, y: 50.01992}
+        - {x: 16.99999, y: 50.01992}
+        - {x: 60, y: 24.01992}
+        - {x: 60, y: -39.98008}
+        - {x: 54, y: -49.98008}
+        - {x: 22.99999, y: -49.98008}
+        - {x: -3.000008, y: -43.98008}
+      physicsShape:
+      - - {x: 6.999992, y: 13.01992}
+        - {x: -1.000008, y: 11.01992}
+        - {x: -11.00001, y: 1.019917}
+        - {x: -11.00001, y: -21.98008}
+        - {x: -6.000008, y: -37.98008}
+        - {x: 13.99999, y: -40.98008}
+        - {x: 41.99999, y: -40.98008}
+        - {x: 52.99999, y: -18.98008}
+        - {x: 52.99999, y: -1.980083}
+        - {x: 35.99999, y: 13.01992}
+      - - {x: 21.99999, y: 18.01992}
+        - {x: 21.99999, y: 23.01992}
+        - {x: 17.99999, y: 28.01992}
+        - {x: 7.999992, y: 37.01992}
+        - {x: -3.000008, y: 43.01992}
+        - {x: -27.00001, y: 43.01992}
+        - {x: -41.00001, y: 37.01992}
+        - {x: -53, y: 19.01991}
+        - {x: -53, y: 3.019917}
+        - {x: -39.00001, y: -20.98008}
+        - {x: -38.00001, y: -22.98008}
+        - {x: -31.00001, y: -22.98008}
+        - {x: -15.00001, y: -20.98008}
+        - {x: -13.00001, y: -18.98008}
+        - {x: -13.00001, y: -4.980083}
+        - {x: 20.99999, y: 15.01992}
+      - - {x: 6.999992, y: -5.980083}
+        - {x: 7.999992, y: -1.980083}
+        - {x: 10.99999, y: -0.9800835}
+        - {x: 12.99999, y: -6.980083}
+      - - {x: 27.99999, y: -3.980083}
+        - {x: 34.99999, y: -2.980083}
+        - {x: 34.99999, y: -6.980083}
+        - {x: 28.99999, y: -6.980083}
+      - - {x: -31.00001, y: 24.01992}
+        - {x: -23.00001, y: 23.01992}
+        - {x: -25.00001, y: 17.01992}
+        - {x: -30.00001, y: 18.01992}
+      - - {x: -4.000008, y: 25.01992}
+        - {x: 1.999992, y: 24.01992}
+        - {x: 0.9999924, y: 17.01992}
+        - {x: -5.000007, y: 18.01992}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835841c6fbae4dc1ba459ab63d4d6a13
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

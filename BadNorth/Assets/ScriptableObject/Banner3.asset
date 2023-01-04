@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b6765ddd491cc4782a91b47ff39b37, type: 3}
+  m_Name: Banner3
+  m_EditorClassIdentifier:
+  points:
+  - pos: {x: 0, y: 0}
+    anchor: {x: -3.251558E-08, y: 0}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 0.4065367, y: 0}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 0.7621677, y: -0.008387678}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1.016287, y: -0.02760871}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1.08914, y: -0.04057843}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1.117728, y: -0.0628135}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1.090112, y: -0.09846271}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1, y: -0.09000002}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1, y: -0.145}
+  - pos: {x: 0, y: 0}
+    anchor: {x: 1.154147, y: -0.15}
+  mirrorMode: 0
+  rotations: 1

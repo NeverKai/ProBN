@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+PrefabInstance:
+  serializedVersion: 2
+  m_RootGameObject: {fileID: 1354395590956796}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+--- !u!1 &1354395590956796
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4644784330408173}
+  - component: {fileID: 114815629550228226}
+  - component: {fileID: 114240801460299051}
+  m_Layer: 0
+  m_Name: MineAbility
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4644784330408173
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354395590956796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114815629550228226
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354395590956796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77ee82ab62a3e948abfa6b6d37710c6, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _abilityNameTerm: UPGRADES/ITEM/MINE/NAME
+  _tooltipDescription:
+  _buttonColor: {r: 154, g: 35, b: 35, a: 1}
+  _cooldownCompleteColor: {r: 200, g: 120, b: 120, a: 1}
+  _iconSprite: {fileID: 21300000, guid: 20ba0faf15709ba43abc3ad7b83a58ad, type: 3}
+  _effectDuration: 0
+  _isCancelable: 0
+  _chargesPerIsland: 2
+  _cooldownPeriod: 0
+  _cancelMoveOnUse: 0
+  _cancelEffectOnMove: 0
+  _blocksMove: 0
+  actionConfirmAudioID: UI/Menu/SelectAbility
+  cooldownCompleteAudioID:
+  targetNavspotPrefab: {fileID: 114510540114382039, guid: 928941d784ed8bf4e95ef93c4fbff25c, type: 2}
+  settingsAtLevel:
+  - explosion: {fileID: 11400000, guid: 0ebadc447fd437c43982edf67ad1ac82, type: 2}
+    charges: 2
+    detectionRadius: 0.6
+  - explosion: {fileID: 11400000, guid: 0ebadc447fd437c43982edf67ad1ac82, type: 2}
+    charges: 3
+    detectionRadius: 0.6
+  - explosion: {fileID: 11400000, guid: d5b5bbeea33d50247b9af21c2e868d15, type: 2}
+    charges: 4
+    detectionRadius: 0.6
+  minePrefab: {fileID: 114854628689435038, guid: ab4b67c9981b8ca488a3bd89a43822cb, type: 2}
+  placeAudio:
+    _name: Sfx/Mine/Place
+--- !u!114 &114240801460299051
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354395590956796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63eb2a76d5d384a48a085c8ce7a0202f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  allowSelf: 1
+  distance: 1.9

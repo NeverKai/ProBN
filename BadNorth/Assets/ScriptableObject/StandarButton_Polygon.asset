@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c48304c4fd5fe4a96bd7ed7eb26b54, type: 3}
+  m_Name: StandarButton_Polygon
+  m_EditorClassIdentifier:
+  borderMode: 0
+  color: {r: 0.9764706, g: 0.9294118, b: 0.8627452, a: 1}
+  segments:
+  - worldOffset: 0
+    shaderOffset: 0
+    lineWidthOffset: 0
+    scale: 0
+    v: 0
+    useBaseColor: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - worldOffset: 0
+    shaderOffset: -1
+    lineWidthOffset: 0
+    scale: 1
+    v: 0
+    useBaseColor: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - worldOffset: 0
+    shaderOffset: 0
+    lineWidthOffset: 0
+    scale: 1
+    v: 0
+    useBaseColor: 1
+    color: {r: 0, g: 0, b: 0, a: 1}
+  - worldOffset: 0
+    shaderOffset: 0
+    lineWidthOffset: 1
+    scale: 1
+    v: 0
+    useBaseColor: 1
+    color: {r: 0, g: 0, b: 0, a: 1}
+  - worldOffset: 0
+    shaderOffset: 1
+    lineWidthOffset: 1
+    scale: 1
+    v: 0
+    useBaseColor: 1
+    color: {r: 0, g: 0, b: 0, a: 0}
+  offset: {x: 0, y: 0}

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+PrefabInstance:
+  serializedVersion: 2
+  m_RootGameObject: {fileID: 1374759123420664}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+--- !u!1 &1374759123420664
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4238011022640711}
+  - component: {fileID: 114002321429178449}
+  m_Layer: 0
+  m_Name: Militia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4238011022640711
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374759123420664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114002321429178449
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374759123420664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5debea10b56210648b72fc9bbc96bc25, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  title: Militia
+  standardPrefab: {fileID: 114294547687225371, guid: 615027bc0c319c042817897ef0b5e176, type: 2}
+  agentPrefab: {fileID: 114984922783033638, guid: 08fb9fdb2702cc2429e41da1cc11d8e3, type: 2}
+  level: 1
+  nextSquadTemplates:
+  - {fileID: 114835889091372118, guid: 22bb90a617b7a4942ad2e9d03ee1117d, type: 2}
+  - {fileID: 114908140469325647, guid: 77b4c10417459e349a51d64ce11ecd57, type: 2}
+  - {fileID: 114634065133774903, guid: 1a5dd6aaeb6494b47ada702cbf6d2a4a, type: 2}
+  moveSound: Sfx/English/Militia/Move
+  swapSound: Sfx/English/Militia/Swap

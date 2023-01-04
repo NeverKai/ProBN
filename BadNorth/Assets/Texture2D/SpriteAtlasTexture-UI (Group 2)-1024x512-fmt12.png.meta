@@ -1,0 +1,2766 @@
+fileFormatVersion: 2
+guid: cc56ced5ce0f1a340ae80d90ac5f7c24
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: UI_RadialFog_0
+  - first:
+      213: 21300002
+    second: UI_SaveIcon
+  - first:
+      213: 21300004
+    second: ButtonIcon_Switch_L
+  - first:
+      213: 21300006
+    second: ButtonIcon_Switch_ZL
+  - first:
+      213: 21300008
+    second: UI_RadialFog_1
+  - first:
+      213: 21300010
+    second: ButtonIcon_Switch_R
+  - first:
+      213: 21300012
+    second: UI_RadialFog_2
+  - first:
+      213: 21300014
+    second: ButtonIcon_Switch_RZ
+  - first:
+      213: 21300016
+    second: ButtonIcon_Switch_LeftStick
+  - first:
+      213: 21300018
+    second: ButtonIcon_Switch_X
+  - first:
+      213: 21300020
+    second: ButtonIcon_Switch_A
+  - first:
+      213: 21300022
+    second: ButtonIcon_Switch_Y
+  - first:
+      213: 21300024
+    second: ButtonIcon_Switch_B
+  - first:
+      213: 21300026
+    second: ButtonIcon_Switch_RightStick
+  - first:
+      213: 21300028
+    second: ButtonIcon_Switch_Up
+  - first:
+      213: 21300030
+    second: ButtonIcon_Switch_Left
+  - first:
+      213: 21300032
+    second: ButtonIcon_Switch_Right
+  - first:
+      213: 21300034
+    second: ButtonIcon_Switch_Down
+  - first:
+      213: 21300036
+    second: ButtonIcon_XBox_LT
+  - first:
+      213: 21300038
+    second: ButtonIcon_XBox_LB
+  - first:
+      213: 21300040
+    second: ButtonIcon_XBox_RT
+  - first:
+      213: 21300042
+    second: ButtonIcon_XBox_RB
+  - first:
+      213: 21300044
+    second: ButtonIcon_XBox_LeftStick
+  - first:
+      213: 21300046
+    second: ButtonIcon_XBox_X
+  - first:
+      213: 21300048
+    second: ButtonIcon_XBox_Y
+  - first:
+      213: 21300050
+    second: ButtonIcon_XBox_B
+  - first:
+      213: 21300052
+    second: ButtonIcon_XBox_A
+  - first:
+      213: 21300054
+    second: ButtonIcon_XBox_Left
+  - first:
+      213: 21300056
+    second: ButtonIcon_XBox_Up
+  - first:
+      213: 21300058
+    second: ButtonIcon_XBox_Right
+  - first:
+      213: 21300060
+    second: ButtonIcon_XBox_Down
+  - first:
+      213: 21300062
+    second: ButtonIcon_XBox_RightStick
+  - first:
+      213: 21300064
+    second: ButtonIcon_Playstation_L2
+  - first:
+      213: 21300066
+    second: ButtonIcon_Playstation_R2
+  - first:
+      213: 21300068
+    second: ButtonIcon_Playstation_L1
+  - first:
+      213: 21300070
+    second: ButtonIcon_Playstation_R1
+  - first:
+      213: 21300072
+    second: ButtonIcon_Playstation_LeftStick
+  - first:
+      213: 21300074
+    second: ButtonIcon_Playstation_RightStick
+  - first:
+      213: 21300076
+    second: ButtonIcon_Playstation_Left
+  - first:
+      213: 21300078
+    second: ButtonIcon_Playstation_Up
+  - first:
+      213: 21300080
+    second: ButtonIcon_Playstation_Right
+  - first:
+      213: 21300082
+    second: ButtonIcon_Playstation_Down
+  - first:
+      213: 21300084
+    second: ButtonIcon_Playstation_Triangle
+  - first:
+      213: 21300086
+    second: ButtonIcon_Playstation_Square
+  - first:
+      213: 21300088
+    second: ButtonIcon_Playstation_Circle
+  - first:
+      213: 21300090
+    second: ButtonIcon_Playstation_Cross
+  - first:
+      213: 21300092
+    second: ButtonIcon_Switch_LeftRight
+  - first:
+      213: 21300094
+    second: ButtonIcon_Switch_UpDown
+  - first:
+      213: 21300096
+    second: ButtonIcon_Playstation_LeftRight
+  - first:
+      213: 21300098
+    second: ButtonIcon_Playstation_UpDown
+  - first:
+      213: 21300100
+    second: ButtonIcon_XBox_LeftRight
+  - first:
+      213: 21300102
+    second: ButtonIcon_XBox_UpDown
+  - first:
+      213: 21300104
+    second: UI_CampaignLinks_0
+  - first:
+      213: 21300106
+    second: UI_CampaignLinks_1
+  - first:
+      213: 21300108
+    second: UI_HouseMapIcon_1
+  - first:
+      213: 21300110
+    second: ButtonIcon_Mouse_LMB
+  - first:
+      213: 21300112
+    second: ButtonIcon_Mouse_MMB
+  - first:
+      213: 21300114
+    second: ButtonIcon_Mouse_RMB
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 1024
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_RadialFog_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 126
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: -63}
+        - {x: -63, y: 63}
+        - {x: 63, y: 63}
+        - {x: 63, y: -63}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce742b697f540c9b9b34fab585350cc
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SaveIcon
+      rect:
+        serializedVersion: 2
+        x: 0.04290771
+        y: 130.0761
+        width: 109.9303
+        height: 117.881
+      alignment: 9
+      pivot: {x: 0.4999265, y: 0.491376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.99192, y: 21.98339}
+        - {x: -8.00808, y: 32.98339}
+        - {x: -33.00808, y: 12.98339}
+        - {x: 13.99192, y: -34.01661}
+      physicsShape:
+      - - {x: -3.00808, y: -45.01661}
+        - {x: -5.008079, y: -48.01661}
+        - {x: -5.008079, y: -55.0166}
+        - {x: -2.00808, y: -59.01661}
+        - {x: 2.99192, y: -59.01661}
+        - {x: 4.99192, y: -57.01661}
+        - {x: 4.99192, y: -47.0166}
+        - {x: 2.99192, y: -45.01661}
+      - - {x: 22.99192, y: -42.01661}
+        - {x: 20.99192, y: -44.0166}
+        - {x: 20.99192, y: -46.01661}
+        - {x: 22.99192, y: -48.01661}
+        - {x: 25.99192, y: -48.01661}
+        - {x: 27.99192, y: -46.01661}
+        - {x: 27.99192, y: -44.0166}
+        - {x: 25.99192, y: -42.01661}
+      - - {x: -27.00808, y: -41.0166}
+        - {x: -28.00808, y: -43.01661}
+        - {x: -28.00808, y: -46.01661}
+        - {x: -26.00808, y: -47.0166}
+        - {x: -23.00808, y: -47.0166}
+        - {x: -22.00808, y: -46.01661}
+        - {x: -22.00808, y: -41.0166}
+      - - {x: 43.99192, y: 15.98339}
+        - {x: 25.99192, y: 38.98339}
+        - {x: 1.99192, y: 57.98339}
+        - {x: -5.008079, y: 57.98339}
+        - {x: -14.00808, y: 46.98339}
+        - {x: -38.00808, y: 23.98339}
+        - {x: -44.00808, y: 11.98339}
+        - {x: -44.00808, y: -14.01661}
+        - {x: -37.00808, y: -26.01661}
+        - {x: -31.00808, y: -33.01661}
+        - {x: -25.00808, y: -38.01661}
+        - {x: -13.00808, y: -45.01661}
+        - {x: 12.99192, y: -45.01661}
+        - {x: 24.99192, y: -38.01661}
+        - {x: 37.99192, y: -27.01661}
+        - {x: 43.99192, y: -11.0166}
+      - - {x: -13.00808, y: -33.01661}
+        - {x: -23.00808, y: -29.01661}
+        - {x: -35.00808, y: -8.016605}
+        - {x: -32.00808, y: 11.98339}
+        - {x: -28.00808, y: 21.98339}
+        - {x: -7.00808, y: 33.98339}
+        - {x: 12.99192, y: 30.98339}
+        - {x: 22.99192, y: 26.98339}
+        - {x: 34.99192, y: 5.983395}
+        - {x: 31.99192, y: -14.01661}
+        - {x: 27.99192, y: -24.0166}
+        - {x: 6.99192, y: -36.01661}
+        - {x: -6.00808, y: -36.01661}
+      - - {x: -45.00808, y: -21.0166}
+        - {x: -52.00808, y: -25.01661}
+        - {x: -52.00808, y: -31.0166}
+        - {x: -50.00808, y: -32.01661}
+        - {x: -43.00808, y: -32.01661}
+        - {x: -39.00808, y: -27.01661}
+        - {x: -39.00808, y: -24.0166}
+        - {x: -40.00808, y: -21.0166}
+      - - {x: 38.99192, y: -21.0166}
+        - {x: 38.99192, y: -28.0166}
+        - {x: 43.99192, y: -32.01661}
+        - {x: 50.99192, y: -32.01661}
+        - {x: 51.99192, y: -29.01661}
+        - {x: 51.99192, y: -23.01661}
+        - {x: 49.99192, y: -21.0166}
+      - - {x: -53.00808, y: 1.983395}
+        - {x: -53.00808, y: -3.016605}
+        - {x: -52.00808, y: -4.016605}
+        - {x: -48.00808, y: -4.016605}
+        - {x: -46.00808, y: -2.016605}
+        - {x: -46.00808, y: -1.016605}
+        - {x: -48.00808, y: 1.983395}
+      - - {x: 48.99192, y: 2.983395}
+        - {x: 46.99192, y: 1.983395}
+        - {x: 46.99192, y: -4.016605}
+        - {x: 53.99192, y: -4.016605}
+        - {x: 53.99192, y: 0.9833946}
+        - {x: 52.99192, y: 2.983395}
+      - - {x: 40.99192, y: 30.98339}
+        - {x: 37.99192, y: 24.98339}
+        - {x: 37.99192, y: 20.98339}
+        - {x: 41.99192, y: 18.98339}
+        - {x: 47.99192, y: 20.98339}
+        - {x: 50.99192, y: 23.98339}
+        - {x: 50.99192, y: 26.98339}
+        - {x: 47.99192, y: 30.98339}
+      - - {x: -52.00808, y: 22.98339}
+        - {x: -48.00808, y: 19.98339}
+        - {x: -39.00808, y: 19.98339}
+        - {x: -39.00808, y: 26.98339}
+        - {x: -40.00808, y: 29.98339}
+        - {x: -45.00808, y: 30.98339}
+        - {x: -52.00808, y: 30.98339}
+      - - {x: -28.00808, y: 45.98339}
+        - {x: -28.00808, y: 41.98339}
+        - {x: -26.00808, y: 39.98339}
+        - {x: -24.00808, y: 39.98339}
+        - {x: -22.00808, y: 41.98339}
+        - {x: -22.00808, y: 43.98339}
+        - {x: -25.00808, y: 46.98339}
+      - - {x: 24.99192, y: 46.98339}
+        - {x: 22.99192, y: 44.98339}
+        - {x: 22.99192, y: 42.98339}
+        - {x: 24.99192, y: 40.98339}
+        - {x: 26.99192, y: 40.98339}
+        - {x: 28.99192, y: 42.98339}
+        - {x: 28.99192, y: 44.98339}
+        - {x: 26.99192, y: 46.98339}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3644341679441a88a36598f13032f9f
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_L
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 294.0267
+        width: 96
+        height: 45.9465
+      alignment: 9
+      pivot: {x: 0.5, y: 0.478236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -22.99998}
+        - {x: -48, y: -22.99998}
+        - {x: -48, y: 21.00002}
+        - {x: -45, y: 23.00002}
+        - {x: 47, y: 23.00002}
+        - {x: 48, y: 20.00002}
+        - {x: 48, y: -19.99998}
+      physicsShape:
+      - - {x: -48, y: 23.00002}
+        - {x: -48, y: -22.99998}
+        - {x: 48, y: -22.99998}
+        - {x: 48, y: 20.00002}
+        - {x: 47, y: 23.00002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cdf3242d784682a9c4a2c1393bcf2c
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_ZL
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 226
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: -32}
+        - {x: -48, y: -30}
+        - {x: -48, y: 21}
+        - {x: -21, y: 32}
+        - {x: 46, y: 32}
+        - {x: 47, y: 27}
+        - {x: 48, y: 21}
+        - {x: 48, y: -31}
+        - {x: 46, y: -32}
+      physicsShape:
+      - - {x: 32, y: 32}
+        - {x: -5, y: 32}
+        - {x: -28, y: 17}
+        - {x: -48, y: 0}
+        - {x: -48, y: -30}
+        - {x: -47, y: -32}
+        - {x: 46, y: -32}
+        - {x: 48, y: -29}
+        - {x: 48, y: 8}
+        - {x: 47, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257876ca1a174254beb5410f8610dc74
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RadialFog_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 126
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: -63}
+        - {x: -63, y: -63}
+        - {x: -63, y: 63}
+        - {x: 63, y: 63}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544a94057362451da2490407fec1a442
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_R
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 344.0267
+        width: 96
+        height: 45.9465
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: -22.99998}
+        - {x: -48, y: -21.99998}
+        - {x: -48, y: 23.00002}
+        - {x: 48, y: 23.00002}
+        - {x: 48, y: -19.99998}
+        - {x: 43, y: -22.99998}
+      physicsShape:
+      - - {x: -48, y: 23.00002}
+        - {x: -48, y: -17.99998}
+        - {x: -46, y: -22.99998}
+        - {x: 43, y: -22.99998}
+        - {x: 48, y: -17.99998}
+        - {x: 48, y: 23.00002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae977a19f61b44fe9080bf52bac7e0d9
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RadialFog_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 126
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: -32}
+        - {x: -63, y: -32}
+        - {x: -63, y: 32}
+        - {x: 63, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e053fd3a3287411c9a969205db8bb2d7
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_RZ
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 386
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: -32}
+        - {x: -48, y: -32}
+        - {x: -48, y: 31}
+        - {x: -43, y: 32}
+        - {x: 13, y: 32}
+        - {x: 48, y: 3}
+      physicsShape:
+      - - {x: -40, y: 32}
+        - {x: -48, y: 16}
+        - {x: -48, y: -30}
+        - {x: -44, y: -32}
+        - {x: 44, y: -32}
+        - {x: 48, y: -29}
+        - {x: 48, y: 1}
+        - {x: 22, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47d65d67dd54ef2a9a8776208c0f6bf
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_LeftStick
+      rect:
+        serializedVersion: 2
+        x: 502.0267
+        y: 272.0267
+        width: 63.97325
+        height: 63.97325
+      alignment: 9
+      pivot: {x: 0.499791, y: 0.4997912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.01337, y: -32.01336}
+        - {x: -32.01337, y: -12.01336}
+        - {x: -32.01337, y: 18.98664}
+        - {x: -17.01337, y: 31.98664}
+        - {x: 27.98663, y: 31.98664}
+        - {x: 31.98663, y: 18.98664}
+        - {x: 31.98663, y: -16.01336}
+        - {x: 18.98663, y: -32.01336}
+      physicsShape:
+      - - {x: 30.98663, y: 17.98664}
+        - {x: 22.98663, y: 28.98664}
+        - {x: 14.98663, y: 31.98664}
+        - {x: -20.01337, y: 31.98664}
+        - {x: -24.01337, y: 30.98664}
+        - {x: -32.01337, y: 13.98664}
+        - {x: -32.01337, y: -6.013357}
+        - {x: -27.01337, y: -14.01336}
+        - {x: -19.01337, y: -22.01336}
+        - {x: -4.013372, y: -32.01336}
+        - {x: 11.98663, y: -32.01336}
+        - {x: 15.98663, y: -31.01336}
+        - {x: 31.98663, y: -9.013357}
+        - {x: 31.98663, y: 14.98664}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb571e51b9c047b988461b1695dff13b
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_X
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 68
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36089bb0290c45799b9887dd7292bf41
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_A
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e80f06bc2d4f1bbde3da28aef970fb
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_Y
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 136
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d530405ea0449f95b6a79c1987e973
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_B
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 408
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203cc5fccc464e3ebcd5964ade6fca6b
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_RightStick
+      rect:
+        serializedVersion: 2
+        x: 642.0267
+        y: 68.02676
+        width: 63.97325
+        height: 63.97325
+      alignment: 9
+      pivot: {x: 0.4997907, y: 0.4997907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.01339, y: -32.01339}
+        - {x: -32.01339, y: -17.01339}
+        - {x: -32.01339, y: 20.98661}
+        - {x: -17.01339, y: 31.98661}
+        - {x: 24.98661, y: 31.98661}
+        - {x: 31.98661, y: 20.98661}
+        - {x: 31.98661, y: -24.01339}
+        - {x: 8.986612, y: -32.01339}
+      physicsShape:
+      - - {x: 27.98661, y: 19.98661}
+        - {x: 22.98661, y: 28.98661}
+        - {x: 13.98661, y: 31.98661}
+        - {x: -13.01339, y: 31.98661}
+        - {x: -23.01339, y: 29.98661}
+        - {x: -32.01339, y: 13.98661}
+        - {x: -32.01339, y: -7.013388}
+        - {x: -31.01339, y: -12.01339}
+        - {x: -19.01339, y: -26.01339}
+        - {x: -9.013388, y: -32.01339}
+        - {x: 6.986612, y: -32.01339}
+        - {x: 21.98661, y: -23.01339}
+        - {x: 31.98661, y: -7.013388}
+        - {x: 31.98661, y: 13.98661}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35adcbc32c6c440db51a9c7e4cbfa28a
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_Up
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 334
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd56e927e7a8459fb24a2ff63de0d9a5
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_Left
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 186
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183a44e7fda64438b02ca687ae0a4c2c
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_Right
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 362
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9654d55b0e47999cbc63d6413abeaa
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_Down
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea86ac02d59474b8e1f5ac06fe40628
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_LT
+      rect:
+        serializedVersion: 2
+        x: 638.0267
+        y: 136
+        width: 63.89713
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5003866, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.9753, y: -32}
+        - {x: -31.9753, y: -29}
+        - {x: -31.9753, y: 10}
+        - {x: -20.9753, y: 32}
+        - {x: 32.0247, y: 32}
+        - {x: 32.0247, y: -32}
+      physicsShape:
+      - - {x: -12.9753, y: 32}
+        - {x: -31.9753, y: 9}
+        - {x: -31.9753, y: -32}
+        - {x: 32.0247, y: -32}
+        - {x: 32.0247, y: 13}
+        - {x: 20.0247, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7cbb36e93a4f3ba6a2771df7fe1aeb
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_LB
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 394.0513
+        width: 96
+        height: 45.87256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5002701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -22.98761}
+        - {x: -48, y: -9.987612}
+        - {x: -48, y: 23.01239}
+        - {x: 43, y: 23.01239}
+        - {x: 48, y: 18.01239}
+        - {x: 48, y: -6.987612}
+        - {x: 38, y: -21.98761}
+        - {x: 31, y: -22.98761}
+      physicsShape:
+      - - {x: -47, y: 23.01239}
+        - {x: -48, y: 22.01239}
+        - {x: -48, y: -21.98761}
+        - {x: -39, y: -22.98761}
+        - {x: 42, y: -22.98761}
+        - {x: 48, y: -12.98761}
+        - {x: 48, y: 20.01239}
+        - {x: 47, y: 23.01239}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c68c08adc264ebca1f5629f8c3bb1f7
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_RT
+      rect:
+        serializedVersion: 2
+        x: 778.0761
+        y: 68
+        width: 63.84776
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5000002, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.99999, y: -32}
+        - {x: -31.99999, y: -30}
+        - {x: -31.99999, y: 1}
+        - {x: -30.99999, y: 18}
+        - {x: -23.99999, y: 32}
+        - {x: 15.00001, y: 32}
+        - {x: 23.00001, y: 30}
+        - {x: 32.00001, y: 11}
+        - {x: 32.00001, y: -29}
+        - {x: 31.00001, y: -32}
+      physicsShape:
+      - - {x: -25.99999, y: 32}
+        - {x: -31.99999, y: 12}
+        - {x: -31.99999, y: -32}
+        - {x: 32.00001, y: -32}
+        - {x: 32.00001, y: 11}
+        - {x: 24.00001, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979861b53cb5434f84726a023f8f3363
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_RB
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0.05133057
+        width: 96
+        height: 45.87256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5002701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: -21.98761}
+        - {x: -48, y: -11.98761}
+        - {x: -48, y: 20.01239}
+        - {x: -47, y: 23.01239}
+        - {x: 43, y: 23.01239}
+        - {x: 48, y: 20.01239}
+        - {x: 48, y: -9.987612}
+        - {x: 29, y: -22.98761}
+        - {x: -35, y: -22.98761}
+      physicsShape:
+      - - {x: -48, y: 18.01239}
+        - {x: -48, y: -5.987612}
+        - {x: -36, y: -22.98761}
+        - {x: 46, y: -22.98761}
+        - {x: 48, y: -14.98761}
+        - {x: 48, y: 23.01239}
+        - {x: -44, y: 23.01239}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e388c0622f4e20b182e55da4b71ccb
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_LeftStick
+      rect:
+        serializedVersion: 2
+        x: 710.0267
+        y: 68.02673
+        width: 63.97325
+        height: 63.97325
+      alignment: 9
+      pivot: {x: 0.4997912, y: 0.4997912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.01336, y: -32.01336}
+        - {x: -32.01336, y: -12.01336}
+        - {x: -32.01336, y: 18.98664}
+        - {x: -17.01336, y: 31.98664}
+        - {x: 27.98664, y: 31.98664}
+        - {x: 31.98664, y: 18.98664}
+        - {x: 31.98664, y: -16.01336}
+        - {x: 18.98664, y: -32.01336}
+      physicsShape:
+      - - {x: 30.98664, y: 17.98664}
+        - {x: 22.98664, y: 28.98664}
+        - {x: 14.98664, y: 31.98664}
+        - {x: -20.01336, y: 31.98664}
+        - {x: -24.01336, y: 30.98664}
+        - {x: -32.01336, y: 13.98664}
+        - {x: -32.01336, y: -6.013357}
+        - {x: -27.01336, y: -14.01336}
+        - {x: -19.01336, y: -22.01336}
+        - {x: -4.013357, y: -32.01336}
+        - {x: 11.98664, y: -32.01336}
+        - {x: 15.98664, y: -31.01336}
+        - {x: 31.98664, y: -9.013357}
+        - {x: 31.98664, y: 14.98664}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bffc1d75964778a8c7c808af775472
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_X
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 226
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409ae9ca9f9149de936edc573599be7c
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_Y
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 118
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e69468123ec429cbaa4f540ac9928c0
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_B
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 266
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ce97f4eebd484cb9f74a61ccabb94b
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_A
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 198
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aea8dcb0db6469f97de6f8be4da07ae
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_Left
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+        - {x: 22, y: -32}
+        - {x: -16, y: -32}
+      physicsShape:
+      - - {x: -15, y: 32}
+        - {x: -32, y: 15}
+        - {x: -32, y: -23}
+        - {x: -17, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -25}
+        - {x: 32, y: 23}
+        - {x: 15, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9d0624e8844331841a0a27ea8ddf66
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_Up
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 68
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+        - {x: 22, y: -32}
+        - {x: -16, y: -32}
+      physicsShape:
+      - - {x: -20, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -28}
+        - {x: -29, y: -32}
+        - {x: 17, y: -32}
+        - {x: 32, y: -16}
+        - {x: 32, y: 16}
+        - {x: 13, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d55cd74cf504766b0c483465853bc55
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_Right
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 322
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+        - {x: 22, y: -32}
+        - {x: -16, y: -32}
+      physicsShape:
+      - - {x: -15, y: 32}
+        - {x: -32, y: 15}
+        - {x: -32, y: -23}
+        - {x: -17, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -25}
+        - {x: 32, y: 23}
+        - {x: 15, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e178dbc144a7aacebe6ab9636cb3f
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_Down
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 130
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+        - {x: 22, y: -32}
+        - {x: -16, y: -32}
+      physicsShape:
+      - - {x: -20, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -28}
+        - {x: -29, y: -32}
+        - {x: 17, y: -32}
+        - {x: 32, y: -16}
+        - {x: 32, y: 16}
+        - {x: 13, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e420620b72584dc3b7b1e1e557254475
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_RightStick
+      rect:
+        serializedVersion: 2
+        x: 768.0267
+        y: 0.02676392
+        width: 63.97325
+        height: 63.97325
+      alignment: 9
+      pivot: {x: 0.4997912, y: 0.4997907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.01336, y: -32.01339}
+        - {x: -32.01336, y: -17.01339}
+        - {x: -32.01336, y: 20.98661}
+        - {x: -17.01336, y: 31.98661}
+        - {x: 24.98664, y: 31.98661}
+        - {x: 31.98664, y: 20.98661}
+        - {x: 31.98664, y: -24.01339}
+        - {x: 8.986643, y: -32.01339}
+      physicsShape:
+      - - {x: 27.98664, y: 19.98661}
+        - {x: 22.98664, y: 28.98661}
+        - {x: 13.98664, y: 31.98661}
+        - {x: -13.01336, y: 31.98661}
+        - {x: -23.01336, y: 29.98661}
+        - {x: -32.01336, y: 13.98661}
+        - {x: -32.01336, y: -7.013388}
+        - {x: -31.01336, y: -12.01339}
+        - {x: -19.01336, y: -26.01339}
+        - {x: -9.013357, y: -32.01339}
+        - {x: 6.986643, y: -32.01339}
+        - {x: 21.98664, y: -23.01339}
+        - {x: 31.98664, y: -7.013388}
+        - {x: 31.98664, y: 13.98661}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377ad47a4112460584f77fa57b9b926f
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_L2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 136
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: -32}
+        - {x: -32, y: -32}
+        - {x: -32, y: 32}
+        - {x: 32, y: 32}
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cc77cd5bf140d5a71129d4a897e76a
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_R2
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 390
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: -32}
+        - {x: -32, y: -32}
+        - {x: -32, y: 32}
+        - {x: 32, y: 32}
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8df3c43fd9a4303a03a5f072de63402
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_L1
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 68.07611
+        width: 76
+        height: 51.84776
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: -25.99999}
+        - {x: -38, y: -21.99999}
+        - {x: -38, y: 22.00001}
+        - {x: -34, y: 26.00001}
+        - {x: 34, y: 26.00001}
+        - {x: 38, y: 22.00001}
+        - {x: 38, y: -21.99999}
+        - {x: 34, y: -25.99999}
+      physicsShape:
+      - - {x: -38, y: 26.00001}
+        - {x: -38, y: -24.99999}
+        - {x: -36, y: -25.99999}
+        - {x: 35, y: -25.99999}
+        - {x: 38, y: -21.99999}
+        - {x: 38, y: 26.00001}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123d09f9549a49f4af6de24b40e0e454
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_R1
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 204.0761
+        width: 76
+        height: 51.84776
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: -25.99999}
+        - {x: -38, y: -21.99999}
+        - {x: -38, y: 22.00001}
+        - {x: -34, y: 26.00001}
+        - {x: 34, y: 26.00001}
+        - {x: 38, y: 22.00001}
+        - {x: 38, y: -21.99999}
+        - {x: 34, y: -25.99999}
+      physicsShape:
+      - - {x: -38, y: 26.00001}
+        - {x: -38, y: -24.99999}
+        - {x: -36, y: -25.99999}
+        - {x: 35, y: -25.99999}
+        - {x: 38, y: -21.99999}
+        - {x: 38, y: 26.00001}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb618f6ab0c4c7b98595feac645c1b7
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_LeftStick
+      rect:
+        serializedVersion: 2
+        x: 570.0267
+        y: 204.0267
+        width: 63.97325
+        height: 63.97325
+      alignment: 9
+      pivot: {x: 0.4997912, y: 0.4997912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.01336, y: -32.01336}
+        - {x: -32.01336, y: -12.01336}
+        - {x: -32.01336, y: 18.98664}
+        - {x: -17.01336, y: 31.98664}
+        - {x: 27.98664, y: 31.98664}
+        - {x: 31.98664, y: 18.98664}
+        - {x: 31.98664, y: -16.01336}
+        - {x: 18.98664, y: -32.01336}
+      physicsShape:
+      - - {x: 30.98664, y: 17.98664}
+        - {x: 22.98664, y: 28.98664}
+        - {x: 14.98664, y: 31.98664}
+        - {x: -20.01336, y: 31.98664}
+        - {x: -24.01336, y: 30.98664}
+        - {x: -32.01336, y: 13.98664}
+        - {x: -32.01336, y: -6.013357}
+        - {x: -27.01336, y: -14.01336}
+        - {x: -19.01336, y: -22.01336}
+        - {x: -4.013357, y: -32.01336}
+        - {x: 11.98664, y: -32.01336}
+        - {x: 15.98664, y: -31.01336}
+        - {x: 31.98664, y: -9.013357}
+        - {x: 31.98664, y: 14.98664}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98002fa9b41c4fef8cbf031c72584682
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_RightStick
+      rect:
+        serializedVersion: 2
+        x: 836.0267
+        y: 0.02676392
+        width: 63.97325
+        height: 63.97325
+      alignment: 9
+      pivot: {x: 0.4997912, y: 0.4997907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.01336, y: -32.01339}
+        - {x: -32.01336, y: -17.01339}
+        - {x: -32.01336, y: 20.98661}
+        - {x: -17.01336, y: 31.98661}
+        - {x: 24.98664, y: 31.98661}
+        - {x: 31.98664, y: 20.98661}
+        - {x: 31.98664, y: -24.01339}
+        - {x: 8.986643, y: -32.01339}
+      physicsShape:
+      - - {x: 27.98664, y: 19.98661}
+        - {x: 22.98664, y: 28.98661}
+        - {x: 13.98664, y: 31.98661}
+        - {x: -13.01336, y: 31.98661}
+        - {x: -23.01336, y: 29.98661}
+        - {x: -32.01336, y: 13.98661}
+        - {x: -32.01336, y: -7.013388}
+        - {x: -31.01336, y: -12.01339}
+        - {x: -19.01336, y: -26.01339}
+        - {x: -9.013357, y: -32.01339}
+        - {x: 6.986643, y: -32.01339}
+        - {x: 21.98664, y: -23.01339}
+        - {x: 31.98664, y: -7.013388}
+        - {x: 31.98664, y: 13.98661}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49820d0295294b94a2b9daad7966429f
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Left
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 204
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -32}
+        - {x: -16, y: -32}
+        - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+      physicsShape:
+      - - {x: 27, y: 32}
+        - {x: -22, y: 32}
+        - {x: -32, y: 29}
+        - {x: -32, y: -25}
+        - {x: -28, y: -32}
+        - {x: 14, y: -32}
+        - {x: 32, y: -14}
+        - {x: 32, y: 17}
+      - - {x: -4, y: -5}
+        - {x: -1, y: -1}
+        - {x: -1, y: 1}
+        - {x: -5, y: 6}
+        - {x: -12, y: 12}
+        - {x: -5, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 5, y: 4}
+        - {x: 12, y: 12}
+        - {x: 5, y: 6}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 4, y: -5}
+        - {x: 12, y: -12}
+        - {x: 5, y: -4}
+        - {x: 1, y: -1}
+        - {x: -1, y: -1}
+        - {x: -5, y: -4}
+        - {x: -12, y: -12}
+        - {x: -9.999999, y: -12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1dc8a6bbf14586bfcc4f7314572d97
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Up
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 204
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -32}
+        - {x: -16, y: -32}
+        - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+      physicsShape:
+      - - {x: 27, y: 32}
+        - {x: -22, y: 32}
+        - {x: -32, y: 29}
+        - {x: -32, y: -25}
+        - {x: -28, y: -32}
+        - {x: 14, y: -32}
+        - {x: 32, y: -14}
+        - {x: 32, y: 17}
+      - - {x: -4, y: -5}
+        - {x: -1, y: -1}
+        - {x: -1, y: 1}
+        - {x: -5, y: 6}
+        - {x: -12, y: 12}
+        - {x: -5, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 5, y: 4}
+        - {x: 12, y: 12}
+        - {x: 5, y: 6}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 4, y: -5}
+        - {x: 12, y: -12}
+        - {x: 5, y: -4}
+        - {x: 1, y: -1}
+        - {x: -1, y: -1}
+        - {x: -5, y: -4}
+        - {x: -12, y: -12}
+        - {x: -9.999999, y: -12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6a3e412551474b9b9d047e357cfc5f
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Right
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -32}
+        - {x: -16, y: -32}
+        - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+      physicsShape:
+      - - {x: 27, y: 32}
+        - {x: -22, y: 32}
+        - {x: -32, y: 29}
+        - {x: -32, y: -25}
+        - {x: -28, y: -32}
+        - {x: 14, y: -32}
+        - {x: 32, y: -14}
+        - {x: 32, y: 17}
+      - - {x: -4, y: -5}
+        - {x: -1, y: -1}
+        - {x: -1, y: 1}
+        - {x: -5, y: 6}
+        - {x: -12, y: 12}
+        - {x: -5, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 5, y: 4}
+        - {x: 12, y: 12}
+        - {x: 5, y: 6}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 4, y: -5}
+        - {x: 12, y: -12}
+        - {x: 5, y: -4}
+        - {x: 1, y: -1}
+        - {x: -1, y: -1}
+        - {x: -5, y: -4}
+        - {x: -12, y: -12}
+        - {x: -9.999999, y: -12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02530ee802054ab7bba1c1d534149eb8
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Down
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 430
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -32}
+        - {x: -16, y: -32}
+        - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+      physicsShape:
+      - - {x: 27, y: 32}
+        - {x: -22, y: 32}
+        - {x: -32, y: 29}
+        - {x: -32, y: -25}
+        - {x: -28, y: -32}
+        - {x: 14, y: -32}
+        - {x: 32, y: -14}
+        - {x: 32, y: 17}
+      - - {x: -4, y: -5}
+        - {x: -1, y: -1}
+        - {x: -1, y: 1}
+        - {x: -5, y: 6}
+        - {x: -12, y: 12}
+        - {x: -5, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 5, y: 4}
+        - {x: 12, y: 12}
+        - {x: 5, y: 6}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 4, y: -5}
+        - {x: 12, y: -12}
+        - {x: 5, y: -4}
+        - {x: 1, y: -1}
+        - {x: -1, y: -1}
+        - {x: -5, y: -4}
+        - {x: -12, y: -12}
+        - {x: -9.999999, y: -12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d561e92a82f040458e2657917e3899ee
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Triangle
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af1e933dda145d7b7757bcb48c6a0ce
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Square
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 68
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b070be4e6d5e44de92f6c578a314b015
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Circle
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 68
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137af2c782d749e381a7977280a819b4
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_Cross
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 254
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -32, y: -21}
+        - {x: -32, y: 25}
+        - {x: -19, y: 32}
+        - {x: 16, y: 32}
+        - {x: 21, y: 31}
+        - {x: 32, y: 22}
+        - {x: 32, y: -24}
+        - {x: 16, y: -32}
+      physicsShape:
+      - - {x: 29, y: 21}
+        - {x: 15, y: 31}
+        - {x: 12, y: 32}
+        - {x: -15, y: 32}
+        - {x: -31, y: 22}
+        - {x: -32, y: 14}
+        - {x: -32, y: -14}
+        - {x: -27, y: -20}
+        - {x: -15, y: -31}
+        - {x: -13, y: -32}
+        - {x: 13, y: -32}
+        - {x: 30, y: -22}
+        - {x: 32, y: -12}
+        - {x: 32, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d51427b878404c98846e4205e0a9a2
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_LeftRight
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 136
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: 4}
+        - {x: -4, y: 4}
+      physicsShape:
+      - - {x: 32, y: 8}
+        - {x: 22, y: 16}
+        - {x: 8, y: 32}
+        - {x: -8, y: 32}
+        - {x: -16, y: 22}
+        - {x: -32, y: 8}
+        - {x: -32, y: -8}
+        - {x: -22, y: -16}
+        - {x: -13, y: -27}
+        - {x: -6, y: -32}
+        - {x: 8, y: -32}
+        - {x: 15, y: -22}
+        - {x: 32, y: -8}
+      - - {x: -6, y: -8}
+        - {x: -4, y: -2}
+        - {x: -4, y: 2}
+        - {x: -5, y: 3}
+        - {x: -6, y: 7}
+        - {x: -11, y: 11}
+        - {x: -8, y: 6}
+        - {x: -2, y: 4}
+        - {x: 2, y: 4}
+        - {x: 3, y: 5}
+        - {x: 7, y: 6}
+        - {x: 11, y: 11}
+        - {x: 6, y: 8}
+        - {x: 4, y: 2}
+        - {x: 4, y: -2}
+        - {x: 5, y: -3}
+        - {x: 6, y: -7}
+        - {x: 11, y: -11}
+        - {x: 8, y: -6}
+        - {x: 2, y: -4}
+        - {x: -2, y: -4}
+        - {x: -3, y: -5}
+        - {x: -7, y: -6}
+        - {x: -11, y: -11}
+        - {x: -9, y: -11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d99bd1f6d04f6598cc9dd3be1319c8
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Switch_UpDown
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 340
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: 4}
+        - {x: -4, y: 4}
+      physicsShape:
+      - - {x: 32, y: 8}
+        - {x: 22, y: 16}
+        - {x: 8, y: 32}
+        - {x: -8, y: 32}
+        - {x: -16, y: 22}
+        - {x: -32, y: 8}
+        - {x: -32, y: -8}
+        - {x: -22, y: -16}
+        - {x: -13, y: -27}
+        - {x: -6, y: -32}
+        - {x: 8, y: -32}
+        - {x: 15, y: -22}
+        - {x: 32, y: -8}
+      - - {x: -6, y: -8}
+        - {x: -4, y: -2}
+        - {x: -4, y: 2}
+        - {x: -5, y: 3}
+        - {x: -6, y: 7}
+        - {x: -11, y: 11}
+        - {x: -8, y: 6}
+        - {x: -2, y: 4}
+        - {x: 2, y: 4}
+        - {x: 3, y: 5}
+        - {x: 7, y: 6}
+        - {x: 11, y: 11}
+        - {x: 6, y: 8}
+        - {x: 4, y: 2}
+        - {x: 4, y: -2}
+        - {x: 5, y: -3}
+        - {x: 6, y: -7}
+        - {x: 11, y: -11}
+        - {x: 8, y: -6}
+        - {x: 2, y: -4}
+        - {x: -2, y: -4}
+        - {x: -3, y: -5}
+        - {x: -7, y: -6}
+        - {x: -11, y: -11}
+        - {x: -9, y: -11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7b2bfa735c4674b132d4b7b4cc4a88
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_LeftRight
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 294
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -32}
+        - {x: -16, y: -32}
+        - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+      physicsShape:
+      - - {x: 27, y: 32}
+        - {x: -22, y: 32}
+        - {x: -32, y: 29}
+        - {x: -32, y: -25}
+        - {x: -28, y: -32}
+        - {x: 14, y: -32}
+        - {x: 32, y: -14}
+        - {x: 32, y: 17}
+      - - {x: -4, y: -5}
+        - {x: -1, y: -1}
+        - {x: -1, y: 1}
+        - {x: -5, y: 6}
+        - {x: -12, y: 12}
+        - {x: -5, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 5, y: 4}
+        - {x: 12, y: 12}
+        - {x: 5, y: 6}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 4, y: -5}
+        - {x: 12, y: -12}
+        - {x: 5, y: -4}
+        - {x: 1, y: -1}
+        - {x: -1, y: -1}
+        - {x: -5, y: -4}
+        - {x: -12, y: -12}
+        - {x: -9.999999, y: -12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad3294122b74322b1ca95125ff670e4
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Playstation_UpDown
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -32}
+        - {x: -16, y: -32}
+        - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+      physicsShape:
+      - - {x: 27, y: 32}
+        - {x: -22, y: 32}
+        - {x: -32, y: 29}
+        - {x: -32, y: -25}
+        - {x: -28, y: -32}
+        - {x: 14, y: -32}
+        - {x: 32, y: -14}
+        - {x: 32, y: 17}
+      - - {x: -4, y: -5}
+        - {x: -1, y: -1}
+        - {x: -1, y: 1}
+        - {x: -5, y: 6}
+        - {x: -12, y: 12}
+        - {x: -5, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 5, y: 4}
+        - {x: 12, y: 12}
+        - {x: 5, y: 6}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 4, y: -5}
+        - {x: 12, y: -12}
+        - {x: 5, y: -4}
+        - {x: 1, y: -1}
+        - {x: -1, y: -1}
+        - {x: -5, y: -4}
+        - {x: -12, y: -12}
+        - {x: -9.999999, y: -12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c0f481c10b4b21b891b78c17569b19
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_LeftRight
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 50
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+        - {x: 22, y: -32}
+        - {x: -16, y: -32}
+      physicsShape:
+      - - {x: -15, y: 32}
+        - {x: -32, y: 15}
+        - {x: -32, y: -23}
+        - {x: -17, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -25}
+        - {x: 32, y: 23}
+        - {x: 15, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad37559405146d39cc0ee59c89b4d45
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_XBox_UpDown
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 272
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -14}
+        - {x: -32, y: -13}
+        - {x: -32, y: 29}
+        - {x: -26, y: 32}
+        - {x: 30, y: 32}
+        - {x: 32, y: 26}
+        - {x: 32, y: -24}
+        - {x: 22, y: -32}
+        - {x: -16, y: -32}
+      physicsShape:
+      - - {x: -15, y: 32}
+        - {x: -32, y: 15}
+        - {x: -32, y: -23}
+        - {x: -17, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -25}
+        - {x: 32, y: 23}
+        - {x: 15, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f78822e4e04224ba2b6ca0edaeb5e3
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CampaignLinks_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 454
+        width: 220
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -110, y: -10.5}
+        - {x: -110, y: 10.5}
+        - {x: 110, y: 10.5}
+        - {x: 110, y: -10.5}
+      physicsShape:
+      - - {x: -3, y: 10.5}
+        - {x: -7, y: 4.5}
+        - {x: -110, y: -0.5}
+        - {x: -110, y: -10.5}
+        - {x: 26, y: -10.5}
+        - {x: 26, y: -9.5}
+        - {x: 9, y: 10.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d89a4a3fddf48a79c818fd9fa637857
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_CampaignLinks_1
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 31
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: -16.5}
+        - {x: -15.5, y: 16.5}
+        - {x: 15.5, y: 16.5}
+        - {x: 15.5, y: -16.5}
+      physicsShape:
+      - - {x: -15.5, y: -10.5}
+        - {x: 15.5, y: -10.5}
+        - {x: 15.5, y: 9.5}
+        - {x: -15.5, y: 9.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8910c56ada340339e36235183e7af06
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_HouseMapIcon_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 50
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 6, z: 6, w: 6}
+      outline:
+      - - {x: -6, y: -6}
+        - {x: -6, y: 6}
+        - {x: 6, y: 6}
+        - {x: 6, y: -6}
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90399fb2f7cb4a74ba003bf1f7330f23
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Mouse_LMB
+      rect:
+        serializedVersion: 2
+        x: 846.0761
+        y: 124
+        width: 48.84776
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -32}
+        - {x: -24.5, y: -18}
+        - {x: -24.5, y: 25}
+        - {x: -21.5, y: 32}
+        - {x: 24.5, y: 32}
+        - {x: 24.5, y: -28}
+        - {x: 19.5, y: -32}
+      physicsShape:
+      - - {x: 22.5, y: 25}
+        - {x: 11.5, y: 32}
+        - {x: -13.5, y: 32}
+        - {x: -21.49999, y: 25}
+        - {x: -24.49999, y: 14}
+        - {x: -24.49999, y: -17}
+        - {x: -15.5, y: -32}
+        - {x: 14.5, y: -32}
+        - {x: 23.5, y: -22}
+        - {x: 24.5, y: -11}
+        - {x: 24.5, y: 17}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62155550cbc43899823a160ad3d5508
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Mouse_MMB
+      rect:
+        serializedVersion: 2
+        x: 706.0761
+        y: 136
+        width: 48.84776
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -32}
+        - {x: -24.5, y: -18}
+        - {x: -24.5, y: 25}
+        - {x: -21.5, y: 32}
+        - {x: 24.5, y: 32}
+        - {x: 24.5, y: -28}
+        - {x: 19.5, y: -32}
+      physicsShape:
+      - - {x: 22.5, y: 25}
+        - {x: 11.5, y: 32}
+        - {x: -13.5, y: 32}
+        - {x: -21.5, y: 25}
+        - {x: -24.5, y: 14}
+        - {x: -24.5, y: -17}
+        - {x: -15.5, y: -32}
+        - {x: 14.5, y: -32}
+        - {x: 23.5, y: -22}
+        - {x: 24.49999, y: -11}
+        - {x: 24.49999, y: 17}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a435e14b83a4404eaaef320d53c44f2c
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonIcon_Mouse_RMB
+      rect:
+        serializedVersion: 2
+        x: 570.0761
+        y: 272
+        width: 48.84776
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -32}
+        - {x: -24.5, y: -18}
+        - {x: -24.5, y: 25}
+        - {x: -21.5, y: 32}
+        - {x: 24.5, y: 32}
+        - {x: 24.5, y: -28}
+        - {x: 19.5, y: -32}
+      physicsShape:
+      - - {x: 22.5, y: 25}
+        - {x: 11.5, y: 32}
+        - {x: -13.5, y: 32}
+        - {x: -21.5, y: 25}
+        - {x: -24.5, y: 14}
+        - {x: -24.5, y: -17}
+        - {x: -15.5, y: -32}
+        - {x: 14.5, y: -32}
+        - {x: 23.5, y: -22}
+        - {x: 24.49999, y: -11}
+        - {x: 24.49999, y: 17}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf9efa7367d468b9bf082fd5de702a6
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

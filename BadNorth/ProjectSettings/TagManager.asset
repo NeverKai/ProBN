@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - DesktopOnly
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Modules
+  - Background
+  - LongshipModules
+  - Voxels
+  - Navigation
+  - Frontier
+  - Ragdoll
+  - EnBodies
+  - ViBodies
+  - NavSpots
+  - Campaign
+  - Blood
+  - LongShips
+  - Houses
+  - OffscreenAgent
+  - Standards
+  - Landings
+  - Mirror
+  - Physical
+  - Debris
+  - PathVizualiser
+  - CursorCollider
+  - CursorBlocker
+  - ArrowBlocker
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

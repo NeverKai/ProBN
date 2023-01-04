@@ -1,0 +1,37 @@
+﻿using System;
+
+namespace CS.Platform
+{
+	// Token: 0x02000055 RID: 85
+	public enum MessageTypes
+	{
+		// Token: 0x04000185 RID: 389
+		UNKNOWN,
+		// Token: 0x04000186 RID: 390
+		GAMEINVITE,
+		// Token: 0x04000187 RID: 391
+		BEENKICKED,
+		// Token: 0x04000188 RID: 392
+		VOICECHAT_DATA,
+		// Token: 0x04000189 RID: 393
+		VOICECHAT_END,
+		// Token: 0x0400018A RID: 394
+		USER_MESSAGE,
+		// Token: 0x0400018B RID: 395
+		LOBBY_HOST_MESSAGE,
+		// Token: 0x0400018C RID: 396
+		LOBBY_CLIENT_MESSAGE,
+		// Token: 0x0400018D RID: 397
+		LOBBY_USER_MESSAGE,
+		// Token: 0x0400018E RID: 398
+		IP_REQUEST,
+		// Token: 0x0400018F RID: 399
+		IP_RESULT,
+		// Token: 0x04000190 RID: 400
+		PING,
+		// Token: 0x04000191 RID: 401
+		PONG,
+		// Token: 0x04000192 RID: 402
+		DEBUG
+	}
+}

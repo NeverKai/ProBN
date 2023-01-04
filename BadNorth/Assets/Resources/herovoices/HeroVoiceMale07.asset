@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209ea4c1bb4257e4c8161ad55129b256, type: 3}
+  m_Name: HeroVoiceMale07
+  m_EditorClassIdentifier:
+  portraitSelectAudio:
+    _name: Sfx/Characters/07Select
+  deathAudio:
+    _name: UI/InGame/SquadLost
+  spearsDownSound:
+    _name: Sfx/English/Spear/SpearsDown
+  spearsUpSound:
+    _name: Sfx/English/Spear/SpearsUp
+  archeryFocusStartAudioId:
+  - _name: Sfx/Ability/ArcheryFocus/Start01
+  - _name: Sfx/Ability/ArcheryFocus/Start02
+  - _name: Sfx/Ability/ArcheryFocus/Start03
+  archeryFocusStopAudioId:
+  - _name: Sfx/Ability/ArcheryFocus/Stop
+  plungeJumpSounds:
+  - _name: Sfx/Ability/Plunge/Plunge01
+  - _name: Sfx/Ability/Plunge/Plunge02
+  - _name: Sfx/Ability/Plunge/Plunge03
+  plungeLandSound:
+    _name: Sfx/English/Land
+  warhammerJumpSounds:
+  - _name: Sfx/Ability/GroundPound/Jump01
+  - _name: Sfx/Ability/GroundPound/Jump02
+  - _name: Sfx/Ability/GroundPound/Jump03
+  warhammerLandSounds:
+  - _name: Sfx/Ability/GroundPound/Land01
+  - _name: Sfx/Ability/GroundPound/Land02
+  - _name: Sfx/Ability/GroundPound/Land03

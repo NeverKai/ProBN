@@ -1,0 +1,707 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+PrefabInstance:
+  serializedVersion: 2
+  m_RootGameObject: {fileID: 1684137655446865}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+--- !u!1 &1684137655446865
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4271984507041785}
+  - component: {fileID: 114960754831210691}
+  m_Layer: 0
+  m_Name: TankArcherTrajectory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4271984507041785
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684137655446865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.85, y: 0, z: 3.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114960754831210691
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684137655446865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96734ab0f6351bd4f9ff4d8c0e6da5b8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  MinY: -5
+  MaxY: 5
+  MaxZ: 8
+  costFunction:
+    expression: minDist * 10 + time
+  validFunction:
+    expression: minDist < 0.2
+  settings:
+    minSpeed: 2
+    maxSpeed: 20
+    drag: 0.5
+    startOffset: 0.3
+    gravity: 9.8
+  maxValidRadius: 7.5
+  trajectories:
+  - attributes:
+      startVelocity: {x: 0.0002518936, y: -20}
+      impactVelocity: {x: 0.000223138, y: -19.95434}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: -0.0001266216, y: 9.988592}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 0, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 4.166806, y: -19.56113}
+      impactVelocity: {x: 3.617311, y: -19.56626}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 0.5516912, y: -2.654904}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 1, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 7.883458, y: -18.38073}
+      impactVelocity: {x: 6.843832, y: -18.54152}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.051249, y: -2.516027}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 2, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 10.92068, y: -16.75526}
+      impactVelocity: {x: 9.480525, y: -17.13041}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.458737, y: -2.303076}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 3, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 12.62554, y: -14.10176}
+      impactVelocity: {x: 10.52652, y: -15.01586}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.168959, y: -2.530147}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 4, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 15.01452, y: -13.21227}
+      impactVelocity: {x: 12.51832, y: -14.27425}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.565163, y: -2.364843}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 5, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 16.30747, y: -11.5787}
+      impactVelocity: {x: 13.32439, y: -13.04602}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.29603, y: -2.500576}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 6, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 17.30967, y: -10.01875}
+      impactVelocity: {x: 13.86039, y: -11.928}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.553787, y: -2.217231}
+      impactTime: 0.4
+      validity: 1
+    end: {x: 7, y: -5, z: 0}
+  - attributes:
+      startVelocity: {x: 0.0001673716, y: -20}
+      impactVelocity: {x: 0.0001512907, y: -19.96157}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: -8.555588E-05, y: 10.19075}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 0, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 5.105758, y: -19.3373}
+      impactVelocity: {x: 4.615201, y: -19.36255}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 0.4746663, y: -1.830437}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 1, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 8.446882, y: -15.69884}
+      impactVelocity: {x: 7.482606, y: -16.14419}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.097188, y: -2.104147}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 2, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 12.5778, y: -15.54988}
+      impactVelocity: {x: 11.14195, y: -16.01224}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.612007, y: -2.0579}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 3, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 14.82127, y: -13.4287}
+      impactVelocity: {x: 12.86672, y: -14.24254}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.990213, y: -1.868201}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 4, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 16.37702, y: -11.48013}
+      impactVelocity: {x: 13.93296, y: -12.69191}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.708864, y: -2.006474}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 5, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 17.44596, y: -9.779495}
+      impactVelocity: {x: 14.54553, y: -11.41218}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.98881, y: -1.782992}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 6, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 18.20531, y: -8.280498}
+      impactVelocity: {x: 14.57756, y: -10.53612}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.77716, y: -1.878317}
+      impactTime: 0.4
+      validity: 1
+    end: {x: 7, y: -4, z: 0}
+  - attributes:
+      startVelocity: {x: 0.002495357, y: -20}
+      impactVelocity: {x: 0.002301638, y: -19.96895}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: -0.001199613, y: 9.582057}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 0, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 6.5484, y: -18.89758}
+      impactVelocity: {x: 6.040035, y: -18.95211}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 0.5885808, y: -1.731254}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 1, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 11.03505, y: -15.62524}
+      impactVelocity: {x: 9.974814, y: -16.00714}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.053616, y: -1.524592}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 2, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 14.6535, y: -13.61158}
+      impactVelocity: {x: 12.98069, y: -14.2952}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.864919, y: -1.797298}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 3, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 16.60396, y: -11.14938}
+      impactVelocity: {x: 14.41432, y: -12.2638}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.188627, y: -1.534621}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 4, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 17.7795, y: -9.15911}
+      impactVelocity: {x: 15.12614, y: -10.71728}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.922225, y: -1.612971}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 5, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 16.24571, y: -6.14829}
+      impactVelocity: {x: 13.27393, y: -8.608976}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.327953, y: -1.419799}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 6, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 19.08046, y: -5.994676}
+      impactVelocity: {x: 15.59012, y: -8.48346}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.770986, y: -1.345079}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 7, y: -3, z: 0}
+  - attributes:
+      startVelocity: {x: 0.0002302232, y: -20}
+      impactVelocity: {x: 0.0002166843, y: -19.97648}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: -0.0001040592, y: 9.028878}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 0, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 9.151918, y: -17.78321}
+      impactVelocity: {x: 8.613712, y: -17.89005}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 0.5196866, y: -1.020785}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 1, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 14.47744, y: -13.79869}
+      impactVelocity: {x: 13.35353, y: -14.24906}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.29172, y: -1.263869}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 2, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 17.04432, y: -10.4638}
+      impactVelocity: {x: 15.40672, y: -11.3416}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.616598, y: -1.025165}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 3, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 18.30623, y: -8.054933}
+      impactVelocity: {x: 16.21643, y: -9.37289}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.347509, y: -1.097911}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 4, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 18.99663, y: -6.255228}
+      impactVelocity: {x: 16.49146, y: -8.015064}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.555385, y: -0.9064216}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 5, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 19.41072, y: -4.81914}
+      impactVelocity: {x: 16.51392, y: -7.024992}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.206852, y: -0.9037588}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 6, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 19.65607, y: -3.69306}
+      impactVelocity: {x: 16.06044, y: -6.602873}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.977194, y: -0.9075656}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 7, y: -2, z: 0}
+  - attributes:
+      startVelocity: {x: 0.0008656623, y: -20}
+      impactVelocity: {x: 0.0008483491, y: -19.992}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: -0.0006401569, y: 14.78999}
+      impactTime: 0
+      validity: 1
+    end: {x: 0, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 14.28887, y: -13.99386}
+      impactVelocity: {x: 13.72303, y: -14.21587}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 0.7326102, y: -0.7284608}
+      impactTime: 0.04
+      validity: 1
+    end: {x: 1, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 18.09323, y: -8.522614}
+      impactVelocity: {x: 17.02921, y: -9.174053}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.029731, y: -0.4960193}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 2, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.19099, y: -5.63081}
+      impactVelocity: {x: 17.70116, y: -6.715265}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.726166, y: -0.5391815}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 3, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.62775, y: -3.840749}
+      impactVelocity: {x: 17.74193, y: -5.354886}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 1.858361, y: -0.3963517}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 4, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.8299, y: -2.602876}
+      impactVelocity: {x: 17.21484, y: -4.844363}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 2.621451, y: -0.4090745}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 5, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 18.18241, y: -1.286878}
+      impactVelocity: {x: 15.15955, y: -4.331475}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.143107, y: -0.3300431}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 6, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.97569, y: -0.9858258}
+      impactVelocity: {x: 16.65469, y: -4.080473}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: 3.433749, y: -0.2770465}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 7, y: -1, z: 0}
+  - attributes:
+      startVelocity: {x: 0, y: 0}
+      impactVelocity: {x: 0, y: -0.392}
+      highPoint: {x: 0, y: 0}
+      midPoint: {x: NaN, y: NaN}
+      impactTime: 0
+      validity: 1
+    end: {x: 0, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 11.67525, y: 0.3132433}
+      impactVelocity: {x: 11.21291, y: -0.4753211}
+      highPoint: {x: 0.757562, y: 0.004645148}
+      midPoint: {x: 0.7140137, y: 0.008180761}
+      impactTime: 0.04
+      validity: 1
+    end: {x: 1, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 17.12801, y: 0.8988971}
+      impactVelocity: {x: 16.12075, y: -0.306602}
+      highPoint: {x: 1.628996, y: 0.0387651}
+      midPoint: {x: 0.8393044, y: 0.03307163}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 2, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 19.98345, y: 0.8133782}
+      impactVelocity: {x: 18.4321, y: -0.7713498}
+      highPoint: {x: 1.850787, y: 0.02860544}
+      midPoint: {x: 1.751796, y: 0.03859415}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 3, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 18.20987, y: 1.102045}
+      impactVelocity: {x: 16.46028, y: -0.8869913}
+      highPoint: {x: 1.712829, y: 0.05693248}
+      midPoint: {x: 1.764197, y: 0.07405914}
+      impactTime: 0.16
+      validity: 0
+    end: {x: 4, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 19.95802, y: 1.295173}
+      impactVelocity: {x: 17.67966, y: -1.09017}
+      highPoint: {x: 2.599805, y: 0.07588218}
+      midPoint: {x: 2.550707, y: 0.1005455}
+      impactTime: 0.2
+      validity: 0
+    end: {x: 5, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 19.93033, y: 1.667929}
+      impactVelocity: {x: 16.95598, y: -1.506032}
+      highPoint: {x: 3.331522, y: 0.1251131}
+      midPoint: {x: 3.25884, y: 0.1651391}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 6, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 19.31114, y: 2.006148}
+      impactVelocity: {x: 15.7786, y: -1.946204}
+      highPoint: {x: 3.236746, y: 0.1825559}
+      midPoint: {x: 3.8944, y: 0.2442569}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 7, y: 0, z: 0}
+  - attributes:
+      startVelocity: {x: 0.0003242456, y: 16.61862}
+      impactVelocity: {x: 0.0003114055, y: 15.18436}
+      highPoint: {x: 0.0002947077, y: 9.045381}
+      midPoint: {x: 0.0001333585, y: 6.824073}
+      impactTime: 0.04
+      validity: 1
+    end: {x: 0, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 13.98172, y: 14.30075}
+      impactVelocity: {x: 13.42804, y: 12.95828}
+      highPoint: {x: 11.73133, y: 6.982347}
+      midPoint: {x: 0.7120363, y: 0.7173076}
+      impactTime: 0.04
+      validity: 1
+    end: {x: 1, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 17.67235, y: 9.364183}
+      impactVelocity: {x: 16.63308, y: 7.660857}
+      highPoint: {x: 11.30649, y: 3.340822}
+      midPoint: {x: 1.011801, y: 0.5251547}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 2, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 18.72636, y: 7.023077}
+      impactVelocity: {x: 17.27259, y: 4.956278}
+      highPoint: {x: 9.876366, y: 1.987132}
+      midPoint: {x: 1.687985, y: 0.6003482}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 3, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.11954, y: 5.868837}
+      impactVelocity: {x: 16.9369, y: 2.961375}
+      highPoint: {x: 8.354383, y: 1.426741}
+      midPoint: {x: 2.426056, y: 0.6797075}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 4, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.31503, y: 5.189397}
+      impactVelocity: {x: 16.76787, y: 1.920308}
+      highPoint: {x: 7.833528, y: 1.13575}
+      midPoint: {x: 2.592998, y: 0.6316823}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 5, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.38819, y: 4.908998}
+      impactVelocity: {x: 16.16486, y: 0.834322}
+      highPoint: {x: 7.863199, y: 1.02203}
+      midPoint: {x: 3.295982, y: 0.7269406}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 6, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 19.42639, y: 4.755553}
+      impactVelocity: {x: 15.87278, y: 0.3002606}
+      highPoint: {x: 7.256483, y: 0.9637077}
+      midPoint: {x: 3.917038, y: 0.7985705}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 7, y: 1, z: 0}
+  - attributes:
+      startVelocity: {x: 4.351636E-05, y: 20}
+      impactVelocity: {x: 4.095725E-05, y: 17.6712}
+      highPoint: {x: 4.303117E-05, y: 12.20849}
+      midPoint: {x: 2.297113E-05, y: 10.54649}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 0, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 8.547955, y: 17.65766}
+      impactVelocity: {x: 8.045266, y: 15.46661}
+      highPoint: {x: 7.928448, y: 9.953716}
+      midPoint: {x: 0.4884468, y: 0.9980174}
+      impactTime: 0.08
+      validity: 1
+    end: {x: 1, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 13.46854, y: 14.22927}
+      impactVelocity: {x: 12.42295, y: 11.60304}
+      highPoint: {x: 11.30494, y: 6.926802}
+      midPoint: {x: 1.199433, y: 1.234471}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 2, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 16.21894, y: 11.7024}
+      impactVelocity: {x: 14.66063, y: 8.694888}
+      highPoint: {x: 12.0578, y: 4.945432}
+      midPoint: {x: 1.567108, y: 1.098002}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 3, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 17.3888, y: 9.880775}
+      impactVelocity: {x: 15.40373, y: 6.515319}
+      highPoint: {x: 11.58943, y: 3.674593}
+      midPoint: {x: 2.221954, y: 1.197591}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 4, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 18.02995, y: 8.655697}
+      impactVelocity: {x: 15.33921, y: 4.4389}
+      highPoint: {x: 11.04397, y: 2.901596}
+      midPoint: {x: 2.979831, y: 1.322951}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 5, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 18.38243, y: 7.879495}
+      impactVelocity: {x: 15.3263, y: 3.310966}
+      highPoint: {x: 10.22718, y: 2.450394}
+      midPoint: {x: 3.144039, y: 1.240083}
+      impactTime: 0.32
+      validity: 1
+    end: {x: 6, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 18.59281, y: 7.369349}
+      impactVelocity: {x: 14.88785, y: 1.995203}
+      highPoint: {x: 9.805933, y: 2.169758}
+      midPoint: {x: 3.860475, y: 1.369803}
+      impactTime: 0.4
+      validity: 1
+    end: {x: 7, y: 2, z: 0}
+  - attributes:
+      startVelocity: {x: 6.721428E-05, y: 20}
+      impactVelocity: {x: 6.199631E-05, y: 16.92578}
+      highPoint: {x: 6.646488E-05, y: 12.20849}
+      midPoint: {x: 4.102773E-05, y: 12.17533}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 0, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 6.111446, y: 19.04338}
+      impactVelocity: {x: 5.637003, y: 16.04342}
+      highPoint: {x: 5.920312, y: 11.26882}
+      midPoint: {x: 0.5672686, y: 1.734911}
+      impactTime: 0.12
+      validity: 1
+    end: {x: 1, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 10.67077, y: 16.91551}
+      impactVelocity: {x: 9.645535, y: 13.40713}
+      highPoint: {x: 9.666128, y: 9.263601}
+      midPoint: {x: 1.029904, y: 1.599915}
+      impactTime: 0.16
+      validity: 1
+    end: {x: 2, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 13.56769, y: 14.69414}
+      impactVelocity: {x: 12.01884, y: 10.7792}
+      highPoint: {x: 11.38394, y: 7.312415}
+      midPoint: {x: 1.735792, y: 1.814922}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 3, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 15.3225, y: 12.85383}
+      impactVelocity: {x: 13.30185, y: 8.574002}
+      highPoint: {x: 11.76876, y: 5.816833}
+      midPoint: {x: 2.048252, y: 1.653268}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 4, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 16.40475, y: 11.44047}
+      impactVelocity: {x: 13.95655, y: 6.808082}
+      highPoint: {x: 11.78361, y: 4.754537}
+      midPoint: {x: 2.72252, y: 1.791065}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 5, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 17.06091, y: 10.43673}
+      impactVelocity: {x: 13.94001, y: 4.942194}
+      highPoint: {x: 11.81738, y: 4.047199}
+      midPoint: {x: 3.44616, y: 1.947817}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 6, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 17.48359, y: 9.712064}
+      impactVelocity: {x: 13.99965, y: 3.871086}
+      highPoint: {x: 11.18572, y: 3.56339}
+      midPoint: {x: 3.632871, y: 1.857731}
+      impactTime: 0.4
+      validity: 1
+    end: {x: 7, y: 3, z: 0}
+  - attributes:
+      startVelocity: {x: 0.001453111, y: 20}
+      impactVelocity: {x: 0.001287227, y: 15.47936}
+      highPoint: {x: 0.00143691, y: 12.20849}
+      midPoint: {x: 0.0008228617, y: 11.26053}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 0, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 4.594237, y: 19.46517}
+      impactVelocity: {x: 4.06977, y: 15.00558}
+      highPoint: {x: 4.543016, y: 11.67962}
+      midPoint: {x: 0.5896724, y: 2.433381}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 1, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 8.415821, y: 18.14315}
+      impactVelocity: {x: 7.45509, y: 13.83448}
+      highPoint: {x: 7.979789, y: 10.40564}
+      midPoint: {x: 1.05585, y: 2.21126}
+      impactTime: 0.2
+      validity: 1
+    end: {x: 2, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 11.3307, y: 16.48075}
+      impactVelocity: {x: 9.836468, y: 11.72262}
+      highPoint: {x: 10.26392, y: 8.869778}
+      midPoint: {x: 1.518108, y: 2.14314}
+      impactTime: 0.24
+      validity: 1
+    end: {x: 3, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 13.34034, y: 14.90085}
+      impactVelocity: {x: 11.34947, y: 9.752048}
+      highPoint: {x: 11.19318, y: 7.485856}
+      midPoint: {x: 2.216306, y: 2.367976}
+      impactTime: 0.28
+      validity: 1
+    end: {x: 4, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 14.69241, y: 13.56956}
+      impactVelocity: {x: 12.00477, y: 7.501948}
+      highPoint: {x: 11.98702, y: 6.383883}
+      midPoint: {x: 2.970384, y: 2.583062}
+      impactTime: 0.36
+      validity: 1
+    end: {x: 5, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 15.58612, y: 12.53287}
+      impactVelocity: {x: 12.4803, y: 6.129793}
+      highPoint: {x: 11.97124, y: 5.570308}
+      midPoint: {x: 3.227717, y: 2.435106}
+      impactTime: 0.4
+      validity: 1
+    end: {x: 6, y: 4, z: 0}
+  - attributes:
+      startVelocity: {x: 16.21883, y: 11.70254}
+      impactVelocity: {x: 12.72719, y: 4.963626}
+      highPoint: {x: 12.05772, y: 4.94554}
+      midPoint: {x: 3.859736, y: 2.561991}
+      impactTime: 0.44
+      validity: 1
+    end: {x: 7, y: 4, z: 0}
+  test: {x: 4.91, y: 3.29}

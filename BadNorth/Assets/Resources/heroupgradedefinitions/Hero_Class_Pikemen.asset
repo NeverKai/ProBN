@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61b2e357648efb458342485a43b6ea1, type: 3}
+  m_Name: Hero_Class_Pikemen
+  m_EditorClassIdentifier:
+  upgradeType: {fileID: 11400000, guid: 50d62f410c7d7e84e92f49a472120d47, type: 2}
+  infoSprite: {fileID: 21300000, guid: 8a2795d66b6eb2441aeef2071f7d3596, type: 3}
+  unlockValue: 0
+  nameTerm: UPGRADES/PIKE/CLASS/NAME
+  shortDescription:
+  affectsPortrait: 0
+  levels:
+  - cost: 6
+    description: UPGRADES/PIKE/CLASS/DESC
+    prepurchaseDescription: UPGRADES/PIKE/CLASS/DESC
+  - cost: 12
+    description: UPGRADES/PIKE/CLASS/DESC
+    prepurchaseDescription: UPGRADES/PIKE/VETERAN/DESC
+  - cost: 20
+    description: UPGRADES/PIKE/CLASS/DESC
+    prepurchaseDescription: UPGRADES/PIKE/ELITE/DESC
+  _uiPurchaseAudioId:
+    _name: UI/Upgrade/Spears
+  prerequisite: {fileID: 0}
+  AbilityPrefab: {fileID: 1240496086252289, guid: bbf3c367302e64344be7ca25e51ff0ba, type: 2}
+  squadLevelTerms:
+  - UPGRADES/GENERIC/LEVEL_CLASS/MILITIA
+  - UPGRADES/GENERIC/LEVEL_CLASS/PIKES
+  - UPGRADES/GENERIC/LEVEL_CLASS/VETERAN_PIKES
+  - UPGRADES/GENERIC/LEVEL_CLASS/ELITE_PIKES
+  minionAgentPrefab: {fileID: 114308002081126578, guid: 80a8dfc73d3424249872362c7a92ea0c, type: 2}

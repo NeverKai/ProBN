@@ -1,0 +1,27 @@
+﻿using System;
+
+namespace CS.Platform.Steam.Server.Part
+{
+	// Token: 0x020000A7 RID: 167
+	public enum authenticationState
+	{
+		// Token: 0x040002E9 RID: 745
+		FAILED_MULTI,
+		// Token: 0x040002EA RID: 746
+		WAITING,
+		// Token: 0x040002EB RID: 747
+		FAILED_TICKET_FIRST,
+		// Token: 0x040002EC RID: 748
+		FAILED_TICKET_SECOND,
+		// Token: 0x040002ED RID: 749
+		FAILED_USERUPDATE,
+		// Token: 0x040002EE RID: 750
+		PASSED,
+		// Token: 0x040002EF RID: 751
+		FAILED_COMPATIBILITY,
+		// Token: 0x040002F0 RID: 752
+		FAILED_CONNECTION_FIRST,
+		// Token: 0x040002F1 RID: 753
+		FAILED_CONNECTION_SECOND
+	}
+}

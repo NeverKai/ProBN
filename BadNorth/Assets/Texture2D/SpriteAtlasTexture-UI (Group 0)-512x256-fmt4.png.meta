@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: 96d1294a7a97c3645ad0203abb301613
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: UI_Buttons_Filled_Border
+  - first:
+      213: 21300002
+    second: UI_Buttons_Filled_NoBorder
+  - first:
+      213: 21300004
+    second: UI_Buttons_Dashed_White
+  - first:
+      213: 21300006
+    second: UI_Lines_Dashed
+  - first:
+      213: 21300008
+    second: UI_Campaign_DistanceField_Circle
+  - first:
+      213: 21300010
+    second: UI_Campaign_DistanceField_Boat
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 512
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 140
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_Buttons_Filled_Border
+      rect:
+        serializedVersion: 2
+        x: 256.0761
+        y: 0
+        width: 30.92388
+        height: 30.95709
+      alignment: 9
+      pivot: {x: 0.4826005, y: 0.5168444}
+      border: {x: 12.92388, y: 14, z: 14, w: 12.95709}
+      outline:
+      - - {x: -14.53806, y: -15.47855}
+        - {x: -15.53806, y: -11.47855}
+        - {x: -15.53806, y: 15.52145}
+        - {x: 15.46194, y: 15.52145}
+        - {x: 15.46194, y: -15.47855}
+      physicsShape:
+      - - {x: -15.53806, y: 13.52145}
+        - {x: -15.53806, y: -14.47855}
+        - {x: 10.46194, y: -14.47855}
+        - {x: 14.46194, y: -13.47855}
+        - {x: 14.46194, y: 10.52145}
+        - {x: 10.46194, y: 15.52145}
+        - {x: -11.53806, y: 15.52145}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790df5df43314528b83d6aceafebb825
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Buttons_Filled_NoBorder
+      rect:
+        serializedVersion: 2
+        x: 102.0761
+        y: 199
+        width: 30.92388
+        height: 30.95709
+      alignment: 9
+      pivot: {x: 0.4826004, y: 0.5168444}
+      border: {x: 12.92388, y: 14, z: 14, w: 12.95709}
+      outline:
+      - - {x: -14.53806, y: -15.47855}
+        - {x: -15.53806, y: -11.47855}
+        - {x: -15.53806, y: 15.52145}
+        - {x: 15.46194, y: 15.52145}
+        - {x: 15.46194, y: -15.47855}
+      physicsShape:
+      - - {x: -15.53806, y: 13.52145}
+        - {x: -15.53806, y: -14.47855}
+        - {x: 10.46194, y: -14.47855}
+        - {x: 14.46194, y: -13.47855}
+        - {x: 14.46194, y: 10.52145}
+        - {x: 10.46194, y: 15.52145}
+        - {x: -11.53806, y: 15.52145}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9816aebf5d04d93b71a56bac6054978
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Buttons_Dashed_White
+      rect:
+        serializedVersion: 2
+        x: 0.07611847
+        y: 94.07612
+        width: 61.84776
+        height: 61.84776
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.5000001}
+      border: {x: 14.92388, y: 14.92388, z: 14.92387, w: 13.92387}
+      outline:
+      - - {x: 31, y: -31}
+        - {x: -30, y: -31}
+        - {x: -31, y: -30}
+        - {x: -31, y: 31}
+        - {x: 31, y: 31}
+      physicsShape:
+      - - {x: -26, y: -20}
+        - {x: -29, y: -20}
+        - {x: -31, y: -22}
+        - {x: -31, y: -28}
+        - {x: -28, y: -31}
+        - {x: -24, y: -31}
+        - {x: -22, y: -29}
+        - {x: -22, y: -26}
+      - - {x: -22, y: -27}
+        - {x: -22, y: -29}
+        - {x: -20, y: -31}
+        - {x: -18, y: -31}
+        - {x: -15, y: -28}
+        - {x: -16, y: -25}
+        - {x: -20, y: -25}
+      - - {x: -12, y: -25}
+        - {x: -15, y: -28}
+        - {x: -14, y: -31}
+        - {x: -5.999996, y: -31}
+        - {x: -3.999996, y: -29}
+        - {x: -3.999996, y: -27}
+        - {x: -5.999996, y: -25}
+      - - {x: -2.999996, y: -27}
+        - {x: -2.999996, y: -29}
+        - {x: -0.9999962, y: -31}
+        - {x: 7.000004, y: -31}
+        - {x: 10, y: -28}
+        - {x: 9.000005, y: -25}
+        - {x: -0.9999962, y: -25}
+      - - {x: 10, y: -31}
+        - {x: 19, y: -31}
+        - {x: 19, y: -25}
+        - {x: 11, y: -25}
+        - {x: 10, y: -27}
+      - - {x: 21, y: -20}
+        - {x: 19, y: -21}
+        - {x: 19, y: -31}
+        - {x: 29, y: -31}
+        - {x: 31, y: -28}
+        - {x: 31, y: -20}
+      - - {x: -31, y: -12}
+        - {x: -31, y: -20}
+        - {x: -27, y: -20}
+        - {x: -25, y: -19}
+        - {x: -25, y: -13}
+        - {x: -27, y: -12}
+      - - {x: 25, y: -1.999996}
+        - {x: 25, y: -18}
+        - {x: 26, y: -20}
+        - {x: 29, y: -20}
+        - {x: 31, y: -19}
+        - {x: 31, y: -2.999996}
+        - {x: 30, y: -1.999996}
+      - - {x: -31, y: -2.999996}
+        - {x: -31, y: -12}
+        - {x: -27, y: -12}
+        - {x: -25, y: -9.999996}
+        - {x: -25, y: -4.999996}
+        - {x: -27, y: -2.999996}
+      - - {x: -31, y: 8.000004}
+        - {x: -31, y: -2.999996}
+        - {x: -26, y: -2.999996}
+        - {x: -25, y: -0.9999962}
+        - {x: -25, y: 8.000004}
+      - - {x: 25, y: 11}
+        - {x: 25, y: 2.000004}
+        - {x: 27, y: 0.000003814697}
+        - {x: 29, y: 0.000003814697}
+        - {x: 31, y: 2.000004}
+        - {x: 31, y: 9.000005}
+        - {x: 28, y: 12}
+      - - {x: -31, y: 21}
+        - {x: -31, y: 9.000005}
+        - {x: -27, y: 9.000005}
+        - {x: -25, y: 10}
+        - {x: -25, y: 21}
+      - - {x: 27, y: 22}
+        - {x: 25, y: 20}
+        - {x: 25, y: 14}
+        - {x: 27, y: 12}
+        - {x: 29, y: 12}
+        - {x: 31, y: 14}
+        - {x: 31, y: 20}
+        - {x: 29, y: 22}
+      - - {x: -29, y: 31}
+        - {x: -31, y: 27}
+        - {x: -31, y: 22}
+        - {x: -18, y: 22}
+        - {x: -4.999996, y: 25}
+        - {x: -4.999996, y: 29}
+        - {x: -6.999996, y: 31}
+      - - {x: 18.00001, y: 31}
+        - {x: 17, y: 30}
+        - {x: 17, y: 25}
+        - {x: 23, y: 22}
+        - {x: 31, y: 22}
+        - {x: 31, y: 30}
+        - {x: 29, y: 31}
+      - - {x: -2.999996, y: 31}
+        - {x: -4.999996, y: 29}
+        - {x: -4.999996, y: 27}
+        - {x: -2.999996, y: 25}
+        - {x: 4.000004, y: 25}
+        - {x: 6.000004, y: 27}
+        - {x: 6.000004, y: 29}
+        - {x: 4.000004, y: 31}
+      - - {x: 9.000005, y: 31}
+        - {x: 7.000004, y: 29}
+        - {x: 7.000004, y: 27}
+        - {x: 9.000005, y: 25}
+        - {x: 15, y: 25}
+        - {x: 17, y: 27}
+        - {x: 17, y: 29}
+        - {x: 15, y: 31}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1b620dec7e47b5bc4483f14506cfa6
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Lines_Dashed
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 101
+        width: 93
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.5, y: -7}
+        - {x: -46.5, y: 7}
+        - {x: 46.5, y: 7}
+        - {x: 46.5, y: -7}
+      physicsShape:
+      - - {x: -46.5, y: 3}
+        - {x: -46.5, y: -3}
+        - {x: -39.5, y: -3}
+        - {x: -37.5, y: -1}
+        - {x: -37.5, y: 1}
+        - {x: -39.5, y: 3}
+      - - {x: -37.5, y: 3}
+        - {x: -37.5, y: -1}
+        - {x: -36.5, y: -3}
+        - {x: -29.5, y: -3}
+        - {x: -27.5, y: -1}
+        - {x: -27.5, y: 3}
+      - - {x: -27.5, y: 1}
+        - {x: -27.5, y: -3}
+        - {x: -15.5, y: -3}
+        - {x: -15.5, y: 1}
+        - {x: -17.5, y: 3}
+        - {x: -25.5, y: 3}
+      - - {x: -14.5, y: 3}
+        - {x: -15.5, y: 1}
+        - {x: -15.5, y: -1}
+        - {x: -13.5, y: -3}
+        - {x: -2.5, y: -3}
+        - {x: -2.5, y: 3}
+      - - {x: -1.5, y: 3}
+        - {x: -2.5, y: 2}
+        - {x: -2.5, y: -3}
+        - {x: 46.5, y: -3}
+        - {x: 46.5, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5b2e0299d44df893cc0c6e5f9f93ac
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Campaign_DistanceField_Circle
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 66
+        width: 62
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -31}
+        - {x: -31, y: 31}
+        - {x: 31, y: 31}
+        - {x: 31, y: -31}
+      physicsShape:
+      - - {x: -20, y: 31}
+        - {x: -31, y: 20}
+        - {x: -31, y: -20}
+        - {x: -30, y: -24}
+        - {x: -18, y: -31}
+        - {x: 26, y: -31}
+        - {x: 31, y: -14}
+        - {x: 31, y: 21}
+        - {x: 19, y: 31}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabbc1cebca74d9481c88d1cbaf1da3a
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Campaign_DistanceField_Boat
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 62
+        height: 62
+      alignment: 9
+      pivot: {x: 0.4999997, y: 0.1801778}
+      border: {x: 14, y: 14, z: 14, w: 14}
+      outline:
+      - - {x: -31, y: -31}
+        - {x: -31, y: 31}
+        - {x: 31, y: 31}
+        - {x: 31, y: -31}
+      physicsShape:
+      - - {x: 25, y: 28}
+        - {x: -26, y: 28}
+        - {x: -28, y: 26}
+        - {x: -28, y: -22}
+        - {x: -27, y: -28}
+        - {x: 25, y: -28}
+        - {x: 28, y: -26}
+        - {x: 28, y: 24}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21195683f4594525b1846ba0fd261c4a
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ad99cc300021a4fa3da132d9c61ec2, type: 3}
+  m_Name: CursorWrapper
+  m_EditorClassIdentifier:
+  defaultCursor: {fileID: 2800000, guid: 5dd9f782f109e4e498568adf00914890, type: 3}
+  defaultHotspot: {x: 5, y: 4}

@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: 4474c341514ee70468eac3d52ae76a71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: HeroIcon_Spriteshop_HeadPlaceholder_0
+  - first:
+      213: 21300002
+    second: HeroIcon_Spriteshop_Torso_0
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 512
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroIcon_Spriteshop_HeadPlaceholder_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 238
+        width: 200
+        height: 259
+      alignment: 9
+      pivot: {x: 0.49, y: 0.2509652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -123.5}
+        - {x: -100, y: -33.5}
+        - {x: -100, y: -9.5}
+        - {x: -99, y: -5.500004}
+        - {x: -84, y: 57.5}
+        - {x: -48, y: 129.5}
+        - {x: 49, y: 129.5}
+        - {x: 85, y: 60.5}
+        - {x: 98, y: 1.5}
+        - {x: 100, y: -4.499996}
+        - {x: 100, y: -33.5}
+        - {x: 56, y: -92.5}
+        - {x: 25, y: -129.5}
+        - {x: -15, y: -129.5}
+      physicsShape:
+      - - {x: 50, y: -84.5}
+        - {x: 63, y: -56.5}
+        - {x: 73, y: -56.5}
+        - {x: 79, y: -54.5}
+        - {x: 100, y: -30.5}
+        - {x: 100, y: -8.5}
+        - {x: 96.99999, y: -5.500004}
+        - {x: 77, y: -5.500004}
+        - {x: 77.99999, y: 40.49999}
+        - {x: 75, y: 59.5}
+        - {x: 69, y: 83.5}
+        - {x: 53, y: 110.5}
+        - {x: 42, y: 121.5}
+        - {x: 24, y: 129.5}
+        - {x: -9, y: 129.5}
+        - {x: -27, y: 125.5}
+        - {x: -37, y: 119.5}
+        - {x: -57, y: 99.5}
+        - {x: -68.99999, y: 77.5}
+        - {x: -71, y: 67.5}
+        - {x: -74, y: 48.5}
+        - {x: -74, y: 6.5}
+        - {x: -73, y: -3.5}
+        - {x: -78, y: -8.5}
+        - {x: -95, y: -9.5}
+        - {x: -98, y: -13.5}
+        - {x: -99.99999, y: -16.5}
+        - {x: -99.99999, y: -23.5}
+        - {x: -93.99999, y: -34.5}
+        - {x: -71, y: -59.5}
+        - {x: -62, y: -59.5}
+        - {x: -56, y: -85.5}
+        - {x: -48, y: -100.5}
+        - {x: -42, y: -107.5}
+        - {x: -27, y: -124.5}
+        - {x: -10, y: -129.5}
+        - {x: 15, y: -129.5}
+        - {x: 22, y: -126.5}
+        - {x: 36, y: -110.5}
+        - {x: 43, y: -99.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56deddd076e4066a9d358e613a5ad9b
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroIcon_Spriteshop_Torso_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 231
+        height: 232
+      alignment: 9
+      pivot: {x: 0.6406927, y: 0.7155172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.5, y: -116}
+        - {x: -115.5, y: -116}
+        - {x: -115.5, y: -58.00001}
+        - {x: -109.5, y: -8}
+        - {x: -79.5, y: 83}
+        - {x: -44.5, y: 114}
+        - {x: -30.5, y: 116}
+        - {x: 27.5, y: 116}
+        - {x: 46.5, y: 111}
+        - {x: 69.5, y: 88}
+        - {x: 78.5, y: 59}
+        - {x: 83.5, y: 20}
+        - {x: 115.5, y: -72}
+        - {x: 115.5, y: -115}
+        - {x: 114.5, y: -116}
+        - {x: 108.5, y: -116}
+        - {x: 88.5, y: -113}
+      physicsShape:
+      - - {x: 108.5, y: -116}
+        - {x: 111.5, y: -116}
+        - {x: 115.5, y: -113}
+        - {x: 115.5, y: -99}
+        - {x: 113.5, y: -82}
+        - {x: 103.5, y: -37}
+        - {x: 92.5, y: -14}
+        - {x: 83.5, y: 9}
+        - {x: 77.5, y: 22}
+        - {x: 78.5, y: 51}
+        - {x: 75.5, y: 62}
+        - {x: 73.5, y: 71}
+        - {x: 70.5, y: 83}
+        - {x: 65.5, y: 90}
+        - {x: 53.5, y: 101}
+        - {x: 47.5, y: 105}
+        - {x: 31.5, y: 112}
+        - {x: 15.5, y: 116}
+        - {x: -23.5, y: 116}
+        - {x: -41.5, y: 113}
+        - {x: -52.5, y: 105}
+        - {x: -79.5, y: 75}
+        - {x: -87.49999, y: 55}
+        - {x: -87.49999, y: 31}
+        - {x: -92.5, y: 25}
+        - {x: -100.5, y: 8}
+        - {x: -106.5, y: -6}
+        - {x: -111.5, y: -35}
+        - {x: -115.5, y: -66}
+        - {x: -115.5, y: -111}
+        - {x: -112.5, y: -113}
+        - {x: -94.5, y: -114}
+        - {x: -83.5, y: -112}
+        - {x: -67.5, y: -116}
+        - {x: 22.5, y: -116}
+        - {x: 33.5, y: -114}
+        - {x: 72.5, y: -113}
+        - {x: 106.5, y: -112}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf481c7cfa3f440db3c91fbb63b956f8
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

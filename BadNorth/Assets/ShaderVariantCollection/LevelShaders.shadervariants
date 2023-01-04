@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LevelShaders
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 41c91d85ff5fcc240a3f17a0c23676b5, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: _BLOOD_ON
+        passType: 0
+      - keywords: _MIRROR_ON
+        passType: 0
+      - keywords: _BLOOD_ON _MIRROR_ON
+        passType: 0
+      - keywords: _GAME_ON
+        passType: 0
+      - keywords: _BLOOD_ON _GAME_ON
+        passType: 0
+      - keywords: _GAME_ON _MIRROR_ON
+        passType: 0
+      - keywords: _BLOOD_ON _GAME_ON _MIRROR_ON
+        passType: 0
+      - keywords: _OUTLINE_ON
+        passType: 0
+      - keywords: _BLOOD_ON _OUTLINE_ON
+        passType: 0
+      - keywords: _GAME_ON _OUTLINE_ON
+        passType: 0
+      - keywords: _BLOOD_ON _GAME_ON _OUTLINE_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 2e7281bdb9594014985b875ffef108a8, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: _GAME_ON
+        passType: 0
+      - keywords: _PAINT_ON
+        passType: 0
+      - keywords: _GAME_ON _PAINT_ON
+        passType: 0
+      - keywords: _COLOR_UP
+        passType: 0
+      - keywords: _COLOR_UP _GAME_ON
+        passType: 0
+      - keywords: _COLOR_UP _PAINT_ON
+        passType: 0
+      - keywords: _COLOR_UP _GAME_ON _PAINT_ON
+        passType: 0
+      - keywords: _COLOR_CLIFF
+        passType: 0
+      - keywords: _COLOR_CLIFF _GAME_ON
+        passType: 0
+      - keywords: _COLOR_CLIFF _PAINT_ON
+        passType: 0
+      - keywords: _COLOR_CLIFF _GAME_ON _PAINT_ON
+        passType: 0
+      - keywords: _COLOR_TREE
+        passType: 0
+      - keywords: _COLOR_TREE _GAME_ON
+        passType: 0
+      - keywords: _COLOR_TREE _PAINT_ON
+        passType: 0
+      - keywords: _COLOR_TREE _GAME_ON _PAINT_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 66453f4247602724f8bd56962d89990d, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: _MIRROR_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _MIRROR_ON
+        passType: 0
+      - keywords: _GAME_ON
+        passType: 0
+      - keywords: _GAME_ON _MIRROR_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _GAME_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _GAME_ON _MIRROR_ON
+        passType: 0
+      - keywords: _PAINT_ON
+        passType: 0
+      - keywords: _MIRROR_ON _PAINT_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _PAINT_ON
+        passType: 0
+      - keywords: _GAME_ON _PAINT_ON
+        passType: 0
+      - keywords: _GAME_ON _MIRROR_ON _PAINT_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _GAME_ON _PAINT_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _GAME_ON _MIRROR_ON _PAINT_ON
+        passType: 0
+      - keywords: _OUTLINE_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _OUTLINE_ON
+        passType: 0
+      - keywords: _GAME_ON _OUTLINE_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _GAME_ON _OUTLINE_ON
+        passType: 0
+      - keywords: _OUTLINE_ON _PAINT_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _OUTLINE_ON _PAINT_ON
+        passType: 0
+      - keywords: _GAME_ON _OUTLINE_ON _PAINT_ON
+        passType: 0
+      - keywords: _CINEMATIC_ON _GAME_ON _OUTLINE_ON _PAINT_ON
+        passType: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6ca68abe0bc4e45b79cc7d5151e3e8, type: 3}
+  m_Name: Hero_Upgrade_Warhammer
+  m_EditorClassIdentifier:
+  upgradeType: {fileID: 11400000, guid: 97c806fb85d09404a9b725f8cd8383b1, type: 2}
+  infoSprite: {fileID: 21300000, guid: 554c6266e6111394bb57d9e6bf4b82e3, type: 3}
+  unlockValue: 1
+  nameTerm: UPGRADES/ITEM/WARHAMMER/NAME
+  shortDescription:
+  affectsPortrait: 0
+  levels:
+  - cost: 0
+    description: UPGRADES/ITEM/WARHAMMER/DESC
+    prepurchaseDescription: UPGRADES/ITEM/WARHAMMER/DESC
+  - cost: 8
+    description: UPGRADES/ITEM/WARHAMMER/DESC
+    prepurchaseDescription: UPGRADES/GENERIC/INCREASED_POWER
+  - cost: 14
+    description: UPGRADES/ITEM/WARHAMMER/DESC
+    prepurchaseDescription: UPGRADES/GENERIC/INCREASED_POWER
+  _uiPurchaseAudioId:
+    _name: UI/Upgrade/Warhammer
+  prerequisite: {fileID: 0}
+  AbilityPrefab: {fileID: 1930257767896375, guid: e63aebb9eff0a3d40ab2df41b810b90d, type: 2}

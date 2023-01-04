@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6d36c457b4f4842a8c218d4356440f, type: 3}
+  m_Name: AchievementData
+  m_EditorClassIdentifier:
+  _serializer:
+  - key: ACHIEVEMENT_A_NEW_HOME
+    name: A New Home
+    description: Complete the campaign on any difficulty
+    ps4Index: 0
+    steamAPI: ACHIEVEMENT_A_NEW_HOME
+    oculusAPI:
+    xboxAPI: 1
+    gogAPI: ACHIEVEMENT_A_NEW_HOME
+  - key: ACHIEVEMENT_NORSEBANE
+    name: Norsebane
+    description: Kill 1000 vikings
+    ps4Index: 2
+    steamAPI: ACHIEVEMENT_NORSEBANE
+    oculusAPI:
+    xboxAPI: 3
+    gogAPI: ACHIEVEMENT_NORSEBANE
+  - key: ACHIEVEMENT_BATHED_IN_BLOOD
+    name: Bathed in Blood
+    description: Kill 15000 vikings
+    ps4Index: 3
+    steamAPI: ACHIEVEMENT_BATH_IN_BLOOD
+    oculusAPI:
+    xboxAPI: 4
+    gogAPI: ACHIEVEMENT_BATH_IN_BLOOD
+  - key: ACHIEVEMENT_FOLK_HERO
+    name: Folk Hero
+    description: Complete the campaign on hard, recruit all commanders and keep them alive
+    ps4Index: 1
+    steamAPI: ACHIEVEMENT_FOLK_HERO
+    oculusAPI:
+    xboxAPI: 2
+    gogAPI: ACHIEVEMENT_FOLK_HERO
+  - key: ACHIEVEMENT_READY_FOR_BATTLE
+    name: Ready for Battle
+    description: Purchase an upgrade for one of your commanders
+    ps4Index: 4
+    steamAPI: ACHIEVEMENT_READY_FOR_BATTLE
+    oculusAPI:
+    xboxAPI: 5
+    gogAPI: ACHIEVEMENT_READY_FOR_BATTLE
+  - key: ACHIEVEMENT_COLD_STEEL
+    name: Cold Steel
+    description: Win an island in the snow
+    ps4Index: 6
+    steamAPI: ACHIEVEMENT_COLD_STEEL
+    oculusAPI:
+    xboxAPI: 7
+    gogAPI: ACHIEVEMENT_COLD_STEEL
+  - key: ACHIEVEMENT_NIGHTWATCH
+    name: Nightwatch
+    description: Win an island at nighttime
+    ps4Index: 7
+    steamAPI: ACHIEVEMENT_NIGHTWATCH
+    oculusAPI:
+    xboxAPI: 8
+    gogAPI: ACHIEVEMENT_NIGHTWATCH
+  - key: ACHIEVEMENT_SPLIT_THE_PARTY
+    name: Split the Party
+    description: Win 3 islands on a single turn
+    ps4Index: 8
+    steamAPI: ACHIEVEMENT_SPLIT_THE_PARTY
+    oculusAPI:
+    xboxAPI: 9
+    gogAPI: ACHIEVEMENT_SPLIT_THE_PARTY
+  - key: ACHIEVEMENT_PROTECTOR_OF_THE_REALM
+    name: Protector of the Realm
+    description: Win 10 islands in a row, without losing a single house
+    ps4Index: 10
+    steamAPI: ACHIEVEMENT_PROTECTOR_OF_THE_REALM
+    oculusAPI:
+    xboxAPI: 11
+    gogAPI: ACHIEVEMENT_PROTECTOR_OF_THE_REALM
+  - key: ACHIEVEMENT_READY_FOR_ANYTHING
+    name: Ready for Anything
+    description: Fully upgrade one of your commanders
+    ps4Index: 5
+    steamAPI: ACHIEVEMENT_READY_FOR_ANYTHING
+    oculusAPI:
+    xboxAPI: 6
+    gogAPI: ACHIEVEMENT_READY_FOR_ANYTHING
+  - key: ACHIEVEMENT_TURN_BACK_THE_TIDE
+    name: Turn Back the Tide
+    description: Kill all the vikings in a ship, before it reaches the shore
+    ps4Index: 9
+    steamAPI: ACHIEVEMENT_TURN_BACK_THE_TIDE
+    oculusAPI:
+    xboxAPI: 10
+    gogAPI: ACHIEVEMENT_TURN_BACK_THE_TIDE

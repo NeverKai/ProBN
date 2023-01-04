@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcffc3cc3f1cb3f4e952f56ac7f15251, type: 3}
+  m_Name: StorageData
+  m_EditorClassIdentifier:
+  PS4:
+    ExpectedSlots: 5
+    Default:
+      directory: Settings
+      title: Settings
+      subTitle: Settings
+      details: Game Settings
+      iconPath: /SaveIcon.png
+    Slots:
+    - directory: Statistics
+      title: Statistics
+      subTitle: Game Statistics
+      details: Statistics tracking data
+      iconPath: /SaveIcon.png
+      Files:
+      - Statistics.meta
+    SelfGen:
+    - directory:
+      title:
+      subTitle: Campaign data
+      details: Saved campaign slot
+      iconPath: /SaveIcon.png
+      FileContains: campaign
+  Oculus:
+    bucketName: SaveData
+  Xbox:
+    containerName: BadNorth
+  Nintendo:
+    MountName: badnorth
+  None:
+    directory: Saves/
+  saveLocalFiles:
+  - settings
+  saveCloudFiles:
+  - user
+  - campaign - 0
+  - campaign - 0.checkpoint
+  - campaign - 0.meta
+  - campaign - 1
+  - campaign - 1.checkpoint
+  - campaign - 1.meta
+  - campaign - 2
+  - campaign - 2.checkpoint
+  - campaign - 2.meta
+  - campaign - 3
+  - campaign - 3.checkpoint
+  - campaign - 3.meta
+  - campaign - 4
+  - campaign - 4.checkpoint
+  - campaign - 4.meta
+  - Beta/user
+  - Beta/campaign - 0
+  - Beta/campaign - 0.checkpoint
+  - Beta/campaign - 0.meta
+  - Beta/campaign - 1
+  - Beta/campaign - 1.checkpoint
+  - Beta/campaign - 1.meta
+  - Beta/campaign - 2
+  - Beta/campaign - 2.checkpoint
+  - Beta/campaign - 2.meta
+  - Beta/campaign - 3
+  - Beta/campaign - 3.checkpoint
+  - Beta/campaign - 3.meta
+  - Beta/campaign - 4
+  - Beta/campaign - 4.checkpoint
+  - Beta/campaign - 4.meta

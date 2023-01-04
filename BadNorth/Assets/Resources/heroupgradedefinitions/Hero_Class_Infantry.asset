@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61b2e357648efb458342485a43b6ea1, type: 3}
+  m_Name: Hero_Class_Infantry
+  m_EditorClassIdentifier:
+  upgradeType: {fileID: 11400000, guid: 50d62f410c7d7e84e92f49a472120d47, type: 2}
+  infoSprite: {fileID: 21300000, guid: cbcb2616b659e504aa2ed6ebe5c62577, type: 3}
+  unlockValue: 0
+  nameTerm: UPGRADES/INFANTRY/CLASS/NAME
+  shortDescription:
+  affectsPortrait: 0
+  levels:
+  - cost: 6
+    description: UPGRADES/INFANTRY/CLASS/DESC
+    prepurchaseDescription: UPGRADES/INFANTRY/CLASS/DESC
+  - cost: 12
+    description: UPGRADES/INFANTRY/CLASS/DESC
+    prepurchaseDescription: UPGRADES/INFANTRY/VETERAN/DESC
+  - cost: 20
+    description: UPGRADES/INFANTRY/CLASS/DESC
+    prepurchaseDescription: UPGRADES/INFANTRY/ELITE/DESC
+  _uiPurchaseAudioId:
+    _name: UI/Upgrade/Infantry
+  prerequisite: {fileID: 0}
+  AbilityPrefab: {fileID: 1678698400013533, guid: c3dc5f53dfe59d54db9b5db2b0946d1e, type: 2}
+  squadLevelTerms:
+  - UPGRADES/GENERIC/LEVEL_CLASS/MILITIA
+  - UPGRADES/GENERIC/LEVEL_CLASS/INFANTRY
+  - UPGRADES/GENERIC/LEVEL_CLASS/VETERAN_INFANTRY
+  - UPGRADES/GENERIC/LEVEL_CLASS/ELITE_INFANTRY
+  minionAgentPrefab: {fileID: 114734256859975325, guid: 71e41b6ee3bd0724aa7241a09041a5b9, type: 2}

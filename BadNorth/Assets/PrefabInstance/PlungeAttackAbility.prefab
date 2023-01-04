@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+PrefabInstance:
+  serializedVersion: 2
+  m_RootGameObject: {fileID: 1567165786781948}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+--- !u!1 &1567165786781948
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4518009309109213}
+  - component: {fileID: 114341134941942250}
+  - component: {fileID: 114372046093995686}
+  - component: {fileID: 114118480944875997}
+  m_Layer: 0
+  m_Name: PlungeAttackAbility
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4518009309109213
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567165786781948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.601875, y: -6.235581, z: -10.57463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114341134941942250
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567165786781948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41df8e86724324542b28b65f969b840d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _abilityNameTerm: UPGRADES/INFANTRY/PLUNGE/NAME
+  _tooltipDescription:
+  _buttonColor: {r: 0.3240872, g: 0.5661765, b: 0, a: 1}
+  _cooldownCompleteColor: {r: 0.3240872, g: 0.5661765, b: 0, a: 1}
+  _iconSprite: {fileID: 21300000, guid: 9556d6577c6257444989e1023556997d, type: 3}
+  _effectDuration: 0
+  _isCancelable: 0
+  _chargesPerIsland: 0
+  _cooldownPeriod: 45
+  _cancelMoveOnUse: 0
+  _cancelEffectOnMove: 0
+  _blocksMove: 1
+  actionConfirmAudioID: UI/Menu/SelectAbility
+  cooldownCompleteAudioID: Sfx/Ability/Plunge/Ready
+  targetNavspotPrefab: {fileID: 114510540114382039, guid: 928941d784ed8bf4e95ef93c4fbff25c, type: 2}
+  landPositionError: 0.15
+  timeout: 2
+  levelSettings:
+  - maxHeight: 2
+    explosion: {fileID: 11400000, guid: 52ee815e205281842bf341274695f246, type: 2}
+  - maxHeight: 2
+    explosion: {fileID: 11400000, guid: 5b828661b9f7d1749b6f1b66be3b2536, type: 2}
+  - maxHeight: 10
+    explosion: {fileID: 11400000, guid: dee5f249105d3b44d8eb6fda10afcdc5, type: 2}
+--- !u!114 &114372046093995686
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567165786781948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ee88c4d2543c146aa1bdfa5c60de52, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  layers:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!114 &114118480944875997
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567165786781948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35e2dc55b512e745991f965f6d99939, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  projectilePeakHeight: 0.35
+  projectilePeakError: 0.05
+  peakMeasuredFrom: 0

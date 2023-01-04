@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbab38213501287469d28e00c77fba2e, type: 3}
+  m_Name: PrefabManager
+  m_EditorClassIdentifier:
+  dustEffect: {fileID: 114173659432708860, guid: 0a707e5016a7cd544967d8e55a784094, type: 2}
+  hitEffect: {fileID: 114643691942476352, guid: f30ad2c7d33b68149b96456d12221057, type: 2}
+  bloodStain: {fileID: 114570298393721735, guid: 1a3f67cee0d0e4b4eb22c33132b51668, type: 2}
+  bloodSplash: {fileID: 114782623711445247, guid: 392c7b8b16d4bb249852405662c72804, type: 2}
+  bloodSplat: {fileID: 114569411653566843, guid: da4bad2214beb254c9f599926ad928a3, type: 2}
+  bloodSlash: {fileID: 114844938646225697, guid: 58fe6809c2d15724c93a7f54d9e47688, type: 2}
+  splash: {fileID: 114526761588412526, guid: 7a90f7006a9453249898bedc7d75c91e, type: 2}
+  swordClash: {fileID: 114482964674911533, guid: 978ecc96d0135e54087b5aaac5c85845, type: 2}
+  plungeLandEffect: {fileID: 114861257197380092, guid: 4d830821e21a53b4bb6a9820095a8314, type: 2}
+  bloodDecal: {fileID: 114810800409784982, guid: 0d27b007166cae04ab828eb96ba2ce85, type: 2}
+  jumpTrail: {fileID: 1782453970077254, guid: 26ecbdb758c3f634e8090f613a5a1d41, type: 2}
+  island: {fileID: 114524857213806866, guid: 3dea16e2e4ae25c419d8c8bf5c47731b, type: 2}
+  corpseMeshes:
+  - {fileID: 4300000, guid: cc28072324d39ef41a509f3903b4e702, type: 2}
+  - {fileID: 4300000, guid: 41f9163011447684eac06de94118e4f8, type: 2}
+  - {fileID: 4300000, guid: d8dbdbb0a38d30e4eb2f360494d378a4, type: 2}
+  - {fileID: 4300000, guid: a2530b399522bb14eb36b911a89d50e0, type: 2}
+  corpseMaterial: {fileID: 2100000, guid: cd63a39a403ce7442876c266c4535261, type: 2}
+  ragdoll: {fileID: 114268937485491222, guid: c4a0515d764aff64db38e008b0d41e72, type: 2}
+  torch: {fileID: 114588346900553895, guid: 7a296e62712ee7d4ab1d10acee608791, type: 2}
+  englishSquad: {fileID: 114007774729983489, guid: ca18b19652027224aa1978d97fc44302, type: 2}
+  militiaTemplate: {fileID: 114002321429178449, guid: c7645d6d31b9a5d45847f18472f8b33e, type: 2}
+  vikingSquad: {fileID: 114966057118955803, guid: 7c72849e0db937542aac3e928a8663d5, type: 2}
+  activeAbilityAudioMixerSnapshot: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+  normalAudioMixerSnapshot: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+  defaultGraphicParentColor: {r: 0.972549, g: 0.8862745, b: 0.8078431, a: 1}
+  continueButton: {fileID: 114421128607599743, guid: 8c64971e30fdee845bd437fd9aa22aba, type: 2}
+  universalUpgrades:
+  - {fileID: 114812324479286365, guid: e2fdc4ddb7165094093183c9fbdc064e, type: 2}
+  - {fileID: 114175649585106928, guid: 1783acef36d4e564ca3ea17782e5c8c5, type: 2}
+  - {fileID: 114272623134733089, guid: ae821f5815f3094429213d2b587e5c6b, type: 2}
+  navSpotCursor: {fileID: 114819790624369290, guid: 2dca8209fb2070347a47bc941e9be436, type: 2}
+  abilityFloatingIcon: {fileID: 114053510472449801, guid: d8a43e2b449aa7740a734e9765c249a7, type: 2}
+  targetNavspot: {fileID: 114146312356873173, guid: 802bfb0fa7a8d31489d872658a5356c9, type: 2}
+  landingBoxCollider: {fileID: 65817693122931380, guid: b02a174c3b922e541a202bf4befd04a1, type: 2}
+  disembarkProjectileSolver: {fileID: 114987410044830550, guid: ae439081be9880a428795cb3e02d8834, type: 2}

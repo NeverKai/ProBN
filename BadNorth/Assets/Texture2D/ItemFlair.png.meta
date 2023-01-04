@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 9a5e8fcd5dcaa334296bb2984b506f32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: ItemFlair_0
+  - first:
+      213: 21300002
+    second: LevelHoverFlair
+  - first:
+      213: 21300004
+    second: LevelWinFlair_0
+  - first:
+      213: 21300006
+    second: ItemFlair_1
+  - first:
+      213: 21300008
+    second: ItemFlair_2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 25
+  maxTextureSize: 1024
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ItemFlair_0
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 529
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: -40}
+        - {x: -40, y: -40}
+        - {x: -40, y: 40}
+        - {x: 40, y: 40}
+      physicsShape:
+      - - {x: -40, y: 40}
+        - {x: -40, y: -40}
+        - {x: 40, y: -40}
+        - {x: 40, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0bfe67cac7410b911757319ac87895
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelHoverFlair
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 419
+        width: 65
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32.5, y: -32.5}
+        - {x: -32.5, y: -32.5}
+        - {x: -32.5, y: 32.5}
+        - {x: 32.5, y: 32.5}
+      physicsShape:
+      - - {x: -32.5, y: 32.5}
+        - {x: -32.5, y: -32.5}
+        - {x: 32.5, y: -32.5}
+        - {x: 32.5, y: 32.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9025fedfd3d456bbc06acb15ebf2df6
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelWinFlair_0
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 311
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -36}
+        - {x: -36, y: -36}
+        - {x: -36, y: 36}
+        - {x: 36, y: 36}
+      physicsShape:
+      - - {x: -36, y: 36}
+        - {x: -36, y: -36}
+        - {x: 36, y: -36}
+        - {x: 36, y: 36}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d024ec04f624edcbd697acb35d4aea2
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemFlair_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 729
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: -40}
+        - {x: -40, y: -40}
+        - {x: -40, y: 40}
+        - {x: 40, y: 40}
+      physicsShape:
+      - - {x: -40, y: 40}
+        - {x: -40, y: -40}
+        - {x: 40, y: -40}
+        - {x: 40, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8a5b65cc5c4d808b3e60f539bac7d9
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemFlair_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 929
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: -40}
+        - {x: -40, y: -40}
+        - {x: -40, y: 40}
+        - {x: 40, y: 40}
+      physicsShape:
+      - - {x: -40, y: 40}
+        - {x: -40, y: -40}
+        - {x: 40, y: -40}
+        - {x: 40, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365665785cbd4dc09d0da1050f66f038
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

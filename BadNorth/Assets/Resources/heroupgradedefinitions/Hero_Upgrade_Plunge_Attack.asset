@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6ca68abe0bc4e45b79cc7d5151e3e8, type: 3}
+  m_Name: Hero_Upgrade_Plunge_Attack
+  m_EditorClassIdentifier:
+  upgradeType: {fileID: 11400000, guid: fe8a39a8f6143ee48ad9bc7861ff2469, type: 2}
+  infoSprite: {fileID: 21300000, guid: 9556d6577c6257444989e1023556997d, type: 3}
+  unlockValue: 0
+  nameTerm: UPGRADES/INFANTRY/PLUNGE/NAME
+  shortDescription:
+  affectsPortrait: 0
+  levels:
+  - cost: 7
+    description: UPGRADES/INFANTRY/PLUNGE/DESC
+    prepurchaseDescription: UPGRADES/INFANTRY/PLUNGE/DESC
+  - cost: 10
+    description: UPGRADES/INFANTRY/PLUNGE/DESC
+    prepurchaseDescription: UPGRADES/INFANTRY/PLUNGE/DESC2
+  - cost: 14
+    description: UPGRADES/INFANTRY/PLUNGE/DESC
+    prepurchaseDescription: UPGRADES/INFANTRY/PLUNGE/DESC3
+  _uiPurchaseAudioId:
+    _name: UI/Upgrade/Plunge
+  prerequisite: {fileID: 11400000, guid: 881040f486bf6d14385a8c92f92049a3, type: 2}
+  AbilityPrefab: {fileID: 1567165786781948, guid: f938f2d9ae5319a4d850e0766d3f4604, type: 2}

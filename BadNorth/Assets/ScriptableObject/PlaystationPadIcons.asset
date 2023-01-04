@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beda367043f75854fafaba248a4e26d0, type: 3}
+  m_Name: PlaystationPadIcons
+  m_EditorClassIdentifier:
+  actionTopRow1: {fileID: 21300086, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  actionTopRow2: {fileID: 21300084, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  actionBottomRow1: {fileID: 21300090, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  actionBottomRow2: {fileID: 21300088, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadLeft: {fileID: 21300076, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadRight: {fileID: 21300080, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadUp: {fileID: 21300078, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadDown: {fileID: 21300082, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadLeftRight: {fileID: 21300096, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadUpDown: {fileID: 21300098, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  bumperLeft: {fileID: 21300068, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  bumperRight: {fileID: 21300070, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  triggerLeft: {fileID: 21300064, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  triggerRight: {fileID: 21300066, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  stickLeft: {fileID: 21300072, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  stickRight: {fileID: 21300074, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}

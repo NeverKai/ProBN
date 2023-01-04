@@ -1,0 +1,1337 @@
+Shader "Unlit/DustParticle" {
+	Properties {
+		_MainTex ("Texture", 2D) = "white" {}
+		_Color ("Color", Vector) = (0.5,0.5,0.5,1)
+	}
+	SubShader {
+		LOD 100
+		Tags { "CanUseSpriteAtlas" = "true" "IGNOREPROJECTOR" = "true" "PreviewType" = "Plane" "RenderType" = "Opaque" }
+		Pass {
+			LOD 100
+			Tags { "CanUseSpriteAtlas" = "true" "IGNOREPROJECTOR" = "true" "PreviewType" = "Plane" "RenderType" = "Opaque" }
+			Blend SrcAlpha OneMinusSrcAlpha, SrcAlpha OneMinusSrcAlpha
+			ZWrite Off
+			Cull Off
+			GpuProgramID 46797
+			Program "vp" {
+				SubProgram "d3d11 " {
+					"vs_4_0
+					
+					#version 330
+					#extension GL_ARB_explicit_attrib_location : require
+					#extension GL_ARB_explicit_uniform_location : require
+					
+					#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+					#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+					#define UNITY_UNIFORM
+					#else
+					#define UNITY_UNIFORM uniform
+					#endif
+					#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+					#if UNITY_SUPPORTS_UNIFORM_LOCATION
+					#define UNITY_LOCATION(x) layout(location = x)
+					#define UNITY_BINDING(x) layout(binding = x, std140)
+					#else
+					#define UNITY_LOCATION(x)
+					#define UNITY_BINDING(x) layout(std140)
+					#endif
+					layout(std140) uniform VGlobals {
+						vec4 unused_0_0[2];
+						vec2 _AoTexSize;
+						vec3 _AoTexVolume;
+						vec4 unused_0_3[2];
+						vec2 _NormalTexSize;
+						vec3 _NormalTexVolume;
+						vec4 unused_0_6[2];
+						vec2 _PaintTexSize;
+						vec3 _PaintTexVolume;
+						vec3 _PaintTexOffset;
+						vec4 _LevelRect;
+						float _WindInterpolator;
+						vec3 _WindDir;
+						float _SqrtWindTime;
+						vec4 unused_0_14[16];
+						vec3 _SunDir;
+						vec4 unused_0_16[4];
+						vec4 _SideSunColor;
+						vec4 unused_0_18[2];
+						float _Year;
+						vec4 unused_0_20[7];
+						vec4 _SnowColor;
+						vec4 _CloudCoverage;
+						float _SnowAmount;
+						vec4 unused_0_24;
+						float _CameraUpScale;
+						vec4 _MinAmbientColor;
+						vec4 _MaxAmbientColor;
+						float _WaterLevel;
+						float _FogMaxRad;
+						float _FogMinRad;
+						vec4 unused_0_31[2];
+						vec4 _FlashColor;
+						vec3 _FlashDir;
+						vec4 unused_0_34[5];
+					};
+					layout(std140) uniform UnityPerFrame {
+						vec4 unused_1_0[9];
+						mat4x4 unity_MatrixV;
+						vec4 unused_1_2[4];
+						mat4x4 unity_MatrixVP;
+						vec4 unused_1_4[2];
+					};
+					uniform  sampler2D _PaintTex;
+					uniform  sampler2D _NormalTex;
+					uniform  sampler2D _GrassTex;
+					uniform  sampler2D _WindTex;
+					uniform  sampler2D _HighlightTex;
+					uniform  sampler2D _AoTex;
+					in  vec4 in_POSITION0;
+					in  vec4 in_TANGENT0;
+					in  vec2 in_TEXCOORD0;
+					in  vec2 in_TEXCOORD1;
+					out vec2 vs_TEXCOORD0;
+					out vec2 vs_TEXCOORD1;
+					out vec4 vs_COLOR0;
+					out vec2 vs_TEXCOORD2;
+					out vec2 vs_TEXCOORD3;
+					vec4 u_xlat0;
+					vec4 u_xlat1;
+					vec4 u_xlat2;
+					vec4 u_xlat3;
+					bool u_xlatb3;
+					vec4 u_xlat4;
+					vec4 u_xlat5;
+					vec4 u_xlat6;
+					vec4 u_xlat7;
+					vec4 u_xlat8;
+					vec4 u_xlat9;
+					vec4 u_xlat10;
+					vec4 u_xlat11;
+					vec4 u_xlat12;
+					vec4 u_xlat13;
+					vec4 u_xlat14;
+					vec3 u_xlat15;
+					vec3 u_xlat16;
+					bool u_xlatb16;
+					vec3 u_xlat18;
+					vec3 u_xlat19;
+					vec3 u_xlat20;
+					vec3 u_xlat21;
+					vec3 u_xlat25;
+					vec3 u_xlat26;
+					vec3 u_xlat27;
+					float u_xlat30;
+					float u_xlat31;
+					float u_xlat33;
+					vec2 u_xlat37;
+					float u_xlat45;
+					float u_xlat46;
+					float u_xlat47;
+					float u_xlat48;
+					float u_xlat49;
+					float u_xlat50;
+					float u_xlat53;
+					void main()
+					{
+					    u_xlat0.xyz = in_POSITION0.xyz + _PaintTexOffset.xyz;
+					    u_xlat1.xy = max(u_xlat0.xz, _LevelRect.xy);
+					    u_xlat0.xz = min(u_xlat1.xy, _LevelRect.zw);
+					    u_xlat0.xyz = max(u_xlat0.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat1.xyz = _PaintTexVolume.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat0.xyz = min(u_xlat0.xyz, u_xlat1.xyz);
+					    u_xlat0.xyz = u_xlat0.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat1.xyz = floor(u_xlat0.xyz);
+					    u_xlat0.xyz = fract(u_xlat0.xyz);
+					    u_xlat45 = _PaintTexVolume.x / _PaintTexSize.xxxy.z;
+					    u_xlat46 = u_xlat1.y * u_xlat45;
+					    u_xlat2.xyz = u_xlat1.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat3.xy = vec2(1.0, 1.0) / vec2(_PaintTexSize.x, _PaintTexSize.y);
+					    u_xlat4.x = u_xlat3.x * u_xlat2.x + u_xlat46;
+					    u_xlat4.y = u_xlat3.x * u_xlat1.x + u_xlat46;
+					    u_xlat4.z = u_xlat1.z * u_xlat3.y;
+					    u_xlat5 = textureLod(_PaintTex, u_xlat4.xz, 0.0);
+					    u_xlat16.yz = u_xlat4.yx;
+					    u_xlat6 = textureLod(_PaintTex, u_xlat4.yz, 0.0);
+					    u_xlat47 = u_xlat0.x * u_xlat5.y;
+					    u_xlat5.xyz = (-u_xlat0.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat47 = u_xlat47 * u_xlat5.y;
+					    u_xlat47 = u_xlat5.z * u_xlat47;
+					    u_xlat33 = u_xlat5.x * u_xlat6.y;
+					    u_xlat33 = u_xlat5.y * u_xlat33;
+					    u_xlat47 = u_xlat33 * u_xlat5.z + u_xlat47;
+					    u_xlat45 = u_xlat45 * u_xlat2.y;
+					    u_xlat4.y = u_xlat3.x * u_xlat1.x + u_xlat45;
+					    u_xlat4.x = u_xlat3.x * u_xlat2.x + u_xlat45;
+					    u_xlat16.x = u_xlat2.z * u_xlat3.y;
+					    u_xlat3 = textureLod(_PaintTex, u_xlat4.yz, 0.0);
+					    u_xlat6 = textureLod(_PaintTex, u_xlat4.xz, 0.0);
+					    u_xlat45 = u_xlat0.x * u_xlat6.y;
+					    u_xlat45 = u_xlat0.y * u_xlat45;
+					    u_xlat1.x = u_xlat5.x * u_xlat3.y;
+					    u_xlat1.x = u_xlat0.y * u_xlat1.x;
+					    u_xlat1.x = u_xlat1.x * u_xlat5.z + u_xlat47;
+					    u_xlat45 = u_xlat45 * u_xlat5.z + u_xlat1.x;
+					    u_xlat2 = textureLod(_PaintTex, u_xlat16.yx, 0.0);
+					    u_xlat3 = textureLod(_PaintTex, u_xlat16.zx, 0.0);
+					    u_xlat4.w = u_xlat16.x;
+					    u_xlat1.x = u_xlat0.x * u_xlat3.y;
+					    u_xlat1.y = u_xlat5.x * u_xlat2.y;
+					    u_xlat1.xy = u_xlat5.yy * u_xlat1.xy;
+					    u_xlat45 = u_xlat1.y * u_xlat0.z + u_xlat45;
+					    u_xlat45 = u_xlat1.x * u_xlat0.z + u_xlat45;
+					    u_xlat1 = textureLod(_PaintTex, u_xlat4.yw, 0.0);
+					    u_xlat2 = textureLod(_PaintTex, u_xlat4.xw, 0.0);
+					    u_xlat0.x = u_xlat0.x * u_xlat2.y;
+					    u_xlat0.x = u_xlat0.y * u_xlat0.x;
+					    u_xlat1.x = u_xlat5.x * u_xlat1.y;
+					    u_xlat15.x = u_xlat0.y * u_xlat1.x;
+					    u_xlat15.x = u_xlat15.x * u_xlat0.z + u_xlat45;
+					    u_xlat0.x = u_xlat0.x * u_xlat0.z + u_xlat15.x;
+					    u_xlat15.x = in_TEXCOORD1.x * in_TEXCOORD1.x;
+					    u_xlat15.x = u_xlat15.x * in_TEXCOORD1.x;
+					    u_xlat30 = u_xlat15.x * u_xlat15.x;
+					    u_xlat45 = (-u_xlat15.x) * u_xlat15.x + 1.0;
+					    u_xlat30 = u_xlat0.x * u_xlat45 + u_xlat30;
+					    u_xlat15.x = u_xlat30 * u_xlat15.x;
+					    u_xlat1.xyz = u_xlat15.xxx * vec3(3.20000005, 0.049999997, 0.150000006) + vec3(0.800000012, 0.200000003, 0.0500000007);
+					    u_xlat30 = (-in_TANGENT0.w) + _SqrtWindTime;
+					    u_xlat45 = sqrt(u_xlat30);
+					    u_xlat46 = u_xlat45 + 0.100000001;
+					    u_xlat45 = (-u_xlat45) + 1.0;
+					    u_xlat45 = max(u_xlat45, 0.0);
+					    u_xlat45 = (-u_xlat45) * u_xlat45 + 1.0;
+					    u_xlat45 = u_xlat45 * 0.200000003;
+					    u_xlat2.xyz = in_TANGENT0.xyz * vec3(u_xlat45) + in_POSITION0.xyz;
+					    u_xlat45 = u_xlat0.x * 0.200000003 + u_xlat46;
+					    u_xlat46 = u_xlat45 * u_xlat1.y + 0.300000012;
+					    u_xlat45 = u_xlat1.y * u_xlat45;
+					    u_xlat3.xz = _AoTexVolume.xz * vec2(0.5, 0.5) + u_xlat2.xz;
+					    u_xlat3.y = u_xlat2.y;
+					    u_xlat3.xyz = u_xlat3.xyz + vec3(-0.5, 0.5, -0.5);
+					    u_xlat3.xyz = max(u_xlat3.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat4.xyz = _NormalTexVolume.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat3.xyz = min(u_xlat3.xyz, u_xlat4.xyz);
+					    u_xlat3.xyz = u_xlat3.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat5.xyz = fract(u_xlat3.xyz);
+					    u_xlat3.xyz = floor(u_xlat3.xyz);
+					    u_xlat6.xyz = (-u_xlat5.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat7.xy = vec2(1.0, 1.0) / _NormalTexSize.xy;
+					    u_xlat8.z = u_xlat3.z * u_xlat7.y;
+					    u_xlat9.xyz = u_xlat3.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat16.x = _NormalTexVolume.x / _NormalTexSize.x;
+					    u_xlat47 = u_xlat3.y * u_xlat16.x;
+					    u_xlat8.x = u_xlat7.x * u_xlat9.x + u_xlat47;
+					    u_xlat8.y = u_xlat7.x * u_xlat3.x + u_xlat47;
+					    u_xlat10 = textureLod(_NormalTex, u_xlat8.xz, 0.0);
+					    u_xlat18.yz = u_xlat8.yx;
+					    u_xlat11 = textureLod(_NormalTex, u_xlat8.yz, 0.0);
+					    u_xlat11.xyz = u_xlat6.xxx * u_xlat11.xyz;
+					    u_xlat11.xyz = u_xlat6.yyy * u_xlat11.xyz;
+					    u_xlat10.xyz = u_xlat5.xxx * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat6.yyy * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat6.zzz * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat11.xyz * u_xlat6.zzz + u_xlat10.xyz;
+					    u_xlat47 = u_xlat9.y * u_xlat16.x;
+					    u_xlat8.y = u_xlat7.x * u_xlat3.x + u_xlat47;
+					    u_xlat8.x = u_xlat7.x * u_xlat9.x + u_xlat47;
+					    u_xlat18.x = u_xlat7.y * u_xlat9.z;
+					    u_xlat9 = textureLod(_NormalTex, u_xlat8.yz, 0.0);
+					    u_xlat11 = textureLod(_NormalTex, u_xlat8.xz, 0.0);
+					    u_xlat11.xyz = u_xlat5.xxx * u_xlat11.xyz;
+					    u_xlat11.xyz = u_xlat5.yyy * u_xlat11.xyz;
+					    u_xlat9.xyz = u_xlat6.xxx * u_xlat9.xyz;
+					    u_xlat9.xyz = u_xlat5.yyy * u_xlat9.xyz;
+					    u_xlat9.xyz = u_xlat9.xyz * u_xlat6.zzz + u_xlat10.xyz;
+					    u_xlat9.xyz = u_xlat11.xyz * u_xlat6.zzz + u_xlat9.xyz;
+					    u_xlat10 = textureLod(_NormalTex, u_xlat18.yx, 0.0);
+					    u_xlat11 = textureLod(_NormalTex, u_xlat18.zx, 0.0);
+					    u_xlat8.w = u_xlat18.x;
+					    u_xlat3.xyz = u_xlat5.xxx * u_xlat11.xyz;
+					    u_xlat3.xyz = u_xlat6.yyy * u_xlat3.xyz;
+					    u_xlat10.xyz = u_xlat6.xxx * u_xlat10.xyz;
+					    u_xlat21.xyz = u_xlat6.yyy * u_xlat10.xyz;
+					    u_xlat21.xyz = u_xlat21.xyz * u_xlat5.zzz + u_xlat9.xyz;
+					    u_xlat3.xyz = u_xlat3.xyz * u_xlat5.zzz + u_xlat21.xyz;
+					    u_xlat9 = textureLod(_NormalTex, u_xlat8.yw, 0.0);
+					    u_xlat8 = textureLod(_NormalTex, u_xlat8.xw, 0.0);
+					    u_xlat21.xyz = u_xlat5.xxx * u_xlat8.xyz;
+					    u_xlat21.xyz = u_xlat5.yyy * u_xlat21.xyz;
+					    u_xlat8.xyz = u_xlat6.xxx * u_xlat9.xyz;
+					    u_xlat5.xyw = u_xlat5.yyy * u_xlat8.xyz;
+					    u_xlat3.xyz = u_xlat5.xyw * u_xlat5.zzz + u_xlat3.xyz;
+					    u_xlat3.xyz = u_xlat21.xyz * u_xlat5.zzz + u_xlat3.xyz;
+					    u_xlat3.xyz = u_xlat3.xyz * vec3(2.0, 2.0, 2.0) + vec3(-1.0, -1.0, -1.0);
+					    u_xlat18.xyz = vec3(u_xlat45) * u_xlat3.xyz;
+					    u_xlat2.xyz = u_xlat18.xyz * vec3(0.800000012, 0.800000012, 0.800000012) + u_xlat2.xyz;
+					    u_xlat5.xz = _AoTexVolume.xz * vec2(0.5, 0.5);
+					    u_xlat5.y = 1.0;
+					    u_xlat18.xyz = u_xlat2.xyz + u_xlat5.xyz;
+					    u_xlat18.xyz = max(u_xlat18.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat6 = _AoTexVolume.yxyz + vec4(-2.0, -0.5, -0.5, -0.5);
+					    u_xlat18.xyz = min(u_xlat18.xyz, u_xlat6.yzw);
+					    u_xlat18.xyz = u_xlat18.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat8.xyz = fract(u_xlat18.xyz);
+					    u_xlat18.xyz = floor(u_xlat18.xyz);
+					    u_xlat9.xyz = (-u_xlat8.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat37.xy = vec2(1.0, 1.0) / _AoTexSize.xy;
+					    u_xlat25.x = u_xlat18.z * u_xlat37.y;
+					    u_xlat47 = _AoTexVolume.x / _AoTexSize.x;
+					    u_xlat49 = u_xlat18.y * u_xlat47;
+					    u_xlat25.y = u_xlat37.x * u_xlat18.x + u_xlat49;
+					    u_xlat11 = textureLod(_WindTex, u_xlat25.yx, 0.0);
+					    u_xlat11 = u_xlat9.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat9.yyyy * u_xlat11;
+					    u_xlat12.xyz = u_xlat18.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat25.z = u_xlat37.x * u_xlat12.x + u_xlat49;
+					    u_xlat13 = textureLod(_WindTex, u_xlat25.zx, 0.0);
+					    u_xlat14.z = u_xlat25.x;
+					    u_xlat13 = u_xlat8.xxxx * u_xlat13;
+					    u_xlat13 = u_xlat9.yyyy * u_xlat13;
+					    u_xlat13 = u_xlat9.zzzz * u_xlat13;
+					    u_xlat11 = u_xlat11 * u_xlat9.zzzz + u_xlat13;
+					    u_xlat33 = u_xlat47 * u_xlat12.y;
+					    u_xlat14.y = u_xlat37.x * u_xlat18.x + u_xlat33;
+					    u_xlat14.x = u_xlat37.x * u_xlat12.x + u_xlat33;
+					    u_xlat25.x = u_xlat37.y * u_xlat12.z;
+					    u_xlat12 = textureLod(_WindTex, u_xlat14.yz, 0.0);
+					    u_xlat13 = textureLod(_WindTex, u_xlat14.xz, 0.0);
+					    u_xlat13 = u_xlat8.xxxx * u_xlat13;
+					    u_xlat13 = u_xlat8.yyyy * u_xlat13;
+					    u_xlat12 = u_xlat9.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat8.yyyy * u_xlat12;
+					    u_xlat11 = u_xlat12 * u_xlat9.zzzz + u_xlat11;
+					    u_xlat11 = u_xlat13 * u_xlat9.zzzz + u_xlat11;
+					    u_xlat12 = textureLod(_WindTex, u_xlat25.yx, 0.0);
+					    u_xlat13 = textureLod(_WindTex, u_xlat25.zx, 0.0);
+					    u_xlat14.w = u_xlat25.x;
+					    u_xlat10 = u_xlat8.xxxx * u_xlat13;
+					    u_xlat10 = u_xlat9.yyyy * u_xlat10;
+					    u_xlat12 = u_xlat9.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat9.yyyy * u_xlat12;
+					    u_xlat11 = u_xlat12 * u_xlat8.zzzz + u_xlat11;
+					    u_xlat10 = u_xlat10 * u_xlat8.zzzz + u_xlat11;
+					    u_xlat11 = textureLod(_WindTex, u_xlat14.yw, 0.0);
+					    u_xlat12 = textureLod(_WindTex, u_xlat14.xw, 0.0);
+					    u_xlat12 = u_xlat8.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat8.yyyy * u_xlat12;
+					    u_xlat9 = u_xlat9.xxxx * u_xlat11;
+					    u_xlat9 = u_xlat8.yyyy * u_xlat9;
+					    u_xlat9 = u_xlat9 * u_xlat8.zzzz + u_xlat10;
+					    u_xlat8 = u_xlat12 * u_xlat8.zzzz + u_xlat9;
+					    u_xlat18.xyz = u_xlat8.yzx * vec3(4.0, 4.0, 4.0) + vec3(-2.0, -2.0, -2.0);
+					    u_xlat8 = u_xlat8 * vec4(4.0, 4.0, 4.0, 1.0) + vec4(-2.0, -2.0, -2.0, 0.0);
+					    u_xlat49 = dot(u_xlat8, u_xlat8);
+					    u_xlat49 = sqrt(u_xlat49);
+					    u_xlat49 = u_xlat30 * u_xlat49;
+					    u_xlat8.xyz = (-u_xlat18.xyz) + _WindDir.yzx;
+					    u_xlat8.xyz = vec3(_WindInterpolator) * u_xlat8.xyz + u_xlat18.xyz;
+					    u_xlat18.xyz = vec3(u_xlat30) * u_xlat18.zxy;
+					    u_xlat9.y = unity_MatrixV[1].z;
+					    u_xlat9.x = unity_MatrixV[0].z;
+					    u_xlat9.z = unity_MatrixV[2].z;
+					    u_xlat10.xyz = u_xlat8.xyz * (-u_xlat9.zxy);
+					    u_xlat8.xyz = (-u_xlat9.yzx) * u_xlat8.yzx + (-u_xlat10.xyz);
+					    u_xlat50 = dot(u_xlat8.xyz, u_xlat8.xyz);
+					    u_xlat50 = inversesqrt(u_xlat50);
+					    u_xlat8.xyz = vec3(u_xlat50) * u_xlat8.xyz;
+					    u_xlat10.xyz = (-u_xlat9.yzx) * u_xlat8.zxy;
+					    u_xlat10.xyz = u_xlat8.yzx * (-u_xlat9.zxy) + (-u_xlat10.xyz);
+					    u_xlat50 = dot((-u_xlat9.xz), (-u_xlat9.xz));
+					    u_xlat11.x = inversesqrt(u_xlat50);
+					    u_xlat11.yw = (-u_xlat9.xz) * u_xlat11.xx;
+					    u_xlat12.xyz = u_xlat11.wyx * vec3(1.0, 0.0, 0.0);
+					    u_xlat12.xyz = u_xlat11.xwy * vec3(0.0, 0.0, 1.0) + (-u_xlat12.xyz);
+					    u_xlat50 = dot(u_xlat12.xz, u_xlat12.xz);
+					    u_xlat50 = inversesqrt(u_xlat50);
+					    u_xlat12.xyz = vec3(u_xlat50) * u_xlat12.xyz;
+					    u_xlat11.z = 0.0;
+					    u_xlat13.xyz = u_xlat11.wyz * u_xlat12.yzx;
+					    u_xlat11.xyz = u_xlat11.zwy * u_xlat12.zxy + (-u_xlat13.xyz);
+					    u_xlat50 = u_xlat11.y * u_xlat11.y;
+					    u_xlat50 = inversesqrt(u_xlat50);
+					    u_xlat11.xyz = vec3(u_xlat50) * u_xlat11.xyz;
+					    u_xlat50 = in_TEXCOORD1.y + -0.5;
+					    u_xlat50 = u_xlat30 * u_xlat50;
+					    u_xlat13.x = sin(u_xlat50);
+					    u_xlat14.x = cos(u_xlat50);
+					    u_xlat13.xy = u_xlat13.xx * in_TEXCOORD0.yx;
+					    u_xlat50 = u_xlat14.x * in_TEXCOORD0.x + (-u_xlat13.x);
+					    u_xlat53 = u_xlat14.x * in_TEXCOORD0.y + u_xlat13.y;
+					    u_xlat12.xyz = vec3(u_xlat50) * u_xlat12.xyz;
+					    u_xlat11.xyz = u_xlat11.xyz * vec3(u_xlat53) + (-u_xlat12.xyz);
+					    u_xlat11.w = u_xlat11.y * _CameraUpScale;
+					    u_xlat26.xyz = vec3(u_xlat45) * u_xlat11.xwz;
+					    u_xlat45 = (-u_xlat3.x) + u_xlat11.x;
+					    u_xlat45 = u_xlat45 * 0.400000006 + u_xlat3.x;
+					    u_xlat1.x = u_xlat30 / u_xlat1.x;
+					    u_xlat30 = (-u_xlat30) + 1.0;
+					    u_xlat30 = clamp(u_xlat30, 0.0, 1.0);
+					    u_xlat30 = (-u_xlat30) * u_xlat30 + 1.0;
+					    u_xlatb3 = 1.0>=u_xlat1.x;
+					    u_xlat3.x = u_xlatb3 ? 1.0 : float(0.0);
+					    u_xlat12.xyz = u_xlat3.xxx * u_xlat26.xyz;
+					    u_xlat10.x = dot(u_xlat10.xyz, u_xlat12.xyz);
+					    u_xlat10.y = dot(u_xlat8.xyz, u_xlat12.xyz);
+					    u_xlat8.xy = u_xlat10.xy / vec2(u_xlat46);
+					    u_xlat10.xyw = in_TEXCOORD1.yxy * vec3(43.1240005, 123.0, 43.1240005);
+					    u_xlat46 = sin(u_xlat10.y);
+					    u_xlat46 = u_xlat46 * u_xlat49;
+					    u_xlat46 = u_xlat46 * _WindInterpolator;
+					    u_xlat10.z = (-u_xlat46) * 0.0100000007 + u_xlat10.x;
+					    vs_TEXCOORD0.xy = u_xlat8.xy * vec2(0.200000003, 0.200000003) + u_xlat10.zw;
+					    vs_TEXCOORD1.xy = in_TEXCOORD0.xy;
+					    u_xlat8.xyz = u_xlat15.xxx * (-u_xlat9.xyz);
+					    u_xlat15.x = _WindInterpolator * 0.300000012 + 0.100000001;
+					    u_xlat18.xyz = u_xlat18.xyz * u_xlat15.xxx + u_xlat2.xyz;
+					    u_xlat15.x = (-u_xlat6.x) * 0.5 + u_xlat2.y;
+					    u_xlat10.xyz = u_xlat26.xyz * u_xlat3.xxx + u_xlat18.xyz;
+					    u_xlat3.xyw = u_xlat12.xzy * vec3(0.5, 0.5, 0.5) + u_xlat18.xzy;
+					    u_xlat10.w = max(u_xlat10.y, _WaterLevel);
+					    u_xlat2.xyz = (-u_xlat8.xyz) * u_xlat1.zzz + u_xlat10.xwz;
+					    u_xlat8 = u_xlat2.yyyy * unity_MatrixVP[1];
+					    u_xlat8 = unity_MatrixVP[0] * u_xlat2.xxxx + u_xlat8;
+					    u_xlat8 = unity_MatrixVP[2] * u_xlat2.zzzz + u_xlat8;
+					    u_xlat31 = dot(u_xlat2.xz, u_xlat2.xz);
+					    u_xlat31 = sqrt(u_xlat31);
+					    u_xlat31 = u_xlat31 + (-_FogMinRad);
+					    gl_Position = u_xlat8 + unity_MatrixVP[3];
+					    u_xlat3.xyz = u_xlat5.xyz + u_xlat3.xwy;
+					    u_xlat2.xyz = u_xlat3.xwz + vec3(-0.5, 0.5, -0.5);
+					    u_xlat2.xyz = max(u_xlat2.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat2.xyz = min(u_xlat4.xyz, u_xlat2.xyz);
+					    u_xlat2.xyz = u_xlat2.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat4.xyz = floor(u_xlat2.xyz);
+					    u_xlat2.xyz = fract(u_xlat2.xyz);
+					    u_xlat46 = u_xlat16.x * u_xlat4.y;
+					    u_xlat5.y = u_xlat7.x * u_xlat4.x + u_xlat46;
+					    u_xlat5.z = u_xlat4.z * u_xlat7.y;
+					    u_xlat8 = textureLod(_NormalTex, u_xlat5.yz, 0.0);
+					    u_xlat10.xyz = (-u_xlat2.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat8 = u_xlat8 * u_xlat10.xxxx;
+					    u_xlat8 = u_xlat10.yyyy * u_xlat8;
+					    u_xlat19.xyz = u_xlat4.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat5.x = u_xlat7.x * u_xlat19.x + u_xlat46;
+					    u_xlat11 = textureLod(_NormalTex, u_xlat5.xz, 0.0);
+					    u_xlat27.yz = u_xlat5.yx;
+					    u_xlat11 = u_xlat2.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat10.yyyy * u_xlat11;
+					    u_xlat11 = u_xlat10.zzzz * u_xlat11;
+					    u_xlat8 = u_xlat8 * u_xlat10.zzzz + u_xlat11;
+					    u_xlat16.x = u_xlat16.x * u_xlat19.y;
+					    u_xlat5.y = u_xlat7.x * u_xlat4.x + u_xlat16.x;
+					    u_xlat5.x = u_xlat7.x * u_xlat19.x + u_xlat16.x;
+					    u_xlat27.x = u_xlat19.z * u_xlat7.y;
+					    u_xlat4 = textureLod(_NormalTex, u_xlat5.yz, 0.0);
+					    u_xlat11 = textureLod(_NormalTex, u_xlat5.xz, 0.0);
+					    u_xlat11 = u_xlat2.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat2.yyyy * u_xlat11;
+					    u_xlat4 = u_xlat10.xxxx * u_xlat4;
+					    u_xlat4 = u_xlat2.yyyy * u_xlat4;
+					    u_xlat4 = u_xlat4 * u_xlat10.zzzz + u_xlat8;
+					    u_xlat4 = u_xlat11 * u_xlat10.zzzz + u_xlat4;
+					    u_xlat8 = textureLod(_NormalTex, u_xlat27.yx, 0.0);
+					    u_xlat11 = textureLod(_NormalTex, u_xlat27.zx, 0.0);
+					    u_xlat5.w = u_xlat27.x;
+					    u_xlat11 = u_xlat2.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat10.yyyy * u_xlat11;
+					    u_xlat8 = u_xlat10.xxxx * u_xlat8;
+					    u_xlat8 = u_xlat10.yyyy * u_xlat8;
+					    u_xlat4 = u_xlat8 * u_xlat2.zzzz + u_xlat4;
+					    u_xlat4 = u_xlat11 * u_xlat2.zzzz + u_xlat4;
+					    u_xlat8 = textureLod(_NormalTex, u_xlat5.yw, 0.0);
+					    u_xlat5 = textureLod(_NormalTex, u_xlat5.xw, 0.0);
+					    u_xlat5 = u_xlat2.xxxx * u_xlat5;
+					    u_xlat5 = u_xlat2.yyyy * u_xlat5;
+					    u_xlat8 = u_xlat10.xxxx * u_xlat8;
+					    u_xlat8 = u_xlat2.yyyy * u_xlat8;
+					    u_xlat4 = u_xlat8 * u_xlat2.zzzz + u_xlat4;
+					    u_xlat4 = u_xlat5 * u_xlat2.zzzz + u_xlat4;
+					    u_xlat2.xyz = u_xlat4.xyz * vec3(2.0, 2.0, 2.0) + vec3(-1.0, -1.0, -1.0);
+					    u_xlat16.x = u_xlat4.w * 0.400000006;
+					    u_xlat4.xyz = (-u_xlat2.xyz) + u_xlat9.xyz;
+					    u_xlat2.xyz = vec3(u_xlat45) * u_xlat4.xyz + u_xlat2.xyz;
+					    u_xlat4.xyz = u_xlat2.xyz * vec3(0.400000006, 0.400000006, 0.400000006) + u_xlat3.xyz;
+					    u_xlat4.xyz = max(u_xlat4.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat4.xyz = min(u_xlat6.yzw, u_xlat4.xyz);
+					    u_xlat15.z = (-u_xlat6.x) * 0.5 + u_xlat3.w;
+					    u_xlat46 = u_xlat3.w + 1.5;
+					    u_xlat46 = floor(u_xlat46);
+					    u_xlat15.xz = u_xlat15.xz * vec2(0.25, 0.25);
+					    u_xlat4.xyz = u_xlat4.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat5.xyz = floor(u_xlat4.xyz);
+					    u_xlat4.xyz = fract(u_xlat4.xyz);
+					    u_xlat18.x = u_xlat47 * u_xlat5.y;
+					    u_xlat6.y = u_xlat37.x * u_xlat5.x + u_xlat18.x;
+					    u_xlat6.z = u_xlat5.z * u_xlat37.y;
+					    u_xlat8 = textureLod(_AoTex, u_xlat6.yz, 0.0);
+					    u_xlat9.xyz = (-u_xlat4.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat8.xyz = u_xlat8.xyz * u_xlat9.xxx;
+					    u_xlat8.xyz = u_xlat9.yyy * u_xlat8.xyz;
+					    u_xlat20.xyz = u_xlat5.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat6.x = u_xlat37.x * u_xlat20.x + u_xlat18.x;
+					    u_xlat10 = textureLod(_AoTex, u_xlat6.xz, 0.0);
+					    u_xlat26.yz = u_xlat6.yx;
+					    u_xlat10.xyz = u_xlat4.xxx * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat9.yyy * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat9.zzz * u_xlat10.xyz;
+					    u_xlat8.xyz = u_xlat8.xyz * u_xlat9.zzz + u_xlat10.xyz;
+					    u_xlat47 = u_xlat47 * u_xlat20.y;
+					    u_xlat6.y = u_xlat37.x * u_xlat5.x + u_xlat47;
+					    u_xlat6.x = u_xlat37.x * u_xlat20.x + u_xlat47;
+					    u_xlat26.x = u_xlat20.z * u_xlat37.y;
+					    u_xlat5 = textureLod(_AoTex, u_xlat6.yz, 0.0);
+					    u_xlat7 = textureLod(_AoTex, u_xlat6.xz, 0.0);
+					    u_xlat7.xyz = u_xlat4.xxx * u_xlat7.xyz;
+					    u_xlat7.xyz = u_xlat4.yyy * u_xlat7.xyz;
+					    u_xlat5.xyz = u_xlat9.xxx * u_xlat5.xyz;
+					    u_xlat5.xyz = u_xlat4.yyy * u_xlat5.xyz;
+					    u_xlat5.xyz = u_xlat5.xyz * u_xlat9.zzz + u_xlat8.xyz;
+					    u_xlat5.xyz = u_xlat7.xyz * u_xlat9.zzz + u_xlat5.xyz;
+					    u_xlat7 = textureLod(_AoTex, u_xlat26.yx, 0.0);
+					    u_xlat8 = textureLod(_AoTex, u_xlat26.zx, 0.0);
+					    u_xlat6.w = u_xlat26.x;
+					    u_xlat8.xyz = u_xlat4.xxx * u_xlat8.xyz;
+					    u_xlat8.xyz = u_xlat9.yyy * u_xlat8.xyz;
+					    u_xlat7.xyz = u_xlat9.xxx * u_xlat7.xyz;
+					    u_xlat7.xyz = u_xlat9.yyy * u_xlat7.xyz;
+					    u_xlat5.xyz = u_xlat7.xyz * u_xlat4.zzz + u_xlat5.xyz;
+					    u_xlat5.xyz = u_xlat8.xyz * u_xlat4.zzz + u_xlat5.xyz;
+					    u_xlat7 = textureLod(_AoTex, u_xlat6.yw, 0.0);
+					    u_xlat6 = textureLod(_AoTex, u_xlat6.xw, 0.0);
+					    u_xlat6.xyz = u_xlat4.xxx * u_xlat6.xyz;
+					    u_xlat6.xyz = u_xlat4.yyy * u_xlat6.xyz;
+					    u_xlat7.xyz = u_xlat9.xxx * u_xlat7.xyz;
+					    u_xlat4.xyw = u_xlat4.yyy * u_xlat7.xyz;
+					    u_xlat4.xyw = u_xlat4.xyw * u_xlat4.zzz + u_xlat5.xyz;
+					    u_xlat4.xyz = u_xlat6.xyz * u_xlat4.zzz + u_xlat4.xyw;
+					    u_xlat5.zw = _SunDir.xx * vec2(1.0, -1.0);
+					    u_xlat5.xy = abs(_SunDir.yx);
+					    u_xlat6.xyz = u_xlat5.zxw;
+					    u_xlat6.xyz = clamp(u_xlat6.xyz, 0.0, 1.0);
+					    u_xlat47 = u_xlat5.x + u_xlat5.y;
+					    u_xlat4.xyw = u_xlat4.xyz * u_xlat6.xyz;
+					    u_xlat18.x = u_xlat4.y + u_xlat4.x;
+					    u_xlat18.x = u_xlat6.z * u_xlat4.z + u_xlat18.x;
+					    u_xlat16.x = u_xlat18.x * 0.600000024 + u_xlat16.x;
+					    u_xlat18.x = (-u_xlat15.z);
+					    u_xlat18.x = clamp(u_xlat18.x, 0.0, 1.0);
+					    u_xlat45 = u_xlat15.z;
+					    u_xlat45 = clamp(u_xlat45, 0.0, 1.0);
+					    u_xlat48 = max(u_xlat18.x, u_xlat45);
+					    u_xlat48 = (-u_xlat48) + 1.0;
+					    u_xlat5.x = _Year;
+					    u_xlat5.y = 0.0;
+					    u_xlat5 = textureLod(_GrassTex, u_xlat5.xy, 0.0);
+					    u_xlat6.xyz = vec3(u_xlat45) * u_xlat5.yzx;
+					    u_xlat6.xyz = u_xlat5.xyz * vec3(u_xlat48) + u_xlat6.xyz;
+					    u_xlat6.xyz = u_xlat18.xxx * u_xlat5.zxy + u_xlat6.xyz;
+					    u_xlat7.xyz = (-u_xlat6.xyz) + _SnowColor.xyz;
+					    u_xlat6.xyz = vec3(_SnowAmount) * u_xlat7.xyz + u_xlat6.xyz;
+					    u_xlat7.xyz = u_xlat6.xyz * _MinAmbientColor.xyz;
+					    u_xlat6.xyz = (-_MinAmbientColor.xyz) * u_xlat6.xyz + _MaxAmbientColor.xyz;
+					    u_xlat6.xyz = u_xlat16.xxx * u_xlat6.xyz + u_xlat7.xyz;
+					    u_xlat45 = dot(u_xlat2.xyz, u_xlat2.xyz);
+					    u_xlat45 = inversesqrt(u_xlat45);
+					    u_xlat7.xyz = vec3(u_xlat45) * u_xlat2.xyz;
+					    u_xlat7.w = (-u_xlat7.x);
+					    u_xlat2.xyz = u_xlat7.xyw;
+					    u_xlat2.xyz = clamp(u_xlat2.xyz, 0.0, 1.0);
+					    u_xlat45 = dot(u_xlat7.xyz, _FlashDir.xyz);
+					    u_xlat45 = clamp(u_xlat45, 0.0, 1.0);
+					    u_xlat45 = (-u_xlat45) + 1.0;
+					    u_xlat2.xy = u_xlat2.xy * u_xlat4.xy;
+					    u_xlat16.x = u_xlat2.y + u_xlat2.x;
+					    u_xlat16.x = u_xlat4.w * u_xlat2.z + u_xlat16.x;
+					    u_xlat16.x = u_xlat16.x / u_xlat47;
+					    u_xlat2.xyz = _SideSunColor.xyz * _CloudCoverage.zzz;
+					    u_xlat2.xyz = u_xlat2.xyz * u_xlat16.xxx + u_xlat6.xyz;
+					    u_xlat16.x = u_xlat45 * u_xlat45;
+					    u_xlat45 = (-u_xlat45) * u_xlat16.x + 1.0;
+					    u_xlat4.xyz = vec3(u_xlat45) * _FlashColor.xyz;
+					    u_xlat2.xyz = u_xlat4.xyz * vec3(0.600000024, 0.600000024, 0.600000024) + u_xlat2.xyz;
+					    u_xlat45 = u_xlat15.x;
+					    u_xlat45 = clamp(u_xlat45, 0.0, 1.0);
+					    u_xlat15.x = (-u_xlat15.x);
+					    u_xlat15.x = clamp(u_xlat15.x, 0.0, 1.0);
+					    u_xlat16.x = max(u_xlat15.x, u_xlat45);
+					    u_xlat4.xyz = u_xlat5.yzx * vec3(u_xlat45);
+					    u_xlat45 = (-u_xlat16.x) + 1.0;
+					    u_xlat4.xyz = u_xlat5.xyz * vec3(u_xlat45) + u_xlat4.xyz;
+					    u_xlat4.xyz = u_xlat15.xxx * u_xlat5.zxy + u_xlat4.xyz;
+					    u_xlat5.xyz = (-u_xlat4.xyz) + _SnowColor.xyz;
+					    u_xlat4.xyz = vec3(_SnowAmount) * u_xlat5.xyz + u_xlat4.xyz;
+					    u_xlat5.xyz = (-u_xlat4.xyz) + vec3(0.400000006, 0.400000006, 0.400000006);
+					    u_xlat0.xyw = u_xlat0.xxx * u_xlat5.xyz + u_xlat4.xyz;
+					    u_xlat18.xz = floor(u_xlat3.xz);
+					    u_xlat3.xz = fract(u_xlat3.xz);
+					    u_xlat3.xz = u_xlat3.xz + vec2(-0.5, -0.5);
+					    u_xlat3.xz = -abs(u_xlat3.xz) * vec2(2.0, 2.0) + vec2(1.0, 1.0);
+					    u_xlat3.xz = u_xlat3.xz * vec2(3.0, 3.0);
+					    u_xlat3.xz = min(u_xlat3.xz, vec2(1.0, 1.0));
+					    u_xlat16.x = u_xlat3.z * u_xlat3.x;
+					    u_xlat46 = u_xlat46 * _AoTexVolume.x + u_xlat18.x;
+					    u_xlat3.y = u_xlat18.z / _AoTexSize.y;
+					    u_xlat3.x = u_xlat46 / _AoTexSize.x;
+					    u_xlat3 = textureLod(_HighlightTex, u_xlat3.xy, 0.0);
+					    u_xlat3 = u_xlat16.xxxx * u_xlat3;
+					    u_xlatb16 = 0.0<u_xlat3.w;
+					    u_xlat4.xyz = u_xlat3.xyz / u_xlat3.www;
+					    u_xlat3.xyz = (bool(u_xlatb16)) ? u_xlat4.xyz : u_xlat3.xyz;
+					    u_xlat3.xyz = (-u_xlat0.xyw) * u_xlat2.xyz + u_xlat3.xyz;
+					    u_xlat0.xyw = u_xlat2.xyz * u_xlat0.xyw;
+					    vs_COLOR0.xyz = u_xlat3.www * u_xlat3.xyz + u_xlat0.xyw;
+					    u_xlat0.x = (-u_xlat1.x) * u_xlat1.x + 1.0;
+					    vs_TEXCOORD3.x = u_xlat1.x;
+					    vs_COLOR0.w = u_xlat0.x * u_xlat30;
+					    u_xlat0.x = _FogMaxRad + (-_FogMinRad);
+					    vs_TEXCOORD2.x = u_xlat31 / u_xlat0.x;
+					    vs_TEXCOORD2.x = clamp(vs_TEXCOORD2.x, 0.0, 1.0);
+					    return;
+					}"
+				}
+				SubProgram "d3d11 " {
+					Keywords { "_BLOOD_ON" }
+					"vs_4_0
+					
+					#version 330
+					#extension GL_ARB_explicit_attrib_location : require
+					#extension GL_ARB_explicit_uniform_location : require
+					
+					#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+					#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+					#define UNITY_UNIFORM
+					#else
+					#define UNITY_UNIFORM uniform
+					#endif
+					#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+					#if UNITY_SUPPORTS_UNIFORM_LOCATION
+					#define UNITY_LOCATION(x) layout(location = x)
+					#define UNITY_BINDING(x) layout(binding = x, std140)
+					#else
+					#define UNITY_LOCATION(x)
+					#define UNITY_BINDING(x) layout(std140)
+					#endif
+					layout(std140) uniform VGlobals {
+						vec4 unused_0_0[2];
+						vec2 _AoTexSize;
+						vec3 _AoTexVolume;
+						vec4 unused_0_3[2];
+						vec2 _NormalTexSize;
+						vec3 _NormalTexVolume;
+						vec4 unused_0_6[2];
+						vec2 _PaintTexSize;
+						vec3 _PaintTexVolume;
+						vec3 _PaintTexOffset;
+						vec4 _LevelRect;
+						float _WindInterpolator;
+						vec3 _WindDir;
+						float _SqrtWindTime;
+						vec4 unused_0_14[16];
+						vec3 _SunDir;
+						vec4 unused_0_16[4];
+						vec4 _SideSunColor;
+						vec4 unused_0_18[2];
+						float _Year;
+						vec4 unused_0_20;
+						vec4 _BloodColor;
+						vec4 unused_0_22[5];
+						vec4 _SnowColor;
+						vec4 _CloudCoverage;
+						float _SnowAmount;
+						vec4 unused_0_26;
+						float _CameraUpScale;
+						vec4 _MinAmbientColor;
+						vec4 _MaxAmbientColor;
+						float _WaterLevel;
+						float _FogMaxRad;
+						float _FogMinRad;
+						vec4 unused_0_33[2];
+						vec4 _FlashColor;
+						vec3 _FlashDir;
+						vec4 unused_0_36[5];
+					};
+					layout(std140) uniform UnityPerFrame {
+						vec4 unused_1_0[9];
+						mat4x4 unity_MatrixV;
+						vec4 unused_1_2[4];
+						mat4x4 unity_MatrixVP;
+						vec4 unused_1_4[2];
+					};
+					uniform  sampler2D _PaintTex;
+					uniform  sampler2D _NormalTex;
+					uniform  sampler2D _GrassTex;
+					uniform  sampler2D _WindTex;
+					uniform  sampler2D _HighlightTex;
+					uniform  sampler2D _AoTex;
+					in  vec4 in_POSITION0;
+					in  vec4 in_TANGENT0;
+					in  vec2 in_TEXCOORD0;
+					in  vec2 in_TEXCOORD1;
+					out vec2 vs_TEXCOORD0;
+					out vec2 vs_TEXCOORD1;
+					out vec4 vs_COLOR0;
+					out vec2 vs_TEXCOORD2;
+					out vec2 vs_TEXCOORD3;
+					vec4 u_xlat0;
+					vec4 u_xlat1;
+					vec4 u_xlat2;
+					vec4 u_xlat3;
+					bool u_xlatb3;
+					vec4 u_xlat4;
+					vec4 u_xlat5;
+					vec4 u_xlat6;
+					vec4 u_xlat7;
+					vec4 u_xlat8;
+					vec4 u_xlat9;
+					vec4 u_xlat10;
+					vec4 u_xlat11;
+					vec4 u_xlat12;
+					vec4 u_xlat13;
+					vec4 u_xlat14;
+					vec3 u_xlat16;
+					bool u_xlatb16;
+					vec3 u_xlat17;
+					vec3 u_xlat18;
+					vec3 u_xlat20;
+					vec3 u_xlat21;
+					vec3 u_xlat25;
+					vec3 u_xlat26;
+					vec3 u_xlat28;
+					float u_xlat30;
+					vec2 u_xlat31;
+					vec2 u_xlat33;
+					float u_xlat34;
+					vec2 u_xlat37;
+					float u_xlat45;
+					float u_xlat46;
+					float u_xlat47;
+					float u_xlat48;
+					float u_xlat49;
+					float u_xlat50;
+					float u_xlat53;
+					float u_xlat54;
+					void main()
+					{
+					    u_xlat0.xyz = in_POSITION0.xyz + _PaintTexOffset.xyz;
+					    u_xlat1.xy = max(u_xlat0.xz, _LevelRect.xy);
+					    u_xlat0.xz = min(u_xlat1.xy, _LevelRect.zw);
+					    u_xlat0.xyz = max(u_xlat0.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat1.xyz = _PaintTexVolume.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat0.xyz = min(u_xlat0.xyz, u_xlat1.xyz);
+					    u_xlat0.xyz = u_xlat0.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat1.xyz = floor(u_xlat0.xyz);
+					    u_xlat0.xyz = fract(u_xlat0.xyz);
+					    u_xlat45 = _PaintTexVolume.x / _PaintTexSize.xxxy.z;
+					    u_xlat46 = u_xlat1.y * u_xlat45;
+					    u_xlat2.xyz = u_xlat1.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat3.xy = vec2(1.0, 1.0) / vec2(_PaintTexSize.x, _PaintTexSize.y);
+					    u_xlat4.x = u_xlat3.x * u_xlat2.x + u_xlat46;
+					    u_xlat4.y = u_xlat3.x * u_xlat1.x + u_xlat46;
+					    u_xlat4.z = u_xlat1.z * u_xlat3.y;
+					    u_xlat5 = textureLod(_PaintTex, u_xlat4.xz, 0.0);
+					    u_xlat16.yz = u_xlat4.yx;
+					    u_xlat6 = textureLod(_PaintTex, u_xlat4.yz, 0.0);
+					    u_xlat33.xy = u_xlat0.xx * u_xlat5.yx;
+					    u_xlat5.xyz = (-u_xlat0.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat33.xy = u_xlat33.xy * u_xlat5.yy;
+					    u_xlat33.xy = u_xlat5.zz * u_xlat33.xy;
+					    u_xlat6.xy = u_xlat5.xx * u_xlat6.yx;
+					    u_xlat6.xy = u_xlat5.yy * u_xlat6.xy;
+					    u_xlat33.xy = u_xlat6.xy * u_xlat5.zz + u_xlat33.xy;
+					    u_xlat45 = u_xlat45 * u_xlat2.y;
+					    u_xlat4.y = u_xlat3.x * u_xlat1.x + u_xlat45;
+					    u_xlat4.x = u_xlat3.x * u_xlat2.x + u_xlat45;
+					    u_xlat16.x = u_xlat2.z * u_xlat3.y;
+					    u_xlat2 = textureLod(_PaintTex, u_xlat4.yz, 0.0);
+					    u_xlat6 = textureLod(_PaintTex, u_xlat4.xz, 0.0);
+					    u_xlat2.zw = u_xlat0.xx * u_xlat6.yx;
+					    u_xlat2.xy = u_xlat5.xx * u_xlat2.yx;
+					    u_xlat2 = u_xlat0.yyyy * u_xlat2;
+					    u_xlat2.xy = u_xlat2.xy * u_xlat5.zz + u_xlat33.xy;
+					    u_xlat2.xy = u_xlat2.zw * u_xlat5.zz + u_xlat2.xy;
+					    u_xlat3 = textureLod(_PaintTex, u_xlat16.yx, 0.0);
+					    u_xlat6 = textureLod(_PaintTex, u_xlat16.zx, 0.0);
+					    u_xlat4.w = u_xlat16.x;
+					    u_xlat1.xy = u_xlat0.xx * u_xlat6.yx;
+					    u_xlat1.zw = u_xlat5.xx * u_xlat3.yx;
+					    u_xlat1 = u_xlat5.yyyy * u_xlat1;
+					    u_xlat31.xy = u_xlat1.zw * u_xlat0.zz + u_xlat2.xy;
+					    u_xlat1.xy = u_xlat1.xy * u_xlat0.zz + u_xlat31.xy;
+					    u_xlat2 = textureLod(_PaintTex, u_xlat4.yw, 0.0);
+					    u_xlat3 = textureLod(_PaintTex, u_xlat4.xw, 0.0);
+					    u_xlat0.xw = u_xlat0.xx * u_xlat3.yx;
+					    u_xlat0.xw = u_xlat0.yy * u_xlat0.xw;
+					    u_xlat31.xy = u_xlat5.xx * u_xlat2.yx;
+					    u_xlat31.xy = u_xlat0.yy * u_xlat31.xy;
+					    u_xlat1.xy = u_xlat31.xy * u_xlat0.zz + u_xlat1.xy;
+					    u_xlat0.xy = u_xlat0.xw * u_xlat0.zz + u_xlat1.xy;
+					    u_xlat30 = in_TEXCOORD1.x * in_TEXCOORD1.x;
+					    u_xlat30 = u_xlat30 * in_TEXCOORD1.x;
+					    u_xlat45 = u_xlat30 * u_xlat30 + -1.0;
+					    u_xlat45 = u_xlat0.y * u_xlat45 + 1.0;
+					    u_xlat30 = u_xlat45 * u_xlat30;
+					    u_xlat45 = u_xlat30 * u_xlat30;
+					    u_xlat1.x = (-u_xlat30) * u_xlat30 + 1.0;
+					    u_xlat45 = u_xlat0.x * u_xlat1.x + u_xlat45;
+					    u_xlat30 = u_xlat45 * u_xlat30;
+					    u_xlat1.xyz = vec3(u_xlat30) * vec3(3.20000005, 0.049999997, 0.150000006) + vec3(0.800000012, 0.200000003, 0.0500000007);
+					    u_xlat45 = (-in_TANGENT0.w) + _SqrtWindTime;
+					    u_xlat46 = sqrt(u_xlat45);
+					    u_xlat2.x = u_xlat46 + 0.100000001;
+					    u_xlat46 = (-u_xlat46) + 1.0;
+					    u_xlat46 = max(u_xlat46, 0.0);
+					    u_xlat46 = (-u_xlat46) * u_xlat46 + 1.0;
+					    u_xlat46 = u_xlat46 * 0.200000003;
+					    u_xlat17.xyz = in_TANGENT0.xyz * vec3(u_xlat46) + in_POSITION0.xyz;
+					    u_xlat46 = u_xlat0.x * 0.200000003 + u_xlat2.x;
+					    u_xlat2.x = u_xlat46 * u_xlat1.y + 0.300000012;
+					    u_xlat16.x = u_xlat1.y * u_xlat46;
+					    u_xlat3.xz = _AoTexVolume.xz * vec2(0.5, 0.5) + u_xlat17.xz;
+					    u_xlat3.y = u_xlat17.y;
+					    u_xlat3.xyz = u_xlat3.xyz + vec3(-0.5, 0.5, -0.5);
+					    u_xlat3.xyz = max(u_xlat3.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat4.xyz = _NormalTexVolume.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat3.xyz = min(u_xlat3.xyz, u_xlat4.xyz);
+					    u_xlat3.xyz = u_xlat3.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat5.xyz = fract(u_xlat3.xyz);
+					    u_xlat3.xyz = floor(u_xlat3.xyz);
+					    u_xlat6.xyz = (-u_xlat5.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat7.xy = vec2(1.0, 1.0) / _NormalTexSize.xy;
+					    u_xlat8.z = u_xlat3.z * u_xlat7.y;
+					    u_xlat9.xyz = u_xlat3.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat46 = _NormalTexVolume.x / _NormalTexSize.x;
+					    u_xlat18.x = u_xlat3.y * u_xlat46;
+					    u_xlat8.x = u_xlat7.x * u_xlat9.x + u_xlat18.x;
+					    u_xlat8.y = u_xlat7.x * u_xlat3.x + u_xlat18.x;
+					    u_xlat10 = textureLod(_NormalTex, u_xlat8.xz, 0.0);
+					    u_xlat18.yz = u_xlat8.yx;
+					    u_xlat11 = textureLod(_NormalTex, u_xlat8.yz, 0.0);
+					    u_xlat11.xyz = u_xlat6.xxx * u_xlat11.xyz;
+					    u_xlat11.xyz = u_xlat6.yyy * u_xlat11.xyz;
+					    u_xlat10.xyz = u_xlat5.xxx * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat6.yyy * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat6.zzz * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat11.xyz * u_xlat6.zzz + u_xlat10.xyz;
+					    u_xlat49 = u_xlat9.y * u_xlat46;
+					    u_xlat8.y = u_xlat7.x * u_xlat3.x + u_xlat49;
+					    u_xlat8.x = u_xlat7.x * u_xlat9.x + u_xlat49;
+					    u_xlat18.x = u_xlat7.y * u_xlat9.z;
+					    u_xlat9 = textureLod(_NormalTex, u_xlat8.yz, 0.0);
+					    u_xlat11 = textureLod(_NormalTex, u_xlat8.xz, 0.0);
+					    u_xlat11.xyz = u_xlat5.xxx * u_xlat11.xyz;
+					    u_xlat11.xyz = u_xlat5.yyy * u_xlat11.xyz;
+					    u_xlat9.xyz = u_xlat6.xxx * u_xlat9.xyz;
+					    u_xlat9.xyz = u_xlat5.yyy * u_xlat9.xyz;
+					    u_xlat9.xyz = u_xlat9.xyz * u_xlat6.zzz + u_xlat10.xyz;
+					    u_xlat9.xyz = u_xlat11.xyz * u_xlat6.zzz + u_xlat9.xyz;
+					    u_xlat10 = textureLod(_NormalTex, u_xlat18.yx, 0.0);
+					    u_xlat11 = textureLod(_NormalTex, u_xlat18.zx, 0.0);
+					    u_xlat8.w = u_xlat18.x;
+					    u_xlat3.xyz = u_xlat5.xxx * u_xlat11.xyz;
+					    u_xlat3.xyz = u_xlat6.yyy * u_xlat3.xyz;
+					    u_xlat10.xyz = u_xlat6.xxx * u_xlat10.xyz;
+					    u_xlat21.xyz = u_xlat6.yyy * u_xlat10.xyz;
+					    u_xlat21.xyz = u_xlat21.xyz * u_xlat5.zzz + u_xlat9.xyz;
+					    u_xlat3.xyz = u_xlat3.xyz * u_xlat5.zzz + u_xlat21.xyz;
+					    u_xlat9 = textureLod(_NormalTex, u_xlat8.yw, 0.0);
+					    u_xlat8 = textureLod(_NormalTex, u_xlat8.xw, 0.0);
+					    u_xlat21.xyz = u_xlat5.xxx * u_xlat8.xyz;
+					    u_xlat21.xyz = u_xlat5.yyy * u_xlat21.xyz;
+					    u_xlat8.xyz = u_xlat6.xxx * u_xlat9.xyz;
+					    u_xlat5.xyw = u_xlat5.yyy * u_xlat8.xyz;
+					    u_xlat3.xyz = u_xlat5.xyw * u_xlat5.zzz + u_xlat3.xyz;
+					    u_xlat3.xyz = u_xlat21.xyz * u_xlat5.zzz + u_xlat3.xyz;
+					    u_xlat3.xyz = u_xlat3.xyz * vec3(2.0, 2.0, 2.0) + vec3(-1.0, -1.0, -1.0);
+					    u_xlat18.xyz = u_xlat16.xxx * u_xlat3.xyz;
+					    u_xlat17.xyz = u_xlat18.xyz * vec3(0.800000012, 0.800000012, 0.800000012) + u_xlat17.xyz;
+					    u_xlat5.xz = _AoTexVolume.xz * vec2(0.5, 0.5);
+					    u_xlat5.y = 1.0;
+					    u_xlat18.xyz = u_xlat17.xyz + u_xlat5.xyz;
+					    u_xlat18.xyz = max(u_xlat18.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat6 = _AoTexVolume.yxyz + vec4(-2.0, -0.5, -0.5, -0.5);
+					    u_xlat18.xyz = min(u_xlat18.xyz, u_xlat6.yzw);
+					    u_xlat18.xyz = u_xlat18.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat8.xyz = fract(u_xlat18.xyz);
+					    u_xlat18.xyz = floor(u_xlat18.xyz);
+					    u_xlat9.xyz = (-u_xlat8.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat37.xy = vec2(1.0, 1.0) / _AoTexSize.xy;
+					    u_xlat25.x = u_xlat18.z * u_xlat37.y;
+					    u_xlat49 = _AoTexVolume.x / _AoTexSize.x;
+					    u_xlat50 = u_xlat18.y * u_xlat49;
+					    u_xlat25.y = u_xlat37.x * u_xlat18.x + u_xlat50;
+					    u_xlat11 = textureLod(_WindTex, u_xlat25.yx, 0.0);
+					    u_xlat11 = u_xlat9.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat9.yyyy * u_xlat11;
+					    u_xlat12.xyz = u_xlat18.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat25.z = u_xlat37.x * u_xlat12.x + u_xlat50;
+					    u_xlat13 = textureLod(_WindTex, u_xlat25.zx, 0.0);
+					    u_xlat14.z = u_xlat25.x;
+					    u_xlat13 = u_xlat8.xxxx * u_xlat13;
+					    u_xlat13 = u_xlat9.yyyy * u_xlat13;
+					    u_xlat13 = u_xlat9.zzzz * u_xlat13;
+					    u_xlat11 = u_xlat11 * u_xlat9.zzzz + u_xlat13;
+					    u_xlat33.x = u_xlat49 * u_xlat12.y;
+					    u_xlat14.y = u_xlat37.x * u_xlat18.x + u_xlat33.x;
+					    u_xlat14.x = u_xlat37.x * u_xlat12.x + u_xlat33.x;
+					    u_xlat25.x = u_xlat37.y * u_xlat12.z;
+					    u_xlat12 = textureLod(_WindTex, u_xlat14.yz, 0.0);
+					    u_xlat13 = textureLod(_WindTex, u_xlat14.xz, 0.0);
+					    u_xlat13 = u_xlat8.xxxx * u_xlat13;
+					    u_xlat13 = u_xlat8.yyyy * u_xlat13;
+					    u_xlat12 = u_xlat9.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat8.yyyy * u_xlat12;
+					    u_xlat11 = u_xlat12 * u_xlat9.zzzz + u_xlat11;
+					    u_xlat11 = u_xlat13 * u_xlat9.zzzz + u_xlat11;
+					    u_xlat12 = textureLod(_WindTex, u_xlat25.yx, 0.0);
+					    u_xlat13 = textureLod(_WindTex, u_xlat25.zx, 0.0);
+					    u_xlat14.w = u_xlat25.x;
+					    u_xlat10 = u_xlat8.xxxx * u_xlat13;
+					    u_xlat10 = u_xlat9.yyyy * u_xlat10;
+					    u_xlat12 = u_xlat9.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat9.yyyy * u_xlat12;
+					    u_xlat11 = u_xlat12 * u_xlat8.zzzz + u_xlat11;
+					    u_xlat10 = u_xlat10 * u_xlat8.zzzz + u_xlat11;
+					    u_xlat11 = textureLod(_WindTex, u_xlat14.yw, 0.0);
+					    u_xlat12 = textureLod(_WindTex, u_xlat14.xw, 0.0);
+					    u_xlat12 = u_xlat8.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat8.yyyy * u_xlat12;
+					    u_xlat9 = u_xlat9.xxxx * u_xlat11;
+					    u_xlat9 = u_xlat8.yyyy * u_xlat9;
+					    u_xlat9 = u_xlat9 * u_xlat8.zzzz + u_xlat10;
+					    u_xlat8 = u_xlat12 * u_xlat8.zzzz + u_xlat9;
+					    u_xlat18.xyz = u_xlat8.yzx * vec3(4.0, 4.0, 4.0) + vec3(-2.0, -2.0, -2.0);
+					    u_xlat8 = u_xlat8 * vec4(4.0, 4.0, 4.0, 1.0) + vec4(-2.0, -2.0, -2.0, 0.0);
+					    u_xlat50 = dot(u_xlat8, u_xlat8);
+					    u_xlat50 = sqrt(u_xlat50);
+					    u_xlat50 = u_xlat45 * u_xlat50;
+					    u_xlat8.xyz = (-u_xlat18.xyz) + _WindDir.yzx;
+					    u_xlat8.xyz = vec3(_WindInterpolator) * u_xlat8.xyz + u_xlat18.xyz;
+					    u_xlat18.xyz = vec3(u_xlat45) * u_xlat18.zxy;
+					    u_xlat9.y = unity_MatrixV[1].z;
+					    u_xlat9.x = unity_MatrixV[0].z;
+					    u_xlat9.z = unity_MatrixV[2].z;
+					    u_xlat10.xyz = u_xlat8.xyz * (-u_xlat9.zxy);
+					    u_xlat8.xyz = (-u_xlat9.yzx) * u_xlat8.yzx + (-u_xlat10.xyz);
+					    u_xlat53 = dot(u_xlat8.xyz, u_xlat8.xyz);
+					    u_xlat53 = inversesqrt(u_xlat53);
+					    u_xlat8.xyz = vec3(u_xlat53) * u_xlat8.xyz;
+					    u_xlat10.xyz = (-u_xlat9.yzx) * u_xlat8.zxy;
+					    u_xlat10.xyz = u_xlat8.yzx * (-u_xlat9.zxy) + (-u_xlat10.xyz);
+					    u_xlat53 = dot((-u_xlat9.xz), (-u_xlat9.xz));
+					    u_xlat11.x = inversesqrt(u_xlat53);
+					    u_xlat11.yw = (-u_xlat9.xz) * u_xlat11.xx;
+					    u_xlat12.xyz = u_xlat11.wyx * vec3(1.0, 0.0, 0.0);
+					    u_xlat12.xyz = u_xlat11.xwy * vec3(0.0, 0.0, 1.0) + (-u_xlat12.xyz);
+					    u_xlat53 = dot(u_xlat12.xz, u_xlat12.xz);
+					    u_xlat53 = inversesqrt(u_xlat53);
+					    u_xlat12.xyz = vec3(u_xlat53) * u_xlat12.xyz;
+					    u_xlat11.z = 0.0;
+					    u_xlat13.xyz = u_xlat11.wyz * u_xlat12.yzx;
+					    u_xlat11.xyz = u_xlat11.zwy * u_xlat12.zxy + (-u_xlat13.xyz);
+					    u_xlat53 = u_xlat11.y * u_xlat11.y;
+					    u_xlat53 = inversesqrt(u_xlat53);
+					    u_xlat11.xyz = vec3(u_xlat53) * u_xlat11.xyz;
+					    u_xlat53 = in_TEXCOORD1.y + -0.5;
+					    u_xlat53 = u_xlat45 * u_xlat53;
+					    u_xlat13.x = sin(u_xlat53);
+					    u_xlat14.x = cos(u_xlat53);
+					    u_xlat13.xy = u_xlat13.xx * in_TEXCOORD0.yx;
+					    u_xlat53 = u_xlat14.x * in_TEXCOORD0.x + (-u_xlat13.x);
+					    u_xlat54 = u_xlat14.x * in_TEXCOORD0.y + u_xlat13.y;
+					    u_xlat12.xyz = vec3(u_xlat53) * u_xlat12.xyz;
+					    u_xlat11.xyz = u_xlat11.xyz * vec3(u_xlat54) + (-u_xlat12.xyz);
+					    u_xlat11.w = u_xlat11.y * _CameraUpScale;
+					    u_xlat26.xyz = u_xlat16.xxx * u_xlat11.xwz;
+					    u_xlat16.x = (-u_xlat3.x) + u_xlat11.x;
+					    u_xlat16.x = u_xlat16.x * 0.400000006 + u_xlat3.x;
+					    u_xlat1.x = u_xlat45 / u_xlat1.x;
+					    u_xlat45 = (-u_xlat45) + 1.0;
+					    u_xlat45 = clamp(u_xlat45, 0.0, 1.0);
+					    u_xlat45 = (-u_xlat45) * u_xlat45 + 1.0;
+					    u_xlatb3 = 1.0>=u_xlat1.x;
+					    u_xlat3.x = u_xlatb3 ? 1.0 : float(0.0);
+					    u_xlat12.xyz = u_xlat3.xxx * u_xlat26.xyz;
+					    u_xlat10.x = dot(u_xlat10.xyz, u_xlat12.xyz);
+					    u_xlat10.y = dot(u_xlat8.xyz, u_xlat12.xyz);
+					    u_xlat8.xy = u_xlat10.xy / u_xlat2.xx;
+					    u_xlat10.xyw = in_TEXCOORD1.yxy * vec3(43.1240005, 123.0, 43.1240005);
+					    u_xlat2.x = sin(u_xlat10.y);
+					    u_xlat2.x = u_xlat2.x * u_xlat50;
+					    u_xlat2.x = u_xlat2.x * _WindInterpolator;
+					    u_xlat10.z = (-u_xlat2.x) * 0.0100000007 + u_xlat10.x;
+					    vs_TEXCOORD0.xy = u_xlat8.xy * vec2(0.200000003, 0.200000003) + u_xlat10.zw;
+					    vs_TEXCOORD1.xy = in_TEXCOORD0.xy;
+					    u_xlat8.xyz = vec3(u_xlat30) * (-u_xlat9.xyz);
+					    u_xlat30 = _WindInterpolator * 0.300000012 + 0.100000001;
+					    u_xlat2.xyw = u_xlat18.xyz * vec3(u_xlat30) + u_xlat17.xyz;
+					    u_xlat30 = (-u_xlat6.x) * 0.5 + u_xlat17.y;
+					    u_xlat30 = u_xlat30 * 0.25;
+					    u_xlat3.xyz = u_xlat26.xyz * u_xlat3.xxx + u_xlat2.xyw;
+					    u_xlat2.xyw = u_xlat12.xzy * vec3(0.5, 0.5, 0.5) + u_xlat2.xwy;
+					    u_xlat3.w = max(u_xlat3.y, _WaterLevel);
+					    u_xlat3.xyz = (-u_xlat8.xyz) * u_xlat1.zzz + u_xlat3.xwz;
+					    u_xlat8 = u_xlat3.yyyy * unity_MatrixVP[1];
+					    u_xlat8 = unity_MatrixVP[0] * u_xlat3.xxxx + u_xlat8;
+					    u_xlat8 = unity_MatrixVP[2] * u_xlat3.zzzz + u_xlat8;
+					    u_xlat31.x = dot(u_xlat3.xz, u_xlat3.xz);
+					    u_xlat31.x = sqrt(u_xlat31.x);
+					    u_xlat31.x = u_xlat31.x + (-_FogMinRad);
+					    gl_Position = u_xlat8 + unity_MatrixVP[3];
+					    u_xlat2.xyz = u_xlat5.xyz + u_xlat2.xwy;
+					    u_xlat3.xyz = u_xlat2.xwz + vec3(-0.5, 0.5, -0.5);
+					    u_xlat3.xyz = max(u_xlat3.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat3.xyz = min(u_xlat4.xyz, u_xlat3.xyz);
+					    u_xlat3.xyz = u_xlat3.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat4.xyz = floor(u_xlat3.xyz);
+					    u_xlat3.xyz = fract(u_xlat3.xyz);
+					    u_xlat48 = u_xlat46 * u_xlat4.y;
+					    u_xlat5.y = u_xlat7.x * u_xlat4.x + u_xlat48;
+					    u_xlat5.z = u_xlat4.z * u_xlat7.y;
+					    u_xlat8 = textureLod(_NormalTex, u_xlat5.yz, 0.0);
+					    u_xlat10.xyz = (-u_xlat3.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat8 = u_xlat8 * u_xlat10.xxxx;
+					    u_xlat8 = u_xlat10.yyyy * u_xlat8;
+					    u_xlat11.xyz = u_xlat4.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat5.x = u_xlat7.x * u_xlat11.x + u_xlat48;
+					    u_xlat12 = textureLod(_NormalTex, u_xlat5.xz, 0.0);
+					    u_xlat28.yz = u_xlat5.yx;
+					    u_xlat12 = u_xlat3.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat10.yyyy * u_xlat12;
+					    u_xlat12 = u_xlat10.zzzz * u_xlat12;
+					    u_xlat8 = u_xlat8 * u_xlat10.zzzz + u_xlat12;
+					    u_xlat46 = u_xlat46 * u_xlat11.y;
+					    u_xlat5.y = u_xlat7.x * u_xlat4.x + u_xlat46;
+					    u_xlat5.x = u_xlat7.x * u_xlat11.x + u_xlat46;
+					    u_xlat28.x = u_xlat7.y * u_xlat11.z;
+					    u_xlat11 = textureLod(_NormalTex, u_xlat5.yz, 0.0);
+					    u_xlat12 = textureLod(_NormalTex, u_xlat5.xz, 0.0);
+					    u_xlat12 = u_xlat3.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat3.yyyy * u_xlat12;
+					    u_xlat11 = u_xlat10.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat3.yyyy * u_xlat11;
+					    u_xlat8 = u_xlat11 * u_xlat10.zzzz + u_xlat8;
+					    u_xlat8 = u_xlat12 * u_xlat10.zzzz + u_xlat8;
+					    u_xlat11 = textureLod(_NormalTex, u_xlat28.yx, 0.0);
+					    u_xlat12 = textureLod(_NormalTex, u_xlat28.zx, 0.0);
+					    u_xlat5.w = u_xlat28.x;
+					    u_xlat12 = u_xlat3.xxxx * u_xlat12;
+					    u_xlat12 = u_xlat10.yyyy * u_xlat12;
+					    u_xlat11 = u_xlat10.xxxx * u_xlat11;
+					    u_xlat11 = u_xlat10.yyyy * u_xlat11;
+					    u_xlat8 = u_xlat11 * u_xlat3.zzzz + u_xlat8;
+					    u_xlat8 = u_xlat12 * u_xlat3.zzzz + u_xlat8;
+					    u_xlat11 = textureLod(_NormalTex, u_xlat5.yw, 0.0);
+					    u_xlat5 = textureLod(_NormalTex, u_xlat5.xw, 0.0);
+					    u_xlat5 = u_xlat3.xxxx * u_xlat5;
+					    u_xlat5 = u_xlat3.yyyy * u_xlat5;
+					    u_xlat10 = u_xlat10.xxxx * u_xlat11;
+					    u_xlat10 = u_xlat3.yyyy * u_xlat10;
+					    u_xlat8 = u_xlat10 * u_xlat3.zzzz + u_xlat8;
+					    u_xlat3 = u_xlat5 * u_xlat3.zzzz + u_xlat8;
+					    u_xlat3.xyz = u_xlat3.xyz * vec3(2.0, 2.0, 2.0) + vec3(-1.0, -1.0, -1.0);
+					    u_xlat46 = u_xlat3.w * 0.400000006;
+					    u_xlat4.xyz = (-u_xlat3.xyz) + u_xlat9.xyz;
+					    u_xlat3.xyz = u_xlat16.xxx * u_xlat4.xyz + u_xlat3.xyz;
+					    u_xlat4.xyz = u_xlat3.xyz * vec3(0.400000006, 0.400000006, 0.400000006) + u_xlat2.xyz;
+					    u_xlat4.xyz = max(u_xlat4.xyz, vec3(0.5, 0.5, 0.5));
+					    u_xlat4.xyz = min(u_xlat6.yzw, u_xlat4.xyz);
+					    u_xlat16.x = (-u_xlat6.x) * 0.5 + u_xlat2.w;
+					    u_xlat17.x = u_xlat2.w + 1.5;
+					    u_xlat17.x = floor(u_xlat17.x);
+					    u_xlat16.x = u_xlat16.x * 0.25;
+					    u_xlat4.xyz = u_xlat4.xyz + vec3(-0.5, -0.5, -0.5);
+					    u_xlat5.xyz = floor(u_xlat4.xyz);
+					    u_xlat4.xyz = fract(u_xlat4.xyz);
+					    u_xlat47 = u_xlat49 * u_xlat5.y;
+					    u_xlat6.y = u_xlat37.x * u_xlat5.x + u_xlat47;
+					    u_xlat6.z = u_xlat5.z * u_xlat37.y;
+					    u_xlat8 = textureLod(_AoTex, u_xlat6.yz, 0.0);
+					    u_xlat9.xyz = (-u_xlat4.xyz) + vec3(1.0, 1.0, 1.0);
+					    u_xlat8.xyz = u_xlat8.xyz * u_xlat9.xxx;
+					    u_xlat8.xyz = u_xlat9.yyy * u_xlat8.xyz;
+					    u_xlat20.xyz = u_xlat5.xyz + vec3(1.0, 1.0, 1.0);
+					    u_xlat6.x = u_xlat37.x * u_xlat20.x + u_xlat47;
+					    u_xlat10 = textureLod(_AoTex, u_xlat6.xz, 0.0);
+					    u_xlat26.yz = u_xlat6.yx;
+					    u_xlat10.xyz = u_xlat4.xxx * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat9.yyy * u_xlat10.xyz;
+					    u_xlat10.xyz = u_xlat9.zzz * u_xlat10.xyz;
+					    u_xlat8.xyz = u_xlat8.xyz * u_xlat9.zzz + u_xlat10.xyz;
+					    u_xlat47 = u_xlat49 * u_xlat20.y;
+					    u_xlat6.y = u_xlat37.x * u_xlat5.x + u_xlat47;
+					    u_xlat6.x = u_xlat37.x * u_xlat20.x + u_xlat47;
+					    u_xlat26.x = u_xlat20.z * u_xlat37.y;
+					    u_xlat5 = textureLod(_AoTex, u_xlat6.yz, 0.0);
+					    u_xlat7 = textureLod(_AoTex, u_xlat6.xz, 0.0);
+					    u_xlat7.xyz = u_xlat4.xxx * u_xlat7.xyz;
+					    u_xlat7.xyz = u_xlat4.yyy * u_xlat7.xyz;
+					    u_xlat5.xyz = u_xlat9.xxx * u_xlat5.xyz;
+					    u_xlat5.xyz = u_xlat4.yyy * u_xlat5.xyz;
+					    u_xlat5.xyz = u_xlat5.xyz * u_xlat9.zzz + u_xlat8.xyz;
+					    u_xlat5.xyz = u_xlat7.xyz * u_xlat9.zzz + u_xlat5.xyz;
+					    u_xlat7 = textureLod(_AoTex, u_xlat26.yx, 0.0);
+					    u_xlat8 = textureLod(_AoTex, u_xlat26.zx, 0.0);
+					    u_xlat6.w = u_xlat26.x;
+					    u_xlat8.xyz = u_xlat4.xxx * u_xlat8.xyz;
+					    u_xlat8.xyz = u_xlat9.yyy * u_xlat8.xyz;
+					    u_xlat7.xyz = u_xlat9.xxx * u_xlat7.xyz;
+					    u_xlat7.xyz = u_xlat9.yyy * u_xlat7.xyz;
+					    u_xlat5.xyz = u_xlat7.xyz * u_xlat4.zzz + u_xlat5.xyz;
+					    u_xlat5.xyz = u_xlat8.xyz * u_xlat4.zzz + u_xlat5.xyz;
+					    u_xlat7 = textureLod(_AoTex, u_xlat6.yw, 0.0);
+					    u_xlat6 = textureLod(_AoTex, u_xlat6.xw, 0.0);
+					    u_xlat6.xyz = u_xlat4.xxx * u_xlat6.xyz;
+					    u_xlat6.xyz = u_xlat4.yyy * u_xlat6.xyz;
+					    u_xlat7.xyz = u_xlat9.xxx * u_xlat7.xyz;
+					    u_xlat4.xyw = u_xlat4.yyy * u_xlat7.xyz;
+					    u_xlat4.xyw = u_xlat4.xyw * u_xlat4.zzz + u_xlat5.xyz;
+					    u_xlat4.xyz = u_xlat6.xyz * u_xlat4.zzz + u_xlat4.xyw;
+					    u_xlat5.zw = _SunDir.xx * vec2(1.0, -1.0);
+					    u_xlat5.xy = abs(_SunDir.yx);
+					    u_xlat6.xyz = u_xlat5.zxw;
+					    u_xlat6.xyz = clamp(u_xlat6.xyz, 0.0, 1.0);
+					    u_xlat47 = u_xlat5.x + u_xlat5.y;
+					    u_xlat4.xyw = u_xlat4.xyz * u_xlat6.xyz;
+					    u_xlat48 = u_xlat4.y + u_xlat4.x;
+					    u_xlat48 = u_xlat6.z * u_xlat4.z + u_xlat48;
+					    u_xlat46 = u_xlat48 * 0.600000024 + u_xlat46;
+					    u_xlat48 = (-u_xlat16.x);
+					    u_xlat48 = clamp(u_xlat48, 0.0, 1.0);
+					    u_xlat16.x = u_xlat16.x;
+					    u_xlat16.x = clamp(u_xlat16.x, 0.0, 1.0);
+					    u_xlat34 = max(u_xlat48, u_xlat16.x);
+					    u_xlat34 = (-u_xlat34) + 1.0;
+					    u_xlat5.x = _Year;
+					    u_xlat5.y = 0.0;
+					    u_xlat5 = textureLod(_GrassTex, u_xlat5.xy, 0.0);
+					    u_xlat6.xyz = u_xlat16.xxx * u_xlat5.yzx;
+					    u_xlat6.xyz = u_xlat5.xyz * vec3(u_xlat34) + u_xlat6.xyz;
+					    u_xlat6.xyz = vec3(u_xlat48) * u_xlat5.zxy + u_xlat6.xyz;
+					    u_xlat7.xyz = (-u_xlat6.xyz) + _SnowColor.xyz;
+					    u_xlat6.xyz = vec3(_SnowAmount) * u_xlat7.xyz + u_xlat6.xyz;
+					    u_xlat7.xyz = u_xlat6.xyz * _MinAmbientColor.xyz;
+					    u_xlat6.xyz = (-_MinAmbientColor.xyz) * u_xlat6.xyz + _MaxAmbientColor.xyz;
+					    u_xlat6.xyz = vec3(u_xlat46) * u_xlat6.xyz + u_xlat7.xyz;
+					    u_xlat16.x = dot(u_xlat3.xyz, u_xlat3.xyz);
+					    u_xlat16.x = inversesqrt(u_xlat16.x);
+					    u_xlat3.xyz = u_xlat16.xxx * u_xlat3.xyz;
+					    u_xlat3.w = (-u_xlat3.x);
+					    u_xlat7.xyz = u_xlat3.xyw;
+					    u_xlat7.xyz = clamp(u_xlat7.xyz, 0.0, 1.0);
+					    u_xlat16.x = dot(u_xlat3.xyz, _FlashDir.xyz);
+					    u_xlat16.x = clamp(u_xlat16.x, 0.0, 1.0);
+					    u_xlat16.x = (-u_xlat16.x) + 1.0;
+					    u_xlat3.xy = u_xlat4.xy * u_xlat7.xy;
+					    u_xlat46 = u_xlat3.y + u_xlat3.x;
+					    u_xlat46 = u_xlat4.w * u_xlat7.z + u_xlat46;
+					    u_xlat46 = u_xlat46 / u_xlat47;
+					    u_xlat3.xyz = _SideSunColor.xyz * _CloudCoverage.zzz;
+					    u_xlat3.xyz = u_xlat3.xyz * vec3(u_xlat46) + u_xlat6.xyz;
+					    u_xlat46 = u_xlat16.x * u_xlat16.x;
+					    u_xlat16.x = (-u_xlat16.x) * u_xlat46 + 1.0;
+					    u_xlat4.xyz = u_xlat16.xxx * _FlashColor.xyz;
+					    u_xlat3.xyz = u_xlat4.xyz * vec3(0.600000024, 0.600000024, 0.600000024) + u_xlat3.xyz;
+					    u_xlat16.x = u_xlat30;
+					    u_xlat16.x = clamp(u_xlat16.x, 0.0, 1.0);
+					    u_xlat30 = (-u_xlat30);
+					    u_xlat30 = clamp(u_xlat30, 0.0, 1.0);
+					    u_xlat46 = max(u_xlat30, u_xlat16.x);
+					    u_xlat4.xyz = u_xlat5.yzx * u_xlat16.xxx;
+					    u_xlat16.x = (-u_xlat46) + 1.0;
+					    u_xlat4.xyz = u_xlat5.xyz * u_xlat16.xxx + u_xlat4.xyz;
+					    u_xlat4.xyz = vec3(u_xlat30) * u_xlat5.zxy + u_xlat4.xyz;
+					    u_xlat5.xyz = (-u_xlat4.xyz) + _SnowColor.xyz;
+					    u_xlat4.xyz = vec3(_SnowAmount) * u_xlat5.xyz + u_xlat4.xyz;
+					    u_xlat5.xyz = (-u_xlat4.xyz) + vec3(0.400000006, 0.400000006, 0.400000006);
+					    u_xlat4.xyz = u_xlat0.xxx * u_xlat5.xyz + u_xlat4.xyz;
+					    u_xlat0.x = u_xlat0.y * 1.20000005 + -0.200000003;
+					    u_xlat0.x = clamp(u_xlat0.x, 0.0, 1.0);
+					    u_xlat5.xyz = u_xlat4.xyz * _BloodColor.xyz + (-u_xlat4.xyz);
+					    u_xlat0.xyz = u_xlat0.xxx * u_xlat5.xyz + u_xlat4.xyz;
+					    u_xlat16.xz = floor(u_xlat2.xz);
+					    u_xlat2.xz = fract(u_xlat2.xz);
+					    u_xlat2.xz = u_xlat2.xz + vec2(-0.5, -0.5);
+					    u_xlat2.xz = -abs(u_xlat2.xz) * vec2(2.0, 2.0) + vec2(1.0, 1.0);
+					    u_xlat2.xz = u_xlat2.xz * vec2(3.0, 3.0);
+					    u_xlat2.xz = min(u_xlat2.xz, vec2(1.0, 1.0));
+					    u_xlat2.x = u_xlat2.z * u_xlat2.x;
+					    u_xlat16.x = u_xlat17.x * _AoTexVolume.x + u_xlat16.x;
+					    u_xlat4.xy = u_xlat16.xz / _AoTexSize.xy;
+					    u_xlat4 = textureLod(_HighlightTex, u_xlat4.xy, 0.0);
+					    u_xlat2 = u_xlat2.xxxx * u_xlat4;
+					    u_xlatb16 = 0.0<u_xlat2.w;
+					    u_xlat4.xyz = u_xlat2.xyz / u_xlat2.www;
+					    u_xlat2.xyz = (bool(u_xlatb16)) ? u_xlat4.xyz : u_xlat2.xyz;
+					    u_xlat2.xyz = (-u_xlat0.xyz) * u_xlat3.xyz + u_xlat2.xyz;
+					    u_xlat0.xyz = u_xlat3.xyz * u_xlat0.xyz;
+					    vs_COLOR0.xyz = u_xlat2.www * u_xlat2.xyz + u_xlat0.xyz;
+					    u_xlat0.x = (-u_xlat1.x) * u_xlat1.x + 1.0;
+					    vs_TEXCOORD3.x = u_xlat1.x;
+					    vs_COLOR0.w = u_xlat0.x * u_xlat45;
+					    u_xlat0.x = _FogMaxRad + (-_FogMinRad);
+					    vs_TEXCOORD2.x = u_xlat31.x / u_xlat0.x;
+					    vs_TEXCOORD2.x = clamp(vs_TEXCOORD2.x, 0.0, 1.0);
+					    return;
+					}"
+				}
+			}
+			Program "fp" {
+				SubProgram "d3d11 " {
+					"ps_4_0
+					
+					#version 330
+					#extension GL_ARB_explicit_attrib_location : require
+					#extension GL_ARB_explicit_uniform_location : require
+					
+					#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+					#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+					#define UNITY_UNIFORM
+					#else
+					#define UNITY_UNIFORM uniform
+					#endif
+					#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+					#if UNITY_SUPPORTS_UNIFORM_LOCATION
+					#define UNITY_LOCATION(x) layout(location = x)
+					#define UNITY_BINDING(x) layout(binding = x, std140)
+					#else
+					#define UNITY_LOCATION(x)
+					#define UNITY_BINDING(x) layout(std140)
+					#endif
+					layout(std140) uniform PGlobals {
+						vec4 unused_0_0[9];
+						vec4 _LutLerp;
+						vec4 unused_0_2[40];
+						vec4 _CloudCoverage;
+						vec4 unused_0_4[7];
+						vec4 _FogColor;
+						vec4 unused_0_6;
+						vec4 _FlashColor;
+						vec4 unused_0_8[5];
+						vec4 _Color;
+					};
+					uniform  sampler2D _MainTex;
+					in  vec2 vs_TEXCOORD0;
+					in  vec2 vs_TEXCOORD1;
+					in  vec4 vs_COLOR0;
+					in  vec2 vs_TEXCOORD2;
+					layout(location = 0) out vec4 SV_Target0;
+					vec4 u_xlat0;
+					vec4 u_xlat1;
+					bool u_xlatb1;
+					float u_xlat2;
+					float u_xlat6;
+					void main()
+					{
+					    u_xlat0.xy = -abs(vs_TEXCOORD1.xy) * abs(vs_TEXCOORD1.xy) + vec2(1.0, 1.0);
+					    u_xlat0.x = (-u_xlat0.x) * u_xlat0.y + 1.0;
+					    u_xlat0.x = (-u_xlat0.x) * u_xlat0.x + 1.0;
+					    u_xlat1 = texture(_MainTex, vs_TEXCOORD0.xy);
+					    u_xlat0.x = u_xlat0.x + u_xlat1.y;
+					    u_xlat1.xyz = u_xlat1.yyy * vec3(0.100000024, 0.100000024, 0.100000024) + vec3(0.899999976, 0.899999976, 0.899999976);
+					    u_xlat0.x = u_xlat0.x + -1.0;
+					    u_xlat0.x = clamp(u_xlat0.x, 0.0, 1.0);
+					    u_xlat0.x = (-u_xlat0.x) + 1.0;
+					    u_xlat2 = u_xlat0.x * u_xlat0.x;
+					    u_xlat1.w = (-u_xlat2) * u_xlat0.x + 1.0;
+					    u_xlat0 = u_xlat1 * _Color;
+					    u_xlat1.x = u_xlat0.w * vs_COLOR0.w + -0.00999999978;
+					    u_xlatb1 = u_xlat1.x<0.0;
+					    if(((int(u_xlatb1) * int(0xffffffffu)))!=0){discard;}
+					    u_xlat1 = u_xlat0 * vs_COLOR0;
+					    u_xlat6 = dot(u_xlat1.xyz, vec3(0.200000003, 0.699999988, 0.100000001));
+					    SV_Target0.w = u_xlat1.w;
+					    SV_Target0.w = clamp(SV_Target0.w, 0.0, 1.0);
+					    u_xlat0.xyz = u_xlat0.xyz * vs_COLOR0.xyz + (-vec3(u_xlat6));
+					    u_xlat0.xyz = _CloudCoverage.yyy * u_xlat0.xyz + vec3(u_xlat6);
+					    u_xlat1.xyz = (-u_xlat0.xyz) + _LutLerp.www;
+					    u_xlat0.xyz = _LutLerp.xyz * u_xlat1.xyz + u_xlat0.xyz;
+					    u_xlat1.xyz = _FlashColor.xyz * vec3(0.200000003, 0.200000003, 0.200000003) + _FogColor.xyz;
+					    u_xlat1.xyz = (-u_xlat0.xyz) + u_xlat1.xyz;
+					    u_xlat6 = vs_TEXCOORD2.x;
+					    u_xlat6 = clamp(u_xlat6, 0.0, 1.0);
+					    SV_Target0.xyz = vec3(u_xlat6) * u_xlat1.xyz + u_xlat0.xyz;
+					    return;
+					}"
+				}
+				SubProgram "d3d11 " {
+					Keywords { "_BLOOD_ON" }
+					"ps_4_0
+					
+					#version 330
+					#extension GL_ARB_explicit_attrib_location : require
+					#extension GL_ARB_explicit_uniform_location : require
+					
+					#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+					#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+					#define UNITY_UNIFORM
+					#else
+					#define UNITY_UNIFORM uniform
+					#endif
+					#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+					#if UNITY_SUPPORTS_UNIFORM_LOCATION
+					#define UNITY_LOCATION(x) layout(location = x)
+					#define UNITY_BINDING(x) layout(binding = x, std140)
+					#else
+					#define UNITY_LOCATION(x)
+					#define UNITY_BINDING(x) layout(std140)
+					#endif
+					layout(std140) uniform PGlobals {
+						vec4 unused_0_0[9];
+						vec4 _LutLerp;
+						vec4 unused_0_2[40];
+						vec4 _CloudCoverage;
+						vec4 unused_0_4[7];
+						vec4 _FogColor;
+						vec4 unused_0_6;
+						vec4 _FlashColor;
+						vec4 unused_0_8[5];
+						vec4 _Color;
+					};
+					uniform  sampler2D _MainTex;
+					in  vec2 vs_TEXCOORD0;
+					in  vec2 vs_TEXCOORD1;
+					in  vec4 vs_COLOR0;
+					in  vec2 vs_TEXCOORD2;
+					layout(location = 0) out vec4 SV_Target0;
+					vec4 u_xlat0;
+					vec4 u_xlat1;
+					bool u_xlatb1;
+					float u_xlat2;
+					float u_xlat6;
+					void main()
+					{
+					    u_xlat0.xy = -abs(vs_TEXCOORD1.xy) * abs(vs_TEXCOORD1.xy) + vec2(1.0, 1.0);
+					    u_xlat0.x = (-u_xlat0.x) * u_xlat0.y + 1.0;
+					    u_xlat0.x = (-u_xlat0.x) * u_xlat0.x + 1.0;
+					    u_xlat1 = texture(_MainTex, vs_TEXCOORD0.xy);
+					    u_xlat0.x = u_xlat0.x + u_xlat1.y;
+					    u_xlat1.xyz = u_xlat1.yyy * vec3(0.100000024, 0.100000024, 0.100000024) + vec3(0.899999976, 0.899999976, 0.899999976);
+					    u_xlat0.x = u_xlat0.x + -1.0;
+					    u_xlat0.x = clamp(u_xlat0.x, 0.0, 1.0);
+					    u_xlat0.x = (-u_xlat0.x) + 1.0;
+					    u_xlat2 = u_xlat0.x * u_xlat0.x;
+					    u_xlat1.w = (-u_xlat2) * u_xlat0.x + 1.0;
+					    u_xlat0 = u_xlat1 * _Color;
+					    u_xlat1.x = u_xlat0.w * vs_COLOR0.w + -0.00999999978;
+					    u_xlatb1 = u_xlat1.x<0.0;
+					    if(((int(u_xlatb1) * int(0xffffffffu)))!=0){discard;}
+					    u_xlat1 = u_xlat0 * vs_COLOR0;
+					    u_xlat6 = dot(u_xlat1.xyz, vec3(0.200000003, 0.699999988, 0.100000001));
+					    SV_Target0.w = u_xlat1.w;
+					    SV_Target0.w = clamp(SV_Target0.w, 0.0, 1.0);
+					    u_xlat0.xyz = u_xlat0.xyz * vs_COLOR0.xyz + (-vec3(u_xlat6));
+					    u_xlat0.xyz = _CloudCoverage.yyy * u_xlat0.xyz + vec3(u_xlat6);
+					    u_xlat1.xyz = (-u_xlat0.xyz) + _LutLerp.www;
+					    u_xlat0.xyz = _LutLerp.xyz * u_xlat1.xyz + u_xlat0.xyz;
+					    u_xlat1.xyz = _FlashColor.xyz * vec3(0.200000003, 0.200000003, 0.200000003) + _FogColor.xyz;
+					    u_xlat1.xyz = (-u_xlat0.xyz) + u_xlat1.xyz;
+					    u_xlat6 = vs_TEXCOORD2.x;
+					    u_xlat6 = clamp(u_xlat6, 0.0, 1.0);
+					    SV_Target0.xyz = vec3(u_xlat6) * u_xlat1.xyz + u_xlat0.xyz;
+					    return;
+					}"
+				}
+			}
+		}
+	}
+}

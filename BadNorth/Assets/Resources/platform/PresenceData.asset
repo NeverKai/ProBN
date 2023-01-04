@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f893dcd401635d4c9acaccbf0eaa3fd, type: 3}
+  m_Name: PresenceData
+  m_EditorClassIdentifier:
+  StatusConnectionType: ': '
+  _serializerP:
+  - key: CAMPAIGN_MAP
+    steamLocCode: RICH_PRESENCE/CAMPAIGN_MAP
+    discordLocCode: RICH_PRESENCE/CAMPAIGN_MAP
+    ps4LocCode: RICH_PRESENCE/CAMPAIGN_MAP
+    xboxKey: CAMPAIGN_MAP
+  - key: MAIN_MENU
+    steamLocCode: RICH_PRESENCE/MAIN_MENU
+    discordLocCode: RICH_PRESENCE/MAIN_MENU
+    ps4LocCode: RICH_PRESENCE/MAIN_MENU
+    xboxKey: MAIN_MENU
+  - key: IN_FIRST_LEVEL
+    steamLocCode: RICH_PRESENCE/IN_FIRST_LEVEL
+    discordLocCode: RICH_PRESENCE/IN_FIRST_LEVEL
+    ps4LocCode: RICH_PRESENCE/IN_FIRST_LEVEL
+    xboxKey: IN_FIRST_LEVEL
+  - key: CAMPAIGN_MAP_ALT
+    steamLocCode: RICH_PRESENCE/CAMPAIGN_MAP_ALT
+    discordLocCode: RICH_PRESENCE/CAMPAIGN_MAP_ALT
+    ps4LocCode: RICH_PRESENCE/CAMPAIGN_MAP_ALT
+    xboxKey: CAMPAIGN_MAP
+  - key: IN_LEVEL
+    steamLocCode: RICH_PRESENCE/IN_LEVEL
+    discordLocCode: RICH_PRESENCE/IN_LEVEL
+    ps4LocCode: RICH_PRESENCE/IN_LEVEL
+    xboxKey: IN_FIRST_LEVEL
+  - key: IN_LEVEL_ALT
+    steamLocCode: RICH_PRESENCE/IN_LEVEL_ALT
+    discordLocCode: RICH_PRESENCE/IN_LEVEL_ALT
+    ps4LocCode: RICH_PRESENCE/IN_LEVEL_ALT
+    xboxKey: IN_FIRST_LEVEL
+  - key: IN_FINAL_LEVEL
+    steamLocCode: RICH_PRESENCE/IN_FINAL_LEVEL
+    discordLocCode: RICH_PRESENCE/IN_FINAL_LEVEL
+    ps4LocCode: RICH_PRESENCE/IN_FINAL_LEVEL
+    xboxKey: IN_FIRST_LEVEL
+  _serializerS: []
+  _serializerI:
+  - key: CAMPAIGN_MAP
+    discordCode: badnorth_painterly
+    discordTextCode: RICH_PRESENCE/CAMPAIGN_MAP
+  - key: MAIN_MENU
+    discordCode: badnorth_painterly
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: IN_FIRST_LEVEL
+    discordCode: badnorth_painterly
+    discordTextCode: RICH_PRESENCE/IN_FIRST_LEVEL
+  - key: ISLAND_SCREENSHOT_01
+    discordCode: island_screenshot_v2_01
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_02
+    discordCode: island_screenshot_v2_02
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_03
+    discordCode: island_screenshot_v2_03
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_04
+    discordCode: island_screenshot_v2_04
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_05
+    discordCode: island_screenshot_v2_05
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_06
+    discordCode: island_screenshot_v2_06
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_07
+    discordCode: island_screenshot_v2_07
+    discordTextCode: RICH_PRESENCE/MAIN_MENU
+  - key: ISLAND_SCREENSHOT_08
+    discordCode: island_screenshot_v2_08
+    discordTextCode: RICH_PRESENCE/MAIN_MENU

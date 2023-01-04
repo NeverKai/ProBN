@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75385e6c0f43fcd419ce2eea777323ba, type: 3}
+  m_Name: Hero_UpgradeType_Item
+  m_EditorClassIdentifier:
+  typeEnum: 0
+  nameTerm: UPGRADES/TYPE/ITEM
+  descriptionTerm: UPGRADES/TYPE/ITEM_DESC
+  unknownNameTerm: META_INVENTORY/UNKNOWN/ITEM/NAME
+  unknownDescriptionTerm: META_INVENTORY/UNKNOWN/ITEM/DESC
+  startItemLockedTerm: META_INVENTORY/START/ITEM/LOCKED
+  startItemUnlockedTerm: META_INVENTORY/START/ITEM/UNLOCKED
+  canBeStartItem: 1
+  mask: {fileID: 21300008, guid: 33e2d1ecb85746e4eab300ba44ada3e5, type: 3}
+  unknownIcon: {fileID: 21300000, guid: bcbbfc483cc81dc4589185516c9de732, type: 3}

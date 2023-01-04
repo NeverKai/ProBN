@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beda367043f75854fafaba248a4e26d0, type: 3}
+  m_Name: XboxPadIcons
+  m_EditorClassIdentifier:
+  actionTopRow1: {fileID: 21300046, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  actionTopRow2: {fileID: 21300048, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  actionBottomRow1: {fileID: 21300052, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  actionBottomRow2: {fileID: 21300050, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadLeft: {fileID: 21300054, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadRight: {fileID: 21300058, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadUp: {fileID: 21300056, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadDown: {fileID: 21300060, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadLeftRight: {fileID: 21300100, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  dPadUpDown: {fileID: 21300102, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  bumperLeft: {fileID: 21300038, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  bumperRight: {fileID: 21300042, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  triggerLeft: {fileID: 21300036, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  triggerRight: {fileID: 21300040, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  stickLeft: {fileID: 21300044, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}
+  stickRight: {fileID: 21300062, guid: cc56ced5ce0f1a340ae80d90ac5f7c24, type: 3}

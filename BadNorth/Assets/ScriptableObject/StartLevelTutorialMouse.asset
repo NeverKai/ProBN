@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cc78f7e7a0523488b38b541209cfcc, type: 3}
+  m_Name: StartLevelTutorialMouse
+  m_EditorClassIdentifier:
+  controller: 1
+  cameraMove:
+    messageTerm: TUTORIAL/MOUSE/CAMERA_MOVE
+    icon: 1
+    secondaryIcon: 0
+  cameraZoom:
+    messageTerm: TUTORIAL/MOUSE/CAMERA_ZOOM
+    icon: 3
+    secondaryIcon: 0
+  mustSelectBoth: 0
+  selectSquad:
+    messageTerm: TUTORIAL/MOUSE/SELECT_SQUAD
+    icon: 1
+    secondaryIcon: 0
+  moveCursor:
+    messageTerm:
+    icon: 0
+    secondaryIcon: 0
+  moveSquad:
+    messageTerm: TUTORIAL/MOUSE/MOVE_SQUAD
+    icon: 0
+    secondaryIcon: 2
+  positionArchers:
+    messageTerm: TUTORIAL/GENERIC/POSITION_ARCHERS
+    icon: 0
+    secondaryIcon: 0
+  positionInfantry:
+    messageTerm: TUTORIAL/GENERIC/POSITION_INFANTRY
+    icon: 0
+    secondaryIcon: 0

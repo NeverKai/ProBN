@@ -1,0 +1,23 @@
+﻿using System;
+
+namespace CS.Platform
+{
+	// Token: 0x0200005C RID: 92
+	public enum ErrorCode
+	{
+		// Token: 0x040001AC RID: 428
+		LOBBY_CONNECTION_FAILED,
+		// Token: 0x040001AD RID: 429
+		LOBBY_CREATE_UNSUPPORTED_TYPE,
+		// Token: 0x040001AE RID: 430
+		LOBBY_CREATE_INVALID,
+		// Token: 0x040001AF RID: 431
+		LOBBY_CREATE_UNKNOWN,
+		// Token: 0x040001B0 RID: 432
+		LOBBY_JOIN_INVALID,
+		// Token: 0x040001B1 RID: 433
+		LOBBY_JOIN_UNKNOWN,
+		// Token: 0x040001B2 RID: 434
+		UNKNOWN
+	}
+}
