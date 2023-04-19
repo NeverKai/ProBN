@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Fabric;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense
@@ -355,7 +354,7 @@ namespace Voxels.TowerDefense
 		private TopDownWeighter weighter = new TopDownWeighter(50f, 2.3f);
 
 		// Token: 0x04002CF7 RID: 11511
-		private WeakReference<EnglishSquad> _squad = new WeakReference<EnglishSquad>(null);
+		private RTM.Utilities.WeakReference<EnglishSquad> _squad = new RTM.Utilities.WeakReference<EnglishSquad>(null);
 
 		// Token: 0x04002CF8 RID: 11512
 		private WorldSpaceCursorIcon icon;

@@ -43,7 +43,7 @@ namespace CS.Platform.Steam.Client.Part
 			uint num = DLC.DLCSteamAPI(dlcKey);
 			if (num != 0U)
 			{
-				SteamFriends.ActivateGameOverlayToStore((AppId_t)num, EOverlayToStoreFlag.k_EOverlayToStoreFlag_None);
+				//SteamFriends.ActivateGameOverlayToStore((AppId_t)num, EOverlayToStoreFlag.k_EOverlayToStoreFlag_None);
 				return true;
 			}
 			CS.Platform.Utils.Debug.LogWarning("[Steamworks] DLC Store Page Failed: No Steam API | Key: {0}", new object[]

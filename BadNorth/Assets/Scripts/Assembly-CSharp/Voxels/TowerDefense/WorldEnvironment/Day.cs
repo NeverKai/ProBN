@@ -3,11 +3,9 @@ using UnityEngine;
 
 namespace Voxels.TowerDefense.WorldEnvironment
 {
-	// Token: 0x020006E1 RID: 1761
 	[Serializable]
 	public struct Day
 	{
-		// Token: 0x06002D8A RID: 11658 RVA: 0x000ADDA7 File Offset: 0x000AC1A7
 		public Day(float value)
 		{
 			this.value = value;

@@ -27,7 +27,7 @@ namespace RTM.UISystem
 		// Token: 0x14000069 RID: 105
 		// (add) Token: 0x06001F61 RID: 8033 RVA: 0x00054220 File Offset: 0x00052620
 		// (remove) Token: 0x06001F62 RID: 8034 RVA: 0x00054258 File Offset: 0x00052658
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<UIMenu> onActiveMenuChanged = delegate(UIMenu A_0)
 		{
 		};

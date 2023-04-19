@@ -1,5 +1,4 @@
-﻿using System;
-using RTM.OnScreenDebug;
+﻿using RTM.OnScreenDebug;
 using RTM.Utilities;
 using UnityEngine;
 using UnityEngine.EventSystems;

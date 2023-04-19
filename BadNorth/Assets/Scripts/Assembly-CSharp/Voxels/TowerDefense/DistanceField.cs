@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense
@@ -327,7 +326,7 @@ namespace Voxels.TowerDefense
 		private DistanceField.FlowContent[] flowContents;
 
 		// Token: 0x040020A8 RID: 8360
-		private WeakReference<NavigationMesh> _navMesh;
+		private RTM.Utilities.WeakReference<NavigationMesh> _navMesh;
 
 		// Token: 0x040020A9 RID: 8361
 		private static List<Pipe> pipeList = new List<Pipe>(16);

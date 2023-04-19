@@ -24,7 +24,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400008A RID: 138
 		// (add) Token: 0x06002916 RID: 10518 RVA: 0x0008E218 File Offset: 0x0008C618
 		// (remove) Token: 0x06002917 RID: 10519 RVA: 0x0008E250 File Offset: 0x0008C650
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event NavigationMesh.ForestDelegate onUnreacables = delegate(List<Tri> A_0)
 		{
 		};
@@ -32,7 +32,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400008B RID: 139
 		// (add) Token: 0x06002918 RID: 10520 RVA: 0x0008E288 File Offset: 0x0008C688
 		// (remove) Token: 0x06002919 RID: 10521 RVA: 0x0008E2C0 File Offset: 0x0008C6C0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event NavigationMesh.ForestDelegate onReachables = delegate(List<Tri> A_0)
 		{
 		};
@@ -40,7 +40,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400008C RID: 140
 		// (add) Token: 0x0600291A RID: 10522 RVA: 0x0008E2F8 File Offset: 0x0008C6F8
 		// (remove) Token: 0x0600291B RID: 10523 RVA: 0x0008E330 File Offset: 0x0008C730
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event NavigationMesh.NavMeshDelegate onWipe = delegate(NavigationMesh A_0)
 		{
 		};
@@ -48,7 +48,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400008D RID: 141
 		// (add) Token: 0x0600291C RID: 10524 RVA: 0x0008E368 File Offset: 0x0008C768
 		// (remove) Token: 0x0600291D RID: 10525 RVA: 0x0008E3A0 File Offset: 0x0008C7A0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event NavigationMesh.NavMeshDelegate onProcess = delegate(NavigationMesh A_0)
 		{
 		};
@@ -128,16 +128,16 @@ namespace Voxels.TowerDefense
 			Vert[] vertLookup = new Vert[mVerts.Count];
 			for (int i = 0; i < mVerts.Count; i++)
 			{
-				NavigationMesh.<Setup>c__Iterator0.<Setup>c__AnonStorey2 <Setup>c__AnonStorey = new NavigationMesh.<Setup>c__Iterator0.<Setup>c__AnonStorey2();
-				<Setup>c__AnonStorey.<>f__ref$0 = this;
-				<Setup>c__AnonStorey.pos = mVerts[i];
-				NavigationMesh.<Setup>c__Iterator0.<Setup>c__AnonStorey2 <Setup>c__AnonStorey2 = <Setup>c__AnonStorey;
-				<Setup>c__AnonStorey2.pos.y = <Setup>c__AnonStorey2.pos.y + -0.09f;
+				//NavigationMesh.<Setup>c__Iterator0.<Setup>c__AnonStorey2 <Setup>c__AnonStorey = new NavigationMesh.<Setup>c__Iterator0.<Setup>c__AnonStorey2();
+				//<Setup>c__AnonStorey.<>f__ref$0 = this;
+				var pos = mVerts[i];
+				// NavigationMesh.<Setup>c__Iterator0.<Setup>c__AnonStorey2 <Setup>c__AnonStorey2 = <Setup>c__AnonStorey;
+				pos.y = pos.y + -0.09f;
 				Vert vert = null;
-				vert = vertList.FirstOrDefault((Vert x) => (x.pos - <Setup>c__AnonStorey.pos).sqrMagnitude < 0.0001f);
+				vert = vertList.FirstOrDefault((Vert x) => (x.pos - pos).sqrMagnitude < 0.0001f);
 				if (vert == null)
 				{
-					vert = new Vert(<Setup>c__AnonStorey.pos);
+					vert = new Vert(pos);
 					vert.index = (ushort)vertList.Count;
 					vertList.Add(vert);
 				}
@@ -178,7 +178,7 @@ namespace Voxels.TowerDefense
 			}
 			for (int k = 0; k < edgeList.Count; k++)
 			{
-				using ("edgeList")
+				//using ("edgeList")
 				{
 					edgeList[k].Setup();
 				}
@@ -186,7 +186,7 @@ namespace Voxels.TowerDefense
 			}
 			for (int l = 0; l < triList.Count; l++)
 			{
-				using ("triList")
+				//using ("triList")
 				{
 					triList[l].Setup();
 				}
@@ -194,7 +194,7 @@ namespace Voxels.TowerDefense
 			}
 			for (int m = 0; m < vertList.Count; m++)
 			{
-				using ("vertList")
+				//using ("vertList")
 				{
 					vertList[m].Setup();
 				}
@@ -202,7 +202,7 @@ namespace Voxels.TowerDefense
 			}
 			for (int n = 0; n < edgeList.Count; n++)
 			{
-				using ("edgeList2")
+				//using ("edgeList2")
 				{
 					edgeList[n].Setup2();
 				}
@@ -287,7 +287,7 @@ namespace Voxels.TowerDefense
 				}
 				this.reachRatio = (float)(totalCount - removedTris.Count) / (float)totalCount;
 				yield return new GenInfo("pre-unreachables", GenInfo.Mode.interruptable);
-				using ("unreachables")
+				//using ("unreachables")
 				{
 					this.onUnreacables(removedTris);
 				}
@@ -315,7 +315,7 @@ namespace Voxels.TowerDefense
 				}
 			}
 			yield return new GenInfo("pre-reachables", GenInfo.Mode.interruptable);
-			using ("reachables")
+			//using ("reachables")
 			{
 				this.onReachables(triList);
 			}

@@ -12,7 +12,7 @@ namespace RTM.UISystem
 		// Token: 0x14000077 RID: 119
 		// (add) Token: 0x0600200E RID: 8206 RVA: 0x00056718 File Offset: 0x00054B18
 		// (remove) Token: 0x0600200F RID: 8207 RVA: 0x00056750 File Offset: 0x00054B50
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<int> onVerticalChange = delegate(int A_0)
 		{
 		};

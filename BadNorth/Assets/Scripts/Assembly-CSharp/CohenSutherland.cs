@@ -101,7 +101,8 @@ public class CohenSutherland
 			}
 		}
 		flag = true;
-		goto IL_1A7;
+		//goto IL_1A7;
+		return flag;
 	}
 
 	// Token: 0x04001482 RID: 5250

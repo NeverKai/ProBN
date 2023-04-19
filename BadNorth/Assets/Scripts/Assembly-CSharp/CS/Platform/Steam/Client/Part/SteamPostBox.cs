@@ -85,7 +85,10 @@ namespace CS.Platform.Steam.Client.Part
 			case 5:
 				this._Manager.AddToNextUpdate(delegate
 				{
-					PlatformEvents.ReceivedUserMessage(new BaseUserInfo(senderID, "steam", SteamFriends.GetFriendPersonaName((CSteamID)senderID)), message);
+					var name = string.Empty;
+					// SteamFriends.GetFriendPersonaName((CSteamID) senderID);
+					PlatformEvents.ReceivedUserMessage(new BaseUserInfo(senderID, "steam", 
+						name), message);
 				});
 				return;
 			case 6:

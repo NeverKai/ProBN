@@ -10,7 +10,7 @@ namespace Voxels.TowerDefense.Ballistics
 		// Token: 0x06003324 RID: 13092 RVA: 0x000DBA78 File Offset: 0x000D9E78
 		public override void Shoot(Agent shooter, Vector3 velocity, ProjectileSettings projectileSettings, AttackSettings attackSettings, LayerMask mask0, LayerMask mask1)
 		{
-			using ("Arrow.Shoot()")
+			//using ("Arrow.Shoot()")
 			{
 				this.onHitGround = null;
 				base.Shoot(shooter, velocity, projectileSettings, attackSettings, mask0, mask1);

@@ -11,13 +11,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 	{
 		// Token: 0x17000721 RID: 1825
 		// (get) Token: 0x06003200 RID: 12800 RVA: 0x000D3BCA File Offset: 0x000D1FCA
-		public float radius
-		{
-			get
-			{
-				return this.shipPrefab.radius * 0.9f;
-			}
-		}
+		public float radius => this.shipPrefab.radius * 0.9f;
 
 		// Token: 0x17000722 RID: 1826
 		// (get) Token: 0x06003201 RID: 12801 RVA: 0x000D3BDD File Offset: 0x000D1FDD
@@ -41,13 +35,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 
 		// Token: 0x17000724 RID: 1828
 		// (get) Token: 0x06003203 RID: 12803 RVA: 0x000D3BFD File Offset: 0x000D1FFD
-		public ShipLoad randomLoad
-		{
-			get
-			{
-				return this.shipLoads[UnityEngine.Random.Range(0, this.shipLoads.Count)];
-			}
-		}
+		public ShipLoad randomLoad => this.shipLoads[UnityEngine.Random.Range(0, this.shipLoads.Count)];
 
 		// Token: 0x17000725 RID: 1829
 		// (get) Token: 0x06003204 RID: 12804 RVA: 0x000D3C1B File Offset: 0x000D201B
@@ -117,7 +105,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 		// Token: 0x0600320C RID: 12812 RVA: 0x000D3D05 File Offset: 0x000D2105
 		public Landing Duplicate()
 		{
-			return this.shipGroup.AddLanding(UnityEngine.Object.Instantiate<GameObject>(base.gameObject, base.transform.parent).GetComponent<Landing>());
+			return this.shipGroup.AddLanding(Instantiate(base.gameObject, base.transform.parent).GetComponent<Landing>());
 		}
 
 		// Token: 0x0600320D RID: 12813 RVA: 0x000D3D2D File Offset: 0x000D212D
@@ -290,7 +278,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 		public Color color = Color.yellow;
 
 		// Token: 0x040021E1 RID: 8673
-		public Landing.ShipTravel shipTravel;
+		public ShipTravel shipTravel;
 
 		// Token: 0x040021E3 RID: 8675
 		[SerializeField]

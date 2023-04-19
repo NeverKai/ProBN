@@ -1,6 +1,5 @@
 ﻿using System;
 using RTM.Pools;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.ScriptAnimations;
 
@@ -171,7 +170,7 @@ namespace Voxels.TowerDefense
 		}
 
 		// Token: 0x040027B9 RID: 10169
-		private WeakReference<Mesh> _mesh = new WeakReference<Mesh>(null);
+		private RTM.Utilities.WeakReference<Mesh> _mesh = new RTM.Utilities.WeakReference<Mesh>(null);
 
 		// Token: 0x040027BA RID: 10170
 		private TargetMesh.IMeshComponent[] navSpotComponents;

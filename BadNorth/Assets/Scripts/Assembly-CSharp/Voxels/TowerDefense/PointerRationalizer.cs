@@ -43,7 +43,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000096 RID: 150
 		// (add) Token: 0x0600304C RID: 12364 RVA: 0x000C52C8 File Offset: 0x000C36C8
 		// (remove) Token: 0x0600304D RID: 12365 RVA: 0x000C5300 File Offset: 0x000C3700
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerRationalizer.State> onStateChanged = delegate(PointerRationalizer.State A_0)
 		{
 		};
@@ -51,7 +51,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000097 RID: 151
 		// (add) Token: 0x0600304E RID: 12366 RVA: 0x000C5338 File Offset: 0x000C3738
 		// (remove) Token: 0x0600304F RID: 12367 RVA: 0x000C5370 File Offset: 0x000C3770
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton, Vector2> onButtonDown = delegate(PointerEventData.InputButton A_0, Vector2 A_1)
 		{
 		};
@@ -59,7 +59,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000098 RID: 152
 		// (add) Token: 0x06003050 RID: 12368 RVA: 0x000C53A8 File Offset: 0x000C37A8
 		// (remove) Token: 0x06003051 RID: 12369 RVA: 0x000C53E0 File Offset: 0x000C37E0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton, Vector2> onClick = delegate(PointerEventData.InputButton A_0, Vector2 A_1)
 		{
 		};
@@ -67,7 +67,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000099 RID: 153
 		// (add) Token: 0x06003052 RID: 12370 RVA: 0x000C5418 File Offset: 0x000C3818
 		// (remove) Token: 0x06003053 RID: 12371 RVA: 0x000C5450 File Offset: 0x000C3850
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton, Vector2> onDrag = delegate(PointerEventData.InputButton A_0, Vector2 A_1)
 		{
 		};
@@ -75,7 +75,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400009A RID: 154
 		// (add) Token: 0x06003054 RID: 12372 RVA: 0x000C5488 File Offset: 0x000C3888
 		// (remove) Token: 0x06003055 RID: 12373 RVA: 0x000C54C0 File Offset: 0x000C38C0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton> onDragStart = delegate(PointerEventData.InputButton A_0)
 		{
 		};
@@ -83,7 +83,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400009B RID: 155
 		// (add) Token: 0x06003056 RID: 12374 RVA: 0x000C54F8 File Offset: 0x000C38F8
 		// (remove) Token: 0x06003057 RID: 12375 RVA: 0x000C5530 File Offset: 0x000C3930
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton> onDragEnd = delegate(PointerEventData.InputButton A_0)
 		{
 		};

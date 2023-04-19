@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using ReflexCLI.Attributes;
 using Rewired;
@@ -57,7 +56,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400009C RID: 156
 		// (add) Token: 0x06003072 RID: 12402 RVA: 0x000C5AC8 File Offset: 0x000C3EC8
 		// (remove) Token: 0x06003073 RID: 12403 RVA: 0x000C5B00 File Offset: 0x000C3F00
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event SquadSelector.OnSquadSelectionChanged onSquadSelectionChanged = delegate(EnglishSquad A_0)
 		{
 		};
@@ -160,7 +159,7 @@ namespace Voxels.TowerDefense
 		[ConsoleCommand("")]
 		public void SelectSquad(EnglishSquad newSelection, bool showGodray = false)
 		{
-			using ("SelectSquad")
+			//using ("SelectSquad")
 			{
 				EnglishSquad selectedSquad = this.selectedSquad;
 				if (!(newSelection == selectedSquad) && (!newSelection || newSelection.selectable))
@@ -171,16 +170,16 @@ namespace Voxels.TowerDefense
 					}
 					if (newSelection)
 					{
-						using ("ShowSelection")
+						//using ("ShowSelection")
 						{
 							this._selectedSquad.Target = newSelection;
 							this._selectedSquad.Target.ShowSelection(true, showGodray);
 						}
-						using ("stateActivate")
+						//using ("stateActivate")
 						{
 							this.selectionState.SetActive(true);
 						}
-						using ("Sfx")
+						//using ("Sfx")
 						{
 							bool flag = !InputHelpers.ControllerTypeIs(ControllerType.Mouse) && selectedSquad;
 							FabricEventReference eventId = (!flag) ? this.primarySelectSound : this.secondarySelectSound;
@@ -191,7 +190,7 @@ namespace Voxels.TowerDefense
 					{
 						this.selectionState.SetActive(false);
 					}
-					using ("onSquadSelectionChangedDelegate")
+					//using ("onSquadSelectionChangedDelegate")
 					{
 						this.onSquadSelectionChanged(newSelection);
 					}

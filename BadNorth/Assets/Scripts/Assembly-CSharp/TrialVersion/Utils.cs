@@ -17,11 +17,11 @@ namespace TrialVersion
 		// Token: 0x060026D6 RID: 9942 RVA: 0x0007C42F File Offset: 0x0007A82F
 		static Utils()
 		{
-			if (Utils.<>f__mg$cache0 == null)
+			if (Utils.action == null)
 			{
-				Utils.<>f__mg$cache0 = new Func<bool>(Utils.LaunchStore);
+				Utils.action = new Func<bool>(Utils.LaunchStore);
 			}
-			Utils.launchStore = Utils.<>f__mg$cache0;
+			Utils.launchStore = Utils.action;
 			Utils.launchStoreAndExitToMain = delegate()
 			{
 				bool flag = Utils.LaunchStore();
@@ -43,11 +43,11 @@ namespace TrialVersion
 			instance.Initialize(title, "TRIAL/OVER/MESSAGE", false);
 			GeneratedMenu generatedMenu = instance;
 			string labelLocTerm = "TRIAL/UPGRADE/MAYBE_LATER";
-			if (Utils.<>f__mg$cache1 == null)
+			if (Utils.action1 == null)
 			{
-				Utils.<>f__mg$cache1 = new Func<bool>(MetaMenuHelpers.ExitToMainMenu);
+				Utils.action1 = new Func<bool>(MetaMenuHelpers.ExitToMainMenu);
 			}
-			generatedMenu.AddButton(labelLocTerm, Utils.<>f__mg$cache1, null, null);
+			generatedMenu.AddButton(labelLocTerm, Utils.action1, null, null);
 			ButtonWidget defaultNavigable = instance.AddButton("TRIAL/UPGRADE/NOW", action, null, null);
 			instance.SetDefaultNavigable(defaultNavigable);
 			instance.SetOpenAudio("Mus/ThankYou");
@@ -93,10 +93,10 @@ namespace TrialVersion
 
 		// Token: 0x040018E5 RID: 6373
 		[CompilerGenerated]
-		private static Func<bool> <>f__mg$cache0;
+		private static Func<bool> action;
 
 		// Token: 0x040018E6 RID: 6374
 		[CompilerGenerated]
-		private static Func<bool> <>f__mg$cache1;
+		private static Func<bool> action1;
 	}
 }

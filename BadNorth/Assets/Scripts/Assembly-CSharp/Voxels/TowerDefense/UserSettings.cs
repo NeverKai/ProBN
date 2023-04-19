@@ -116,11 +116,11 @@ namespace Voxels.TowerDefense
 					UserSettings.Language.ChineseTraditional
 				}
 			};
-			if (UserSettings.<>f__mg$cache0 == null)
+			if (UserSettings.action == null)
 			{
-				UserSettings.<>f__mg$cache0 = new PlatformEvents.PlatformBoolEventDel(UserSettings.OnPlatformGamePauseEvent);
+				UserSettings.action = new PlatformEvents.PlatformBoolEventDel(UserSettings.OnPlatformGamePauseEvent);
 			}
-			PlatformEvents.OnPlatformGamePauseEvent += UserSettings.<>f__mg$cache0;
+			PlatformEvents.OnPlatformGamePauseEvent += UserSettings.action;
 		}
 
 		// Token: 0x170004E0 RID: 1248
@@ -194,7 +194,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000087 RID: 135
 		// (add) Token: 0x060025B8 RID: 9656 RVA: 0x000774CC File Offset: 0x000758CC
 		// (remove) Token: 0x060025B9 RID: 9657 RVA: 0x00077500 File Offset: 0x00075900
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<UserSettings> onUpdated;
 
 		// Token: 0x060025BA RID: 9658 RVA: 0x00077534 File Offset: 0x00075934
@@ -401,7 +401,7 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x040017FD RID: 6141
 		[CompilerGenerated]
-		private static PlatformEvents.PlatformBoolEventDel <>f__mg$cache0;
+		private static PlatformEvents.PlatformBoolEventDel action;
 
 		// Token: 0x020005A6 RID: 1446
 		public enum AntiAliasOption

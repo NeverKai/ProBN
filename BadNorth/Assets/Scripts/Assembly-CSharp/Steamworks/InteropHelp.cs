@@ -115,7 +115,7 @@ namespace Steamworks
 			}
 
 			// Token: 0x06001230 RID: 4656 RVA: 0x0002733C File Offset: 0x0002573C
-			protected override void Finalize()
+			protected void Finalize()
 			{
 				try
 				{
@@ -134,7 +134,7 @@ namespace Steamworks
 				}
 				finally
 				{
-					base.Finalize();
+					//base.Finalize();
 				}
 			}
 

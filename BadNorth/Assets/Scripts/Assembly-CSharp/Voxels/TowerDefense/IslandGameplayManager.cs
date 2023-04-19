@@ -8,7 +8,6 @@ using CS.Platform;
 using CS.VT;
 using I2.Loc;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.CampaignGeneration;
 using Voxels.TowerDefense.CoinDispensing;
@@ -18,27 +17,14 @@ using Voxels.TowerDefense.UI.UpgradeScreen;
 
 namespace Voxels.TowerDefense
 {
-	// Token: 0x0200052B RID: 1323
 	public class IslandGameplayManager : Singleton<IslandGameplayManager>, IGameSetup
 	{
-		// Token: 0x17000471 RID: 1137
-		// (get) Token: 0x06002251 RID: 8785 RVA: 0x00063982 File Offset: 0x00061D82
-		// (set) Token: 0x06002252 RID: 8786 RVA: 0x0006398A File Offset: 0x00061D8A
 		public IslandStateTree states { get; private set; }
 
-		// Token: 0x17000472 RID: 1138
-		// (get) Token: 0x06002253 RID: 8787 RVA: 0x00063993 File Offset: 0x00061D93
-		// (set) Token: 0x06002254 RID: 8788 RVA: 0x0006399B File Offset: 0x00061D9B
 		public LevelCamera levelCamera { get; private set; }
 
-		// Token: 0x17000473 RID: 1139
-		// (get) Token: 0x06002255 RID: 8789 RVA: 0x000639A4 File Offset: 0x00061DA4
-		// (set) Token: 0x06002256 RID: 8790 RVA: 0x000639AC File Offset: 0x00061DAC
 		public LevelPauser levelPauser { get; private set; }
 
-		// Token: 0x17000474 RID: 1140
-		// (get) Token: 0x06002257 RID: 8791 RVA: 0x000639B5 File Offset: 0x00061DB5
-		// (set) Token: 0x06002258 RID: 8792 RVA: 0x000639BD File Offset: 0x00061DBD
 		public SquadSpawner squadSpawner { get; private set; }
 
 		// Token: 0x17000475 RID: 1141
@@ -98,43 +84,19 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x17000480 RID: 1152
 		// (get) Token: 0x0600226F RID: 8815 RVA: 0x00063A81 File Offset: 0x00061E81
-		public CameraScreenshotter userScreenShotter
-		{
-			get
-			{
-				return this._userScreenshotter;
-			}
-		}
+		public CameraScreenshotter userScreenShotter => this._userScreenshotter;
 
 		// Token: 0x17000481 RID: 1153
 		// (get) Token: 0x06002270 RID: 8816 RVA: 0x00063A89 File Offset: 0x00061E89
-		public AudioEventBuffer footstepsAudio
-		{
-			get
-			{
-				return this._footstepsAudio;
-			}
-		}
+		public AudioEventBuffer footstepsAudio => this._footstepsAudio;
 
 		// Token: 0x17000482 RID: 1154
 		// (get) Token: 0x06002271 RID: 8817 RVA: 0x00063A91 File Offset: 0x00061E91
-		public AudioEventBuffer combatAudio
-		{
-			get
-			{
-				return this._combatAudio;
-			}
-		}
+		public AudioEventBuffer combatAudio => this._combatAudio;
 
 		// Token: 0x17000483 RID: 1155
 		// (get) Token: 0x06002272 RID: 8818 RVA: 0x00063A99 File Offset: 0x00061E99
-		public Island island
-		{
-			get
-			{
-				return this._island;
-			}
-		}
+		public Island island => this._island;
 
 		// Token: 0x06002273 RID: 8819 RVA: 0x00063AA8 File Offset: 0x00061EA8
 		void IGameSetup.OnGameAwake()
@@ -154,19 +116,19 @@ namespace Voxels.TowerDefense
 			this.endOfLevel = base.GetComponentInChildren<EndOfLevel>(true);
 			this.levelLeaver = base.GetComponentInChildren<LevelLeaver>(true);
 			this.nsTargetManager = base.GetComponentInChildren<NavSpotTargetManager>(true);
-			foreach (IslandGameplayManager.IAwake awake in base.transform.GetComponentsInChildren<IslandGameplayManager.IAwake>(true))
+			foreach (IAwake awake in base.transform.GetComponentsInChildren<IAwake>(true))
 			{
 				awake.OnAwake(this);
 			}
-			this.setupCoroutines = base.GetComponentsInChildren<IslandGameplayManager.ISetupIslandCoroutine>(true);
-			this.setups = base.GetComponentsInChildren<IslandGameplayManager.ISetupIsland>(true);
-			this.wipers = base.GetComponentsInChildren<IslandGameplayManager.IWipeIsland>(true);
-			this.leavers = base.GetComponentsInChildren<IslandGameplayManager.ILeaveIsland>(true);
+			this.setupCoroutines = base.GetComponentsInChildren<ISetupIslandCoroutine>(true);
+			this.setups = base.GetComponentsInChildren<ISetupIsland>(true);
+			this.wipers = base.GetComponentsInChildren<IWipeIsland>(true);
+			this.leavers = base.GetComponentsInChildren<ILeaveIsland>(true);
 			Singleton<AudioStateListener>.instance.BindLevelStates(this);
 			DemoAttractMode.onAttractModeTriggered += this.OnAttractModeTriggered;
 			CorePlatformUtils.onForcePrimUserOut += this.OnAttractModeTriggered;
 			CampaignManager.onExitCampaign += this.OnExitCampaign;
-			this.richPresenseScreenshots = new SmartShuffler<string>(new string[]
+			richPresenseScreenshots = new SmartShuffler<string>(new string[]
 			{
 				"ISLAND_SCREENSHOT_01",
 				"ISLAND_SCREENSHOT_02",
@@ -182,7 +144,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002274 RID: 8820 RVA: 0x00063C68 File Offset: 0x00062068
 		private void OnExitCampaign(CampaignManager campaignManager, Campaign campaign)
 		{
-			foreach (IslandGameplayManager.IExitCampaign exitCampaign in base.GetComponentsInChildren<IslandGameplayManager.IExitCampaign>(true))
+			foreach (IExitCampaign exitCampaign in base.GetComponentsInChildren<IExitCampaign>(true))
 			{
 				exitCampaign.OnExitCampaign(campaignManager, campaign);
 			}
@@ -236,7 +198,6 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x0600227B RID: 8827 RVA: 0x00063D4C File Offset: 0x0006214C
 		private void PlayIsland()
 		{
 			string text = Profile.campaign.PercentComplete().ToString();
@@ -248,8 +209,7 @@ namespace Voxels.TowerDefense
 			}
 			else if (this.island.levelNode.isEnd)
 			{
-				string[] parameter = new string[]
-				{
+				string[] parameter = {
 					text2,
 					locTerm
 				};
@@ -257,8 +217,7 @@ namespace Voxels.TowerDefense
 			}
 			else if (UnityEngine.Random.Range(0, 2) == 1)
 			{
-				string[] parameter2 = new string[]
-				{
+				string[] parameter2 = {
 					text2,
 					locTerm
 				};
@@ -266,8 +225,7 @@ namespace Voxels.TowerDefense
 			}
 			else
 			{
-				string[] parameter3 = new string[]
-				{
+				string[] parameter3 = {
 					text2,
 					text
 				};
@@ -297,7 +255,6 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x0600227D RID: 8829 RVA: 0x00063F30 File Offset: 0x00062330
 		private IEnumerator<GenInfo> PlayIslandRoutine()
 		{
 			this.CacheProfileStates(this.island.levelNode.campaign.campaignSave);
@@ -307,7 +264,7 @@ namespace Voxels.TowerDefense
 				GenInfo genInfo = routine.Current;
 				yield return genInfo;
 			}
-			foreach (IslandGameplayManager.ISetupIslandCoroutine setup in this.setupCoroutines)
+			foreach (ISetupIslandCoroutine setup in this.setupCoroutines)
 			{
 				IEnumerator r = setup.OnSetup(this.island);
 				while (r.MoveNext())
@@ -315,7 +272,7 @@ namespace Voxels.TowerDefense
 					yield return new GenInfo("IslandGamplayManager.SetupCoroutines", GenInfo.Mode.interruptable);
 				}
 			}
-			foreach (IslandGameplayManager.ISetupIsland setup2 in this.setups)
+			foreach (ISetupIsland setup2 in this.setups)
 			{
 				setup2.OnSetup(this.island);
 				yield return new GenInfo("IslandGamplayManager.Setups", GenInfo.Mode.interruptable);
@@ -571,7 +528,7 @@ namespace Voxels.TowerDefense
 		private AudioEventBuffer _combatAudio;
 
 		// Token: 0x0400150F RID: 5391
-		private WeakReference<Island> _island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> _island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x04001510 RID: 5392
 		private IslandGameplayManager.ISetupIslandCoroutine[] setupCoroutines;

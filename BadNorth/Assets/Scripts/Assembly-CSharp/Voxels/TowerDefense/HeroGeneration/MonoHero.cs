@@ -77,7 +77,7 @@ namespace Voxels.TowerDefense.HeroGeneration
 		// Token: 0x140000A0 RID: 160
 		// (add) Token: 0x0600316B RID: 12651 RVA: 0x000CC6A4 File Offset: 0x000CAAA4
 		// (remove) Token: 0x0600316C RID: 12652 RVA: 0x000CC6DC File Offset: 0x000CAADC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Agent> onMinionPrefabChanged = delegate(Agent A_0)
 		{
 		};

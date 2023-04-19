@@ -1,51 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using RTM.OnScreenDebug;
 using UnityEngine;
 
 namespace Voxels.TowerDefense
 {
-	// Token: 0x0200077A RID: 1914
 	public class Island : MonoBehaviour
 	{
-		// Token: 0x1700071C RID: 1820
-		// (get) Token: 0x060031B9 RID: 12729 RVA: 0x000CFF8D File Offset: 0x000CE38D
-		public NavigationMesh navMesh
-		{
-			get
-			{
-				return this.navManager.navigationMesh;
-			}
-		}
+		public NavigationMesh navMesh => this.navManager.navigationMesh;
 
-		// Token: 0x1700071D RID: 1821
-		// (get) Token: 0x060031BA RID: 12730 RVA: 0x000CFF9A File Offset: 0x000CE39A
-		public TexturePool texturePool
-		{
-			get
-			{
-				return this.levelNode.campaign.texturePool;
-			}
-		}
+		public TexturePool texturePool => this.levelNode.campaign.texturePool;
 
-		// Token: 0x1700071E RID: 1822
-		// (get) Token: 0x060031BB RID: 12731 RVA: 0x000CFFAC File Offset: 0x000CE3AC
-		public MeshPool meshPool
-		{
-			get
-			{
-				return this.levelNode.campaign.meshPool;
-			}
-		}
+		public MeshPool meshPool => this.levelNode.campaign.meshPool;
 
-		// Token: 0x060031BC RID: 12732 RVA: 0x000CFFBE File Offset: 0x000CE3BE
 		private void SelfDestruct()
 		{
-			UnityEngine.Object.Destroy(base.gameObject);
+			Destroy(base.gameObject);
 		}
 
-		// Token: 0x060031BD RID: 12733 RVA: 0x000CFFCC File Offset: 0x000CE3CC
 		private void OnDestroy()
 		{
 			this.english = null;
@@ -76,7 +48,6 @@ namespace Voxels.TowerDefense
 			this.savedWave = null;
 		}
 
-		// Token: 0x060031BE RID: 12734 RVA: 0x000D0090 File Offset: 0x000CE490
 		public IEnumerator<GenInfo> SetupRoutine(LevelNode levelNode, MultiWave multiWave)
 		{
 			this.savedWave = multiWave.savedWave;
@@ -121,11 +92,10 @@ namespace Voxels.TowerDefense
 			this.islandResetters = base.GetComponentsInChildren<IIslandReset>(true);
 			this.islandLeavers = base.GetComponentsInChildren<IIslandLeave>(true);
 			this.generated = true;
-			this.state = Island.State.Idle;
+			this.state = State.Idle;
 			yield return default(GenInfo);
 			yield return default(GenInfo);
 			base.gameObject.SetActive(false);
-			yield break;
 		}
 
 		// Token: 0x060031BF RID: 12735 RVA: 0x000D00BC File Offset: 0x000CE4BC
@@ -136,7 +106,7 @@ namespace Voxels.TowerDefense
 			stopwatch.Start();
 			base.gameObject.SetActive(true);
 			UnityEngine.Random.State oldState = UnityEngine.Random.state;
-			UnityEngine.Random.InitState(this.levelNode.index * 98765 + this.levelNode.campaign.seed);
+			Random.InitState(this.levelNode.index * 98765 + this.levelNode.campaign.seed);
 			IEnumerator<GenInfo> enumerator = this.EnterIsland();
 			while (enumerator.MoveNext())
 			{
@@ -150,9 +120,8 @@ namespace Voxels.TowerDefense
 				}
 			}
 			yield return ScenePreloader.islandGameplay;
-			UnityEngine.Random.state = oldState;
+			Random.state = oldState;
 			yield return null;
-			yield break;
 		}
 
 		// Token: 0x060031C0 RID: 12736 RVA: 0x000D00D8 File Offset: 0x000CE4D8
@@ -193,7 +162,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060031C1 RID: 12737 RVA: 0x000D00F4 File Offset: 0x000CE4F4
 		public IEnumerator<GenInfo> PlayIsland()
 		{
-			this.runContainer = base.gameObject.AddEmptyChild("RunContainer").transform;
+			this.runContainer = gameObject.AddEmptyChild("RunContainer").transform;
 			UnityEngine.Random.State oldState = UnityEngine.Random.state;
 			UnityEngine.Random.InitState(this.levelNode.index * 7652132 + this.levelNode.campaign.seed);
 			for (int i = 0; i < this.islandPlayers.Length; i++)
@@ -212,7 +181,6 @@ namespace Voxels.TowerDefense
 			}
 			UnityEngine.Random.state = oldState;
 			yield return default(GenInfo);
-			yield break;
 		}
 
 		// Token: 0x060031C2 RID: 12738 RVA: 0x000D0110 File Offset: 0x000CE510
@@ -383,13 +351,9 @@ namespace Voxels.TowerDefense
 		// Token: 0x0200077B RID: 1915
 		public enum State
 		{
-			// Token: 0x040021A4 RID: 8612
 			Created,
-			// Token: 0x040021A5 RID: 8613
 			Processing,
-			// Token: 0x040021A6 RID: 8614
 			Idle,
-			// Token: 0x040021A7 RID: 8615
 			Playing
 		}
 	}

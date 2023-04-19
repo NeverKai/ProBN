@@ -2,7 +2,6 @@
 using System.Collections;
 using Fabric;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;
 using Voxels.TowerDefense.WorldEnvironment;
@@ -400,7 +399,7 @@ namespace Voxels.TowerDefense
 		private float introMusicRepeatTime = 60f;
 
 		// Token: 0x04000062 RID: 98
-		private WeakReference<Island> _island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> _island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x04000063 RID: 99
 		private IslandGameplayManager manager;

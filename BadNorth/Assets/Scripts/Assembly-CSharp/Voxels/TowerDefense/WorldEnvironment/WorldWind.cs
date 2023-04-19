@@ -8,13 +8,7 @@ namespace Voxels.TowerDefense.WorldEnvironment
 	{
 		// Token: 0x1700082D RID: 2093
 		// (get) Token: 0x060038EA RID: 14570 RVA: 0x000F7273 File Offset: 0x000F5673
-		private float windInterpolator
-		{
-			get
-			{
-				return Singleton<WorldWeather>.instance.weatherSystem.wind;
-			}
-		}
+		private float windInterpolator => Singleton<WorldWeather>.instance.weatherSystem.wind;
 
 		// Token: 0x1700082E RID: 2094
 		// (get) Token: 0x060038EB RID: 14571 RVA: 0x000F7284 File Offset: 0x000F5684

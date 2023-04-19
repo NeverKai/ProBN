@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using UnityEngine;
 
 namespace CS.Platform.Utils
@@ -25,7 +24,7 @@ namespace CS.Platform.Utils
 		// Token: 0x060004E9 RID: 1257 RVA: 0x00014370 File Offset: 0x00012770
 		public static void LogError(string message, params object[] args)
 		{
-			Debug.LogErrorFormat(message, args);
+			// Debug.LogErrorFormat(message, args);
 		}
 
 		// Token: 0x060004EA RID: 1258 RVA: 0x00014379 File Offset: 0x00012779

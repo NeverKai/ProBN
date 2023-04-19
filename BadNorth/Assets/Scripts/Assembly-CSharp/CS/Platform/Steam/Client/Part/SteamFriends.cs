@@ -61,23 +61,23 @@ namespace CS.Platform.Steam.Client.Part
 			{
 				this._gening = true;
 			}
-			int friendCount = SteamFriends.GetFriendCount(EFriendFlags.k_EFriendFlagImmediate);
-			if (this._friends == null || friendCount != this._friends.Length)
-			{
-				this._friends = new BaseUserInfo[friendCount];
-			}
-			for (int i = 0; i < friendCount; i++)
-			{
-				CSteamID friendByIndex = SteamFriends.GetFriendByIndex(i, EFriendFlags.k_EFriendFlagImmediate);
-				if (friendByIndex == CSteamID.Nil)
-				{
-					this._friends[i] = default(BaseUserInfo);
-				}
-				else
-				{
-					this._friends[i] = new BaseUserInfo((ulong)friendByIndex, "steam", SteamFriends.GetFriendPersonaName(friendByIndex));
-				}
-			}
+			// int friendCount = SteamFriends.GetFriendCount(EFriendFlags.k_EFriendFlagImmediate);
+			// if (this._friends == null || friendCount != this._friends.Length)
+			// {
+			// 	this._friends = new BaseUserInfo[friendCount];
+			// }
+			// for (int i = 0; i < friendCount; i++)
+			// {
+			// 	CSteamID friendByIndex = SteamFriends.GetFriendByIndex(i, EFriendFlags.k_EFriendFlagImmediate);
+			// 	if (friendByIndex == CSteamID.Nil)
+			// 	{
+			// 		this._friends[i] = default(BaseUserInfo);
+			// 	}
+			// 	else
+			// 	{
+			// 		this._friends[i] = new BaseUserInfo((ulong)friendByIndex, "steam", SteamFriends.GetFriendPersonaName(friendByIndex));
+			// 	}
+			// }
 			BaseUserInfo[] newUsers = this._friends;
 			object locker2 = this._locker;
 			lock (locker2)

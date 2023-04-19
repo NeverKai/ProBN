@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using CS.Platform;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.CampaignGeneration;
 using Voxels.TowerDefense.ProfileInternals;
@@ -52,7 +51,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000078 RID: 120
 		// (add) Token: 0x0600223D RID: 8765 RVA: 0x0006329C File Offset: 0x0006169C
 		// (remove) Token: 0x0600223E RID: 8766 RVA: 0x000632D4 File Offset: 0x000616D4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Island, EndOfLevel.Reason> preProcess = delegate(Island A_0, EndOfLevel.Reason A_1)
 		{
 		};
@@ -60,7 +59,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000079 RID: 121
 		// (add) Token: 0x0600223F RID: 8767 RVA: 0x0006330C File Offset: 0x0006170C
 		// (remove) Token: 0x06002240 RID: 8768 RVA: 0x00063344 File Offset: 0x00061744
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Island> postProcess = delegate(Island A_0)
 		{
 		};
@@ -115,7 +114,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002248 RID: 8776 RVA: 0x00063424 File Offset: 0x00061824
 		private void ProcessEOL(EndOfLevel.Reason reason)
 		{
-			using ("ProcessEndOfLevel")
+			//using ("ProcessEndOfLevel")
 			{
 				this.reason = reason;
 				this.MakeHousesInvulnerable();
@@ -135,13 +134,13 @@ namespace Voxels.TowerDefense
 				}
 				else
 				{
-					using ("TriggerEndOfLevel")
+					//using ("TriggerEndOfLevel")
 					{
-						using ("PostProcess Delegate")
+						//using ("PostProcess Delegate")
 						{
 							this.postProcess(this.island);
 						}
-						using ("EndOfLevel StateChange")
+						//using ("EndOfLevel StateChange")
 						{
 							this.manager.states.EndOfLevel.SetActive(true);
 						}
@@ -245,7 +244,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x0600224D RID: 8781 RVA: 0x0006383C File Offset: 0x00061C3C
 		private void NotifySquads()
 		{
-			using ("NotifySquads")
+			//using ("NotifySquads")
 			{
 				foreach (Squad squad in this.island.english.allSquads)
 				{
@@ -269,7 +268,7 @@ namespace Voxels.TowerDefense
 		private IslandGameplayManager manager;
 
 		// Token: 0x040014ED RID: 5357
-		private WeakReference<Island> _island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> _island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x0200052A RID: 1322
 		public enum Reason

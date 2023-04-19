@@ -92,7 +92,7 @@ namespace Voxels.TowerDefense.CampaignGeneration
 		public int GetGenerationDepth()
 		{
 			int result;
-			using ("GetGenerationDepth")
+			//using ("GetGenerationDepth")
 			{
 				int num = 0;
 				foreach (LevelNode levelNode in this.levels)

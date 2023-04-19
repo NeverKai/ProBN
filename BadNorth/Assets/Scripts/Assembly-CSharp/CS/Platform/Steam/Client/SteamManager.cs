@@ -26,20 +26,20 @@ namespace CS.Platform.Steam.Client
 			if (!this.CheckSteamAppId())
 			{
 				CS.Platform.Utils.Debug.LogError("[Steamworks] steam_appid.txt exists and could not be deleted", new object[0]);
-				if (SteamManager.<>f__mg$cache0 == null)
+				if (SteamManager.action == null)
 				{
-					SteamManager.<>f__mg$cache0 = new Action(Application.Quit);
+					SteamManager.action = new Action(Application.Quit);
 				}
-				base.AddToNextUpdate(SteamManager.<>f__mg$cache0);
+				base.AddToNextUpdate(SteamManager.action);
 			}
 			if (SteamAPI.RestartAppIfNecessary(SteamManager.DesiredGameID))
 			{
 				CS.Platform.Utils.Debug.LogError("[Steamworks] Restarting for steam client.", new object[0]);
-				if (SteamManager.<>f__mg$cache1 == null)
+				if (SteamManager.action1 == null)
 				{
-					SteamManager.<>f__mg$cache1 = new Action(Application.Quit);
+					SteamManager.action1 = new Action(Application.Quit);
 				}
-				base.AddToNextUpdate(SteamManager.<>f__mg$cache1);
+				base.AddToNextUpdate(SteamManager.action1);
 			}
 			if (!BasePlatformManager._InitializedPlatformAPI)
 			{
@@ -1060,10 +1060,10 @@ namespace CS.Platform.Steam.Client
 
 		// Token: 0x04000174 RID: 372
 		[CompilerGenerated]
-		private static Action <>f__mg$cache0;
+		private static Action action;
 
 		// Token: 0x04000175 RID: 373
 		[CompilerGenerated]
-		private static Action <>f__mg$cache1;
+		private static Action action1;
 	}
 }

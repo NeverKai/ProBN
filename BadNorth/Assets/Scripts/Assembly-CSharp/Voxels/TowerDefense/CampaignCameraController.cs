@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using ReflexCLI.Attributes;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Voxels.TowerDefense.CampaignGeneration;
@@ -35,18 +33,12 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x170006EC RID: 1772
 		// (get) Token: 0x06002FDD RID: 12253 RVA: 0x000C36EC File Offset: 0x000C1AEC
-		public float currentPos
-		{
-			get
-			{
-				return this.cameraRoot.transform.position.x;
-			}
-		}
+		public float currentPos => this.cameraRoot.transform.position.x;
 
 		// Token: 0x14000093 RID: 147
 		// (add) Token: 0x06002FDE RID: 12254 RVA: 0x000C3714 File Offset: 0x000C1B14
 		// (remove) Token: 0x06002FDF RID: 12255 RVA: 0x000C374C File Offset: 0x000C1B4C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<float, float> onLimitsUpdated = delegate(float A_0, float A_1)
 		{
 		};
@@ -54,7 +46,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000094 RID: 148
 		// (add) Token: 0x06002FE0 RID: 12256 RVA: 0x000C3784 File Offset: 0x000C1B84
 		// (remove) Token: 0x06002FE1 RID: 12257 RVA: 0x000C37BC File Offset: 0x000C1BBC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onDrag = delegate()
 		{
 		};
@@ -62,7 +54,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000095 RID: 149
 		// (add) Token: 0x06002FE2 RID: 12258 RVA: 0x000C37F4 File Offset: 0x000C1BF4
 		// (remove) Token: 0x06002FE3 RID: 12259 RVA: 0x000C382C File Offset: 0x000C1C2C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onBackgroundClick = delegate()
 		{
 		};
@@ -70,7 +62,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002FE4 RID: 12260 RVA: 0x000C3864 File Offset: 0x000C1C64
 		void IGameSetup.OnGameAwake()
 		{
-			this.clickListener = new CampaignCameraController.ClickListener(delegate()
+			this.clickListener = new ClickListener(delegate()
 			{
 				this.SetVelocity(Vector2.zero);
 			}, delegate()
@@ -239,7 +231,6 @@ namespace Voxels.TowerDefense
 			this.ClampCamera();
 		}
 
-		// Token: 0x06002FF4 RID: 12276 RVA: 0x000C3D0C File Offset: 0x000C210C
 		private void ClampCamera()
 		{
 			this.scrollMin = Mathf.Lerp(this.scrollMin, this.scrollTargetMin, Time.unscaledDeltaTime * 3f);
@@ -261,7 +252,6 @@ namespace Voxels.TowerDefense
 			this.cameraRef.transform.SetLocalY((0.5f - screenSpaceNormalizedRect.center.y) * this.cameraRef.orthographicSize * 2f);
 		}
 
-		// Token: 0x06002FF5 RID: 12277 RVA: 0x000C3ED8 File Offset: 0x000C22D8
 		private void FixedUpdate()
 		{
 			if (!this.dragging)
@@ -270,7 +260,6 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x06002FF6 RID: 12278 RVA: 0x000C3EFC File Offset: 0x000C22FC
 		public void UpdateLimits()
 		{
 			Campaign campaign = (!Singleton<CampaignManager>.instance) ? null : Singleton<CampaignManager>.instance.campaign;
@@ -321,14 +310,12 @@ namespace Voxels.TowerDefense
 			this.onLimitsUpdated(this.scrollTargetMin - orthoHalfWidth, this.scrollTargetMax + orthoHalfWidth);
 		}
 
-		// Token: 0x06002FF7 RID: 12279 RVA: 0x000C4168 File Offset: 0x000C2568
 		void CursorManager.ICursor.SetActive(bool active)
 		{
 			this.dragging = false;
 			this.velocity = Vector3.zero;
 		}
 
-		// Token: 0x06002FF8 RID: 12280 RVA: 0x000C4181 File Offset: 0x000C2581
 		void CursorManager.IDragListener.OnDragStart(PointerEventData.InputButton button)
 		{
 			this.CancelSeek();
@@ -336,7 +323,6 @@ namespace Voxels.TowerDefense
 			this.dragging = true;
 		}
 
-		// Token: 0x06002FF9 RID: 12281 RVA: 0x000C419C File Offset: 0x000C259C
 		void CursorManager.IDragListener.OnDragEnd(PointerEventData.InputButton button)
 		{
 			if (Time.unscaledTime - this.lastDragTime > this.dragReleaseThresholdTime)
@@ -352,7 +338,6 @@ namespace Voxels.TowerDefense
 			this.dragging = false;
 		}
 
-		// Token: 0x06002FFA RID: 12282 RVA: 0x000C4238 File Offset: 0x000C2638
 		void CursorManager.IDragListener.OnDrag(PointerEventData.InputButton button, Vector2 inDelta)
 		{
 			Vector2 vector = -(inDelta * this.cameraRef.orthographicSize * 2f) / (float)this.cameraRef.pixelHeight;
@@ -371,7 +356,6 @@ namespace Voxels.TowerDefense
 			this.onDrag();
 		}
 
-		// Token: 0x06002FFB RID: 12283 RVA: 0x000C430D File Offset: 0x000C270D
 		private void OnPointerStateChanged(PointerRationalizer.State state)
 		{
 			if (state != PointerRationalizer.State.None)
@@ -380,12 +364,10 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x06002FFC RID: 12284 RVA: 0x000C4320 File Offset: 0x000C2720
 		void CursorManager.IDragListener.OverrideCursorTexture(PointerRationalizer.State state, ref Texture2D texture, ref Vector2 position)
 		{
 		}
 
-		// Token: 0x06002FFD RID: 12285 RVA: 0x000C4324 File Offset: 0x000C2724
 		private void OnDrawGizmos()
 		{
 			Gizmos.color = Color.red;
@@ -498,7 +480,7 @@ namespace Voxels.TowerDefense
 		private Vector2 velocity;
 
 		// Token: 0x04002013 RID: 8211
-		private WeakReference<Campaign> campaign = new WeakReference<Campaign>(null);
+		private RTM.Utilities.WeakReference<Campaign> campaign = new RTM.Utilities.WeakReference<Campaign>(null);
 
 		// Token: 0x04002014 RID: 8212
 		private CampaignCameraController.ClickListener clickListener;
@@ -543,29 +525,24 @@ namespace Voxels.TowerDefense
 				this.onButtonUp = action2;
 			}
 
-			// Token: 0x06003006 RID: 12294 RVA: 0x000C444D File Offset: 0x000C284D
 			void CursorManager.IPointerCursor.OnButtonDown(PointerEventData.InputButton button, Vector2 screenPos)
 			{
 				this.onButtonDown();
 			}
 
-			// Token: 0x06003007 RID: 12295 RVA: 0x000C445A File Offset: 0x000C285A
 			void CursorManager.IPointerCursor.OnButtonUp(PointerEventData.InputButton button, Vector2 screenPos)
 			{
 				this.onButtonUp();
 			}
 
-			// Token: 0x06003008 RID: 12296 RVA: 0x000C4467 File Offset: 0x000C2867
 			void CursorManager.IPointerCursor.OverrideCursorTexture(PointerRationalizer.State state, ref Texture2D texture, ref Vector2 position)
 			{
 			}
 
-			// Token: 0x06003009 RID: 12297 RVA: 0x000C4469 File Offset: 0x000C2869
 			void CursorManager.ICursor.SetActive(bool active)
 			{
 			}
 
-			// Token: 0x0600300A RID: 12298 RVA: 0x000C446B File Offset: 0x000C286B
 			void CursorManager.IPointerCursor.UpdateHoverTarget(PointerRationalizer.State state, Vector2 screenPos)
 			{
 			}

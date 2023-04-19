@@ -9,33 +9,15 @@ namespace Voxels.TowerDefense
 	{
 		// Token: 0x17000600 RID: 1536
 		// (get) Token: 0x06002B61 RID: 11105 RVA: 0x0009D3DE File Offset: 0x0009B7DE
-		public float damage
-		{
-			get
-			{
-				return this.damageLevels[base.agent.squad.level];
-			}
-		}
+		public float damage => this.damageLevels[base.agent.squad.level];
 
 		// Token: 0x17000601 RID: 1537
 		// (get) Token: 0x06002B62 RID: 11106 RVA: 0x0009D3F7 File Offset: 0x0009B7F7
-		public float knockback
-		{
-			get
-			{
-				return this.knockbackLevels[base.agent.squad.level];
-			}
-		}
+		public float knockback => this.knockbackLevels[base.agent.squad.level];
 
 		// Token: 0x17000602 RID: 1538
 		// (get) Token: 0x06002B63 RID: 11107 RVA: 0x0009D410 File Offset: 0x0009B810
-		public float stun
-		{
-			get
-			{
-				return this.stunLevels[base.agent.squad.level];
-			}
-		}
+		public float stun => this.stunLevels[base.agent.squad.level];
 
 		// Token: 0x17000603 RID: 1539
 		// (get) Token: 0x06002B64 RID: 11108 RVA: 0x0009D429 File Offset: 0x0009B829
@@ -73,23 +55,13 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x17000606 RID: 1542
-		// (get) Token: 0x06002B68 RID: 11112 RVA: 0x0009D467 File Offset: 0x0009B867
-		private bool isLeader
-		{
-			get
-			{
-				return this.isStandard && base.squad.agents.Count > 1;
-			}
-		}
+		private bool isLeader => this.isStandard && base.squad.agents.Count > 1;
 
-		// Token: 0x06002B69 RID: 11113 RVA: 0x0009D48A File Offset: 0x0009B88A
 		private void StartCountingDistance()
 		{
 			this.startDistance = base.agent.walkedDistance;
 		}
 
-		// Token: 0x06002B6A RID: 11114 RVA: 0x0009D4A0 File Offset: 0x0009B8A0
 		public override void Setup()
 		{
 			base.Setup();
@@ -258,7 +230,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002B6F RID: 11119 RVA: 0x0009DAE4 File Offset: 0x0009BEE4
 		private void ReadyUpdate()
 		{
-			using ("Swordsman.ReadyUpdate()")
+			//using ("Swordsman.ReadyUpdate()")
 			{
 				this.stamina = Mathf.MoveTowards(this.stamina, 1f, Time.deltaTime);
 				Vector3 vector = base.agent.orderDir;

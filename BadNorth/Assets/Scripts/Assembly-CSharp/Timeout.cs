@@ -12,7 +12,7 @@ public class Timeout : MonoBehaviour
 	// Token: 0x1400007F RID: 127
 	// (add) Token: 0x06002411 RID: 9233 RVA: 0x00071084 File Offset: 0x0006F484
 	// (remove) Token: 0x06002412 RID: 9234 RVA: 0x000710BC File Offset: 0x0006F4BC
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public event Action OnTimedOut = delegate()
 	{
 	};
@@ -20,7 +20,7 @@ public class Timeout : MonoBehaviour
 	// Token: 0x14000080 RID: 128
 	// (add) Token: 0x06002413 RID: 9235 RVA: 0x000710F4 File Offset: 0x0006F4F4
 	// (remove) Token: 0x06002414 RID: 9236 RVA: 0x0007112C File Offset: 0x0006F52C
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public event Action OnTimerReset = delegate()
 	{
 	};

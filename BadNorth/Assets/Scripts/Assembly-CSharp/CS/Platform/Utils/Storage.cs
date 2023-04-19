@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using CS.Platform.Utils.Data;
-using Sony.PS4.SavedGame;
+//using Sony.PS4.SavedGame;
 using UnityEngine;
 
 namespace CS.Platform.Utils
@@ -31,17 +31,17 @@ namespace CS.Platform.Utils
 		}
 
 		// Token: 0x06000553 RID: 1363 RVA: 0x00015CF8 File Offset: 0x000140F8
-		public static bool StoragePS4SetupSlot(string file, ref SaveLoad.SavedGameSlotParams slot)
-		{
-			return Storage._storageInfomation != null && Storage._storageInfomation.PS4.SetupSlot(file, ref slot);
-		}
+		// public static bool StoragePS4SetupSlot(string file, ref SaveLoad.SavedGameSlotParams slot)
+		// {
+		// 	return Storage._storageInfomation != null && Storage._storageInfomation.PS4.SetupSlot(file, ref slot);
+		// }
 
 		// Token: 0x06000554 RID: 1364 RVA: 0x00015D1D File Offset: 0x0001411D
 		public static int StoragePS4ExpectedSlots()
 		{
 			if (Storage._storageInfomation != null)
 			{
-				return Storage._storageInfomation.PS4.ExpectedSlots;
+				// return Storage._storageInfomation.PS4.ExpectedSlots;
 			}
 			return 1;
 		}
@@ -123,7 +123,7 @@ namespace CS.Platform.Utils
 		{
 			if (Storage._storageInfomation != null)
 			{
-				return Storage._storageInfomation.Oculus.bucketName;
+				//return Storage._storageInfomation.Oculus.bucketName;
 			}
 			return null;
 		}
@@ -133,7 +133,7 @@ namespace CS.Platform.Utils
 		{
 			if (Storage._storageInfomation != null)
 			{
-				return Storage._storageInfomation.Xbox.containerName;
+				//return Storage._storageInfomation.Xbox.containerName;
 			}
 			return null;
 		}
@@ -143,7 +143,7 @@ namespace CS.Platform.Utils
 		{
 			if (Storage._storageInfomation != null)
 			{
-				return Storage._storageInfomation.Nintendo.MountName;
+				//return Storage._storageInfomation.Nintendo.MountName;
 			}
 			return null;
 		}

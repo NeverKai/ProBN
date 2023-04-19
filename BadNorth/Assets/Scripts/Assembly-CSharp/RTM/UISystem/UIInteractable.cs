@@ -112,7 +112,7 @@ namespace RTM.UISystem
 		// Token: 0x14000065 RID: 101
 		// (add) Token: 0x06001F4D RID: 8013 RVA: 0x00053A60 File Offset: 0x00051E60
 		// (remove) Token: 0x06001F4E RID: 8014 RVA: 0x00053A98 File Offset: 0x00051E98
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<UIInteractable.State> onStateChanged = delegate(UIInteractable.State A_0)
 		{
 		};
@@ -120,7 +120,7 @@ namespace RTM.UISystem
 		// Token: 0x14000066 RID: 102
 		// (add) Token: 0x06001F4F RID: 8015 RVA: 0x00053AD0 File Offset: 0x00051ED0
 		// (remove) Token: 0x06001F50 RID: 8016 RVA: 0x00053B08 File Offset: 0x00051F08
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<bool> onSelectedChanged = delegate(bool A_0)
 		{
 		};
@@ -128,7 +128,7 @@ namespace RTM.UISystem
 		// Token: 0x14000067 RID: 103
 		// (add) Token: 0x06001F51 RID: 8017 RVA: 0x00053B40 File Offset: 0x00051F40
 		// (remove) Token: 0x06001F52 RID: 8018 RVA: 0x00053B78 File Offset: 0x00051F78
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<bool> onDisabledChanged = delegate(bool A_0)
 		{
 		};
@@ -136,7 +136,7 @@ namespace RTM.UISystem
 		// Token: 0x14000068 RID: 104
 		// (add) Token: 0x06001F53 RID: 8019 RVA: 0x00053BB0 File Offset: 0x00051FB0
 		// (remove) Token: 0x06001F54 RID: 8020 RVA: 0x00053BE8 File Offset: 0x00051FE8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onFlash;
 
 		// Token: 0x06001F55 RID: 8021 RVA: 0x00053C20 File Offset: 0x00052020

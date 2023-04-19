@@ -41,49 +41,44 @@ namespace Discord
 		// Token: 0x14000040 RID: 64
 		// (add) Token: 0x0600082B RID: 2091 RVA: 0x0001DC14 File Offset: 0x0001C014
 		// (remove) Token: 0x0600082C RID: 2092 RVA: 0x0001DC4C File Offset: 0x0001C04C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event LobbyManager.LobbyUpdateHandler OnLobbyUpdate;
 
 		// Token: 0x14000041 RID: 65
 		// (add) Token: 0x0600082D RID: 2093 RVA: 0x0001DC84 File Offset: 0x0001C084
 		// (remove) Token: 0x0600082E RID: 2094 RVA: 0x0001DCBC File Offset: 0x0001C0BC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event LobbyManager.LobbyDeleteHandler OnLobbyDelete;
 
 		// Token: 0x14000042 RID: 66
 		// (add) Token: 0x0600082F RID: 2095 RVA: 0x0001DCF4 File Offset: 0x0001C0F4
 		// (remove) Token: 0x06000830 RID: 2096 RVA: 0x0001DD2C File Offset: 0x0001C12C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event LobbyManager.MemberConnectHandler OnMemberConnect;
 
 		// Token: 0x14000043 RID: 67
 		// (add) Token: 0x06000831 RID: 2097 RVA: 0x0001DD64 File Offset: 0x0001C164
 		// (remove) Token: 0x06000832 RID: 2098 RVA: 0x0001DD9C File Offset: 0x0001C19C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event LobbyManager.MemberUpdateHandler OnMemberUpdate;
 
 		// Token: 0x14000044 RID: 68
 		// (add) Token: 0x06000833 RID: 2099 RVA: 0x0001DDD4 File Offset: 0x0001C1D4
 		// (remove) Token: 0x06000834 RID: 2100 RVA: 0x0001DE0C File Offset: 0x0001C20C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event LobbyManager.MemberDisconnectHandler OnMemberDisconnect;
 
 		// Token: 0x14000045 RID: 69
 		// (add) Token: 0x06000835 RID: 2101 RVA: 0x0001DE44 File Offset: 0x0001C244
 		// (remove) Token: 0x06000836 RID: 2102 RVA: 0x0001DE7C File Offset: 0x0001C27C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event LobbyManager.LobbyMessageHandler OnLobbyMessage;
 
 		// Token: 0x14000046 RID: 70
 		// (add) Token: 0x06000837 RID: 2103 RVA: 0x0001DEB4 File Offset: 0x0001C2B4
 		// (remove) Token: 0x06000838 RID: 2104 RVA: 0x0001DEEC File Offset: 0x0001C2EC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event LobbyManager.SpeakingHandler OnSpeaking;
 
 		// Token: 0x14000047 RID: 71
 		// (add) Token: 0x06000839 RID: 2105 RVA: 0x0001DF24 File Offset: 0x0001C324
 		// (remove) Token: 0x0600083A RID: 2106 RVA: 0x0001DF5C File Offset: 0x0001C35C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event LobbyManager.NetworkMessageHandler OnNetworkMessage;
 
 		// Token: 0x0600083B RID: 2107 RVA: 0x0001DF94 File Offset: 0x0001C394

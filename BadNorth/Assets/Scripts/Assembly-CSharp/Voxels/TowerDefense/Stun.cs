@@ -71,7 +71,6 @@ namespace Voxels.TowerDefense
 			};
 		}
 
-		// Token: 0x06002C05 RID: 11269 RVA: 0x000A3044 File Offset: 0x000A1444
 		private IEnumerator<object> FallOver()
 		{
 			base.agent.PlayAnimation(Stun.fallId, 0f);
@@ -109,7 +108,6 @@ namespace Voxels.TowerDefense
 			yield break;
 		}
 
-		// Token: 0x06002C06 RID: 11270 RVA: 0x000A3060 File Offset: 0x000A1460
 		void Agent.IPostAttack.PostAttack(Attack attack, float addedSpeed, ref bool keepGoing)
 		{
 			if (!base.agent.aliveAndGrounded.active)
@@ -131,7 +129,6 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x06002C07 RID: 11271 RVA: 0x000A314E File Offset: 0x000A154E
 		[ContextMenu("Do Stun")]
 		private void DoStun()
 		{
@@ -139,7 +136,6 @@ namespace Voxels.TowerDefense
 			this.fall.SetActive(true);
 		}
 
-		// Token: 0x06002C08 RID: 11272 RVA: 0x000A3174 File Offset: 0x000A1574
 		private void StunUpdate()
 		{
 			if (base.agent.body.hopping.active && base.agent.velocity.magnitude < 0.001f && this.fall.timeSinceActivation > 0.5f)
@@ -148,51 +144,37 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x04001CBF RID: 7359
 		private static AnimId fallId = "Fall";
 
-		// Token: 0x04001CC0 RID: 7360
 		private static AnimId riseId = "Rise";
 
-		// Token: 0x04001CC1 RID: 7361
 		private static AnimId sitId = "Sit";
 
-		// Token: 0x04001CC2 RID: 7362
 		private IEnumerator<object> enumerator;
 
-		// Token: 0x04001CC3 RID: 7363
 		private float stunTimer;
 
-		// Token: 0x04001CC4 RID: 7364
 		private float accumulatedStun;
 
-		// Token: 0x04001CC5 RID: 7365
 		[SerializeField]
 		private bool canFall = true;
 
-		// Token: 0x04001CC6 RID: 7366
 		[SerializeField]
 		private bool canSlide = true;
 
-		// Token: 0x04001CC7 RID: 7367
 		[SerializeField]
 		[Range(0f, 1f)]
 		public float stunMultiplier = 1f;
 
-		// Token: 0x04001CC8 RID: 7368
 		[SerializeField]
 		private bool _disableTriflowWhenDown;
 
-		// Token: 0x04001CC9 RID: 7369
 		private static FabricEventReference getUpSound = "Sfx/GetUp";
 
-		// Token: 0x04001CCA RID: 7370
 		private static FabricEventReference hitGroundSound = "Sfx/HitGround";
 
-		// Token: 0x04001CCB RID: 7371
 		public AgentState slide;
 
-		// Token: 0x04001CCC RID: 7372
 		public AgentState fall;
 	}
 }

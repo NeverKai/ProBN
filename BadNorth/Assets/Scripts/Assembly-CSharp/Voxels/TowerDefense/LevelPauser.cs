@@ -24,7 +24,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400007A RID: 122
 		// (add) Token: 0x060022C4 RID: 8900 RVA: 0x0006672C File Offset: 0x00064B2C
 		// (remove) Token: 0x060022C5 RID: 8901 RVA: 0x00066764 File Offset: 0x00064B64
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<bool> onPauseChanged = delegate(bool A_0)
 		{
 		};

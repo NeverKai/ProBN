@@ -312,7 +312,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400008E RID: 142
 		// (add) Token: 0x06002A53 RID: 10835 RVA: 0x00096DC4 File Offset: 0x000951C4
 		// (remove) Token: 0x06002A54 RID: 10836 RVA: 0x00096DFC File Offset: 0x000951FC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Agent.MeleeBrainDelegate OnAttackTelegraphed = delegate(Brain A_0)
 		{
 		};
@@ -320,7 +320,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400008F RID: 143
 		// (add) Token: 0x06002A55 RID: 10837 RVA: 0x00096E34 File Offset: 0x00095234
 		// (remove) Token: 0x06002A56 RID: 10838 RVA: 0x00096E6C File Offset: 0x0009526C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Agent.SelectedDelegate OnAgentSelected = delegate(Agent A_0, bool A_1, bool A_2)
 		{
 		};

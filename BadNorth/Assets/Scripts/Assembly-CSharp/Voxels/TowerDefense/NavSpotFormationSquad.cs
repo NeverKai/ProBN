@@ -112,7 +112,7 @@ namespace Voxels.TowerDefense
 			{
 				return;
 			}
-			using ("UpdateFormation")
+			//using ("UpdateFormation")
 			{
 				Vector3 vector = Vector3.forward;
 				float oldDist = 0f;
@@ -143,7 +143,7 @@ namespace Voxels.TowerDefense
 				if (flag)
 				{
 					IEnumerator enumerator = this.SlotPusher();
-					using ("SlotPusherWarmup")
+					//using ("SlotPusherWarmup")
 					{
 						int num = 0;
 						while (num < 4 && enumerator.MoveNext())
@@ -268,7 +268,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060032ED RID: 13037 RVA: 0x000D9348 File Offset: 0x000D7748
 		private void SlotSwapper()
 		{
-			using ("SlotSwapper")
+			//using ("SlotSwapper")
 			{
 				if (this.agentComponents.Count >= 2)
 				{
@@ -313,7 +313,7 @@ namespace Voxels.TowerDefense
 			bool anyChange = true;
 			while (anyChange)
 			{
-				using ("SlotPusher")
+				//using ("SlotPusher")
 				{
 					anyChange = false;
 					for (int i = 0; i < this.orders.Count; i++)

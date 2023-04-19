@@ -20,7 +20,7 @@ namespace CS.Lights
 		// Token: 0x14000052 RID: 82
 		// (add) Token: 0x060014D4 RID: 5332 RVA: 0x0002AB04 File Offset: 0x00028F04
 		// (remove) Token: 0x060014D5 RID: 5333 RVA: 0x0002AB38 File Offset: 0x00028F38
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		protected static event Action<SetLightingEvent> _OnEffecting;
 
 		// Token: 0x060014D6 RID: 5334 RVA: 0x0002AB6C File Offset: 0x00028F6C

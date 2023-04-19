@@ -1,5 +1,4 @@
 ﻿using System;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense.Ballistics
@@ -79,7 +78,7 @@ namespace Voxels.TowerDefense.Ballistics
 		// Token: 0x0600334D RID: 13133 RVA: 0x000DB7C0 File Offset: 0x000D9BC0
 		public virtual void Shoot(Agent shooter, Vector3 velocity, ProjectileSettings projectileSettings, AttackSettings attackSettings, LayerMask mask0, LayerMask mask1)
 		{
-			using ("Shootable.Shoot")
+			//using ("Shootable.Shoot")
 			{
 				this.shooter = shooter;
 				this.attackSettings = attackSettings;
@@ -89,7 +88,7 @@ namespace Voxels.TowerDefense.Ballistics
 				base.transform.position = this.projectile.pos;
 				base.transform.rotation = Quaternion.LookRotation(velocity);
 				this.rb.drag = projectileSettings.drag;
-				using ("ReturnToParent()")
+				//using ("ReturnToParent()")
 				{
 					base.ReturnToParent();
 				}
@@ -102,7 +101,7 @@ namespace Voxels.TowerDefense.Ballistics
 					this.mask1 |= LayerMaster.longshipModulesMask;
 				}
 				this.fineMask = LayerMaster.arrowHigh;
-				using ("projectiling.setActive()")
+				//using ("projectiling.setActive()")
 				{
 					this.projectiling.SetActive(true);
 				}
@@ -125,7 +124,7 @@ namespace Voxels.TowerDefense.Ballistics
 		protected Projectile projectile;
 
 		// Token: 0x040022DF RID: 8927
-		protected WeakReference<Agent> shooter = new WeakReference<Agent>(null);
+		protected RTM.Utilities.WeakReference<Agent> shooter = new RTM.Utilities.WeakReference<Agent>(null);
 
 		// Token: 0x040022E0 RID: 8928
 		public AttackSettings attackSettings;

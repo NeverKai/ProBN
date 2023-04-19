@@ -1,7 +1,6 @@
 ﻿using System;
 using Rewired;
 using RTM.Input;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense.Upgrades
@@ -89,6 +88,6 @@ namespace Voxels.TowerDefense.Upgrades
 		private WorldSpaceNavSpotCursor cursor;
 
 		// Token: 0x040025EA RID: 9706
-		private WeakReference<NavigatorNavSpotPool> navSpots = new WeakReference<NavigatorNavSpotPool>(null);
+		private RTM.Utilities.WeakReference<NavigatorNavSpotPool> navSpots = new RTM.Utilities.WeakReference<NavigatorNavSpotPool>(null);
 	}
 }

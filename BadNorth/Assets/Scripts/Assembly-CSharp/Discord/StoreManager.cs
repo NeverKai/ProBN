@@ -40,13 +40,11 @@ namespace Discord
 		// Token: 0x1400004B RID: 75
 		// (add) Token: 0x06000A65 RID: 2661 RVA: 0x0001F75C File Offset: 0x0001DB5C
 		// (remove) Token: 0x06000A66 RID: 2662 RVA: 0x0001F794 File Offset: 0x0001DB94
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event StoreManager.EntitlementCreateHandler OnEntitlementCreate;
 
 		// Token: 0x1400004C RID: 76
 		// (add) Token: 0x06000A67 RID: 2663 RVA: 0x0001F7CC File Offset: 0x0001DBCC
 		// (remove) Token: 0x06000A68 RID: 2664 RVA: 0x0001F804 File Offset: 0x0001DC04
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event StoreManager.EntitlementDeleteHandler OnEntitlementDelete;
 
 		// Token: 0x06000A69 RID: 2665 RVA: 0x0001F83A File Offset: 0x0001DC3A

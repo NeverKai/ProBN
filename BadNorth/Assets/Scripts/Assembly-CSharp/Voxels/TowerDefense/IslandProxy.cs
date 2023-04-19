@@ -12,41 +12,23 @@ namespace Voxels.TowerDefense
 	{
 		// Token: 0x17000562 RID: 1378
 		// (get) Token: 0x06002841 RID: 10305 RVA: 0x00084EB3 File Offset: 0x000832B3
-		public IslandProxy.State state
-		{
-			get
-			{
-				return this._state;
-			}
-		}
+		public State state => this._state;
 
 		// Token: 0x17000563 RID: 1379
 		// (get) Token: 0x06002842 RID: 10306 RVA: 0x00084EBB File Offset: 0x000832BB
-		public LevelNode levelNode
-		{
-			get
-			{
-				return base.manager;
-			}
-		}
+		public LevelNode levelNode => base.manager;
 
 		// Token: 0x14000089 RID: 137
 		// (add) Token: 0x06002843 RID: 10307 RVA: 0x00084EC4 File Offset: 0x000832C4
 		// (remove) Token: 0x06002844 RID: 10308 RVA: 0x00084EFC File Offset: 0x000832FC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-		public event Action<IslandProxy.State> onStateChanged = delegate(IslandProxy.State A_0)
+		
+		public event Action<State> onStateChanged = delegate
 		{
 		};
 
 		// Token: 0x17000564 RID: 1380
 		// (get) Token: 0x06002845 RID: 10309 RVA: 0x00084F32 File Offset: 0x00083332
-		public bool isGenerating
-		{
-			get
-			{
-				return this.state != IslandProxy.State.None && this.state != IslandProxy.State.Ready;
-			}
-		}
+		public bool isGenerating => this.state != State.None && this.state != State.Ready;
 
 		// Token: 0x06002846 RID: 10310 RVA: 0x00084F50 File Offset: 0x00083350
 		private bool ShouldGenerate(int maxStepsFromUnlock)
@@ -67,9 +49,9 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002847 RID: 10311 RVA: 0x00084FD4 File Offset: 0x000833D4
 		public void GenerateIsland()
 		{
-			int seed = base.manager.campaign.seed + base.manager.index * 43271;
+			int seed = base.manager.campaign.seed + manager.index * 43271;
 			int seed2 = base.manager.levelState.seed;
-			List<string> list = this.levelNode.levelState.GetReferencedStrings(LevelObjectReference.Key.Tiles).ToList<string>();
+			List<string> list = this.levelNode.levelState.GetReferencedStrings(LevelObjectReference.Key.Tiles).ToList();
 			if (this.levelNode.hasCheckpoint)
 			{
 				list.Add("Checkpoint");
@@ -255,7 +237,7 @@ namespace Voxels.TowerDefense
 			this.DestroyIsland();
 			this.buildPriority = -1;
 			this.preparingToPlay = false;
-			this.SetState(IslandProxy.State.None);
+			this.SetState(State.None);
 		}
 
 		// Token: 0x06002851 RID: 10321 RVA: 0x000855EC File Offset: 0x000839EC
@@ -294,17 +276,11 @@ namespace Voxels.TowerDefense
 		// Token: 0x0200061E RID: 1566
 		public enum State
 		{
-			// Token: 0x040019D4 RID: 6612
 			None,
-			// Token: 0x040019D5 RID: 6613
 			GenerateQueue,
-			// Token: 0x040019D6 RID: 6614
 			Generating,
-			// Token: 0x040019D7 RID: 6615
 			BuildQueue,
-			// Token: 0x040019D8 RID: 6616
 			Building,
-			// Token: 0x040019D9 RID: 6617
 			Ready
 		}
 	}

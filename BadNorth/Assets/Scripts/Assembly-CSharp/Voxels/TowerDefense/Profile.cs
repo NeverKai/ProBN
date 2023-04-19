@@ -34,13 +34,13 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000085 RID: 133
 		// (add) Token: 0x0600250B RID: 9483 RVA: 0x00074618 File Offset: 0x00072A18
 		// (remove) Token: 0x0600250C RID: 9484 RVA: 0x0007464C File Offset: 0x00072A4C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<Profile.UpdateType> OnProfileUpdated;
 
 		// Token: 0x14000086 RID: 134
 		// (add) Token: 0x0600250D RID: 9485 RVA: 0x00074680 File Offset: 0x00072A80
 		// (remove) Token: 0x0600250E RID: 9486 RVA: 0x000746B4 File Offset: 0x00072AB4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action OnSettingsLoaded;
 
 		// Token: 0x0600250F RID: 9487 RVA: 0x000746E8 File Offset: 0x00072AE8
@@ -65,17 +65,17 @@ namespace Voxels.TowerDefense
 			};
 			Action<Callback<MemoryStream>>[] array = new Action<Callback<MemoryStream>>[3];
 			int num = 0;
-			if (Profile.<>f__mg$cache0 == null)
+			if (Profile.action == null)
 			{
-				Profile.<>f__mg$cache0 = new Action<Callback<MemoryStream>>(Profile.OnUserSaveLoaded);
+				Profile.action = new Action<Callback<MemoryStream>>(Profile.OnUserSaveLoaded);
 			}
-			array[num] = Profile.<>f__mg$cache0;
+			array[num] = Profile.action;
 			int num2 = 1;
-			if (Profile.<>f__mg$cache1 == null)
+			if (Profile.action1 == null)
 			{
-				Profile.<>f__mg$cache1 = new Action<Callback<MemoryStream>>(Profile.OnUserSettingLoaded);
+				Profile.action1 = new Action<Callback<MemoryStream>>(Profile.OnUserSettingLoaded);
 			}
-			array[num2] = Profile.<>f__mg$cache1;
+			array[num2] = Profile.action1;
 			array[2] = delegate(Callback<MemoryStream> d)
 			{
 				Profile.OnUserInputMappingsLoaded(playerId, d);
@@ -112,16 +112,16 @@ namespace Voxels.TowerDefense
 				Profile.OnSettingsLoaded();
 			}
 			int maxCampaignSlots = Profile.meta.maxCampaignSlots;
-			if (Profile.<>f__mg$cache2 == null)
+			if (Profile.action3 == null)
 			{
-				Profile.<>f__mg$cache2 = new Action<Callback<List<ISaveGameObject>>>(Profile.OnCampaignLoaded);
+				Profile.action3 = new Action<Callback<List<ISaveGameObject>>>(Profile.OnCampaignLoaded);
 			}
-			Action<Callback<List<ISaveGameObject>>> completionCallback = Profile.<>f__mg$cache2;
-			if (Profile.<>f__mg$cache3 == null)
+			Action<Callback<List<ISaveGameObject>>> completionCallback = Profile.action3;
+			if (Profile.action4 == null)
 			{
-				Profile.<>f__mg$cache3 = new Func<MemoryStream, ISaveGameObject>(Profile.OnCampaignMetaDeserialise);
+				Profile.action4 = new Func<MemoryStream, ISaveGameObject>(Profile.OnCampaignMetaDeserialise);
 			}
-			SaveGameUtilities.GetHeaders(maxCampaignSlots, completionCallback, Profile.<>f__mg$cache3);
+			SaveGameUtilities.GetHeaders(maxCampaignSlots, completionCallback, Profile.action4);
 			Profile._loading--;
 		}
 
@@ -290,11 +290,11 @@ namespace Voxels.TowerDefense
 			}
 			Profile.campaign = null;
 			Profile.activeCampaignMeta = campaignSave;
-			if (Profile.<>f__mg$cache4 == null)
+			if (Profile.action5 == null)
 			{
-				Profile.<>f__mg$cache4 = new Action<Callback<MemoryStream>>(Profile.OnCampaignDeserialise);
+				Profile.action5 = new Action<Callback<MemoryStream>>(Profile.OnCampaignDeserialise);
 			}
-			Callback<MemoryStream> campaignLoader = SaveGameUtilities.Load(targetFile, Profile.<>f__mg$cache4, null);
+			Callback<MemoryStream> campaignLoader = SaveGameUtilities.Load(targetFile, Profile.action5, null);
 			while (campaignLoader.MoveNext())
 			{
 				object obj = campaignLoader.Current;
@@ -838,23 +838,23 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x040017B2 RID: 6066
 		[CompilerGenerated]
-		private static Action<Callback<MemoryStream>> <>f__mg$cache0;
+		private static Action<Callback<MemoryStream>> action;
 
 		// Token: 0x040017B3 RID: 6067
 		[CompilerGenerated]
-		private static Action<Callback<MemoryStream>> <>f__mg$cache1;
+		private static Action<Callback<MemoryStream>> action1;
 
 		// Token: 0x040017B4 RID: 6068
 		[CompilerGenerated]
-		private static Action<Callback<List<ISaveGameObject>>> <>f__mg$cache2;
+		private static Action<Callback<List<ISaveGameObject>>> action3;
 
 		// Token: 0x040017B5 RID: 6069
 		[CompilerGenerated]
-		private static Func<MemoryStream, ISaveGameObject> <>f__mg$cache3;
+		private static Func<MemoryStream, ISaveGameObject> action4;
 
 		// Token: 0x040017B6 RID: 6070
 		[CompilerGenerated]
-		private static Action<Callback<MemoryStream>> <>f__mg$cache4;
+		private static Action<Callback<MemoryStream>> action5;
 
 		// Token: 0x02000596 RID: 1430
 		public enum UpdateType

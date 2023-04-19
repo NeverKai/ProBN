@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Linq;
 using I2.Loc;
 using ReflexCLI.Attributes;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.CampaignGeneration;
 using Voxels.TowerDefense.ProfileInternals;
@@ -19,33 +18,27 @@ namespace Voxels.TowerDefense
 	{
 		// Token: 0x17000655 RID: 1621
 		// (get) Token: 0x06002D56 RID: 11606 RVA: 0x000ABB75 File Offset: 0x000A9F75
-		public Campaign campaign
-		{
-			get
-			{
-				return this._campaign;
-			}
-		}
+		public Campaign campaign => this._campaign;
 
 		// Token: 0x14000090 RID: 144
 		// (add) Token: 0x06002D57 RID: 11607 RVA: 0x000ABB84 File Offset: 0x000A9F84
 		// (remove) Token: 0x06002D58 RID: 11608 RVA: 0x000ABBB8 File Offset: 0x000A9FB8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<CampaignManager, Campaign> onNewCampaign;
 
 		// Token: 0x14000091 RID: 145
 		// (add) Token: 0x06002D59 RID: 11609 RVA: 0x000ABBEC File Offset: 0x000A9FEC
 		// (remove) Token: 0x06002D5A RID: 11610 RVA: 0x000ABC20 File Offset: 0x000AA020
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<CampaignManager, Campaign> onExitCampaign;
 
 		// Token: 0x06002D5B RID: 11611 RVA: 0x000ABC54 File Offset: 0x000AA054
 		protected override void Awake()
 		{
 			base.Awake();
-			this.newCampaigners = base.GetComponentsInChildren<CampaignManager.INewCampaign>(true);
-			this.newCampaignSavers = base.GetComponentsInChildren<CampaignManager.INewCampaignSave>(true);
-			this.campaignExiters = base.GetComponentsInChildren<CampaignManager.IExitCampaign>(true);
+			this.newCampaigners = base.GetComponentsInChildren<INewCampaign>(true);
+			this.newCampaignSavers = base.GetComponentsInChildren<INewCampaignSave>(true);
+			this.campaignExiters = base.GetComponentsInChildren<IExitCampaign>(true);
 			Singleton<Stack>.instance.stateCampaign.OnChange += this.campaignContainer.gameObject.SetActive;
 			Singleton<Stack>.instance.stateMeta.OnActivate += this.ClearCampaign;
 			this.campaignContainer.gameObject.SetActive(false);
@@ -57,7 +50,7 @@ namespace Voxels.TowerDefense
 			if (this.campaign)
 			{
 				this.campaign.campaignSave.Unload();
-				foreach (CampaignManager.IExitCampaign exitCampaign in this.campaignExiters)
+				foreach (IExitCampaign exitCampaign in this.campaignExiters)
 				{
 					exitCampaign.OnCampaignExit(this, this.campaign);
 				}
@@ -80,11 +73,11 @@ namespace Voxels.TowerDefense
 			{
 				yield return null;
 			}
-			while (!Singleton<CampaignManager>.instance)
+			while (!instance)
 			{
 				yield return null;
 			}
-			IEnumerator<object> enumerator = Singleton<CampaignManager>.instance.GenerateCampaignInternal(campaignSave, campaignIsNew);
+			IEnumerator<object> enumerator = instance.GenerateCampaignInternal(campaignSave, campaignIsNew);
 			while (enumerator.MoveNext())
 			{
 				object obj = enumerator.Current;
@@ -152,7 +145,7 @@ namespace Voxels.TowerDefense
 		[DebugSetting("Reseed All Levels", "重玩所有关卡", DebugSettingLocation.Campaign)]
 		public static void ReseedAllLevels()
 		{
-			foreach (LevelNode levelNode in Singleton<CampaignManager>.instance.campaign.levels)
+			foreach (LevelNode levelNode in instance.campaign.levels)
 			{
 				levelNode.levelState.seed++;
 			}
@@ -164,12 +157,12 @@ namespace Voxels.TowerDefense
 		[DebugSetting("Unlock All Levels", "解锁所有关卡", DebugSettingLocation.Campaign)]
 		public static void UnlockAllLevels()
 		{
-			foreach (LevelNode levelNode in Singleton<CampaignManager>.instance.campaign.levels)
+			foreach (LevelNode levelNode in instance.campaign.levels)
 			{
 				levelNode.levelState.unlocked = true;
 				levelNode.unlocked.SetActive(true);
 			}
-			CampaignCameraController campaignCameraController = UnityEngine.Object.FindObjectOfType<CampaignCameraController>();
+			CampaignCameraController campaignCameraController = FindObjectOfType<CampaignCameraController>();
 			if (campaignCameraController)
 			{
 				campaignCameraController.UpdateLimits();
@@ -180,23 +173,17 @@ namespace Voxels.TowerDefense
 		// Token: 0x17000656 RID: 1622
 		// (get) Token: 0x06002D61 RID: 11617 RVA: 0x000ABEE0 File Offset: 0x000AA2E0
 		[ConsoleCommand("")]
-		public static int seed
-		{
-			get
-			{
-				return Singleton<CampaignManager>.instance.campaign.seed;
-			}
-		}
+		public static int seed => instance.campaign.seed;
 
 		// Token: 0x06002D62 RID: 11618 RVA: 0x000ABEF4 File Offset: 0x000AA2F4
 		[ConsoleCommand("")]
 		[DebugSetting("Unlock 10 Levels", "解锁10个关卡", DebugSettingLocation.Campaign)]
 		public static void UnlockLevels(int count = 10)
 		{
-			List<LevelNode> list = (from x in Singleton<CampaignManager>.instance.campaign.levels
+			List<LevelNode> list = (from x in instance.campaign.levels
 			where x.IsUnlocked()
 			select x).ToList<LevelNode>();
-			List<LevelNode> list2 = (from x in Singleton<CampaignManager>.instance.campaign.levels
+			List<LevelNode> list2 = (from x in instance.campaign.levels
 			where !x.IsUnlocked()
 			select x).ToList<LevelNode>();
 			for (int i = 0; i < list.Count; i++)
@@ -221,7 +208,7 @@ namespace Voxels.TowerDefense
 					break;
 				}
 			}
-			CampaignCameraController campaignCameraController = UnityEngine.Object.FindObjectOfType<CampaignCameraController>();
+			CampaignCameraController campaignCameraController = FindObjectOfType<CampaignCameraController>();
 			if (campaignCameraController)
 			{
 				campaignCameraController.UpdateLimits();
@@ -289,7 +276,7 @@ namespace Voxels.TowerDefense
 		private Campaign campaignPrefab;
 
 		// Token: 0x04001DF6 RID: 7670
-		private WeakReference<Campaign> _campaign = new WeakReference<Campaign>(null);
+		private RTM.Utilities.WeakReference<Campaign> _campaign = new RTM.Utilities.WeakReference<Campaign>(null);
 
 		// Token: 0x04001DF7 RID: 7671
 		private CampaignManager.INewCampaign[] newCampaigners;

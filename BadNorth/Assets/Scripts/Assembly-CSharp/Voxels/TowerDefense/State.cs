@@ -30,7 +30,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B9 RID: 185
 		// (add) Token: 0x06003571 RID: 13681 RVA: 0x000E5CDC File Offset: 0x000E40DC
 		// (remove) Token: 0x06003572 RID: 13682 RVA: 0x000E5D14 File Offset: 0x000E4114
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event State.VoidDelegate OnActivate = delegate()
 		{
 		};
@@ -38,7 +38,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000BA RID: 186
 		// (add) Token: 0x06003573 RID: 13683 RVA: 0x000E5D4C File Offset: 0x000E414C
 		// (remove) Token: 0x06003574 RID: 13684 RVA: 0x000E5D84 File Offset: 0x000E4184
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event State.VoidDelegate OnDeactivate = delegate()
 		{
 		};
@@ -46,7 +46,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000BB RID: 187
 		// (add) Token: 0x06003575 RID: 13685 RVA: 0x000E5DBC File Offset: 0x000E41BC
 		// (remove) Token: 0x06003576 RID: 13686 RVA: 0x000E5DF4 File Offset: 0x000E41F4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event State.VoidDelegate OnUpdate = delegate()
 		{
 		};
@@ -54,7 +54,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000BC RID: 188
 		// (add) Token: 0x06003577 RID: 13687 RVA: 0x000E5E2C File Offset: 0x000E422C
 		// (remove) Token: 0x06003578 RID: 13688 RVA: 0x000E5E64 File Offset: 0x000E4264
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event State.BoolDelegate OnChange = delegate(bool A_0)
 		{
 		};

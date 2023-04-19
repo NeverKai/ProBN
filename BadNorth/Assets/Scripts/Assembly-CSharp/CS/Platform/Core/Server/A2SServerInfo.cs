@@ -20,7 +20,7 @@ namespace CS.Platform.Core.Server
 				byte.MaxValue
 			};
 			this._Data.Header = 73;
-			this._Data.EDF = 0;
+			this._Data.EDF = 0;                                                                        
 		}
 
 		// Token: 0x06000609 RID: 1545 RVA: 0x00019D48 File Offset: 0x00018148
@@ -157,7 +157,7 @@ namespace CS.Platform.Core.Server
 		{
 			if ((this._Data.EDF & 32) != 32)
 			{
-				this._Data.EDF = (this._Data.EDF | 32);
+				this._Data.EDF = (byte) (this._Data.EDF | 32);
 			}
 			this._Data.Keywords = value;
 		}
@@ -269,13 +269,13 @@ namespace CS.Platform.Core.Server
 		// Token: 0x0600061D RID: 1565 RVA: 0x0001A354 File Offset: 0x00018754
 		public void SetPrivate(bool value)
 		{
-			this._Data.Visibility = ((!value) ? 0 : 1);
+			this._Data.Visibility = (byte) ((!value) ? 0 : 1);
 		}
 
 		// Token: 0x0600061E RID: 1566 RVA: 0x0001A36E File Offset: 0x0001876E
 		public void SetVac(bool value)
 		{
-			this._Data.VAC = ((!value) ? 0 : 1);
+			this._Data.VAC = (byte) ((!value) ? 0 : 1);
 		}
 
 		// Token: 0x0600061F RID: 1567 RVA: 0x0001A388 File Offset: 0x00018788
@@ -283,7 +283,7 @@ namespace CS.Platform.Core.Server
 		{
 			if ((this._Data.EDF & 128) != 128)
 			{
-				this._Data.EDF = (this._Data.EDF | 128);
+				this._Data.EDF = (byte) (this._Data.EDF | 128);
 			}
 			this._Data.GamePort = value;
 		}
@@ -293,7 +293,7 @@ namespace CS.Platform.Core.Server
 		{
 			if ((this._Data.EDF & 16) != 16)
 			{
-				this._Data.EDF = (this._Data.EDF | 16);
+				this._Data.EDF = (byte) (this._Data.EDF | 16);
 			}
 			this._Data.SteamID = value;
 		}
@@ -303,7 +303,7 @@ namespace CS.Platform.Core.Server
 		{
 			if ((this._Data.EDF & 1) != 1)
 			{
-				this._Data.EDF = (this._Data.EDF | 1);
+				this._Data.EDF = (byte) (this._Data.EDF | 1);
 			}
 			this._Data.GameID = value;
 		}

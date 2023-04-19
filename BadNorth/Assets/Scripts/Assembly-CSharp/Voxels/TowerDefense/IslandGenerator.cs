@@ -49,35 +49,34 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002816 RID: 10262 RVA: 0x000830E8 File Offset: 0x000814E8
 		public static void AddBlocker(object coroutineBlocker, object threadBlocker)
 		{
-			if (coroutineBlocker != null && !IslandGenerator.coroutineBlockers.Contains(coroutineBlocker))
+			if (coroutineBlocker != null && !coroutineBlockers.Contains(coroutineBlocker))
 			{
-				IslandGenerator.coroutineBlockers.Add(coroutineBlocker);
+				coroutineBlockers.Add(coroutineBlocker);
 			}
-			if (threadBlocker != null && !IslandGenerator.threadBlockers.Contains(threadBlocker))
+			if (threadBlocker != null && !threadBlockers.Contains(threadBlocker))
 			{
-				IslandGenerator.threadBlockers.Add(threadBlocker);
+				threadBlockers.Add(threadBlocker);
 			}
-			if (IslandGenerator.instance)
+			if (instance)
 			{
-				IslandGenerator.instance.UpdateBlockage();
+				instance.UpdateBlockage();
 			}
 		}
 
 		// Token: 0x06002817 RID: 10263 RVA: 0x00083150 File Offset: 0x00081550
 		public static void RemoveBlocker(object coroutineBlocker, object threadBlocker)
 		{
-			IslandGenerator.coroutineBlockers.Remove(coroutineBlocker);
-			IslandGenerator.threadBlockers.Remove(threadBlocker);
-			if (IslandGenerator.instance)
+			coroutineBlockers.Remove(coroutineBlocker);
+			threadBlockers.Remove(threadBlocker);
+			if (instance)
 			{
-				IslandGenerator.instance.UpdateBlockage();
+				instance.UpdateBlockage();
 			}
 		}
 
-		// Token: 0x06002818 RID: 10264 RVA: 0x00083184 File Offset: 0x00081584
 		private void UpdateBlockage()
 		{
-			if (IslandGenerator.threadBlockers.Count == 0)
+			if (threadBlockers.Count == 0)
 			{
 				if (!this.queue.enabled)
 				{
@@ -90,27 +89,26 @@ namespace Voxels.TowerDefense
 			}
 			if (this.currentIslandProxy && this.currentIslandProxy.island)
 			{
-				this.currentIslandProxy.island.gameObject.SetActive(IslandGenerator.coroutineBlockers.Count == 0);
+				this.currentIslandProxy.island.gameObject.SetActive(coroutineBlockers.Count == 0);
 			}
 		}
 
-		// Token: 0x06002819 RID: 10265 RVA: 0x00083224 File Offset: 0x00081624
 		private void Update()
 		{
-			if (IslandGenerator.threadBlockers.Count == 0)
+			if (threadBlockers.Count == 0)
 			{
 				this.queue.Update();
 			}
-			if (IslandGenerator.coroutineBlockers.Count == 0 && this.timerCoroutine != null)
+			if (coroutineBlockers.Count == 0)
 			{
-				this.timerCoroutine.MoveNext();
+				timerCoroutine?.MoveNext();
 			}
-			using ("DBG")
+			//using ("DBG")
 			{
-				foreach (object obj in IslandGenerator.threadBlockers)
+				foreach (object obj in threadBlockers)
 				{
 				}
-				foreach (object obj2 in IslandGenerator.coroutineBlockers)
+				foreach (object obj2 in coroutineBlockers)
 				{
 				}
 			}
@@ -217,7 +215,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x0600281D RID: 10269 RVA: 0x00083365 File Offset: 0x00081765
 		private void Start()
 		{
-			IslandGenerator.instance = this;
+			instance = this;
 			this.UpdateBlockage();
 			this.timerCoroutine = CoroutineUtils.GenerateTimer(2.5f, this.InfiniteEnumerator());
 		}
@@ -260,7 +258,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002823 RID: 10275 RVA: 0x000833F4 File Offset: 0x000817F4
 		public IEnumerator ShutDownRoutine()
 		{
-			IslandGenerator.AddBlocker(this, this);
+			AddBlocker(this, this);
 			this.timerCoroutine = null;
 			this.currentIslandProxy = null;
 			IEnumerator r = this.queue.ShutDownRoutine();
@@ -269,8 +267,7 @@ namespace Voxels.TowerDefense
 				yield return null;
 			}
 			this.islandContainer.DestroyChildren();
-			IslandGenerator.RemoveBlocker(this, this);
-			yield break;
+			RemoveBlocker(this, this);
 		}
 
 		// Token: 0x06002824 RID: 10276 RVA: 0x00083410 File Offset: 0x00081810

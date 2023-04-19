@@ -39,7 +39,7 @@ namespace CS.VT
 			base.DiscardMessage();
 			if (this._activeModal != null)
 			{
-				RewiredStandaloneInputModule.systemBlocked = this.wasSystemBlocked;
+				//RewiredStandaloneInputModule.systemBlocked = this.wasSystemBlocked;
 				Singleton<UIManager>.instance.blockUIInput = this.wasSystemBlocked;
 			}
 		}
@@ -53,7 +53,7 @@ namespace CS.VT
 			{
 				this.wasSystemBlocked = Singleton<UIManager>.instance.blockUIInput;
 			}
-			RewiredStandaloneInputModule.systemBlocked = false;
+			//RewiredStandaloneInputModule.systemBlocked = false;
 			Singleton<UIManager>.instance.blockUIInput = false;
 		}
 

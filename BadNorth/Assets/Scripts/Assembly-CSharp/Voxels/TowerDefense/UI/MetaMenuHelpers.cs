@@ -71,11 +71,11 @@ namespace Voxels.TowerDefense.UI
 			try
 			{
 				string new_CAMPAIGN = ScriptLocalization.LOAD_SCREEN.NEW_CAMPAIGN;
-				if (MetaMenuHelpers.<>f__mg$cache0 == null)
+				if (MetaMenuHelpers.action == null)
 				{
-					MetaMenuHelpers.<>f__mg$cache0 = new Action(MetaMenuHelpers.EnterNewCampaign);
+					MetaMenuHelpers.action = new Action(MetaMenuHelpers.EnterNewCampaign);
 				}
-				LoadingScreen.BeginLoadingPhase(new_CAMPAIGN, MetaMenuHelpers.<>f__mg$cache0, new IEnumerator[]
+				LoadingScreen.BeginLoadingPhase(new_CAMPAIGN, MetaMenuHelpers.action, new IEnumerator[]
 				{
 					CampaignManager.GenerateCampaign(campaign, true)
 				});
@@ -185,6 +185,6 @@ namespace Voxels.TowerDefense.UI
 
 		// Token: 0x04002A83 RID: 10883
 		[CompilerGenerated]
-		private static Action <>f__mg$cache0;
+		private static Action action;
 	}
 }

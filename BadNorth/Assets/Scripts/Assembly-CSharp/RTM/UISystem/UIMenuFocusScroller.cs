@@ -106,7 +106,7 @@ namespace RTM.UISystem
 			vector = this.content.InverseTransformPoint(vector);
 			vector.x -= (1f - pivot.x) * rect3.width;
 			vector.y -= (1f - pivot.y) * rect3.height;
-			Vector2 vector2 = -vector - rect2.size * 0.5f;
+			Vector2 vector2 = new Vector2(-vector.x, -vector.y) - rect2.size * 0.5f;
 			Vector2 vector3 = rect3.size - rect2.size;
 			Vector3 v = new Vector3((vector3.x <= 0f) ? 0f : (1f - Mathf.Clamp(vector2.x / vector3.x, 0f, 1f)), (vector3.y <= 0f) ? 0f : (1f - Mathf.Clamp(vector2.y / vector3.y, 0f, 1f)));
 			return v;

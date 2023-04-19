@@ -46,7 +46,7 @@ namespace RTM.UISystem
 		// Token: 0x14000071 RID: 113
 		// (add) Token: 0x06001FD0 RID: 8144 RVA: 0x00055B68 File Offset: 0x00053F68
 		// (remove) Token: 0x06001FD1 RID: 8145 RVA: 0x00055BA0 File Offset: 0x00053FA0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onClicked = delegate()
 		{
 		};
@@ -54,7 +54,7 @@ namespace RTM.UISystem
 		// Token: 0x14000072 RID: 114
 		// (add) Token: 0x06001FD2 RID: 8146 RVA: 0x00055BD8 File Offset: 0x00053FD8
 		// (remove) Token: 0x06001FD3 RID: 8147 RVA: 0x00055C10 File Offset: 0x00054010
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<bool> onFocusChanged = delegate(bool A_0)
 		{
 		};
@@ -62,7 +62,7 @@ namespace RTM.UISystem
 		// Token: 0x14000073 RID: 115
 		// (add) Token: 0x06001FD4 RID: 8148 RVA: 0x00055C48 File Offset: 0x00054048
 		// (remove) Token: 0x06001FD5 RID: 8149 RVA: 0x00055C80 File Offset: 0x00054080
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Vector2> onConsumedNavigation = delegate(Vector2 A_0)
 		{
 		};
@@ -127,10 +127,10 @@ namespace RTM.UISystem
 		}
 
 		// Token: 0x06001FDF RID: 8159 RVA: 0x00055DAA File Offset: 0x000541AA
-		Transform IUINavigable.get_transform()
-		{
-			return base.transform;
-		}
+		// Transform IUINavigable.get_transform()
+		// {
+		// 	return base.transform;
+		// }
 
 		// Token: 0x040013BE RID: 5054
 		[SerializeField]

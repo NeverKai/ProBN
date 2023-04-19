@@ -6,36 +6,22 @@ using CS.Platform;
 using Fabric;
 using ReflexCLI.Attributes;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.RaidGeneration;
 using Voxels.TowerDefense.TriFlow;
 
 namespace Voxels.TowerDefense
 {
-	// Token: 0x0200079F RID: 1951
 	[SelectionBase]
 	public class Longship : MonoBehaviour, ITriFlowObject
 	{
 		// Token: 0x17000731 RID: 1841
 		// (get) Token: 0x0600324C RID: 12876 RVA: 0x000D55FE File Offset: 0x000D39FE
-		public float radius
-		{
-			get
-			{
-				return this.col.radius;
-			}
-		}
+		public float radius => this.col.radius;
 
 		// Token: 0x17000732 RID: 1842
 		// (get) Token: 0x0600324D RID: 12877 RVA: 0x000D560B File Offset: 0x000D3A0B
-		public float length
-		{
-			get
-			{
-				return this.col.height;
-			}
-		}
+		public float length => this.col.height;
 
 		// Token: 0x17000733 RID: 1843
 		// (get) Token: 0x0600324E RID: 12878 RVA: 0x000D5618 File Offset: 0x000D3A18
@@ -64,53 +50,23 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x17000735 RID: 1845
 		// (get) Token: 0x06003250 RID: 12880 RVA: 0x000D5683 File Offset: 0x000D3A83
-		public Landing landing
-		{
-			get
-			{
-				return this._landing;
-			}
-		}
+		public Landing landing => this._landing;
 
 		// Token: 0x17000736 RID: 1846
 		// (get) Token: 0x06003251 RID: 12881 RVA: 0x000D5690 File Offset: 0x000D3A90
-		public Squad squad
-		{
-			get
-			{
-				return (this.agents.Count <= 0) ? null : this.agents[0].squad;
-			}
-		}
+		public Squad squad => (this.agents.Count <= 0) ? null : this.agents[0].squad;
 
 		// Token: 0x17000737 RID: 1847
 		// (get) Token: 0x06003252 RID: 12882 RVA: 0x000D56BA File Offset: 0x000D3ABA
-		public Landing.ShipTravel shipTravel
-		{
-			get
-			{
-				return this.landing.shipTravel;
-			}
-		}
+		public Landing.ShipTravel shipTravel => this.landing.shipTravel;
 
 		// Token: 0x17000738 RID: 1848
 		// (get) Token: 0x06003253 RID: 12883 RVA: 0x000D56C8 File Offset: 0x000D3AC8
-		private Vector3 startPos
-		{
-			get
-			{
-				return this.shipTravel.startPos;
-			}
-		}
+		private Vector3 startPos => this.shipTravel.startPos;
 
 		// Token: 0x17000739 RID: 1849
 		// (get) Token: 0x06003254 RID: 12884 RVA: 0x000D56E4 File Offset: 0x000D3AE4
-		private Vector3 endPos
-		{
-			get
-			{
-				return this.shipTravel.endPos;
-			}
-		}
+		private Vector3 endPos => this.shipTravel.endPos;
 
 		// Token: 0x1700073A RID: 1850
 		// (get) Token: 0x06003255 RID: 12885 RVA: 0x000D56FF File Offset: 0x000D3AFF
@@ -119,48 +75,24 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x1700073B RID: 1851
 		// (get) Token: 0x06003257 RID: 12887 RVA: 0x000D5710 File Offset: 0x000D3B10
-		public float totalDistance
-		{
-			get
-			{
-				return this.shipTravel.distance;
-			}
-		}
+		public float totalDistance => this.shipTravel.distance;
 
 		// Token: 0x1700073C RID: 1852
 		// (get) Token: 0x06003258 RID: 12888 RVA: 0x000D572B File Offset: 0x000D3B2B
-		public float distanceTravelled
-		{
-			get
-			{
-				return this.interpolator * this.totalDistance;
-			}
-		}
+		public float distanceTravelled => this.interpolator * this.totalDistance;
 
 		// Token: 0x1700073D RID: 1853
 		// (get) Token: 0x06003259 RID: 12889 RVA: 0x000D573A File Offset: 0x000D3B3A
-		public float distanceRemaining
-		{
-			get
-			{
-				return (1f - this.interpolator) * this.totalDistance;
-			}
-		}
+		public float distanceRemaining => (1f - this.interpolator) * this.totalDistance;
 
 		// Token: 0x1700073E RID: 1854
 		// (get) Token: 0x0600325A RID: 12890 RVA: 0x000D5750 File Offset: 0x000D3B50
-		public float timeRemaining
-		{
-			get
-			{
-				return (1f - this.interpolator) * this.shipTravel.duration;
-			}
-		}
+		public float timeRemaining => (1f - this.interpolator) * this.shipTravel.duration;
 
 		// Token: 0x140000A4 RID: 164
 		// (add) Token: 0x0600325B RID: 12891 RVA: 0x000D5778 File Offset: 0x000D3B78
 		// (remove) Token: 0x0600325C RID: 12892 RVA: 0x000D57B0 File Offset: 0x000D3BB0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onShipArrival = delegate()
 		{
 		};
@@ -168,7 +100,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000A5 RID: 165
 		// (add) Token: 0x0600325D RID: 12893 RVA: 0x000D57E8 File Offset: 0x000D3BE8
 		// (remove) Token: 0x0600325E RID: 12894 RVA: 0x000D5820 File Offset: 0x000D3C20
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onShipLaunch = delegate()
 		{
 		};
@@ -176,7 +108,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000A6 RID: 166
 		// (add) Token: 0x0600325F RID: 12895 RVA: 0x000D5858 File Offset: 0x000D3C58
 		// (remove) Token: 0x06003260 RID: 12896 RVA: 0x000D5890 File Offset: 0x000D3C90
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<float> shipLeavingUpdate = delegate(float A_0)
 		{
 		};
@@ -184,60 +116,30 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000A7 RID: 167
 		// (add) Token: 0x06003261 RID: 12897 RVA: 0x000D58C8 File Offset: 0x000D3CC8
 		// (remove) Token: 0x06003262 RID: 12898 RVA: 0x000D5900 File Offset: 0x000D3D00
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onShipExit = delegate()
 		{
 		};
 
 		// Token: 0x1700073F RID: 1855
 		// (get) Token: 0x06003263 RID: 12899 RVA: 0x000D5938 File Offset: 0x000D3D38
-		public Data data
-		{
-			get
-			{
-				return new Data(this, this.landing.navPos, false, false, this.distanceRemaining, this.landing.dir * this.distanceRemaining, ExtraMath.RemapValue(this.distanceRemaining, 4f, 1f));
-			}
-		}
+		public Data data => new Data(this, this.landing.navPos, false, false, this.distanceRemaining, this.landing.dir * this.distanceRemaining, ExtraMath.RemapValue(this.distanceRemaining, 4f, 1f));
 
 		// Token: 0x17000740 RID: 1856
 		// (get) Token: 0x06003264 RID: 12900 RVA: 0x000D5989 File Offset: 0x000D3D89
-		public int numVikings
-		{
-			get
-			{
-				return this.agents.Count;
-			}
-		}
+		public int numVikings => this.agents.Count;
 
 		// Token: 0x17000741 RID: 1857
 		// (get) Token: 0x06003265 RID: 12901 RVA: 0x000D5996 File Offset: 0x000D3D96
-		public bool hasAnyVikings
-		{
-			get
-			{
-				return this.numVikings > 0;
-			}
-		}
+		public bool hasAnyVikings => this.numVikings > 0;
 
 		// Token: 0x17000742 RID: 1858
 		// (get) Token: 0x06003266 RID: 12902 RVA: 0x000D59A1 File Offset: 0x000D3DA1
-		public Vector3 lookDir
-		{
-			get
-			{
-				return -this.landing.dir;
-			}
-		}
+		public Vector3 lookDir => -this.landing.dir;
 
 		// Token: 0x17000743 RID: 1859
 		// (get) Token: 0x06003267 RID: 12903 RVA: 0x000D59B3 File Offset: 0x000D3DB3
-		public bool haveAllSpawned
-		{
-			get
-			{
-				return this.spawnRoutine == null;
-			}
-		}
+		public bool haveAllSpawned => this.spawnRoutine == null;
 
 		// Token: 0x06003268 RID: 12904 RVA: 0x000D59C0 File Offset: 0x000D3DC0
 		public void Explode()
@@ -395,7 +297,7 @@ namespace Voxels.TowerDefense
 			base.CancelInvoke();
 			this.landed = false;
 			this.outgoing = true;
-			this.animator.SetTrigger(Longship.launchId);
+			this.animator.SetTrigger(launchId);
 			this.animator.enabled = true;
 			FabricWrapper.PostEvent(this.launchSound, base.gameObject);
 			FabricWrapper.PostEvent(this.shipAmbiance, base.gameObject);
@@ -540,7 +442,6 @@ namespace Voxels.TowerDefense
 			this.agents.Clear();
 		}
 
-		// Token: 0x0400222C RID: 8748
 		private DebugChannelGroup dbgGroup = new DebugChannelGroup("Longship", EVerbosity.Minimal, 100);
 
 		// Token: 0x0400222D RID: 8749
@@ -575,7 +476,7 @@ namespace Voxels.TowerDefense
 		private Bounds bounds;
 
 		// Token: 0x04002236 RID: 8758
-		private WeakReference<Landing> _landing;
+		private RTM.Utilities.WeakReference<Landing> _landing;
 
 		// Token: 0x04002237 RID: 8759
 		public bool landed;

@@ -11,13 +11,13 @@ namespace ReflexCLI.User
 		// Token: 0x14000059 RID: 89
 		// (add) Token: 0x06001976 RID: 6518 RVA: 0x000433F8 File Offset: 0x000417F8
 		// (remove) Token: 0x06001977 RID: 6519 RVA: 0x0004342C File Offset: 0x0004182C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action OnConsoleOpened;
 
 		// Token: 0x1400005A RID: 90
 		// (add) Token: 0x06001978 RID: 6520 RVA: 0x00043460 File Offset: 0x00041860
 		// (remove) Token: 0x06001979 RID: 6521 RVA: 0x00043494 File Offset: 0x00041894
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action OnConsoleClosed;
 
 		// Token: 0x0600197A RID: 6522 RVA: 0x000434C8 File Offset: 0x000418C8

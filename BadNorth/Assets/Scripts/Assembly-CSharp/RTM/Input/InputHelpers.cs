@@ -16,13 +16,13 @@ namespace RTM.Input
 		// Token: 0x1400005D RID: 93
 		// (add) Token: 0x06001E91 RID: 7825 RVA: 0x00051994 File Offset: 0x0004FD94
 		// (remove) Token: 0x06001E92 RID: 7826 RVA: 0x000519C8 File Offset: 0x0004FDC8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action OnActiveControllerLost;
 
 		// Token: 0x1400005E RID: 94
 		// (add) Token: 0x06001E93 RID: 7827 RVA: 0x000519FC File Offset: 0x0004FDFC
 		// (remove) Token: 0x06001E94 RID: 7828 RVA: 0x00051A30 File Offset: 0x0004FE30
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<ControllerType> onControllerTypeChanged;
 
 		// Token: 0x06001E95 RID: 7829 RVA: 0x00051A64 File Offset: 0x0004FE64

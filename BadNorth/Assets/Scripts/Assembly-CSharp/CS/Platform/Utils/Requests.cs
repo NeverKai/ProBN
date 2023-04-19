@@ -9,7 +9,7 @@ namespace CS.Platform.Utils
 		// Token: 0x14000037 RID: 55
 		// (add) Token: 0x06000515 RID: 1301 RVA: 0x000153E0 File Offset: 0x000137E0
 		// (remove) Token: 0x06000516 RID: 1302 RVA: 0x00015414 File Offset: 0x00013814
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Requests.PlatformVoiceConnectionDel VoiceConnectionAttempt;
 
 		// Token: 0x06000517 RID: 1303 RVA: 0x00015448 File Offset: 0x00013848
@@ -21,7 +21,7 @@ namespace CS.Platform.Utils
 		// Token: 0x14000038 RID: 56
 		// (add) Token: 0x06000518 RID: 1304 RVA: 0x00015464 File Offset: 0x00013864
 		// (remove) Token: 0x06000519 RID: 1305 RVA: 0x00015498 File Offset: 0x00013898
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Requests.PlatformLocaliseDel TextLocalise;
 
 		// Token: 0x0600051A RID: 1306 RVA: 0x000154CC File Offset: 0x000138CC

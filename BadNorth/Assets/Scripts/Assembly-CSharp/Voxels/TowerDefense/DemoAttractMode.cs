@@ -12,7 +12,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400007E RID: 126
 		// (add) Token: 0x06002405 RID: 9221 RVA: 0x00070D78 File Offset: 0x0006F178
 		// (remove) Token: 0x06002406 RID: 9222 RVA: 0x00070DAC File Offset: 0x0006F1AC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action onAttractModeTriggered;
 
 		// Token: 0x06002407 RID: 9223 RVA: 0x00070DE0 File Offset: 0x0006F1E0

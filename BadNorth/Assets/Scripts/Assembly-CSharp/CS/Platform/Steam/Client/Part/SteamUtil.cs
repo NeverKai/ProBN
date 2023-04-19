@@ -116,20 +116,23 @@ namespace CS.Platform.Steam.Client.Part
 		{
 			if (personChanged.m_nChangeFlags == EPersonaChange.k_EPersonaChangeAvatar)
 			{
-				PlatformEvents.UserPictureLoaded(new BaseUserInfo(personChanged.m_ulSteamID, this._Manager.Key, SteamFriends.GetFriendPersonaName((CSteamID)personChanged.m_ulSteamID)));
+				var name = string.Empty;
+				// SteamFriends.GetFriendPersonaName((CSteamID) senderID);
+				PlatformEvents.UserPictureLoaded(new BaseUserInfo(personChanged.m_ulSteamID, this._Manager.Key, 
+					name));
 			}
 		}
 
 		// Token: 0x0600031A RID: 794 RVA: 0x0000FFFE File Offset: 0x0000E3FE
 		public void AddPlayerToPlayedList(CSteamID userID)
 		{
-			SteamFriends.SetPlayedWith(userID);
+			//SteamFriends.SetPlayedWith(userID);
 		}
 
 		// Token: 0x0600031B RID: 795 RVA: 0x00010006 File Offset: 0x0000E406
 		public void WantsUserInfo(CSteamID userID, bool picture)
 		{
-			SteamFriends.RequestUserInformation(userID, picture);
+			//SteamFriends.RequestUserInformation(userID, picture);
 		}
 
 		// Token: 0x0600031C RID: 796 RVA: 0x00010010 File Offset: 0x0000E410
@@ -137,11 +140,11 @@ namespace CS.Platform.Steam.Client.Part
 		{
 			if (serverIP == string.Empty || serverPort == string.Empty)
 			{
-				SteamFriends.SetRichPresence("connect", string.Empty);
+				//SteamFriends.SetRichPresence("connect", string.Empty);
 			}
 			else
 			{
-				SteamFriends.SetRichPresence("connect", serverIP + ":" + serverPort);
+				//SteamFriends.SetRichPresence("connect", serverIP + ":" + serverPort);
 			}
 		}
 
@@ -223,7 +226,7 @@ namespace CS.Platform.Steam.Client.Part
 			{
 				this._discordLink.SendRichPresence();
 			}
-			SteamFriends.SetRichPresence("status", text);
+			//SteamFriends.SetRichPresence("status", text);
 		}
 
 		// Token: 0x06000320 RID: 800 RVA: 0x000101F3 File Offset: 0x0000E5F3
@@ -256,7 +259,8 @@ namespace CS.Platform.Steam.Client.Part
 		public bool LoadProfileImage(CSteamID userID, ref Texture2D imageLocation)
 		{
 			bool result = false;
-			int mediumFriendAvatar = SteamFriends.GetMediumFriendAvatar(userID);
+			// int mediumFriendAvatar = SteamFriends.GetMediumFriendAvatar(userID);
+			int mediumFriendAvatar = 0;
 			if (mediumFriendAvatar != 0)
 			{
 				if (SteamUtils.GetImageRGBA(mediumFriendAvatar, this.imageBuffer64, this.imageBuffer64.Length))

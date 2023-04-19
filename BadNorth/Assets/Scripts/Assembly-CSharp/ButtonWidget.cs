@@ -7,7 +7,7 @@ public class ButtonWidget : Widget
 	// Token: 0x140000C6 RID: 198
 	// (add) Token: 0x06003B4C RID: 15180 RVA: 0x00107B28 File Offset: 0x00105F28
 	// (remove) Token: 0x06003B4D RID: 15181 RVA: 0x00107B60 File Offset: 0x00105F60
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	private event Func<bool> action;
 
 	// Token: 0x06003B4E RID: 15182 RVA: 0x00107B96 File Offset: 0x00105F96

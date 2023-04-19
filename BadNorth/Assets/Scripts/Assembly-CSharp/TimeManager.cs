@@ -44,7 +44,7 @@ public class TimeManager : MonoBehaviour
 	// Token: 0x14000088 RID: 136
 	// (add) Token: 0x060027A5 RID: 10149 RVA: 0x000804B4 File Offset: 0x0007E8B4
 	// (remove) Token: 0x060027A6 RID: 10150 RVA: 0x000804E8 File Offset: 0x0007E8E8
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public static event Action<float> onTimeScaleChanged;
 
 	// Token: 0x060027A7 RID: 10151 RVA: 0x0008051C File Offset: 0x0007E91C

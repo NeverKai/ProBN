@@ -91,7 +91,7 @@ namespace MeshModifer
 		// Token: 0x06002875 RID: 10357 RVA: 0x00087198 File Offset: 0x00085598
 		public static bool operator ==(Vertex x, Vertex y)
 		{
-			return x.pos == y.pos && x.normal == y.normal && x.uv == y.uv && x.color == y.color;
+			return x.pos == y.pos && x.normal == y.normal && x.uv == y.uv && x.color.r == y.color.r && x.color.g == y.color.g && x.color.b == y.color.b && x.color.a == y.color.a;
 		}
 
 		// Token: 0x06002876 RID: 10358 RVA: 0x0008720D File Offset: 0x0008560D

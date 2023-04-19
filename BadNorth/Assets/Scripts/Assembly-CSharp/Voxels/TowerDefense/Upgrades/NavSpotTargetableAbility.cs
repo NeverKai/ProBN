@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using RTM.Pools;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense.Upgrades
@@ -37,7 +36,7 @@ namespace Voxels.TowerDefense.Upgrades
 		// Token: 0x17000807 RID: 2055
 		// (get) Token: 0x060037D5 RID: 14293 RVA: 0x000ED0EE File Offset: 0x000EB4EE
 		// (set) Token: 0x060037D6 RID: 14294 RVA: 0x000ED0F6 File Offset: 0x000EB4F6
-		private protected NavSpot heroNavSpot { protected get; private set; }
+		private protected NavSpot heroNavSpot { get; private set; }
 
 		// Token: 0x060037D7 RID: 14295 RVA: 0x000ED100 File Offset: 0x000EB500
 		protected override void DoSquadSpawnAction_Implementation()
@@ -247,7 +246,7 @@ namespace Voxels.TowerDefense.Upgrades
 		private TargetNavSpot targetNavspotPrefab;
 
 		// Token: 0x04002602 RID: 9730
-		private WeakReference<LocalPool<TargetNavSpot>> navSpotPool = new WeakReference<LocalPool<TargetNavSpot>>(null);
+		private RTM.Utilities.WeakReference<LocalPool<TargetNavSpot>> navSpotPool = new RTM.Utilities.WeakReference<LocalPool<TargetNavSpot>>(null);
 
 		// Token: 0x04002603 RID: 9731
 		private List<TargetNavSpot> candidates = new List<TargetNavSpot>();

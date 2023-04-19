@@ -20,25 +20,25 @@ namespace Voxels.TowerDefense.ScriptAnimations
 		// Token: 0x06003627 RID: 13863 RVA: 0x000E97C8 File Offset: 0x000E7BC8
 		public AnimatedState(string name, AgentState parentState, AgentState updateState, bool active, bool exclusive, ITargetAnimFuncs<float> targetAnimFuncs) : base(name, parentState, active, exclusive)
 		{
-			AnimatedState $this = this;
+			//AnimatedState $this = this;
 			this.value = (float)((!active) ? 0 : 1);
-			this.anim = new TargetAnimator<float>(name, () => $this.value, delegate(float x)
+			this.anim = new TargetAnimator<float>(name, () => this.value, delegate(float x)
 			{
-				$this.value = x;
+				this.value = x;
 			}, updateState, targetAnimFuncs);
 			this.updateState = updateState;
 			this.OnActivate = (Action)Delegate.Combine(this.OnActivate, new Action(delegate()
 			{
-				$this.onActivity(true);
-				$this.anim.SetTarget(1f, null, null, null, 0f, null);
+				this.onActivity(true);
+				this.anim.SetTarget(1f, null, null, null, 0f, null);
 			}));
 			Action onDeactivate = delegate()
 			{
-				$this.onActivity(false);
+				this.onActivity(false);
 			};
 			this.OnDeactivate = (Action)Delegate.Combine(this.OnDeactivate, new Action(delegate()
 			{
-				$this.anim.SetTarget(0f, null, onDeactivate, null, 0f, null);
+				this.anim.SetTarget(0f, null, onDeactivate, null, 0f, null);
 			}));
 		}
 

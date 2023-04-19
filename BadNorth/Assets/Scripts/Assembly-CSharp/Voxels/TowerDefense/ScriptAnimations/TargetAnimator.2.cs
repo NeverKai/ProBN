@@ -14,60 +14,59 @@ namespace Voxels.TowerDefense.ScriptAnimations
 		// Token: 0x06003615 RID: 13845 RVA: 0x000E9248 File Offset: 0x000E7648
 		public TargetAnimator(string name, Func<T> getFunc, Action<T> setFunc, AgentState updateState, ITargetAnimFuncs<T> targetAnimFuncs)
 		{
-			TargetAnimator<T> $this = this;
 			this.getFunc = getFunc;
 			this.setFunc = (Action<T>)Delegate.Combine(this.setFunc, setFunc);
 			this.state = new AgentState(name, updateState, false, false);
 			AgentState agentState = this.state;
 			agentState.OnDeactivate = (Action)Delegate.Combine(agentState.OnDeactivate, new Action(delegate()
 			{
-				$this.setFunc($this.target);
+				this.setFunc(this.target);
 			}));
 			AgentState agentState2 = this.state;
 			agentState2.OnActivate = (Action)Delegate.Combine(agentState2.OnActivate, new Action(delegate()
 			{
-				$this.animFuncs.OnActivate(getFunc(), $this.target);
+				animFuncs.OnActivate(getFunc(), this.target);
 			}));
 			this.state.OnUpdate += delegate()
 			{
-				if (Time.unscaledTime < $this.delayTime)
+				if (Time.unscaledTime < this.delayTime)
 				{
 					return;
 				}
-				if ($this.onStart != null)
+				if (this.onStart != null)
 				{
-					$this.onStart();
-					$this.onStart = null;
+					this.onStart();
+					this.onStart = null;
 				}
 				T t = getFunc();
 				float num = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
 				for (float num2 = 0f; num2 < num; num2 += 0.033333335f)
 				{
-					t = $this.animFuncs.UpdateCurrent(t, $this.target, Mathf.Min(num - num2, 0.033333335f));
+					t = this.animFuncs.UpdateCurrent(t, this.target, Mathf.Min(num - num2, 0.033333335f));
 				}
-				if (!$this.hasBeenTriggered && $this.animFuncs.ShouldTrigger(t, $this.target))
+				if (!this.hasBeenTriggered && this.animFuncs.ShouldTrigger(t, this.target))
 				{
-					if ($this.onTrigger != null)
+					if (this.onTrigger != null)
 					{
-						$this.onTrigger();
+						this.onTrigger();
 					}
-					$this.hasBeenTriggered = true;
+					this.hasBeenTriggered = true;
 				}
-				if ($this.hasBeenTriggered && $this.animFuncs.IsDone(t, $this.target))
+				if (this.hasBeenTriggered && this.animFuncs.IsDone(t, this.target))
 				{
-					$this.setFunc($this.target);
-					if ($this.onDone != null)
+					this.setFunc(this.target);
+					if (this.onDone != null)
 					{
-						$this.onDone();
+						this.onDone();
 					}
-					$this.state.SetActive(false);
+					this.state.SetActive(false);
 				}
 				else
 				{
-					$this.setFunc(t);
+					this.setFunc(t);
 				}
 			};
-			this.state.OnDebugString.Add(() => string.Format("Current {0}, Target {1}, HasTriggered {2}", getFunc(), $this.target, $this.hasBeenTriggered));
+			this.state.OnDebugString.Add(() => string.Format("Current {0}, Target {1}, HasTriggered {2}", getFunc(), this.target, this.hasBeenTriggered));
 			this.animFuncs = targetAnimFuncs;
 		}
 

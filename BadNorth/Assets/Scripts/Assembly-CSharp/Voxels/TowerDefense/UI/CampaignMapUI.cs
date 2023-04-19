@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using CS.Platform;
 using ReflexCLI.Attributes;
@@ -9,7 +8,6 @@ using ReflexCLI.User;
 using Rewired;
 using RTM.Input;
 using RTM.UISystem;
-using RTM.Utilities;
 using TrialVersion;
 using UnityEngine;
 using Voxels.TowerDefense.CampaignGeneration;
@@ -24,7 +22,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000C4 RID: 196
 		// (add) Token: 0x06003A22 RID: 14882 RVA: 0x000FF2F0 File Offset: 0x000FD6F0
 		// (remove) Token: 0x06003A23 RID: 14883 RVA: 0x000FF328 File Offset: 0x000FD728
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<GameOverReason> onGameOver = delegate(GameOverReason A_0)
 		{
 		};
@@ -1069,10 +1067,10 @@ namespace Voxels.TowerDefense.UI
 		private IslandGenerator islandGenerator;
 
 		// Token: 0x04002861 RID: 10337
-		private WeakReference<Campaign> campaign = new WeakReference<Campaign>(null);
+		private RTM.Utilities.WeakReference<Campaign> campaign = new RTM.Utilities.WeakReference<Campaign>(null);
 
 		// Token: 0x04002862 RID: 10338
-		private WeakReference<Frontier> frontier = new WeakReference<Frontier>(null);
+		private RTM.Utilities.WeakReference<Frontier> frontier = new RTM.Utilities.WeakReference<Frontier>(null);
 
 		// Token: 0x04002863 RID: 10339
 		private List<LevelNode> levelNodeStack;

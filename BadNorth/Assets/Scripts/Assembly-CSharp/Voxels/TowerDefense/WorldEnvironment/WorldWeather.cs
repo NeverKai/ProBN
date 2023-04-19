@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using CS.Lights;
 using ReflexCLI.Attributes;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense.WorldEnvironment
@@ -18,7 +17,6 @@ namespace Voxels.TowerDefense.WorldEnvironment
 			this.weatherLight = base.GetComponent<WeatherLight>();
 		}
 
-		// Token: 0x060038CD RID: 14541 RVA: 0x000F6494 File Offset: 0x000F4894
 		private void Update()
 		{
 			this.SetDay(Singleton<EnvironmentManager>.instance.year, Singleton<EnvironmentManager>.instance.day);
@@ -207,7 +205,7 @@ namespace Voxels.TowerDefense.WorldEnvironment
 		// Token: 0x060038D2 RID: 14546 RVA: 0x000F6CD6 File Offset: 0x000F50D6
 		void IGameSetup.OnGameAwake()
 		{
-			Singleton<WorldWeather>._instance = this;
+			_instance = this;
 		}
 
 		// Token: 0x040026B6 RID: 9910
@@ -245,7 +243,7 @@ namespace Voxels.TowerDefense.WorldEnvironment
 		// Token: 0x040026BE RID: 9918
 		[Space]
 		[SerializeField]
-		public WorldWeather.WeatherSystem weatherSystem;
+		public WeatherSystem weatherSystem;
 
 		// Token: 0x040026BF RID: 9919
 		[Space]
@@ -278,7 +276,7 @@ namespace Voxels.TowerDefense.WorldEnvironment
 		public bool hasBeenNightOnIsland;
 
 		// Token: 0x040026C8 RID: 9928
-		private WeakReference<LevelNode> levelNode = new WeakReference<LevelNode>(null);
+		private RTM.Utilities.WeakReference<LevelNode> levelNode = new RTM.Utilities.WeakReference<LevelNode>(null);
 
 		// Token: 0x040026C9 RID: 9929
 		private WeatherLight weatherLight;
@@ -391,7 +389,7 @@ namespace Voxels.TowerDefense.WorldEnvironment
 		public struct WeatherSystem
 		{
 			// Token: 0x060038D7 RID: 14551 RVA: 0x000F6ECA File Offset: 0x000F52CA
-			public WeatherSystem(float time, WorldWeather.WeatherKey key0, WorldWeather.WeatherKey key1)
+			public WeatherSystem(float time, WeatherKey key0, WeatherKey key1)
 			{
 				this.time = time;
 				this.key0 = key0;
@@ -400,23 +398,14 @@ namespace Voxels.TowerDefense.WorldEnvironment
 
 			// Token: 0x17000824 RID: 2084
 			// (get) Token: 0x060038D8 RID: 14552 RVA: 0x000F6EE1 File Offset: 0x000F52E1
-			public float t
-			{
-				get
-				{
-					return ExtraMath.RemapValue(this.time, this.key0.time, this.key1.time, 0f, 1f);
-				}
-			}
+			public float t => ExtraMath.RemapValue(this.time, this.key0.time, this.key1.time, 0f, 1f);
 
 			// Token: 0x17000825 RID: 2085
 			// (get) Token: 0x060038D9 RID: 14553 RVA: 0x000F6F0E File Offset: 0x000F530E
 			// (set) Token: 0x060038DA RID: 14554 RVA: 0x000F6F27 File Offset: 0x000F5327
-			public WorldWeather.WeatherKey current
+			public WeatherKey current
 			{
-				get
-				{
-					return WorldWeather.WeatherKey.Lerp(this.key0, this.key1, this.t);
-				}
+				get => WeatherKey.Lerp(this.key0, this.key1, this.t);
 				set
 				{
 					this.key0 = value;
@@ -518,10 +507,7 @@ namespace Voxels.TowerDefense.WorldEnvironment
 			// (set) Token: 0x060038E4 RID: 14564 RVA: 0x000F713B File Offset: 0x000F553B
 			public float wind
 			{
-				get
-				{
-					return this.current.wind;
-				}
+				get => this.current.wind;
 				set
 				{
 					this.key0.wind = value;
@@ -534,17 +520,14 @@ namespace Voxels.TowerDefense.WorldEnvironment
 			// (set) Token: 0x060038E6 RID: 14566 RVA: 0x000F7174 File Offset: 0x000F5574
 			public float thunder
 			{
-				get
-				{
-					return this.current.thunder;
-				}
+				get => this.current.thunder;
 				set
 				{
 					if (this.thunder == value)
 					{
 						return;
 					}
-					WorldWeather.WeatherKey current = this.current;
+					WeatherKey current = this.current;
 					current.thunder = value;
 					this.current = current;
 					this.rainfall = Mathf.Max(this.rainfall, value);
@@ -568,10 +551,10 @@ namespace Voxels.TowerDefense.WorldEnvironment
 			}
 
 			// Token: 0x040026D5 RID: 9941
-			public WorldWeather.WeatherKey key0;
+			public WeatherKey key0;
 
 			// Token: 0x040026D6 RID: 9942
-			public WorldWeather.WeatherKey key1;
+			public WeatherKey key1;
 
 			// Token: 0x040026D7 RID: 9943
 			public float time;

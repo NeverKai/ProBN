@@ -13,33 +13,15 @@ namespace Voxels.TowerDefense
 	{
 		// Token: 0x1700083D RID: 2109
 		// (get) Token: 0x0600392A RID: 14634 RVA: 0x000F9A29 File Offset: 0x000F7E29
-		private int width
-		{
-			get
-			{
-				return Mathf.ClosestPowerOfTwo((int)this.texSize.x);
-			}
-		}
+		private int width => Mathf.ClosestPowerOfTwo((int)this.texSize.x);
 
 		// Token: 0x1700083E RID: 2110
 		// (get) Token: 0x0600392B RID: 14635 RVA: 0x000F9A3C File Offset: 0x000F7E3C
-		private int height
-		{
-			get
-			{
-				return Mathf.ClosestPowerOfTwo((int)this.texSize.y);
-			}
-		}
+		private int height => Mathf.ClosestPowerOfTwo((int)this.texSize.y);
 
 		// Token: 0x1700083F RID: 2111
 		// (get) Token: 0x0600392C RID: 14636 RVA: 0x000F9A4F File Offset: 0x000F7E4F
-		private RenderTexture srcRenderTexture
-		{
-			get
-			{
-				return (!this.alternate) ? this.texture1 : this.texture0;
-			}
-		}
+		private RenderTexture srcRenderTexture => (!this.alternate) ? this.texture1 : this.texture0;
 
 		// Token: 0x17000840 RID: 2112
 		// (get) Token: 0x0600392D RID: 14637 RVA: 0x000F9A6D File Offset: 0x000F7E6D
@@ -85,14 +67,14 @@ namespace Voxels.TowerDefense
 				this.Setup();
 			}
 			this.Randomize();
-			this.moveMaterial.SetFloat(WindParticleSystem.amountId, this.amount);
-			this.moveMaterial.SetFloat(WindParticleSystem.deltaId, this.timeStep * timeScale);
+			this.moveMaterial.SetFloat(amountId, this.amount);
+			this.moveMaterial.SetFloat(deltaId, this.timeStep * timeScale);
 			for (int i = 0; i < iterations; i++)
 			{
 				Graphics.Blit(this.texture0, this.texture1, this.moveMaterial);
 				Graphics.Blit(this.texture1, this.texture0, this.moveMaterial);
 			}
-			this.moveMaterial.SetFloat(WindParticleSystem.deltaId, this.timeStep);
+			this.moveMaterial.SetFloat(deltaId, this.timeStep);
 		}
 
 		// Token: 0x06003931 RID: 14641 RVA: 0x000F9C14 File Offset: 0x000F8014
@@ -117,9 +99,9 @@ namespace Voxels.TowerDefense
 		{
 			this.mesh = new Mesh();
 			this.mesh.MarkDynamic();
-			if (!WindParticleSystem.alphaBlitMaterial)
+			if (!alphaBlitMaterial)
 			{
-				WindParticleSystem.alphaBlitMaterial = new Material(this.alphaBlit);
+				alphaBlitMaterial = new Material(alphaBlit);
 			}
 			List<SpriteBounds> list = this.sprites.ToList<Sprite>().ConvertAll<SpriteBounds>((Sprite x) => new SpriteBounds(x));
 			this.count = this.width * this.height;
@@ -205,7 +187,8 @@ namespace Voxels.TowerDefense
 			Color32[] pixels = this.srcTex.GetPixels32();
 			for (int k = 0; k < pixels.Length; k++)
 			{
-				pixels[k] = (UnityEngine.Random.insideUnitSphere + Vector3.one / 2f).SetW(UnityEngine.Random.value);
+				var vector4 = (UnityEngine.Random.insideUnitSphere + Vector3.one / 2f).SetW(UnityEngine.Random.value);
+				pixels[k] = new Color32((byte) vector4.x, (byte) vector4.y, (byte) vector4.z, (byte) vector4.w);
 			}
 			this.noiseTex.SetPixels32(pixels);
 			this.noiseTex.Apply();
@@ -216,7 +199,7 @@ namespace Voxels.TowerDefense
 			this.drawBlock.SetTexture("_PosTex0", this.texture0);
 			this.drawBlock.SetTexture("_PosTex1", this.texture1);
 			this.mr.SetPropertyBlock(this.drawBlock);
-			this.moveMaterial = UnityEngine.Object.Instantiate<Material>(this.srcMoveMaterial);
+			this.moveMaterial = Instantiate(this.srcMoveMaterial);
 			this.moveMaterial.SetFloat("_DeltaTime", this.timeStep);
 			this.moveMaterial.SetTexture("_NoiseTex", this.noiseTex);
 			if (this.randomizeStart)
@@ -232,14 +215,13 @@ namespace Voxels.TowerDefense
 			this.Setup();
 		}
 
-		// Token: 0x06003934 RID: 14644 RVA: 0x000FA3D0 File Offset: 0x000F87D0
 		private void ApplyNewParticles(RenderTexture targetTex)
 		{
 			if (this.startIndex != this.endIndex)
 			{
 				this.srcTex.SetPixels32(this.pixels);
 				this.srcTex.Apply();
-				Graphics.Blit(this.srcTex, targetTex, WindParticleSystem.alphaBlitMaterial);
+				Graphics.Blit(this.srcTex, targetTex, alphaBlitMaterial);
 				Color clear = Color.clear;
 				for (int i = this.startIndex; i < this.endIndex; i++)
 				{
@@ -250,13 +232,12 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x06003935 RID: 14645 RVA: 0x000FA478 File Offset: 0x000F8878
 		public void Redraw(float dt)
 		{
 			this.ApplyNewParticles(this.srcRenderTexture);
-			this.moveMaterial.SetFloat(WindParticleSystem.amountId, this.amount);
-			this.moveMaterial.SetFloat(WindParticleSystem.deltaId, dt);
-			this.moveMaterial.SetVector(WindParticleSystem.randomId, new Vector4(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value));
+			this.moveMaterial.SetFloat(amountId, this.amount);
+			this.moveMaterial.SetFloat(deltaId, dt);
+			this.moveMaterial.SetVector(randomId, new Vector4(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value));
 			Graphics.Blit(this.srcRenderTexture, this.dstRenderTexture, this.moveMaterial);
 			this.alternate = !this.alternate;
 		}

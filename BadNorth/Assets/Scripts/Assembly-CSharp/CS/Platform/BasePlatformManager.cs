@@ -20,13 +20,13 @@ namespace CS.Platform
 		// Token: 0x14000001 RID: 1
 		// (add) Token: 0x060000EF RID: 239 RVA: 0x0000643C File Offset: 0x0000483C
 		// (remove) Token: 0x060000F0 RID: 240 RVA: 0x00006474 File Offset: 0x00004874
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		private event Action _CallNextUpdate;
 
 		// Token: 0x14000002 RID: 2
 		// (add) Token: 0x060000F1 RID: 241 RVA: 0x000064AC File Offset: 0x000048AC
 		// (remove) Token: 0x060000F2 RID: 242 RVA: 0x000064E4 File Offset: 0x000048E4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		private event Action _CallThisUpdate;
 
 		// Token: 0x060000F3 RID: 243 RVA: 0x0000651C File Offset: 0x0000491C
@@ -139,7 +139,7 @@ namespace CS.Platform
 		// Token: 0x14000003 RID: 3
 		// (add) Token: 0x060000FC RID: 252 RVA: 0x0000669C File Offset: 0x00004A9C
 		// (remove) Token: 0x060000FD RID: 253 RVA: 0x000066D4 File Offset: 0x00004AD4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action OnPreGameStart;
 
 		// Token: 0x060000FE RID: 254 RVA: 0x0000670A File Offset: 0x00004B0A
@@ -158,11 +158,11 @@ namespace CS.Platform
 			this._blockers.Remove(key);
 			if (!this.IsLoadBlocked)
 			{
-				if (BasePlatformManager.<>f__mg$cache0 == null)
+				if (BasePlatformManager.action == null)
 				{
-					BasePlatformManager.<>f__mg$cache0 = new Action(PlatformEvents.PlatformLoadUnblocked);
+					BasePlatformManager.action = new Action(PlatformEvents.PlatformLoadUnblocked);
 				}
-				this._blockerFreeCall = BasePlatformManager.<>f__mg$cache0;
+				this._blockerFreeCall = BasePlatformManager.action;
 				this.AddToNextUpdate(new Action(this.RecheckBlockComplete));
 			}
 		}
@@ -313,11 +313,11 @@ namespace CS.Platform
 					{
 						PlatformEvents.EntitlementChanged(false);
 					});
-					if (BasePlatformManager.<>f__mg$cache1 == null)
+					if (BasePlatformManager.action1 == null)
 					{
-						BasePlatformManager.<>f__mg$cache1 = new Action(Application.Quit);
+						BasePlatformManager.action1 = new Action(Application.Quit);
 					}
-					this.AddToNextUpdate(BasePlatformManager.<>f__mg$cache1);
+					this.AddToNextUpdate(BasePlatformManager.action1);
 				}
 			}
 		}
@@ -427,11 +427,11 @@ namespace CS.Platform
 		// Token: 0x0600011A RID: 282 RVA: 0x00006A9E File Offset: 0x00004E9E
 		public virtual void LoadSavedData(string[] files)
 		{
-			if (BasePlatformManager.<>f__mg$cache2 == null)
+			if (BasePlatformManager.action2 == null)
 			{
-				BasePlatformManager.<>f__mg$cache2 = new Action(PlatformEvents.LoadLocalComplete);
+				BasePlatformManager.action2 = new Action(PlatformEvents.LoadLocalComplete);
 			}
-			this.AddToNextUpdate(BasePlatformManager.<>f__mg$cache2);
+			this.AddToNextUpdate(BasePlatformManager.action2);
 		}
 
 		// Token: 0x0600011B RID: 283 RVA: 0x00006AC3 File Offset: 0x00004EC3
@@ -1201,14 +1201,14 @@ namespace CS.Platform
 
 		// Token: 0x04000084 RID: 132
 		[CompilerGenerated]
-		private static Action <>f__mg$cache0;
+		private static Action action;
 
 		// Token: 0x04000085 RID: 133
 		[CompilerGenerated]
-		private static Action <>f__mg$cache1;
+		private static Action action1;
 
 		// Token: 0x04000088 RID: 136
 		[CompilerGenerated]
-		private static Action <>f__mg$cache2;
+		private static Action action2;
 	}
 }

@@ -21,13 +21,13 @@ namespace CS.Platform.Base.Client.Addon
 		// Token: 0x14000004 RID: 4
 		// (add) Token: 0x06000220 RID: 544 RVA: 0x0000AD74 File Offset: 0x00009174
 		// (remove) Token: 0x06000221 RID: 545 RVA: 0x0000ADAC File Offset: 0x000091AC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action OnSaveComplete;
 
 		// Token: 0x14000005 RID: 5
 		// (add) Token: 0x06000222 RID: 546 RVA: 0x0000ADE4 File Offset: 0x000091E4
 		// (remove) Token: 0x06000223 RID: 547 RVA: 0x0000AE1C File Offset: 0x0000921C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action OnLoadComplete;
 
 		// Token: 0x17000053 RID: 83

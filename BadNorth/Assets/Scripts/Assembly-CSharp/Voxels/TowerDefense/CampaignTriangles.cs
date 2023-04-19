@@ -15,10 +15,10 @@ namespace Voxels.TowerDefense
 			CampaignLoops campaignLoops = campaign.GetComponentInChildren<CampaignLoops>();
 			List<LevelState> levels = campaign.campaignSave.levelStates;
 			Loop longestLoop = campaignLoops.loops[0];
-			this.verts = new List<CampaignTriangles.Vertex>(campaign.campaignSave.levelStates.Count + longestLoop.Count + 4);
+			this.verts = new List<Vertex>(campaign.campaignSave.levelStates.Count + longestLoop.Count + 4);
 			for (int i = 0; i < campaign.campaignSave.levelStates.Count; i++)
 			{
-				this.verts.Add(new CampaignTriangles.Vertex(campaign.campaignSave.levelStates[i]));
+				this.verts.Add(new Vertex(campaign.campaignSave.levelStates[i]));
 			}
 			for (int j = 1; j < campaignLoops.loops.Count; j++)
 			{
@@ -205,7 +205,7 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x04001DFF RID: 7679
 		[NonSerialized]
-		public List<CampaignTriangles.Vertex> verts;
+		public List<Vertex> verts;
 
 		// Token: 0x04001E00 RID: 7680
 		[NonSerialized]

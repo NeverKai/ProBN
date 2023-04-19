@@ -10,58 +10,28 @@ namespace Voxels.TowerDefense
 	{
 		// Token: 0x1700078C RID: 1932
 		// (get) Token: 0x060034A9 RID: 13481 RVA: 0x000E2D0F File Offset: 0x000E110F
-		public float area
-		{
-			get
-			{
-				return this._area;
-			}
-		}
+		public float area => this._area;
 
 		// Token: 0x1700078D RID: 1933
 		// (get) Token: 0x060034AA RID: 13482 RVA: 0x000E2D17 File Offset: 0x000E1117
-		public float radius
-		{
-			get
-			{
-				return this.ship.radius;
-			}
-		}
+		public float radius => this.ship.radius;
 
 		// Token: 0x1700078E RID: 1934
 		// (get) Token: 0x060034AB RID: 13483 RVA: 0x000E2D24 File Offset: 0x000E1124
-		public NavPos entryNavPos
-		{
-			get
-			{
-				return this._entryNavPos;
-			}
-		}
+		public NavPos entryNavPos => this._entryNavPos;
 
 		// Token: 0x1700078F RID: 1935
 		// (get) Token: 0x060034AC RID: 13484 RVA: 0x000E2D2C File Offset: 0x000E112C
-		public NavPos localNavPos
-		{
-			get
-			{
-				return this._localNavPos;
-			}
-		}
+		public NavPos localNavPos => this._localNavPos;
 
 		// Token: 0x17000790 RID: 1936
 		// (get) Token: 0x060034AD RID: 13485 RVA: 0x000E2D34 File Offset: 0x000E1134
-		public DistanceField distanceField
-		{
-			get
-			{
-				return this._distanceField;
-			}
-		}
+		public DistanceField distanceField => this._distanceField;
 
 		// Token: 0x140000B2 RID: 178
 		// (add) Token: 0x060034AE RID: 13486 RVA: 0x000E2D3C File Offset: 0x000E113C
 		// (remove) Token: 0x060034AF RID: 13487 RVA: 0x000E2D74 File Offset: 0x000E1174
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onEvacuationDepart = delegate()
 		{
 		};
@@ -69,7 +39,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B3 RID: 179
 		// (add) Token: 0x060034B0 RID: 13488 RVA: 0x000E2DAC File Offset: 0x000E11AC
 		// (remove) Token: 0x060034B1 RID: 13489 RVA: 0x000E2DE4 File Offset: 0x000E11E4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onEvacuationConfirm = delegate()
 		{
 		};
@@ -77,7 +47,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B4 RID: 180
 		// (add) Token: 0x060034B2 RID: 13490 RVA: 0x000E2E1C File Offset: 0x000E121C
 		// (remove) Token: 0x060034B3 RID: 13491 RVA: 0x000E2E54 File Offset: 0x000E1254
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onEvacuationCompleted = delegate()
 		{
 		};
@@ -97,7 +67,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060034B6 RID: 13494 RVA: 0x000E2ED4 File Offset: 0x000E12D4
 		public void Setup()
 		{
-			using ("evac.Setup()")
+			//using ("evac.Setup()")
 			{
 				this._area = this.ship.area;
 				this._entryNavPos = this.ship.landing.navPos;

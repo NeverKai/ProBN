@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Rewired;
 using RTM.Input;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.ScriptAnimations;
 
@@ -48,7 +47,7 @@ namespace Voxels.TowerDefense.UI
 		public override void OpenMenu()
 		{
 			base.OpenMenu();
-			using ("Force Update widgets")
+			//using ("Force Update widgets")
 			{
 				this.ForceUpdateAll();
 			}
@@ -309,7 +308,7 @@ namespace Voxels.TowerDefense.UI
 		private bool somethingChanged;
 
 		// Token: 0x040028C8 RID: 10440
-		private WeakReference<IslandUIManager> islandUIManager = new WeakReference<IslandUIManager>(null);
+		private RTM.Utilities.WeakReference<IslandUIManager> islandUIManager = new RTM.Utilities.WeakReference<IslandUIManager>(null);
 
 		// Token: 0x040028C9 RID: 10441
 		[Header("Animations")]

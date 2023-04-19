@@ -26,7 +26,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002AA7 RID: 10919 RVA: 0x000988C8 File Offset: 0x00096CC8
 		public void Update()
 		{
-			using ("AgentUpdateRangeWorry")
+			//using ("AgentUpdateRangeWorry")
 			{
 				if (this.valid)
 				{

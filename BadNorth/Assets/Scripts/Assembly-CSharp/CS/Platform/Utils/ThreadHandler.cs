@@ -303,7 +303,7 @@ namespace CS.Platform.Utils
 		// Token: 0x14000036 RID: 54
 		// (add) Token: 0x0600050C RID: 1292 RVA: 0x00014DCC File Offset: 0x000131CC
 		// (remove) Token: 0x0600050D RID: 1293 RVA: 0x00014E04 File Offset: 0x00013204
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action OnCompletion;
 
 		// Token: 0x0600050E RID: 1294 RVA: 0x00014E3A File Offset: 0x0001323A

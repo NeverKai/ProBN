@@ -29,7 +29,7 @@ namespace CS.Platform.Steam.Client.Part
 				if (!base.VoiceRunning && base.RunningThread && base.VoipEnabled)
 				{
 					SteamUser.StartVoiceRecording();
-					SteamFriends.SetInGameVoiceSpeaking((CSteamID)this._Manager.GetUserID, true);
+					//SteamFriends.SetInGameVoiceSpeaking((CSteamID)this._Manager.GetUserID, true);
 					base.VoiceRunning = true;
 				}
 			}
@@ -44,7 +44,7 @@ namespace CS.Platform.Steam.Client.Part
 				if (base.VoiceRunning)
 				{
 					SteamUser.StopVoiceRecording();
-					SteamFriends.SetInGameVoiceSpeaking((CSteamID)this._Manager.GetUserID, false);
+					//SteamFriends.SetInGameVoiceSpeaking((CSteamID)this._Manager.GetUserID, false);
 					base.VoiceRunning = false;
 				}
 			}

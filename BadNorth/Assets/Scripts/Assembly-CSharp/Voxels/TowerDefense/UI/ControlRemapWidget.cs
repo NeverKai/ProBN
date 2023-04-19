@@ -16,7 +16,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000C7 RID: 199
 		// (add) Token: 0x06003B51 RID: 15185 RVA: 0x00107CB0 File Offset: 0x001060B0
 		// (remove) Token: 0x06003B52 RID: 15186 RVA: 0x00107CE8 File Offset: 0x001060E8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onStartListening = delegate()
 		{
 		};
@@ -24,7 +24,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000C8 RID: 200
 		// (add) Token: 0x06003B53 RID: 15187 RVA: 0x00107D20 File Offset: 0x00106120
 		// (remove) Token: 0x06003B54 RID: 15188 RVA: 0x00107D58 File Offset: 0x00106158
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onStopListening = delegate()
 		{
 		};
@@ -32,7 +32,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000C9 RID: 201
 		// (add) Token: 0x06003B55 RID: 15189 RVA: 0x00107D90 File Offset: 0x00106190
 		// (remove) Token: 0x06003B56 RID: 15190 RVA: 0x00107DC8 File Offset: 0x001061C8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onMappingChanged = delegate()
 		{
 		};

@@ -18,7 +18,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000C0 RID: 192
 		// (add) Token: 0x0600383D RID: 14397 RVA: 0x000F2ABC File Offset: 0x000F0EBC
 		// (remove) Token: 0x0600383E RID: 14398 RVA: 0x000F2AF4 File Offset: 0x000F0EF4
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Village.HouseDelegate onHouseDestroyed = delegate(House A_0)
 		{
 		};
@@ -26,7 +26,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000C1 RID: 193
 		// (add) Token: 0x0600383F RID: 14399 RVA: 0x000F2B2C File Offset: 0x000F0F2C
 		// (remove) Token: 0x06003840 RID: 14400 RVA: 0x000F2B64 File Offset: 0x000F0F64
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Village.VoidDelegate onHouseDestroyedVoid = delegate()
 		{
 		};

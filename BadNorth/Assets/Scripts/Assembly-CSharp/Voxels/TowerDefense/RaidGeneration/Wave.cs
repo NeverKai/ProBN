@@ -14,13 +14,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 	{
 		// Token: 0x17000529 RID: 1321
 		// (get) Token: 0x06002668 RID: 9832 RVA: 0x0007958C File Offset: 0x0007798C
-		public ShipGroup randomGroup
-		{
-			get
-			{
-				return this.shipGroups[UnityEngine.Random.Range(0, this.shipGroups.Count)];
-			}
-		}
+		public ShipGroup randomGroup => this.shipGroups[UnityEngine.Random.Range(0, this.shipGroups.Count)];
 
 		// Token: 0x1700052A RID: 1322
 		// (get) Token: 0x06002669 RID: 9833 RVA: 0x000795AA File Offset: 0x000779AA
@@ -46,13 +40,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 
 		// Token: 0x1700052C RID: 1324
 		// (get) Token: 0x0600266B RID: 9835 RVA: 0x00079636 File Offset: 0x00077A36
-		public UnityEngine.Color color
-		{
-			get
-			{
-				return UnityEngine.Color.HSVToRGB(this.waveStartTime / 60f % 1f, 0.7f, 1f);
-			}
-		}
+		public UnityEngine.Color color => UnityEngine.Color.HSVToRGB(this.waveStartTime / 60f % 1f, 0.7f, 1f);
 
 		// Token: 0x0600266C RID: 9836 RVA: 0x0007965C File Offset: 0x00077A5C
 		private void Awake()
@@ -156,7 +144,7 @@ namespace Voxels.TowerDefense.RaidGeneration
 		public IEnumerator BeginWave()
 		{
 			this.triggered = true;
-			using ("waveSoundStart")
+			// using ("waveSoundStart")
 			{
 				FabricWrapper.PostEvent(this.approachAudioId, base.gameObject);
 			}
@@ -182,7 +170,6 @@ namespace Voxels.TowerDefense.RaidGeneration
 			}
 			this.haveAllSpawned = true;
 			yield return null;
-			yield break;
 		}
 
 		// Token: 0x0400184A RID: 6218

@@ -13,16 +13,16 @@ namespace RTM.Input
 		// Token: 0x06001EA7 RID: 7847 RVA: 0x00052274 File Offset: 0x00050674
 		static RewiredHelpers()
 		{
-			if (RewiredHelpers.<>f__mg$cache0 == null)
+			if (RewiredHelpers.action == null)
 			{
-				RewiredHelpers.<>f__mg$cache0 = new Action<ControllerStatusChangedEventArgs>(RewiredHelpers.OnControllerConnected);
+				RewiredHelpers.action = new Action<ControllerStatusChangedEventArgs>(RewiredHelpers.OnControllerConnected);
 			}
-			ReInput.ControllerConnectedEvent += RewiredHelpers.<>f__mg$cache0;
-			if (RewiredHelpers.<>f__mg$cache1 == null)
+			ReInput.ControllerConnectedEvent += RewiredHelpers.action;
+			if (RewiredHelpers.action1 == null)
 			{
-				RewiredHelpers.<>f__mg$cache1 = new Action<ControllerStatusChangedEventArgs>(RewiredHelpers.OnControllerDisconnectedEvent);
+				RewiredHelpers.action1 = new Action<ControllerStatusChangedEventArgs>(RewiredHelpers.OnControllerDisconnectedEvent);
 			}
-			ReInput.ControllerDisconnectedEvent += RewiredHelpers.<>f__mg$cache1;
+			ReInput.ControllerDisconnectedEvent += RewiredHelpers.action1;
 		}
 
 		// Token: 0x06001EA8 RID: 7848 RVA: 0x000522E1 File Offset: 0x000506E1
@@ -94,11 +94,11 @@ namespace RTM.Input
 
 		// Token: 0x0400130B RID: 4875
 		[CompilerGenerated]
-		private static Action<ControllerStatusChangedEventArgs> <>f__mg$cache0;
+		private static Action<ControllerStatusChangedEventArgs> action;
 
 		// Token: 0x0400130C RID: 4876
 		[CompilerGenerated]
-		private static Action<ControllerStatusChangedEventArgs> <>f__mg$cache1;
+		private static Action<ControllerStatusChangedEventArgs> action1;
 
 		// Token: 0x020004BB RID: 1211
 		public static class JoystickGuids

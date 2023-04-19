@@ -16,7 +16,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000081 RID: 129
 		// (add) Token: 0x06002428 RID: 9256 RVA: 0x00071838 File Offset: 0x0006FC38
 		// (remove) Token: 0x06002429 RID: 9257 RVA: 0x0007186C File Offset: 0x0006FC6C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<Vector4, DeviceOrientation> onSafeZoneChanged;
 
 		// Token: 0x1700049F RID: 1183

@@ -87,7 +87,7 @@ public static class Platform
 	// Token: 0x14000082 RID: 130
 	// (add) Token: 0x06002434 RID: 9268 RVA: 0x00071A04 File Offset: 0x0006FE04
 	// (remove) Token: 0x06002435 RID: 9269 RVA: 0x00071A38 File Offset: 0x0006FE38
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	private static event Action _onPlatformUpdated;
 
 	// Token: 0x14000083 RID: 131

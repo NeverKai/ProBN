@@ -171,7 +171,8 @@ public class Fake3dTex
 		}
 		if (volumeSize != string.Empty)
 		{
-			Shader.SetGlobalVector(volumeSize, this.size);
+			var vector4 = new Vector4(this.size.x, size.y,size.z);
+			Shader.SetGlobalVector(volumeSize, vector4);
 		}
 		if (textureSize != string.Empty)
 		{

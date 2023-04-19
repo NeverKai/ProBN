@@ -1,5 +1,4 @@
 ﻿using System;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense
@@ -75,7 +74,7 @@ namespace Voxels.TowerDefense
 		private MeshRenderer colorRenderer;
 
 		// Token: 0x040027DA RID: 10202
-		private WeakReference<NavSpot> navSpot = new WeakReference<NavSpot>(null);
+		private RTM.Utilities.WeakReference<NavSpot> navSpot = new RTM.Utilities.WeakReference<NavSpot>(null);
 
 		// Token: 0x040027DB RID: 10203
 		[SerializeField]

@@ -10,7 +10,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000BF RID: 191
 		// (add) Token: 0x06003787 RID: 14215 RVA: 0x000EFB94 File Offset: 0x000EDF94
 		// (remove) Token: 0x06003788 RID: 14216 RVA: 0x000EFBCC File Offset: 0x000EDFCC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onComplete = delegate()
 		{
 		};

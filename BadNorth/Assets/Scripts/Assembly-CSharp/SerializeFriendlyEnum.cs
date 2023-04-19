@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Reflection;
 using System.Runtime.Serialization;
 
@@ -82,7 +83,7 @@ public class SerializeFriendlyEnum<TEnum> : IComparable<TEnum> where TEnum : str
 	}
 
 	// Token: 0x060025A3 RID: 9635 RVA: 0x00077024 File Offset: 0x00075424
-	int IComparable<!0>.CompareTo(TEnum other)
+	public int CompareTo(TEnum other)
 	{
 		TEnum value = this.value;
 		return value.CompareTo(other);

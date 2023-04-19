@@ -20,7 +20,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000C2 RID: 194
 		// (add) Token: 0x0600394E RID: 14670 RVA: 0x000FACB8 File Offset: 0x000F90B8
 		// (remove) Token: 0x0600394F RID: 14671 RVA: 0x000FACF0 File Offset: 0x000F90F0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onThrowRelease = delegate()
 		{
 		};
@@ -28,7 +28,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000C3 RID: 195
 		// (add) Token: 0x06003950 RID: 14672 RVA: 0x000FAD28 File Offset: 0x000F9128
 		// (remove) Token: 0x06003951 RID: 14673 RVA: 0x000FAD60 File Offset: 0x000F9160
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onThrowComplete = delegate()
 		{
 		};

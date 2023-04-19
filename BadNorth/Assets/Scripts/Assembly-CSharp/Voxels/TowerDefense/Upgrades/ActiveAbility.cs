@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using I2.Loc;
 using ReflexCLI.Attributes;
-using RTM.Utilities;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -276,7 +274,7 @@ namespace Voxels.TowerDefense.Upgrades
 		// Token: 0x140000BE RID: 190
 		// (add) Token: 0x06003701 RID: 14081 RVA: 0x000EBD40 File Offset: 0x000EA140
 		// (remove) Token: 0x06003702 RID: 14082 RVA: 0x000EBD78 File Offset: 0x000EA178
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onActivated = delegate()
 		{
 		};
@@ -504,16 +502,16 @@ namespace Voxels.TowerDefense.Upgrades
 		private const string abilityInUseToolTipText = "UPGRADES/COMMON/TOOLTIPS/ABILITY_IN_USE";
 
 		// Token: 0x0400254F RID: 9551
-		private WeakReference<IslandGameplayManager> islandGameplayManager = new WeakReference<IslandGameplayManager>(null);
+		private RTM.Utilities.WeakReference<IslandGameplayManager> islandGameplayManager = new RTM.Utilities.WeakReference<IslandGameplayManager>(null);
 
 		// Token: 0x04002550 RID: 9552
-		private WeakReference<IslandUINotificationManager> notificationManager = new WeakReference<IslandUINotificationManager>(null);
+		private RTM.Utilities.WeakReference<IslandUINotificationManager> notificationManager = new RTM.Utilities.WeakReference<IslandUINotificationManager>(null);
 
 		// Token: 0x04002551 RID: 9553
-		private WeakReference<IslandUINotification> currentNotification = new WeakReference<IslandUINotification>(null);
+		private RTM.Utilities.WeakReference<IslandUINotification> currentNotification = new RTM.Utilities.WeakReference<IslandUINotification>(null);
 
 		// Token: 0x04002552 RID: 9554
-		public WeakReference<WorldSpaceCursorIconPool> wsCursorIcons = new WeakReference<WorldSpaceCursorIconPool>(null);
+		public RTM.Utilities.WeakReference<WorldSpaceCursorIconPool> wsCursorIcons = new RTM.Utilities.WeakReference<WorldSpaceCursorIconPool>(null);
 
 		// Token: 0x04002553 RID: 9555
 		public AgentState focus;

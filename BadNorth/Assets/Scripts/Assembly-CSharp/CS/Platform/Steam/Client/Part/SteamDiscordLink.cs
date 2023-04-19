@@ -52,10 +52,10 @@ namespace CS.Platform.Steam.Client.Part
 			}
 			try
 			{
-				this._sdk = new Discord(487564993236172802L, 1UL);
+				this._sdk = new Discord.Discord(487564993236172802L, 1UL);
 				if (CS.Platform.Utils.Debug.IsDebug)
 				{
-					this._sdk.SetLogHook(LogLevel.Info, new Discord.SetLogHookHandler(this.ErrorLogger));
+					// this._sdk.SetLogHook(LogLevel.Info, new Discord.SetLogHookHandler(this.ErrorLogger));
 				}
 				this._activitiesSDK = this._sdk.GetActivityManager();
 				this._overlaySDK = this._sdk.GetOverlayManager();
@@ -334,7 +334,7 @@ namespace CS.Platform.Steam.Client.Part
 		}
 
 		// Token: 0x04000100 RID: 256
-		private Discord _sdk;
+		private Discord.Discord _sdk;
 
 		// Token: 0x04000101 RID: 257
 		private ActivityManager _activitiesSDK;

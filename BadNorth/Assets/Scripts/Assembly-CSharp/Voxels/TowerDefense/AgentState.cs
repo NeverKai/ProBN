@@ -7,7 +7,6 @@ namespace Voxels.TowerDefense
 	// Token: 0x020007F3 RID: 2035
 	public class AgentState
 	{
-		// Token: 0x06003539 RID: 13625 RVA: 0x000E5250 File Offset: 0x000E3650
 		public AgentState(AgentStateRoot stateRoot)
 		{
 			this.name = "Root";

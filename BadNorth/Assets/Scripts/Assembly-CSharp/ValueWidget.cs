@@ -9,7 +9,7 @@ public abstract class ValueWidget<T> : Widget
 	// Token: 0x140000CA RID: 202
 	// (add) Token: 0x06003BA9 RID: 15273 RVA: 0x00107740 File Offset: 0x00105B40
 	// (remove) Token: 0x06003BAA RID: 15274 RVA: 0x00107778 File Offset: 0x00105B78
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public event Action<T> onValueChanged = delegate(T A_0)
 	{
 	};
@@ -17,7 +17,7 @@ public abstract class ValueWidget<T> : Widget
 	// Token: 0x140000CB RID: 203
 	// (add) Token: 0x06003BAB RID: 15275 RVA: 0x001077B0 File Offset: 0x00105BB0
 	// (remove) Token: 0x06003BAC RID: 15276 RVA: 0x001077E8 File Offset: 0x00105BE8
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public event Action<T> onForceUpdate = delegate(T A_0)
 	{
 	};

@@ -22,11 +22,11 @@ namespace CS.VT
 			if (BasePlatformManager.Instance == null)
 			{
 				UserSettings.I2LanguageInitToSystem();
-				if (CorePlatformSetup.<>f__mg$cache0 == null)
+				if (CorePlatformSetup.action == null)
 				{
-					CorePlatformSetup.<>f__mg$cache0 = new LocalizationManager.OnLocalizeCallback(CorePlatformSetup.SetLocKeys);
+					CorePlatformSetup.action = new LocalizationManager.OnLocalizeCallback(CorePlatformSetup.SetLocKeys);
 				}
-				LocalizationManager.OnLocalizeEvent += CorePlatformSetup.<>f__mg$cache0;
+				LocalizationManager.OnLocalizeEvent += CorePlatformSetup.action;
 				CorePlatformSetup.SetLocKeys();
 				GameObject gameObject = new GameObject("PlatformManager");
 				UnityEngine.Object.DontDestroyOnLoad(gameObject);
@@ -59,6 +59,6 @@ namespace CS.VT
 
 		// Token: 0x04000CD6 RID: 3286
 		[CompilerGenerated]
-		private static LocalizationManager.OnLocalizeCallback <>f__mg$cache0;
+		private static LocalizationManager.OnLocalizeCallback action;
 	}
 }

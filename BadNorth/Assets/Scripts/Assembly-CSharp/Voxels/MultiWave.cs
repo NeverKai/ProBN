@@ -410,7 +410,9 @@ namespace Voxels
 									}
 								}
 							}
-							Color.white.a = (float)j / (float)this.marcher.rays[i].pos.Length;
+
+							var white = Color.white;
+							white.a = (float)j / (float)this.marcher.rays[i].pos.Length;
 						}
 					}
 				}

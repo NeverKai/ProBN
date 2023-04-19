@@ -35,19 +35,19 @@ namespace Voxels.TowerDefense.UI
 			UpgradeCarousel[] componentsInChildren = this.uiRoot.GetComponentsInChildren<UpgradeCarousel>(true);
 			for (int i = 0; i < componentsInChildren.Length; i++)
 			{
-				NewGameInventoryPrompt.<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey1 <Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey = new NewGameInventoryPrompt.<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey1();
-				<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.carousel = componentsInChildren[i];
-				<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.$this = this;
-				IUINavigable navigable = <Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.carousel.GetComponent<IUINavigable>();
+				// NewGameInventoryPrompt.<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey1 <Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey = new NewGameInventoryPrompt.<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey1();
+				var carousel = componentsInChildren[i];
+				//<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.$this = this;
+				IUINavigable navigable = carousel.GetComponent<IUINavigable>();
 				Action visibleFunc = delegate()
 				{
-					<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.$this.codexPrompt.active = (navigable.hasFocus && <Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.carousel.selectedUpgrade && InputHelpers.ControllerTypeIs(ControllerType.Joystick));
+					this.codexPrompt.active = (navigable.hasFocus && carousel.selectedUpgrade && InputHelpers.ControllerTypeIs(ControllerType.Joystick));
 				};
 				navigable.onFocusChanged += delegate(bool f)
 				{
 					visibleFunc();
 				};
-				<Voxels_TowerDefense_IGameSetup_OnGameAwake>c__AnonStorey.carousel.onSelectedUpgradeChanged += delegate(HeroUpgradeDefinition u)
+				carousel.onSelectedUpgradeChanged += delegate(HeroUpgradeDefinition u)
 				{
 					visibleFunc();
 				};

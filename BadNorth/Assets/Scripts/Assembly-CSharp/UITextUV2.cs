@@ -18,7 +18,7 @@ public class UITextUV2 : MonoBehaviour, IMeshModifier
 				vh.PopulateUIVertex(ref v2, j);
 				v2.uv1 = new Vector2((float)((j + 1) / 2 % 2), (float)((j / 2 + 1) % 2));
 				v2.color.a = 0;
-				v2.position += v;
+				v2.position = new Vector2(v.x + v2.position.x, v.y + v2.position.y) ;
 				vh.AddVert(v2);
 			}
 			v = new Vector2(-v.y, v.x);

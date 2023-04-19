@@ -56,16 +56,16 @@ namespace Voxels.TowerDefense.UI.MetaInventory
 			DistanceFieldSettings[] array3 = this.focuses;
 			for (int k = 0; k < array3.Length; k++)
 			{
-				UpgradeToken.<Setup>c__AnonStorey0 <Setup>c__AnonStorey2 = new UpgradeToken.<Setup>c__AnonStorey0();
-				<Setup>c__AnonStorey2.focus = array3[k];
-				float fraction = <Setup>c__AnonStorey2.focus.fraction;
-				Graphic graphic = <Setup>c__AnonStorey2.focus.GetComponent<Graphic>();
+				// UpgradeToken.<Setup>c__AnonStorey0 <Setup>c__AnonStorey2 = new UpgradeToken.<Setup>c__AnonStorey0();
+				var focus = array3[k];
+				float fraction = focus.fraction;
+				Graphic graphic = focus.GetComponent<Graphic>();
 				focusState.Subscribe(delegate(bool x)
 				{
-					<Setup>c__AnonStorey2.focus.gameObject.SetActive(x);
+					focus.gameObject.SetActive(x);
 				}, delegate(float x)
 				{
-					<Setup>c__AnonStorey2.focus.fraction = Mathf.Lerp(fraction * 0.1f, fraction, x);
+					focus.fraction = Mathf.Lerp(fraction * 0.1f, fraction, x);
 					graphic.color = graphic.color.SetA(x);
 				});
 			}

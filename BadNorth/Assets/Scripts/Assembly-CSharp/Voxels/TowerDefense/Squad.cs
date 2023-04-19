@@ -42,7 +42,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000AB RID: 171
 		// (add) Token: 0x06003443 RID: 13379 RVA: 0x000C8AE8 File Offset: 0x000C6EE8
 		// (remove) Token: 0x06003444 RID: 13380 RVA: 0x000C8B20 File Offset: 0x000C6F20
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onAllDead = delegate()
 		{
 		};
@@ -50,7 +50,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000AC RID: 172
 		// (add) Token: 0x06003445 RID: 13381 RVA: 0x000C8B58 File Offset: 0x000C6F58
 		// (remove) Token: 0x06003446 RID: 13382 RVA: 0x000C8B90 File Offset: 0x000C6F90
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onDestroy = delegate()
 		{
 		};
@@ -58,7 +58,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000AD RID: 173
 		// (add) Token: 0x06003447 RID: 13383 RVA: 0x000C8BC8 File Offset: 0x000C6FC8
 		// (remove) Token: 0x06003448 RID: 13384 RVA: 0x000C8C00 File Offset: 0x000C7000
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onAllDestroyed = delegate()
 		{
 		};
@@ -66,7 +66,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000AE RID: 174
 		// (add) Token: 0x06003449 RID: 13385 RVA: 0x000C8C38 File Offset: 0x000C7038
 		// (remove) Token: 0x0600344A RID: 13386 RVA: 0x000C8C70 File Offset: 0x000C7070
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onSquadChanged = delegate()
 		{
 		};
@@ -74,7 +74,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000AF RID: 175
 		// (add) Token: 0x0600344B RID: 13387 RVA: 0x000C8CA8 File Offset: 0x000C70A8
 		// (remove) Token: 0x0600344C RID: 13388 RVA: 0x000C8CE0 File Offset: 0x000C70E0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Agent> onAgentCreated = delegate(Agent A_0)
 		{
 		};
@@ -82,7 +82,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B0 RID: 176
 		// (add) Token: 0x0600344D RID: 13389 RVA: 0x000C8D18 File Offset: 0x000C7118
 		// (remove) Token: 0x0600344E RID: 13390 RVA: 0x000C8D50 File Offset: 0x000C7150
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Agent> onAgentSpawned = delegate(Agent A_0)
 		{
 		};
@@ -90,7 +90,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B1 RID: 177
 		// (add) Token: 0x0600344F RID: 13391 RVA: 0x000C8D88 File Offset: 0x000C7188
 		// (remove) Token: 0x06003450 RID: 13392 RVA: 0x000C8DC0 File Offset: 0x000C71C0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<Agent> onAgentRemoved = delegate(Agent A_0)
 		{
 		};

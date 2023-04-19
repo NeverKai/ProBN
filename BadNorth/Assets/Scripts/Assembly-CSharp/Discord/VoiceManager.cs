@@ -39,7 +39,6 @@ namespace Discord
 		// Token: 0x1400004D RID: 77
 		// (add) Token: 0x06000ACA RID: 2762 RVA: 0x0001FC64 File Offset: 0x0001E064
 		// (remove) Token: 0x06000ACB RID: 2763 RVA: 0x0001FC9C File Offset: 0x0001E09C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event VoiceManager.SettingsUpdateHandler OnSettingsUpdate;
 
 		// Token: 0x06000ACC RID: 2764 RVA: 0x0001FCD2 File Offset: 0x0001E0D2

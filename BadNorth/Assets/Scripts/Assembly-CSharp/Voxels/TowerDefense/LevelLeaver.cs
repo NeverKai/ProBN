@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using CS.Platform;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.CampaignGeneration;
 using Voxels.TowerDefense.ProfileInternals;
@@ -186,7 +185,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060022B4 RID: 8884 RVA: 0x00065340 File Offset: 0x00063740
 		private void UpdateProfile()
 		{
-			using ("UpdateProfile")
+			//using ("UpdateProfile")
 			{
 				LevelNode levelNode = this.island.levelNode;
 				Campaign campaign = levelNode.campaign;
@@ -254,7 +253,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060022B5 RID: 8885 RVA: 0x000656B8 File Offset: 0x00063AB8
 		private void UpdateHeroStates(EndOfLevel.Reason eolReason, LevelNode levelNode)
 		{
-			using ("UpdateHeroStates")
+			//using ("UpdateHeroStates")
 			{
 				foreach (Squad squad in this.island.english.allSquads)
 				{
@@ -275,7 +274,7 @@ namespace Voxels.TowerDefense
 					}
 					if (englishSquad.dead || !englishSquad.heroAgent)
 					{
-						using ("HeroDied")
+						//using ("HeroDied")
 						{
 							hero.alive = false;
 							hero.deathLevelId = this.island.levelNode.index;
@@ -304,7 +303,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060022B6 RID: 8886 RVA: 0x00065968 File Offset: 0x00063D68
 		private void UpdateLevelStates(LevelNode levelNode, EndOfLevel.Reason eolReason)
 		{
-			using ("UpdateLevelStates")
+			//using ("UpdateLevelStates")
 			{
 				Campaign campaign = levelNode.campaign;
 				campaign.pendingUnlocks.Clear();
@@ -363,7 +362,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060022B9 RID: 8889 RVA: 0x00065BA8 File Offset: 0x00063FA8
 		private void UpdateHouseStates(LevelState levelState, EndOfLevel.Reason eolReason)
 		{
-			using ("UpdateHouseStates")
+			//using ("UpdateHouseStates")
 			{
 				House[] houses = this.island.village.houses;
 				HouseState[] houses2 = levelState.houses;
@@ -396,7 +395,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060022BA RID: 8890 RVA: 0x00065CB0 File Offset: 0x000640B0
 		private void UpdateStats(CampaignStats stats, CampaignSave campaignSave, LevelState levelState, EndOfLevel.Reason eolReason)
 		{
-			using ("UpdateStats")
+			//using ("UpdateStats")
 			{
 				bool flag = levelState.playCount == 0;
 				int num = (!flag) ? 0 : 1;
@@ -482,7 +481,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x060022BD RID: 8893 RVA: 0x00066068 File Offset: 0x00064468
 		private void PaintExtraSoot()
 		{
-			using ("PaintExtraSoot")
+			//using ("PaintExtraSoot")
 			{
 				House[] houses = this.island.village.houses;
 				HouseState[] houses2 = this.island.levelNode.levelState.houses;
@@ -506,6 +505,6 @@ namespace Voxels.TowerDefense
 		private IslandGameplayManager gameplayManager;
 
 		// Token: 0x04001530 RID: 5424
-		private WeakReference<Island> _island = null;
+		private RTM.Utilities.WeakReference<Island> _island = null;
 	}
 }

@@ -14,13 +14,13 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x1400009D RID: 157
 		// (add) Token: 0x060030AC RID: 12460 RVA: 0x000C6DE8 File Offset: 0x000C51E8
 		// (remove) Token: 0x060030AD RID: 12461 RVA: 0x000C6E1C File Offset: 0x000C521C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action onCreditsFillScreen;
 
 		// Token: 0x1400009E RID: 158
 		// (add) Token: 0x060030AE RID: 12462 RVA: 0x000C6E50 File Offset: 0x000C5250
 		// (remove) Token: 0x060030AF RID: 12463 RVA: 0x000C6E84 File Offset: 0x000C5284
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action onCreditsComplete;
 
 		// Token: 0x060030B0 RID: 12464 RVA: 0x000C6EB8 File Offset: 0x000C52B8

@@ -67,7 +67,7 @@ namespace Steamworks
 		// Token: 0x06001307 RID: 4871 RVA: 0x0002823C File Offset: 0x0002663C
 		public uint ModID()
 		{
-			return (uint)(this.m_GameID >> 32 & (ulong)-1);
+			return (uint)(this.m_GameID >> 32 & unchecked((ulong)-1));
 		}
 
 		// Token: 0x06001308 RID: 4872 RVA: 0x0002824C File Offset: 0x0002664C
@@ -115,7 +115,7 @@ namespace Steamworks
 		// Token: 0x0600130D RID: 4877 RVA: 0x00028354 File Offset: 0x00026754
 		private void SetModID(uint other)
 		{
-			this.m_GameID = ((this.m_GameID & (ulong)-1) | ((ulong)other & (ulong)-1) << 32);
+			this.m_GameID = ((this.m_GameID & unchecked((ulong)-1)) | ((ulong)other & unchecked((ulong)-1)) << 32);
 		}
 
 		// Token: 0x0600130E RID: 4878 RVA: 0x0002836E File Offset: 0x0002676E

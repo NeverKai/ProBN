@@ -174,7 +174,7 @@ namespace Voxels
 			this.PropagateColor(marcher.center, 1f);
 			for (int i = 0; i < this.voxelSpace.cornerVoxels.Length; i++)
 			{
-				using ("BakeAO For Loop " + i)
+				//using ("BakeAO For Loop " + i)
 				{
 					VoxelSpace.CornerVoxel cornerVoxel = this.voxelSpace.cornerVoxels[i];
 					Vector4 ao = this.GetAo(marcher.center, cornerVoxel.pos);

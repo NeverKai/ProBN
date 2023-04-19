@@ -64,20 +64,14 @@ public static class ComponentEnumerator
 		}
 
 		// Token: 0x060027CA RID: 10186 RVA: 0x00081529 File Offset: 0x0007F929
-		IEnumerator<T> IEnumerable<!0>.GetEnumerator()
+		public  IEnumerator<T> GetEnumerator()
 		{
 			return this;
 		}
 
 		// Token: 0x17000553 RID: 1363
 		// (get) Token: 0x060027CB RID: 10187 RVA: 0x0008152C File Offset: 0x0007F92C
-		T IEnumerator<!0>.Current
-		{
-			get
-			{
-				return this.list[this.index - 1];
-			}
-		}
+		public T Current => this.list[this.index - 1];
 
 		// Token: 0x17000554 RID: 1364
 		// (get) Token: 0x060027CC RID: 10188 RVA: 0x00081541 File Offset: 0x0007F941

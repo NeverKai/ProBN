@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using RTM.Pools;
 using RTM.UISystem;
-using RTM.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
 using Voxels.TowerDefense.ScriptAnimations;
@@ -158,8 +157,6 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x06003B1E RID: 15134 RVA: 0x00106694 File Offset: 0x00104A94
 		protected override void Initialize()
 		{
-			UserSettingsMenu.<Initialize>c__AnonStorey0 <Initialize>c__AnonStorey = new UserSettingsMenu.<Initialize>c__AnonStorey0();
-			<Initialize>c__AnonStorey.$this = this;
 			base.Initialize();
 			UserSettingsMenu._instance = this;
 			base.gameObject.SetActive(false);
@@ -171,23 +168,23 @@ namespace Voxels.TowerDefense.UI
 			this.categoryLayouts.Add(this.categoryAudio.parent.GetComponent<VerticalLayoutGroup>());
 			this.safeAreaVisibility = this.safeAreaIndicator.GetComponent<IUIVisibility>();
 			this.safeAreaVisibility.SetVisible(false, true);
-			<Initialize>c__AnonStorey.languageWidget = this.AddPopupWidget("SETTINGS/LANGUAGE/NAME", UserSettings.LanguageDisplayNames, false, () => (int)Profile.userSettings.language.value, delegate(int value)
+			var languageWidget = this.AddPopupWidget("SETTINGS/LANGUAGE/NAME", UserSettings.LanguageDisplayNames, false, () => (int)Profile.userSettings.language.value, delegate(int value)
 			{
 				Profile.userSettings.language = (UserSettings.Language)value;
 				Profile.userSettings.ProcessUpdate(true);
 				return true;
 			}, this.categoryGraphics, null);
-			<Initialize>c__AnonStorey.languageWidget.SetSuccessAudio(FabricID.settingChange);
-			<Initialize>c__AnonStorey.languageWidget.popup.onOpened += delegate()
+			languageWidget.SetSuccessAudio(FabricID.settingChange);
+			languageWidget.popup.onOpened += delegate()
 			{
-				LocalPool<PopupWidgetOption> options = <Initialize>c__AnonStorey.languageWidget.popup.options;
+				LocalPool<PopupWidgetOption> options = languageWidget.popup.options;
 				List<PopupWidgetOption> inUse = options.inUse;
 				for (int i = inUse.Count - 1; i >= 0; i--)
 				{
 					PopupWidgetOption popupWidgetOption = inUse[i];
 					UserSettings.Language language = (UserSettings.Language)i;
-					Font font = <Initialize>c__AnonStorey.$this.defaultLanguageFont;
-					foreach (UserSettingsMenu.LanguageFontMap languageFontMap in <Initialize>c__AnonStorey.$this.fontMap)
+					Font font =this.defaultLanguageFont;
+					foreach (LanguageFontMap languageFontMap in this.fontMap)
 					{
 						if (languageFontMap.language == language)
 						{
@@ -199,29 +196,29 @@ namespace Voxels.TowerDefense.UI
 					popupWidgetOption.text.font = font;
 				}
 			};
-			<Initialize>c__AnonStorey.resolution = this.AddResolutionWidget("SETTINGS/RESOLUTION", this.categoryDisplay, this.popupExample);
-			<Initialize>c__AnonStorey.resolution.widget.SetIncrementCycling(false).SetUpdateAction(delegate
+			var resolution = this.AddResolutionWidget("SETTINGS/RESOLUTION", this.categoryDisplay, this.popupExample);
+			resolution.widget.SetIncrementCycling(false).SetUpdateAction(delegate
 			{
-				<Initialize>c__AnonStorey.$this.UpdateOccasionally(<Initialize>c__AnonStorey.resolution.widget, false);
+				this.UpdateOccasionally(resolution.widget, false);
 			}).SetSuccessAudio(FabricID.settingChange).SetVisibilityCallback(() => Application.isEditor || Screen.fullScreen);
-			UserSettingsMenu.<Initialize>c__AnonStorey0 <Initialize>c__AnonStorey2 = <Initialize>c__AnonStorey;
+			// UserSettingsMenu.<Initialize>c__AnonStorey0 <Initialize>c__AnonStorey2 = <Initialize>c__AnonStorey;
 			string labelLocTerm = "SETTINGS/FULLSCREEN/NAME";
-			if (UserSettingsMenu.<>f__mg$cache0 == null)
+			if (UserSettingsMenu.action == null)
 			{
-				UserSettingsMenu.<>f__mg$cache0 = new Func<bool>(Screen.get_fullScreen);
+				UserSettingsMenu.action = new Func<bool>(Screen.get_fullScreen);
 			}
-			<Initialize>c__AnonStorey2.fullscreen = this.AddBoolWidget(labelLocTerm, UserSettingsMenu.<>f__mg$cache0, new Func<bool, bool>(this.SetFullscreen), this.categoryDisplay);
-			<Initialize>c__AnonStorey.fullscreen.onValueChanged += delegate(bool f)
+			var fullscreen = this.AddBoolWidget(labelLocTerm, UserSettingsMenu.action, new Func<bool, bool>(this.SetFullscreen), this.categoryDisplay);
+			fullscreen.onValueChanged += delegate(bool f)
 			{
 				if (f)
 				{
-					<Initialize>c__AnonStorey.resolution.UpdateList();
+					resolution.UpdateList();
 				}
 			};
-			<Initialize>c__AnonStorey.fullscreen.SetSuccessAudio(FabricID.settingChange);
-			<Initialize>c__AnonStorey.fullscreen.SetUpdateAction(delegate
+			fullscreen.SetSuccessAudio(FabricID.settingChange);
+			fullscreen.SetUpdateAction(delegate
 			{
-				<Initialize>c__AnonStorey.$this.UpdateOccasionally(<Initialize>c__AnonStorey.fullscreen, false);
+				UpdateOccasionally(fullscreen, false);
 			});
 			string[] values = new string[]
 			{
@@ -243,13 +240,13 @@ namespace Voxels.TowerDefense.UI
 			intWidget.percentDisplay = true;
 			intWidget.onValueChanged += delegate(int x)
 			{
-				<Initialize>c__AnonStorey.$this.SafeAreaChanged();
+				this.SafeAreaChanged();
 			};
 			intWidget.navigable.onFocusChanged += this.SafeAreaFocusChanged;
 			intWidget.SetSuccessAudio(FabricID.settingChange);
 			intWidget.gameObject.AddComponent<UIPointerReceiver>().onStateChanged += delegate(UIPointerReceiver.State s)
 			{
-				<Initialize>c__AnonStorey.$this.SafeAreaFocusChanged(s >= UIPointerReceiver.State.Hover);
+				this.SafeAreaFocusChanged(s >= UIPointerReceiver.State.Hover);
 			};
 			string[] values2 = new string[]
 			{
@@ -288,16 +285,16 @@ namespace Voxels.TowerDefense.UI
 			}, this.categoryControls).SetIncrementCycling(true).SetSuccessAudio(FabricID.settingChange);
 			ButtonWidget buttonWidget = this.AddButton("CONTROLS/KEYBOARD/NAME", delegate()
 			{
-				ControlsKeyboardMenu.Open(<Initialize>c__AnonStorey.$this.islandUIManager);
-				<Initialize>c__AnonStorey.$this.slideSide.SetActive(true);
+				ControlsKeyboardMenu.Open(this.islandUIManager);
+				this.slideSide.SetActive(true);
 				return true;
 			}, this.categoryControls, this.wideButtonPrefab);
 			ButtonWidget buttonWidget2 = this.AddButton(ControlsGamepadMenu.GetTitleLocTerm(), delegate()
 			{
 				ControlsGamepadMenu.Open(false);
-				if (<Initialize>c__AnonStorey.$this.islandUIManager)
+				if (this.islandUIManager)
 				{
-					<Initialize>c__AnonStorey.$this.slideSide.SetActive(true);
+					this.slideSide.SetActive(true);
 				}
 				return true;
 			}, this.categoryControls, this.wideButtonPrefab);
@@ -332,10 +329,10 @@ namespace Voxels.TowerDefense.UI
 			TargetAnimator<float> anim = this.slideSide.anim;
 			anim.setFunc = (Action<float>)Delegate.Combine(anim.setFunc, new Action<float>(delegate(float a)
 			{
-				float num = (!<Initialize>c__AnonStorey.$this.islandUIManager) ? -75f : 300f;
+				float num = (!islandUIManager) ? -75f : 300f;
 				Vector2 vector = new Vector2(a * num, 0f);
-				<Initialize>c__AnonStorey.$this.positionOffsetTransform.offsetMin = vector;
-				<Initialize>c__AnonStorey.$this.positionOffsetTransform.offsetMax = vector;
+				positionOffsetTransform.offsetMin = vector;
+				positionOffsetTransform.offsetMax = vector;
 			}));
 		}
 
@@ -567,14 +564,14 @@ namespace Voxels.TowerDefense.UI
 		private bool centered;
 
 		// Token: 0x04002918 RID: 10520
-		private WeakReference<IslandUIManager> islandUIManager = new WeakReference<IslandUIManager>(null);
+		private RTM.Utilities.WeakReference<IslandUIManager> islandUIManager = new RTM.Utilities.WeakReference<IslandUIManager>(null);
 
 		// Token: 0x04002919 RID: 10521
 		private IUIVisibility visibility;
 
 		// Token: 0x0400291A RID: 10522
 		[CompilerGenerated]
-		private static Func<bool> <>f__mg$cache0;
+		private static Func<bool> action;
 
 		// Token: 0x020008C1 RID: 2241
 		[Serializable]

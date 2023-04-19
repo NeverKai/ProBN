@@ -111,7 +111,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B5 RID: 181
 		// (add) Token: 0x060034ED RID: 13549 RVA: 0x000E3944 File Offset: 0x000E1D44
 		// (remove) Token: 0x060034EE RID: 13550 RVA: 0x000E397C File Offset: 0x000E1D7C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onAgentEntered = delegate()
 		{
 		};
@@ -119,7 +119,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B6 RID: 182
 		// (add) Token: 0x060034EF RID: 13551 RVA: 0x000E39B4 File Offset: 0x000E1DB4
 		// (remove) Token: 0x060034F0 RID: 13552 RVA: 0x000E39EC File Offset: 0x000E1DEC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<int> onAgentHealed = delegate(int A_0)
 		{
 		};
@@ -127,7 +127,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000B7 RID: 183
 		// (add) Token: 0x060034F1 RID: 13553 RVA: 0x000E3A24 File Offset: 0x000E1E24
 		// (remove) Token: 0x060034F2 RID: 13554 RVA: 0x000E3A5C File Offset: 0x000E1E5C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onSquadBeginExit = delegate()
 		{
 		};

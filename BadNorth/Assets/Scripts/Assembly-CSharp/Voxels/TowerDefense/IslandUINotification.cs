@@ -173,10 +173,10 @@ namespace Voxels.TowerDefense
 				FabricWrapper.PostEvent(this.closeAudioId.name);
 			}));
 			LerpTowards targetAnimFuncs = new LerpTowards(4f, 0.15f);
-			this.flashAnim = new TargetAnimator(new Func<float>(this.get_flashIntensity), delegate(float v)
-			{
-				this.flashIntensity = v;
-			}, this.stateRoot.rootState, targetAnimFuncs);
+			// this.flashAnim = new TargetAnimator(new Func<float>(this.get_flashIntensity), delegate(float v)
+			// {
+			// 	this.flashIntensity = v;
+			// }, this.stateRoot.rootState, targetAnimFuncs);
 			this.polygon = base.GetComponentInChildren<PolygonMask>();
 			this.baseColor = this.polygon.color;
 		}

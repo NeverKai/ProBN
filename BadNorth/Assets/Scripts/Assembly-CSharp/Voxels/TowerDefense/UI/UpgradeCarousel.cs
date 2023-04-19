@@ -26,7 +26,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000D0 RID: 208
 		// (add) Token: 0x06003D5E RID: 15710 RVA: 0x001134E8 File Offset: 0x001118E8
 		// (remove) Token: 0x06003D5F RID: 15711 RVA: 0x00113520 File Offset: 0x00111920
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<float, float, HeroUpgradeDefinition, HeroUpgradeDefinition> onDisplayUpdated = delegate(float A_0, float A_1, HeroUpgradeDefinition A_2, HeroUpgradeDefinition A_3)
 		{
 		};
@@ -34,7 +34,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000D1 RID: 209
 		// (add) Token: 0x06003D60 RID: 15712 RVA: 0x00113558 File Offset: 0x00111958
 		// (remove) Token: 0x06003D61 RID: 15713 RVA: 0x00113590 File Offset: 0x00111990
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<int, HeroUpgradeDefinition> onSnapToPosition = delegate(int A_0, HeroUpgradeDefinition A_1)
 		{
 		};
@@ -42,7 +42,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000D2 RID: 210
 		// (add) Token: 0x06003D62 RID: 15714 RVA: 0x001135C8 File Offset: 0x001119C8
 		// (remove) Token: 0x06003D63 RID: 15715 RVA: 0x00113600 File Offset: 0x00111A00
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<UIInteractable.State> onInteractibleStateChanged = delegate(UIInteractable.State A_0)
 		{
 		};
@@ -50,7 +50,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000D3 RID: 211
 		// (add) Token: 0x06003D64 RID: 15716 RVA: 0x00113638 File Offset: 0x00111A38
 		// (remove) Token: 0x06003D65 RID: 15717 RVA: 0x00113670 File Offset: 0x00111A70
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<float> onFlash = delegate(float A_0)
 		{
 		};
@@ -110,7 +110,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000D4 RID: 212
 		// (add) Token: 0x06003D6B RID: 15723 RVA: 0x00113744 File Offset: 0x00111B44
 		// (remove) Token: 0x06003D6C RID: 15724 RVA: 0x0011377C File Offset: 0x00111B7C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<int> onIdxChanged = delegate(int A_0)
 		{
 		};
@@ -118,7 +118,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000D5 RID: 213
 		// (add) Token: 0x06003D6D RID: 15725 RVA: 0x001137B4 File Offset: 0x00111BB4
 		// (remove) Token: 0x06003D6E RID: 15726 RVA: 0x001137EC File Offset: 0x00111BEC
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<HeroUpgradeDefinition> onSelectedUpgradeChanged = delegate(HeroUpgradeDefinition A_0)
 		{
 		};

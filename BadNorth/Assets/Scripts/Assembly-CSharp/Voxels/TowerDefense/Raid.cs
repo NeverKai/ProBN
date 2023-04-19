@@ -14,13 +14,7 @@ namespace Voxels.TowerDefense
 	{
 		// Token: 0x170006D9 RID: 1753
 		// (get) Token: 0x06002F4B RID: 12107 RVA: 0x000BDF8C File Offset: 0x000BC38C
-		public Wave randomWave
-		{
-			get
-			{
-				return this.waves[UnityEngine.Random.Range(0, this.waves.Count)];
-			}
-		}
+		public Wave randomWave => this.waves[UnityEngine.Random.Range(0, this.waves.Count)];
 
 		// Token: 0x170006DA RID: 1754
 		// (get) Token: 0x06002F4C RID: 12108 RVA: 0x000BDFAA File Offset: 0x000BC3AA
@@ -55,8 +49,8 @@ namespace Voxels.TowerDefense
 		// Token: 0x14000092 RID: 146
 		// (add) Token: 0x06002F4F RID: 12111 RVA: 0x000BDFF0 File Offset: 0x000BC3F0
 		// (remove) Token: 0x06002F50 RID: 12112 RVA: 0x000BE028 File Offset: 0x000BC428
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-		public event Raid.BeginWaveDelegate OnBeginWave = delegate(int A_0)
+		
+		public event BeginWaveDelegate OnBeginWave = delegate(int A_0)
 		{
 		};
 
@@ -112,7 +106,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002F57 RID: 12119 RVA: 0x000BE183 File Offset: 0x000BC583
 		public bool AllWavesSpawned()
 		{
-			return this.waves.Last<Wave>().haveAllSpawned;
+			return this.waves.Last().haveAllSpawned;
 		}
 
 		// Token: 0x06002F58 RID: 12120 RVA: 0x000BE198 File Offset: 0x000BC598
@@ -507,34 +501,33 @@ namespace Voxels.TowerDefense
 		// Token: 0x02000723 RID: 1827
 		private static class RaidModifier
 		{
-			// Token: 0x06002F67 RID: 12135 RVA: 0x000BE440 File Offset: 0x000BC840
 			public static List<Action> GetActions(Raid raid)
 			{
 				return new List<Action>
 				{
 					delegate()
 					{
-						Raid.RaidModifier.DoubleLoad(raid);
+						DoubleLoad(raid);
 					},
 					delegate()
 					{
-						Raid.RaidModifier.MultiplyOneLoad(raid);
+						MultiplyOneLoad(raid);
 					},
 					delegate()
 					{
-						Raid.RaidModifier.MultiplyOneGroupLoads(raid);
+						MultiplyOneGroupLoads(raid);
 					},
 					delegate()
 					{
-						Raid.RaidModifier.MultiplyOneWaveLoads(raid);
+						MultiplyOneWaveLoads(raid);
 					},
 					delegate()
 					{
-						Raid.RaidModifier.ChangeOneLoad(raid);
+						ChangeOneLoad(raid);
 					},
 					delegate()
 					{
-						Raid.RaidModifier.DuplicateOneShip(raid);
+						DuplicateOneShip(raid);
 					},
 					delegate()
 					{

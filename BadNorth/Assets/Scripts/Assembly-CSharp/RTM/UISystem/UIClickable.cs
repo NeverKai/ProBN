@@ -21,19 +21,19 @@ namespace RTM.UISystem
 			this.onClickFailed = delegate()
 			{
 			};
-			base..ctor();
+			//base.ctor();
 		}
 
 		// Token: 0x14000063 RID: 99
 		// (add) Token: 0x06001F2C RID: 7980 RVA: 0x00053DDC File Offset: 0x000521DC
 		// (remove) Token: 0x06001F2D RID: 7981 RVA: 0x00053E14 File Offset: 0x00052214
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onClick;
 
 		// Token: 0x14000064 RID: 100
 		// (add) Token: 0x06001F2E RID: 7982 RVA: 0x00053E4C File Offset: 0x0005224C
 		// (remove) Token: 0x06001F2F RID: 7983 RVA: 0x00053E84 File Offset: 0x00052284
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onClickFailed;
 
 		// Token: 0x1700041B RID: 1051
@@ -114,5 +114,6 @@ namespace RTM.UISystem
 
 		// Token: 0x0400135F RID: 4959
 		protected UIActionListener actionListener;
+		private UnityEvent onClickEvent;
 	}
 }

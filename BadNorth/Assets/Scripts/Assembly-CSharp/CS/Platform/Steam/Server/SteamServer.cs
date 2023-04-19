@@ -14,17 +14,17 @@ namespace CS.Platform.Steam.Server
 		// Token: 0x06000641 RID: 1601 RVA: 0x0001BB6C File Offset: 0x00019F6C
 		public SteamServer()
 		{
-			if (SteamServer<ClientConnectionInfo>.<>f__mg$cache0 == null)
+			if (SteamServer<ClientConnectionInfo>.action == null)
 			{
-				SteamServer<ClientConnectionInfo>.<>f__mg$cache0 = new SteamServer<ClientConnectionInfo>.DisconnectUserCall(SteamServer<ClientConnectionInfo>.DoNothingDisconnectUserCall);
+				SteamServer<ClientConnectionInfo>.action = new SteamServer<ClientConnectionInfo>.DisconnectUserCall(SteamServer<ClientConnectionInfo>.DoNothingDisconnectUserCall);
 			}
-			this._DisconnectUser = SteamServer<ClientConnectionInfo>.<>f__mg$cache0;
-			if (SteamServer<ClientConnectionInfo>.<>f__mg$cache1 == null)
+			this._DisconnectUser = SteamServer<ClientConnectionInfo>.action;
+			if (SteamServer<ClientConnectionInfo>.action1 == null)
 			{
-				SteamServer<ClientConnectionInfo>.<>f__mg$cache1 = new SteamServer<ClientConnectionInfo>.CanDisconnectUserCall(SteamServer<ClientConnectionInfo>.NoCanDisconnectUser);
+				SteamServer<ClientConnectionInfo>.action1 = new SteamServer<ClientConnectionInfo>.CanDisconnectUserCall(SteamServer<ClientConnectionInfo>.NoCanDisconnectUser);
 			}
-			this._CanDisconnectUser = SteamServer<ClientConnectionInfo>.<>f__mg$cache1;
-			base..ctor();
+			this._CanDisconnectUser = SteamServer<ClientConnectionInfo>.action1;
+			//base..ctor();
 			this._callbackSteamMessageFailed = Callback<GCMessageFailed_t>.CreateGameServer(new Callback<GCMessageFailed_t>.DispatchDelegate(this.OnSteamMessageFailed));
 			this._callbackSteamConnectionFail = Callback<SteamServerConnectFailure_t>.CreateGameServer(new Callback<SteamServerConnectFailure_t>.DispatchDelegate(this.OnSteamConnectionFail));
 			this._callbackSteamServerConnected = Callback<SteamServersConnected_t>.CreateGameServer(new Callback<SteamServersConnected_t>.DispatchDelegate(this.OnSteamServerConnected));
@@ -299,11 +299,11 @@ namespace CS.Platform.Steam.Server
 
 		// Token: 0x04000317 RID: 791
 		[CompilerGenerated]
-		private static SteamServer<ClientConnectionInfo>.DisconnectUserCall <>f__mg$cache0;
+		private static SteamServer<ClientConnectionInfo>.DisconnectUserCall action;
 
 		// Token: 0x04000318 RID: 792
 		[CompilerGenerated]
-		private static SteamServer<ClientConnectionInfo>.CanDisconnectUserCall <>f__mg$cache1;
+		private static SteamServer<ClientConnectionInfo>.CanDisconnectUserCall action1;
 
 		// Token: 0x020000AD RID: 173
 		// (Invoke) Token: 0x0600065B RID: 1627

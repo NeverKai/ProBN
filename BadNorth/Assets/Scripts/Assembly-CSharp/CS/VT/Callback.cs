@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace CS.VT
 {
 	// Token: 0x02000383 RID: 899
-	public class Callback<T> : IEnumerator<T>, IEnumerator, IDisposable
+	public class Callback<T> : IEnumerator<T>
 	{
 		// Token: 0x170000F2 RID: 242
 		// (get) Token: 0x0600148F RID: 5263 RVA: 0x00029E2C File Offset: 0x0002822C
@@ -98,7 +98,7 @@ namespace CS.VT
 
 		// Token: 0x170000F1 RID: 241
 		// (get) Token: 0x06001496 RID: 5270 RVA: 0x00029FD9 File Offset: 0x000283D9
-		T IEnumerator<!0>.Current
+		T IEnumerator<T>.Current
 		{
 			get
 			{

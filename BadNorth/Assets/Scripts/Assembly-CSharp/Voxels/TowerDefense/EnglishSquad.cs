@@ -125,7 +125,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400009F RID: 159
 		// (add) Token: 0x060030ED RID: 12525 RVA: 0x000C9A5C File Offset: 0x000C7E5C
 		// (remove) Token: 0x060030EE RID: 12526 RVA: 0x000C9A94 File Offset: 0x000C7E94
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onSquadSpawnComplete = delegate()
 		{
 		};

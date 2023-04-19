@@ -45,7 +45,7 @@ namespace Voxels.TowerDefense
 			this.islandSize = ExtraMath.RoundToInt(island.size);
 			Vector3Int size = this.islandSize;
 			size.y = island.levelNode.campaign.paintAtlas.tex3d.size.y;
-			this.bounds = new Bounds(size / 2f, size + Vector3.one);
+			this.bounds = new Bounds(size / (int) 2f, size + Vector3.one);
 			this.centerOffset.x = (float)(size.x + 1) / 2f;
 			this.centerOffset.y = 1f;
 			this.centerOffset.z = (float)(size.z + 1) / 2f;

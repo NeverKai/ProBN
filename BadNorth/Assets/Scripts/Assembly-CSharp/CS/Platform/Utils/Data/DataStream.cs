@@ -122,7 +122,7 @@ namespace CS.Platform.Utils.Data
 			if (this._data == null)
 			{
 				this._data = new byte[6 + bufferSize];
-				this._data[0] = ((!BitConverter.IsLittleEndian) ? byte.MaxValue : 0);
+				this._data[0] = ((!BitConverter.IsLittleEndian) ? byte.MaxValue : (byte)0);
 				Buffer.BlockCopy(BitConverter.GetBytes(0U), 0, this._data, 2, 4);
 				this._bufferPoint = 6;
 			}

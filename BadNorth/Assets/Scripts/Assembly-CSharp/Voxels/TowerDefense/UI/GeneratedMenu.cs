@@ -11,7 +11,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000C5 RID: 197
 		// (add) Token: 0x06003AC2 RID: 15042 RVA: 0x0006F044 File Offset: 0x0006D444
 		// (remove) Token: 0x06003AC3 RID: 15043 RVA: 0x0006F07C File Offset: 0x0006D47C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		protected event Action slaveUpdates = delegate()
 		{
 		};

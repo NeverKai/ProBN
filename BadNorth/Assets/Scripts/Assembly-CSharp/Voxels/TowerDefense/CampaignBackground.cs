@@ -6,10 +6,8 @@ using Voxels.TowerDefense.ScriptAnimations;
 
 namespace Voxels.TowerDefense
 {
-	// Token: 0x020006CF RID: 1743
 	public class CampaignBackground : CampaignComponent, Campaign.ICampaignGenerator
 	{
-		// Token: 0x06002D33 RID: 11571 RVA: 0x000A8A30 File Offset: 0x000A6E30
 		IEnumerator<GenInfo> Campaign.ICampaignGenerator.OnCampaignGeneration(Campaign campaign)
 		{
 			GenInfo info = new GenInfo("CampaignBackground", GenInfo.Mode.interruptable);
@@ -84,7 +82,6 @@ namespace Voxels.TowerDefense
 			yield break;
 		}
 
-		// Token: 0x06002D34 RID: 11572 RVA: 0x000A8A54 File Offset: 0x000A6E54
 		private void SetAllDirty()
 		{
 			foreach (UIVertexListGraphic uivertexListGraphic in this.graphics0)
@@ -97,13 +94,11 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x06002D35 RID: 11573 RVA: 0x000A8AB3 File Offset: 0x000A6EB3
 		private void OnCloudChange(bool x)
 		{
 			base.enabled = true;
 		}
 
-		// Token: 0x06002D36 RID: 11574 RVA: 0x000A8ABC File Offset: 0x000A6EBC
 		private void UpdateTriangles()
 		{
 			List<CampaignTriangles.Vertex> verts = this.campaignTriangles.verts;
@@ -168,13 +163,11 @@ namespace Voxels.TowerDefense
 			}
 		}
 
-		// Token: 0x06002D37 RID: 11575 RVA: 0x000A8E17 File Offset: 0x000A7217
 		private void Awake()
 		{
 			base.enabled = false;
 		}
 
-		// Token: 0x06002D38 RID: 11576 RVA: 0x000A8E20 File Offset: 0x000A7220
 		private void LateUpdate()
 		{
 			this.UpdateTriangles();
@@ -182,7 +175,6 @@ namespace Voxels.TowerDefense
 			base.enabled = false;
 		}
 
-		// Token: 0x06002D39 RID: 11577 RVA: 0x000A8E38 File Offset: 0x000A7238
 		private void OnDrawGizmos()
 		{
 			Gizmos.matrix = base.transform.localToWorldMatrix;
@@ -246,17 +238,13 @@ namespace Voxels.TowerDefense
 		// Token: 0x04001DB9 RID: 7609
 		private int lastDepth = -99;
 
-		// Token: 0x04001DBA RID: 7610
 		private CampaignTriangles campaignTriangles;
 
-		// Token: 0x04001DBB RID: 7611
 		private LineFrontier lineFrontier;
 
-		// Token: 0x04001DBC RID: 7612
 		[SerializeField]
 		private Color gizmoColor0 = Color.white;
 
-		// Token: 0x04001DBD RID: 7613
 		[SerializeField]
 		private Color gizmoColor1 = Color.white;
 	}

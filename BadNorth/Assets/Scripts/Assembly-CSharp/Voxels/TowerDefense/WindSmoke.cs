@@ -10,9 +10,9 @@ namespace Voxels.TowerDefense
 		// Token: 0x060038C3 RID: 14531 RVA: 0x000F58BC File Offset: 0x000F3CBC
 		private static Texture2D GetTexture()
 		{
-			if (WindSmoke.textures.Count > 0)
+			if (textures.Count > 0)
 			{
-				Texture2D texture2D = WindSmoke.textures.Pop();
+				Texture2D texture2D = textures.Pop();
 				if (texture2D)
 				{
 					return texture2D;
@@ -27,9 +27,9 @@ namespace Voxels.TowerDefense
 		// Token: 0x060038C4 RID: 14532 RVA: 0x000F5904 File Offset: 0x000F3D04
 		private static Mesh GetMesh()
 		{
-			if (WindSmoke.meshes.Count > 0)
+			if (meshes.Count > 0)
 			{
-				return WindSmoke.meshes.Pop();
+				return meshes.Pop();
 			}
 			Mesh mesh = new Mesh();
 			int num = 8;
@@ -78,15 +78,15 @@ namespace Voxels.TowerDefense
 		// Token: 0x060038C5 RID: 14533 RVA: 0x000F5B24 File Offset: 0x000F3F24
 		IEnumerator<GenInfo> IIslandFirstEnter.OnIslandFirstEnter(Island island)
 		{
-			GenInfo genInfo = new GenInfo("WindSmoke", GenInfo.Mode.interruptable);
+			GenInfo genInfo = new GenInfo("WindSmoke");
 			Wind wind = island.wind;
 			this.mr = base.gameObject.GetOrAddComponent<MeshRenderer>();
 			this.mf = base.gameObject.GetOrAddComponent<MeshFilter>();
 			Vector3 constantForce = Vector3.up;
 			Bounds bounds = new Bounds(base.transform.position, Vector3.zero);
 			float maxDist = 0f;
-			this.tex = WindSmoke.GetTexture();
-			this.mf.sharedMesh = WindSmoke.GetMesh();
+			this.tex = GetTexture();
+			this.mf.sharedMesh = GetMesh();
 			for (int y = 0; y < 8; y++)
 			{
 				Vector3 pos = base.transform.position;
@@ -95,8 +95,8 @@ namespace Voxels.TowerDefense
 				t *= t;
 				for (int x = 0; x < 8; x++)
 				{
-					WindSmoke.nodes[x, y].pos = pos;
-					WindSmoke.nodes[x, y].distance = totalDist;
+					nodes[x, y].pos = pos;
+					nodes[x, y].distance = totalDist;
 					Vector3 windVelocity = wind.GetWindDirectionLinear(pos);
 					Vector3 normal;
 					float openness;
@@ -183,7 +183,7 @@ namespace Voxels.TowerDefense
 		private MeshFilter mf;
 
 		// Token: 0x040026A8 RID: 9896
-		private static WindSmoke.Node[,] nodes = new WindSmoke.Node[8, 8];
+		private static Node[,] nodes = new Node[8, 8];
 
 		// Token: 0x040026A9 RID: 9897
 		private Texture2D tex;

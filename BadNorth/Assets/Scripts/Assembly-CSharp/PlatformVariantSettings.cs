@@ -10,7 +10,7 @@ public class PlatformVariantSettings<T, M> where T : class, new() where M : Plat
 	// Token: 0x14000084 RID: 132
 	// (add) Token: 0x06002457 RID: 9303 RVA: 0x00072170 File Offset: 0x00070570
 	// (remove) Token: 0x06002458 RID: 9304 RVA: 0x000721A8 File Offset: 0x000705A8
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public event PlatformVariantSettings<T, M>.Del onUpdated = delegate()
 	{
 	};

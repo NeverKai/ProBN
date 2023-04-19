@@ -533,7 +533,7 @@ namespace Voxels.TowerDefense.CampaignGeneration
 							}
 							if (valid)
 							{
-								node5.chokepointLevel = ((node5.connectionCount != 2) ? 3 : 4);
+								node5.chokepointLevel = (byte) ((node5.connectionCount != 2) ? 3 : 4);
 							}
 						}
 						if (!valid)

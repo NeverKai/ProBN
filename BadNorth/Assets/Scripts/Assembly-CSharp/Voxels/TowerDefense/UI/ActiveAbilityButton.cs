@@ -1,5 +1,4 @@
-﻿using System;
-using RTM.Pools;
+﻿using RTM.Pools;
 using RTM.UISystem;
 using RTM.Utilities;
 using UnityEngine;

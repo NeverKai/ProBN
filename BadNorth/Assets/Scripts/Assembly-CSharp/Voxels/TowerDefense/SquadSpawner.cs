@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.Upgrades;
 
@@ -16,7 +15,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x1400007B RID: 123
 		// (add) Token: 0x060022F8 RID: 8952 RVA: 0x00067A1C File Offset: 0x00065E1C
 		// (remove) Token: 0x060022F9 RID: 8953 RVA: 0x00067A54 File Offset: 0x00065E54
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<EnglishSquad> onSquadSpawned = delegate(EnglishSquad A_0)
 		{
 		};
@@ -84,7 +83,7 @@ namespace Voxels.TowerDefense
 				NavSpot navSpot = null;
 				do
 				{
-					List<Tuple<NavSpot, float>> list = this.spawnSpots;
+					List<RTM.Utilities.Tuple<NavSpot, float>> list = this.spawnSpots;
 					int index;
 					nIdx = (index = nIdx) + 1;
 					navSpot = list[index].item1;
@@ -150,12 +149,12 @@ namespace Voxels.TowerDefense
 				i++;
 			}
 			yield return true;
-			using ("onSquadSpawnCompleteDelegate")
+			//using ("onSquadSpawnCompleteDelegate")
 			{
 				squad.OnSquadSpawnComplete();
 			}
 			yield return false;
-			using ("onSquadSpawnedDelegate")
+			//using ("onSquadSpawnedDelegate")
 			{
 				this.onSquadSpawned(squad);
 			}
@@ -179,13 +178,13 @@ namespace Voxels.TowerDefense
 				{
 					num -= Mathf.Abs(house.distanceField.SampleDistance(navSpot.vert) - 1.5f) * 0.3f;
 				}
-				this.spawnSpots.Add(new Tuple<NavSpot, float>(navSpot, num));
+				this.spawnSpots.Add(new RTM.Utilities.Tuple<NavSpot, float>(navSpot, num));
 			}
 			yield return null;
-			this.spawnSpots.Sort((Tuple<NavSpot, float> a, Tuple<NavSpot, float> b) => b.item2.CompareTo(a.item2));
+			this.spawnSpots.Sort((RTM.Utilities.Tuple<NavSpot, float> a, RTM.Utilities.Tuple<NavSpot, float> b) => b.item2.CompareTo(a.item2));
 			if (numSquads == 4)
 			{
-				foreach (Tuple<NavSpot, float> tuple in this.spawnSpots)
+				foreach (RTM.Utilities.Tuple<NavSpot, float> tuple in this.spawnSpots)
 				{
 					NavSpot item = tuple.item1;
 					NavSpot navSpot2 = item.neighbours[0];
@@ -193,31 +192,31 @@ namespace Voxels.TowerDefense
 					NavSpot navSpot4 = item.neighbours[1];
 					if (item && navSpot2 && navSpot3 && navSpot4)
 					{
-						this.spawnSpots.Insert(0, new Tuple<NavSpot, float>(item, 0f));
-						this.spawnSpots.Insert(1, new Tuple<NavSpot, float>(navSpot2, 0f));
-						this.spawnSpots.Insert(2, new Tuple<NavSpot, float>(navSpot3, 0f));
-						this.spawnSpots.Insert(3, new Tuple<NavSpot, float>(navSpot4, 0f));
+						this.spawnSpots.Insert(0, new RTM.Utilities.Tuple<NavSpot, float>(item, 0f));
+						this.spawnSpots.Insert(1, new RTM.Utilities.Tuple<NavSpot, float>(navSpot2, 0f));
+						this.spawnSpots.Insert(2, new RTM.Utilities.Tuple<NavSpot, float>(navSpot3, 0f));
+						this.spawnSpots.Insert(3, new RTM.Utilities.Tuple<NavSpot, float>(navSpot4, 0f));
 						break;
 					}
 				}
 			}
 			else if (numSquads == 3)
 			{
-				foreach (Tuple<NavSpot, float> tuple2 in this.spawnSpots)
+				foreach (RTM.Utilities.Tuple<NavSpot, float> tuple2 in this.spawnSpots)
 				{
 					NavSpot item2 = tuple2.item1;
 					if (item2.neighbours[0] && item2.neighbours[4])
 					{
-						this.spawnSpots.Insert(0, new Tuple<NavSpot, float>(item2.neighbours[0], 0f));
-						this.spawnSpots.Insert(1, new Tuple<NavSpot, float>(item2, 0f));
-						this.spawnSpots.Insert(2, new Tuple<NavSpot, float>(item2.neighbours[4], 0f));
+						this.spawnSpots.Insert(0, new RTM.Utilities.Tuple<NavSpot, float>(item2.neighbours[0], 0f));
+						this.spawnSpots.Insert(1, new RTM.Utilities.Tuple<NavSpot, float>(item2, 0f));
+						this.spawnSpots.Insert(2, new RTM.Utilities.Tuple<NavSpot, float>(item2.neighbours[4], 0f));
 						break;
 					}
 					if (item2.neighbours[2] && item2.neighbours[6])
 					{
-						this.spawnSpots.Insert(0, new Tuple<NavSpot, float>(item2.neighbours[2], 0f));
-						this.spawnSpots.Insert(1, new Tuple<NavSpot, float>(item2, 0f));
-						this.spawnSpots.Insert(2, new Tuple<NavSpot, float>(item2.neighbours[6], 0f));
+						this.spawnSpots.Insert(0, new RTM.Utilities.Tuple<NavSpot, float>(item2.neighbours[2], 0f));
+						this.spawnSpots.Insert(1, new RTM.Utilities.Tuple<NavSpot, float>(item2, 0f));
+						this.spawnSpots.Insert(2, new RTM.Utilities.Tuple<NavSpot, float>(item2.neighbours[6], 0f));
 						break;
 					}
 				}
@@ -253,10 +252,10 @@ namespace Voxels.TowerDefense
 		private IslandGameplayManager manager;
 
 		// Token: 0x04001563 RID: 5475
-		private WeakReference<Island> island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x04001564 RID: 5476
-		private List<Tuple<NavSpot, float>> spawnSpots = new List<Tuple<NavSpot, float>>(64);
+		private List<RTM.Utilities.Tuple<NavSpot, float>> spawnSpots = new List<RTM.Utilities.Tuple<NavSpot, float>>(64);
 
 		// Token: 0x04001565 RID: 5477
 		public List<NavSpot> bannedNavSpots = new List<NavSpot>();

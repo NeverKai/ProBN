@@ -91,7 +91,7 @@ namespace RTM.UISystem
 		// Token: 0x1400006A RID: 106
 		// (add) Token: 0x06001F8C RID: 8076 RVA: 0x00054BF0 File Offset: 0x00052FF0
 		// (remove) Token: 0x06001F8D RID: 8077 RVA: 0x00054C28 File Offset: 0x00053028
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onGainedFocus = delegate()
 		{
 		};
@@ -99,7 +99,7 @@ namespace RTM.UISystem
 		// Token: 0x1400006B RID: 107
 		// (add) Token: 0x06001F8E RID: 8078 RVA: 0x00054C60 File Offset: 0x00053060
 		// (remove) Token: 0x06001F8F RID: 8079 RVA: 0x00054C98 File Offset: 0x00053098
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onLostFocus = delegate()
 		{
 		};
@@ -107,7 +107,7 @@ namespace RTM.UISystem
 		// Token: 0x1400006C RID: 108
 		// (add) Token: 0x06001F90 RID: 8080 RVA: 0x00054CD0 File Offset: 0x000530D0
 		// (remove) Token: 0x06001F91 RID: 8081 RVA: 0x00054D08 File Offset: 0x00053108
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<bool> onFocusChanged = delegate(bool A_0)
 		{
 		};
@@ -115,7 +115,7 @@ namespace RTM.UISystem
 		// Token: 0x1400006D RID: 109
 		// (add) Token: 0x06001F92 RID: 8082 RVA: 0x00054D40 File Offset: 0x00053140
 		// (remove) Token: 0x06001F93 RID: 8083 RVA: 0x00054D78 File Offset: 0x00053178
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onOpened = delegate()
 		{
 		};
@@ -123,7 +123,7 @@ namespace RTM.UISystem
 		// Token: 0x1400006E RID: 110
 		// (add) Token: 0x06001F94 RID: 8084 RVA: 0x00054DB0 File Offset: 0x000531B0
 		// (remove) Token: 0x06001F95 RID: 8085 RVA: 0x00054DE8 File Offset: 0x000531E8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onClosed = delegate()
 		{
 		};
@@ -131,7 +131,7 @@ namespace RTM.UISystem
 		// Token: 0x1400006F RID: 111
 		// (add) Token: 0x06001F96 RID: 8086 RVA: 0x00054E20 File Offset: 0x00053220
 		// (remove) Token: 0x06001F97 RID: 8087 RVA: 0x00054E58 File Offset: 0x00053258
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<IUINavigable> onFocusedNavigableChanged = delegate(IUINavigable A_0)
 		{
 		};
@@ -139,7 +139,7 @@ namespace RTM.UISystem
 		// Token: 0x14000070 RID: 112
 		// (add) Token: 0x06001F98 RID: 8088 RVA: 0x00054E90 File Offset: 0x00053290
 		// (remove) Token: 0x06001F99 RID: 8089 RVA: 0x00054EC8 File Offset: 0x000532C8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<IUINavigable, bool> forceScrollToNavigable = delegate(IUINavigable A_0, bool A_1)
 		{
 		};

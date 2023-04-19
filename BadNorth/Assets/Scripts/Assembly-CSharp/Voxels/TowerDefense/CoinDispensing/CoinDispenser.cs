@@ -5,7 +5,6 @@ using CS.Lights;
 using CS.Platform;
 using ReflexCLI.Attributes;
 using RTM.Pools;
-using RTM.Utilities;
 using UnityEngine;
 using Voxels.TowerDefense.Upgrades;
 
@@ -444,7 +443,7 @@ namespace Voxels.TowerDefense.CoinDispensing
 		private float coinTravelDist = 0.5f;
 
 		// Token: 0x04001FD7 RID: 8151
-		private WeakReference<Island> _island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> _island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x04001FD8 RID: 8152
 		private LocalPool<DispensedCoin> checkpointTokens = new LocalPool<DispensedCoin>();

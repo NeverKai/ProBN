@@ -183,14 +183,14 @@ namespace Voxels.TowerDefense
 		// Token: 0x060029E1 RID: 10721 RVA: 0x00094678 File Offset: 0x00092A78
 		private void LateUpdate()
 		{
-			using ("navspotHighlight")
+			//using ("navspotHighlight")
 			{
 				foreach (NavSpot navSpot in this.navSpots)
 				{
 					this.highlightTex.pixels[navSpot.pixelIndex] = navSpot.GetHighlightColor();
 				}
 			}
-			using ("navspotHighlightApply")
+			//using ("navspotHighlightApply")
 			{
 				this.highlightTex.ApplyPixels();
 			}

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using RTM.Pools;
 using RTM.Utilities;
@@ -51,7 +50,7 @@ namespace Voxels.TowerDefense
 			{
 				return;
 			}
-			using ("SetNavSpotVisibility")
+			//using ("SetNavSpotVisibility")
 			{
 				foreach (TargetNavSpot targetNavSpot in this.pool.inUse)
 				{

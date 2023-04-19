@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense
@@ -72,7 +71,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x140000D6 RID: 214
 		// (add) Token: 0x06003FF0 RID: 16368 RVA: 0x001224A8 File Offset: 0x001208A8
 		// (remove) Token: 0x06003FF1 RID: 16369 RVA: 0x001224E0 File Offset: 0x001208E0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onPostMove = delegate()
 		{
 		};
@@ -453,7 +452,7 @@ namespace Voxels.TowerDefense
 		private const float ceilingPassThroughLockoutTime = 0.2f;
 
 		// Token: 0x04002CDE RID: 11486
-		private WeakReference<Island> island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x04002CDF RID: 11487
 		private Rigidbody body;

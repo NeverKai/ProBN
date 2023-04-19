@@ -56,7 +56,7 @@ namespace RTM.UISystem
 		// Token: 0x14000074 RID: 116
 		// (add) Token: 0x06001FEB RID: 8171 RVA: 0x00055F00 File Offset: 0x00054300
 		// (remove) Token: 0x06001FEC RID: 8172 RVA: 0x00055F38 File Offset: 0x00054338
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<UIPointerReceiver.State> onStateChanged = delegate(UIPointerReceiver.State A_0)
 		{
 		};
@@ -64,7 +64,7 @@ namespace RTM.UISystem
 		// Token: 0x14000075 RID: 117
 		// (add) Token: 0x06001FED RID: 8173 RVA: 0x00055F70 File Offset: 0x00054370
 		// (remove) Token: 0x06001FEE RID: 8174 RVA: 0x00055FA8 File Offset: 0x000543A8
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton, Vector2> onButtonDown = delegate(PointerEventData.InputButton A_0, Vector2 A_1)
 		{
 		};
@@ -72,7 +72,7 @@ namespace RTM.UISystem
 		// Token: 0x14000076 RID: 118
 		// (add) Token: 0x06001FEF RID: 8175 RVA: 0x00055FE0 File Offset: 0x000543E0
 		// (remove) Token: 0x06001FF0 RID: 8176 RVA: 0x00056018 File Offset: 0x00054418
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action<PointerEventData.InputButton, Vector2> onClick = delegate(PointerEventData.InputButton A_0, Vector2 A_1)
 		{
 		};

@@ -215,7 +215,9 @@ namespace Voxels.TowerDefense
 		private void ApplyWindMatrix()
 		{
 			Vector3 vector;
-			(Vector3.one * base.island.fog.maxRad * 2f).y = vector.y * 0.7f;
+			var fogMAXRad = Vector3.one * base.island.fog.maxRad * 2f;
+			vector.y = 0;
+			fogMAXRad.y = vector.y * 0.7f;
 			Wind.staticWind2World = this.wind2World;
 			Wind.staticWorld2Wind = this.world2Wind;
 			Shader.SetGlobalMatrix("_Tex2World", Wind.staticWind2World);

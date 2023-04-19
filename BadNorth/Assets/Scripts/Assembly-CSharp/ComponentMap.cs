@@ -19,11 +19,11 @@ public class ComponentMap : MonoBehaviour
 				this._sourceDict = base.transform.GetChildren().ToDictionary((Transform x) => x.name, delegate(Transform x)
 				{
 					IEnumerable<MonoBehaviour> components = x.GetComponents<MonoBehaviour>();
-					if (ComponentMap.<>f__mg$cache0 == null)
+					if (ComponentMap.action == null)
 					{
-						ComponentMap.<>f__mg$cache0 = new Func<MonoBehaviour, ComponentMap.Copy>(ComponentMap.Copy.Get<MonoBehaviour>);
+						ComponentMap.action = new Func<MonoBehaviour, ComponentMap.Copy>(ComponentMap.Copy.Get<MonoBehaviour>);
 					}
-					return components.Select(ComponentMap.<>f__mg$cache0).ToArray<ComponentMap.Copy>();
+					return components.Select(ComponentMap.action).ToArray<ComponentMap.Copy>();
 				});
 			}
 			return this._sourceDict;
@@ -39,11 +39,11 @@ public class ComponentMap : MonoBehaviour
 			UnityEngine.Object.Instantiate<GameObject>(original, gameObject.transform);
 		}
 		Transform transform2 = gameObject.transform;
-		if (ComponentMap.<>f__mg$cache1 == null)
+		if (ComponentMap.action1 == null)
 		{
-			ComponentMap.<>f__mg$cache1 = new Func<Transform, IEnumerable<Transform>>(TransformExtensions.GetChildren);
+			ComponentMap.action1 = new Func<Transform, IEnumerable<Transform>>(TransformExtensions.GetChildren);
 		}
-		foreach (Transform transform3 in Enumeration.Traverse<Transform>(transform2, ComponentMap.<>f__mg$cache1))
+		foreach (Transform transform3 in Enumeration.Traverse<Transform>(transform2, ComponentMap.action1))
 		{
 			foreach (string key in transform3.name.Split(new char[]
 			{
@@ -89,11 +89,11 @@ public class ComponentMap : MonoBehaviour
 
 	// Token: 0x04001446 RID: 5190
 	[CompilerGenerated]
-	private static Func<MonoBehaviour, ComponentMap.Copy> <>f__mg$cache0;
+	private static Func<MonoBehaviour, ComponentMap.Copy> action;
 
 	// Token: 0x04001449 RID: 5193
 	[CompilerGenerated]
-	private static Func<Transform, IEnumerable<Transform>> <>f__mg$cache1;
+	private static Func<Transform, IEnumerable<Transform>> action1;
 
 	// Token: 0x020004FF RID: 1279
 	private class Copy

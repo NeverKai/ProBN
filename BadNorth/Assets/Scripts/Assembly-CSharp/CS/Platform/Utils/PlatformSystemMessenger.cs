@@ -11,7 +11,7 @@ namespace CS.Platform.Utils
 		// Token: 0x14000035 RID: 53
 		// (add) Token: 0x060004CD RID: 1229 RVA: 0x00006E58 File Offset: 0x00005258
 		// (remove) Token: 0x060004CE RID: 1230 RVA: 0x00006E8C File Offset: 0x0000528C
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public static event Action<bool> OnMessageChange;
 
 		// Token: 0x170000BB RID: 187

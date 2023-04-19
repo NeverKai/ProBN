@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using RTM.OnScreenDebug;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense.TriFlow
@@ -172,7 +171,7 @@ namespace Voxels.TowerDefense.TriFlow
 		private List<Addition> pendingAdditions = new List<Addition>();
 
 		// Token: 0x040024A4 RID: 9380
-		private WeakReference<NavigationMesh> _navMesh;
+		private RTM.Utilities.WeakReference<NavigationMesh> _navMesh;
 
 		// Token: 0x040024A5 RID: 9381
 		private FlowField flowField;

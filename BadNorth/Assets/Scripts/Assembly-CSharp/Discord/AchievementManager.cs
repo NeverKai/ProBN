@@ -39,7 +39,7 @@ namespace Discord
 		// Token: 0x1400004E RID: 78
 		// (add) Token: 0x06000B12 RID: 2834 RVA: 0x0002000C File Offset: 0x0001E40C
 		// (remove) Token: 0x06000B13 RID: 2835 RVA: 0x00020044 File Offset: 0x0001E444
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event AchievementManager.UserAchievementUpdateHandler OnUserAchievementUpdate;
 
 		// Token: 0x06000B14 RID: 2836 RVA: 0x0002007A File Offset: 0x0001E47A

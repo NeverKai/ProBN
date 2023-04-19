@@ -45,25 +45,25 @@ namespace Discord
 		// Token: 0x14000039 RID: 57
 		// (add) Token: 0x06000665 RID: 1637 RVA: 0x0001BF48 File Offset: 0x0001A348
 		// (remove) Token: 0x06000666 RID: 1638 RVA: 0x0001BF80 File Offset: 0x0001A380
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event ActivityManager.ActivityJoinHandler OnActivityJoin;
 
 		// Token: 0x1400003A RID: 58
 		// (add) Token: 0x06000667 RID: 1639 RVA: 0x0001BFB8 File Offset: 0x0001A3B8
 		// (remove) Token: 0x06000668 RID: 1640 RVA: 0x0001BFF0 File Offset: 0x0001A3F0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event ActivityManager.ActivitySpectateHandler OnActivitySpectate;
 
 		// Token: 0x1400003B RID: 59
 		// (add) Token: 0x06000669 RID: 1641 RVA: 0x0001C028 File Offset: 0x0001A428
 		// (remove) Token: 0x0600066A RID: 1642 RVA: 0x0001C060 File Offset: 0x0001A460
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event ActivityManager.ActivityJoinRequestHandler OnActivityJoinRequest;
 
 		// Token: 0x1400003C RID: 60
 		// (add) Token: 0x0600066B RID: 1643 RVA: 0x0001C098 File Offset: 0x0001A498
 		// (remove) Token: 0x0600066C RID: 1644 RVA: 0x0001C0D0 File Offset: 0x0001A4D0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event ActivityManager.ActivityInviteHandler OnActivityInvite;
 
 		// Token: 0x0600066D RID: 1645 RVA: 0x0001C108 File Offset: 0x0001A508

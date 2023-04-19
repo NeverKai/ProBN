@@ -28,7 +28,7 @@ namespace Voxels.TowerDefense
 		// Token: 0x0600352B RID: 13611 RVA: 0x000E4E54 File Offset: 0x000E3254
 		public override void Setup()
 		{
-			using ("Standard.Setup")
+			//using ("Standard.Setup")
 			{
 				base.Setup();
 				HeroDefinition hero = base.enSquad.hero;

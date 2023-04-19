@@ -39,13 +39,11 @@ namespace Discord
 		// Token: 0x14000048 RID: 72
 		// (add) Token: 0x06000985 RID: 2437 RVA: 0x0001EC68 File Offset: 0x0001D068
 		// (remove) Token: 0x06000986 RID: 2438 RVA: 0x0001ECA0 File Offset: 0x0001D0A0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event NetworkManager.MessageHandler OnMessage;
 
 		// Token: 0x14000049 RID: 73
 		// (add) Token: 0x06000987 RID: 2439 RVA: 0x0001ECD8 File Offset: 0x0001D0D8
 		// (remove) Token: 0x06000988 RID: 2440 RVA: 0x0001ED10 File Offset: 0x0001D110
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event NetworkManager.RouteUpdateHandler OnRouteUpdate;
 
 		// Token: 0x06000989 RID: 2441 RVA: 0x0001ED46 File Offset: 0x0001D146

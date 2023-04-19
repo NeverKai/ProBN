@@ -80,8 +80,8 @@ namespace Voxels
 				{
 					if (this.mode[num4] == Claim.Mode.Standard && vector4 == Constants.directions[num4])
 					{
-						vector -= Constants.directions[num4] * 0.5f;
-						vector2 -= Constants.directions[num4] * 0.5f;
+						vector -= Constants.directions[num4] * (int) 0.5f;
+						vector2 -= Constants.directions[num4] * (int) 0.5f;
 						string positionString = this.GetPositionString(vector);
 						string positionString2 = this.GetPositionString(vector2);
 						string text = string.Concat(new string[]
@@ -111,7 +111,7 @@ namespace Voxels
 							Vector3 vector5 = Constants.corners[num6];
 							if (Vector3.Dot(vector5, Constants.directions[num5]) > 0f)
 							{
-								vector5 -= Constants.directions[num5] * 0.5f;
+								vector5 -= Constants.directions[num5] * (int) 0.5f;
 								if (this.cornersInside[num6])
 								{
 									flag2 = false;
@@ -152,7 +152,7 @@ namespace Voxels
 						Vector3 vector6 = Constants.corners[num11];
 						if (Vector3.Dot(vector6, Constants.directions[num7]) > 0f)
 						{
-							vector6 -= Constants.directions[num7] * 0.5f;
+							vector6 -= Constants.directions[num7] * (int) 0.5f;
 							int num12;
 							(array2 = this.keyStrings)[num12 = num7] = array2[num12] + (vector6 * 2f).ToString("F0") + this.cornersInside[num11];
 						}

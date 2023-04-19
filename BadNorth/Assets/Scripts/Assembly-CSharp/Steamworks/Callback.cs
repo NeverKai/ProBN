@@ -18,7 +18,7 @@ namespace Steamworks
 		// Token: 0x1400004F RID: 79
 		// (add) Token: 0x060011F1 RID: 4593 RVA: 0x00026930 File Offset: 0x00024D30
 		// (remove) Token: 0x060011F2 RID: 4594 RVA: 0x00026968 File Offset: 0x00024D68
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		private event Callback<T>.DispatchDelegate m_Func;
 
 		// Token: 0x060011F3 RID: 4595 RVA: 0x0002699E File Offset: 0x00024D9E

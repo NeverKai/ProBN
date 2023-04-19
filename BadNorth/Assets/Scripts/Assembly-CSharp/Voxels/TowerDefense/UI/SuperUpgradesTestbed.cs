@@ -44,10 +44,10 @@ namespace Voxels.TowerDefense.UI
 			for (int l = 0; l < componentsInChildren.Length; l++)
 			{
 				UINavigable navigable = componentsInChildren[l];
-				SuperUpgradesTestbed $this = this;
+				//SuperUpgradesTestbed $this = this;
 				navigable.onConsumedNavigation += delegate(Vector2 v)
 				{
-					$this.OnConsumedNavigation(navigable, v);
+					this.OnConsumedNavigation(navigable, v);
 				};
 			}
 			foreach (UIClickable uiclickable in base.GetComponentsInChildren<UIClickable>(true))
@@ -88,7 +88,7 @@ namespace Voxels.TowerDefense.UI
 			heroDefinition.nameTerm = SuperUpgradesTestbed.nameTerms[UnityEngine.Random.Range(0, SuperUpgradesTestbed.nameTerms.Length - 1)];
 			heroDefinition.recruited = true;
 			heroDefinition.alive = true;
-			heroDefinition.timesUsedThisTurn = ((UnityEngine.Random.value >= 0.3f) ? 0 : 1);
+			heroDefinition.timesUsedThisTurn = ((UnityEngine.Random.value >= 0.3f) ? (byte)0 : (byte)1);
 			heroDefinition.voice = ResourceList<HeroVoice>.list.GetRandomByProbability((HeroVoice x) => 1f, 0f);
 			heroDefinition.alive = (UnityEngine.Random.value > 0.1f);
 			return heroDefinition;

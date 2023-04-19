@@ -12,16 +12,16 @@ namespace Voxels.TowerDefense
 		// Token: 0x06002DEF RID: 11759 RVA: 0x000B2944 File Offset: 0x000B0D44
 		static HeroDefinitionExtensions()
 		{
-			if (HeroDefinitionExtensions.<>f__mg$cache0 == null)
+			if (HeroDefinitionExtensions.action == null)
 			{
-				HeroDefinitionExtensions.<>f__mg$cache0 = new Func<int, int, bool>(HeroDefinitionExtensions.CheapestCostComparison);
+				HeroDefinitionExtensions.action = new Func<int, int, bool>(HeroDefinitionExtensions.CheapestCostComparison);
 			}
-			HeroDefinitionExtensions.cheapestCostComparison = HeroDefinitionExtensions.<>f__mg$cache0;
-			if (HeroDefinitionExtensions.<>f__mg$cache1 == null)
+			HeroDefinitionExtensions.cheapestCostComparison = HeroDefinitionExtensions.action;
+			if (HeroDefinitionExtensions.action1 == null)
 			{
-				HeroDefinitionExtensions.<>f__mg$cache1 = new Func<int, int, bool>(HeroDefinitionExtensions.MostExpensiveCostComparison);
+				HeroDefinitionExtensions.action1 = new Func<int, int, bool>(HeroDefinitionExtensions.MostExpensiveCostComparison);
 			}
-			HeroDefinitionExtensions.mostExpensiveCostComparison = HeroDefinitionExtensions.<>f__mg$cache1;
+			HeroDefinitionExtensions.mostExpensiveCostComparison = HeroDefinitionExtensions.action1;
 			HeroDefinitionExtensions.purchasableUpgrades = (from u in ResourceList<HeroUpgradeDefinition>.list
 			where (from l in u.levels
 			where l.cost > 0
@@ -161,10 +161,10 @@ namespace Voxels.TowerDefense
 
 		// Token: 0x04001E72 RID: 7794
 		[CompilerGenerated]
-		private static Func<int, int, bool> <>f__mg$cache0;
+		private static Func<int, int, bool> action;
 
 		// Token: 0x04001E73 RID: 7795
 		[CompilerGenerated]
-		private static Func<int, int, bool> <>f__mg$cache1;
+		private static Func<int, int, bool> action1;
 	}
 }

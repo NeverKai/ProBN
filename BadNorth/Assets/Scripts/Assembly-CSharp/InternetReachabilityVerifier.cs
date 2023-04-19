@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -12,7 +13,7 @@ public class InternetReachabilityVerifier : MonoBehaviour
 	// Token: 0x14000056 RID: 86
 	// (add) Token: 0x06001920 RID: 6432 RVA: 0x000425AC File Offset: 0x000409AC
 	// (remove) Token: 0x06001921 RID: 6433 RVA: 0x000425E4 File Offset: 0x000409E4
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	
 	public event InternetReachabilityVerifier.StatusChangedDelegate statusChangedDelegate;
 
 	// Token: 0x1700018E RID: 398
@@ -484,7 +485,13 @@ public class InternetReachabilityVerifier : MonoBehaviour
 	static InternetReachabilityVerifier()
 	{
 		RuntimePlatform[] array = new RuntimePlatform[6];
-		RuntimeHelpers.InitializeArray(array, fieldof(<PrivateImplementationDetails>.$field-A521C39CEF3283C4ED1AFD0A913B091FAFDDFD6D).FieldHandle);
+		//RuntimeHelpers.InitializeArray(array, fieldof(<PrivateImplementationDetails>.$field-A521C39CEF3283C4ED1AFD0A913B091FAFDDFD6D).FieldHandle);
+		var type = typeof(InternetReachabilityVerifier); // "EnclosingClass" is the class this code is in
+		// assuming PrivateImplementationDetails is private
+		var fieldInfo = type.GetField("PrivateImplementationDetails", BindingFlags.NonPublic);
+		RuntimeHelpers.InitializeArray(array, fieldInfo.FieldHandle);
+		
+		
 		InternetReachabilityVerifier.methodGoogle204Supported = array;
 	}
 

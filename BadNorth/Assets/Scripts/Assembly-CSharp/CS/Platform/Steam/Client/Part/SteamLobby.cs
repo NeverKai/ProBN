@@ -224,12 +224,13 @@ namespace CS.Platform.Steam.Client.Part
 				{
 					this._InLobby = true;
 					this._LobbyID = (CSteamID)message.m_ulSteamIDLobby;
-					int friendCountFromSource = SteamFriends.GetFriendCountFromSource(this._LobbyID);
+					int friendCountFromSource = 0;
+						// SteamFriends.GetFriendCountFromSource(this._LobbyID);
 					this._LobbyHostID = SteamMatchmaking.GetLobbyOwner(this._LobbyID);
 					this._LobbyHost = (this._LobbyHostID == this._Manager.UserInfo.LoggedUserID);
 					if (!SteamFriends.RequestUserInformation(this._LobbyHostID, true))
 					{
-						this._CurrentLobby.host.Set((ulong)this._LobbyHostID, null, SteamFriends.GetFriendPersonaName(this._LobbyHostID));
+						//this._CurrentLobby.host.Set((ulong)this._LobbyHostID, null, SteamFriends.GetFriendPersonaName(this._LobbyHostID));
 						PlatformEvents.LobbyNewHost(this._CurrentLobby.host);
 					}
 					else
@@ -240,7 +241,7 @@ namespace CS.Platform.Steam.Client.Part
 					this._CurrentLobby.maxSlots = (uint)SteamMatchmaking.GetLobbyMemberLimit(this._LobbyID);
 					for (int i = 0; i < friendCountFromSource; i++)
 					{
-						this.AddLobbyMember(SteamFriends.GetFriendFromSourceByIndex(this._LobbyID, i));
+						// this.AddLobbyMember(SteamFriends.GetFriendFromSourceByIndex(this._LobbyID, i));
 					}
 					PlatformEvents.LobbyJoined();
 					if (this._LobbyHost)
@@ -276,7 +277,9 @@ namespace CS.Platform.Steam.Client.Part
 							this._LobbyHostID = SteamMatchmaking.GetLobbyOwner(this._LobbyID);
 							if (!SteamFriends.RequestUserInformation(this._LobbyHostID, false))
 							{
-								this._CurrentLobby.host.Set((ulong)this._LobbyHostID, null, SteamFriends.GetFriendPersonaName(this._LobbyHostID));
+								var name = string.Empty;
+									// SteamFriends.GetFriendPersonaName(this._LobbyHostID)
+								this._CurrentLobby.host.Set((ulong)this._LobbyHostID, null, name);
 								if (this._LobbyHostID != this._Manager.UserInfo.LoggedUserID)
 								{
 									PlatformEvents.LobbyNewHost(this._CurrentLobby.host);
@@ -328,7 +331,8 @@ namespace CS.Platform.Steam.Client.Part
 					{
 						if (value.userName == string.Empty + '\b')
 						{
-							value.userName = SteamFriends.GetFriendPersonaName(value.userID);
+							value.userName = string.Empty;
+								//SteamFriends.GetFriendPersonaName(value.userID);
 							this._Manager.Utilities.LoadProfileImage(value.userID, ref value.userImage);
 							this._LobbyMembers[num] = value;
 							PlatformEvents.LobbyUserJoined(new BaseUserInfo((ulong)value.userID, "steam", value.userName));
@@ -339,7 +343,8 @@ namespace CS.Platform.Steam.Client.Part
 				}
 				if ((ulong)this._LobbyHostID == message.m_ulSteamID)
 				{
-					string friendPersonaName = SteamFriends.GetFriendPersonaName((CSteamID)message.m_ulSteamID);
+					string friendPersonaName = string.Empty;
+						// SteamFriends.GetFriendPersonaName((CSteamID)message.m_ulSteamID);
 					if (friendPersonaName != this._CurrentLobby.host.userName)
 					{
 						this._CurrentLobby.host.Set((ulong)this._LobbyHostID, null, friendPersonaName);

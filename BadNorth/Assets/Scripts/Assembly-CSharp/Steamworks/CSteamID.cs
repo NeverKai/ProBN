@@ -152,7 +152,7 @@ namespace Steamworks
 		// Token: 0x0600132B RID: 4907 RVA: 0x000285D3 File Offset: 0x000269D3
 		public void SetAccountID(AccountID_t other)
 		{
-			this.m_SteamID = ((this.m_SteamID & 18446744069414584320UL) | ((ulong)((uint)other) & (ulong)-1) << 0);
+			this.m_SteamID = ((this.m_SteamID & 18446744069414584320UL) | ((ulong)((uint)other) & unchecked((ulong)-1)) << 0);
 		}
 
 		// Token: 0x0600132C RID: 4908 RVA: 0x000285F8 File Offset: 0x000269F8
@@ -191,7 +191,7 @@ namespace Steamworks
 		// Token: 0x06001331 RID: 4913 RVA: 0x00028691 File Offset: 0x00026A91
 		public AccountID_t GetAccountID()
 		{
-			return new AccountID_t((uint)(this.m_SteamID & (ulong)-1));
+			return new AccountID_t((uint)(this.m_SteamID & unchecked((ulong)-1)));
 		}
 
 		// Token: 0x06001332 RID: 4914 RVA: 0x000286A2 File Offset: 0x00026AA2

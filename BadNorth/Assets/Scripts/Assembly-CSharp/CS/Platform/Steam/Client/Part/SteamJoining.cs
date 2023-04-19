@@ -128,23 +128,23 @@ namespace CS.Platform.Steam.Client.Part
 		public void SetJoinOnMeInfo(string serverIP, ushort port)
 		{
 			byte[] addressBytes = IPAddress.Parse(serverIP).GetAddressBytes();
-			SteamFriends.SetRichPresence("connect", serverIP + ":" + port.ToString());
-			SteamFriends.SetRichPresence("status", "Online Gangbeast");
+			// SteamFriends.SetRichPresence("connect", serverIP + ":" + port.ToString());
+			// SteamFriends.SetRichPresence("status", "Online Gangbeast");
 		}
 
 		// Token: 0x060002B6 RID: 694 RVA: 0x0000D1E0 File Offset: 0x0000B5E0
 		public void SetJoinOnMeInfo(CSteamID serverID, uint serverIP, ushort serverPort)
 		{
 			SteamUser.AdvertiseGame(serverID, serverIP, serverPort);
-			SteamFriends.SetRichPresence("connect", serverIP + ":" + serverPort.ToString());
-			SteamFriends.SetRichPresence("status", "Online Gangbeast");
+			// SteamFriends.SetRichPresence("connect", serverIP + ":" + serverPort.ToString());
+			// SteamFriends.SetRichPresence("status", "Online Gangbeast");
 		}
 
 		// Token: 0x060002B7 RID: 695 RVA: 0x0000D22D File Offset: 0x0000B62D
 		public void ClearJoinMeInfo()
 		{
-			SteamFriends.SetRichPresence("connect", null);
-			SteamFriends.SetRichPresence("status", null);
+			// SteamFriends.SetRichPresence("connect", null);
+			// SteamFriends.SetRichPresence("status", null);
 		}
 
 		// Token: 0x060002B8 RID: 696 RVA: 0x0000D248 File Offset: 0x0000B648
@@ -153,7 +153,8 @@ namespace CS.Platform.Steam.Client.Part
 			object @lock = SteamJoining._lock;
 			lock (@lock)
 			{
-				this._InviteFrom = SteamFriends.GetFriendPersonaName(inviteString.m_steamIDFriend);
+				this._InviteFrom = string.Empty;
+					// SteamFriends.GetFriendPersonaName(inviteString.m_steamIDFriend);
 				int num = inviteString.m_rgchConnect.IndexOf(":");
 				this._ServerIP = inviteString.m_rgchConnect.Substring(0, num);
 				this._ServerPort = inviteString.m_rgchConnect.Substring(num + 1);
@@ -214,7 +215,8 @@ namespace CS.Platform.Steam.Client.Part
 				{
 					this._HasLobby = true;
 					this._invitedLobbyID = message.m_ulSteamIDLobby;
-					this._InviteHost = SteamFriends.GetFriendPersonaName((CSteamID)message.m_ulSteamIDUser);
+					this._InviteHost = string.Empty;
+						// SteamFriends.GetFriendPersonaName((CSteamID)message.m_ulSteamIDUser);
 					PlatformEvents.ReceivedLobbyInvite();
 				}
 			}
@@ -232,7 +234,8 @@ namespace CS.Platform.Steam.Client.Part
 			{
 				this._HasLobby = true;
 				this._invitedLobbyID = (ulong)message.m_steamIDLobby;
-				this._InviteHost = SteamFriends.GetFriendPersonaName(message.m_steamIDFriend);
+				this._InviteHost = string.Empty;
+					// SteamFriends.GetFriendPersonaName(message.m_steamIDFriend);
 				this.JoinInvitedLobby();
 			}
 		}

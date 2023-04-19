@@ -1,36 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Voxels.TowerDefense
 {
-	// Token: 0x0200078A RID: 1930
 	public class MeshMerger2 : IslandComponent, IIslandProcessor, IIslandFirstEnter, IIslandDestroy
 	{
-		// Token: 0x060031E2 RID: 12770 RVA: 0x000D1814 File Offset: 0x000CFC14
 		IEnumerator<GenInfo> IIslandProcessor.OnIslandProcess(Island island, SavedWave savedWave)
 		{
-			if (this.processOn == MeshMerger2.ProcessOn.OnIslandProcess)
+			if (this.processOn == ProcessOn.OnIslandProcess)
 			{
 				foreach (GenInfo x in this.Process(island))
 				{
 					yield return x;
 				}
 			}
-			yield break;
 		}
 
 		// Token: 0x060031E3 RID: 12771 RVA: 0x000D1838 File Offset: 0x000CFC38
 		IEnumerator<GenInfo> IIslandFirstEnter.OnIslandFirstEnter(Island island)
 		{
-			if (this.processOn == MeshMerger2.ProcessOn.OnIslandFirstEnter)
+			if (this.processOn == ProcessOn.OnIslandFirstEnter)
 			{
 				foreach (GenInfo x in this.Process(island))
 				{
 					yield return x;
 				}
 			}
-			yield break;
 		}
 
 		// Token: 0x060031E4 RID: 12772 RVA: 0x000D185C File Offset: 0x000CFC5C
@@ -392,33 +387,24 @@ namespace Voxels.TowerDefense
 		// Token: 0x0200078B RID: 1931
 		private enum ProcessOn
 		{
-			// Token: 0x040021C2 RID: 8642
 			OnIslandFirstEnter,
-			// Token: 0x040021C3 RID: 8643
 			OnIslandProcess
 		}
 
 		// Token: 0x0200078C RID: 1932
 		private enum CullTriangles
 		{
-			// Token: 0x040021C5 RID: 8645
 			All,
-			// Token: 0x040021C6 RID: 8646
 			Grass,
-			// Token: 0x040021C7 RID: 8647
 			Cliffs,
-			// Token: 0x040021C8 RID: 8648
 			Water
 		}
 
 		// Token: 0x0200078D RID: 1933
 		private enum TangentMode
 		{
-			// Token: 0x040021CA RID: 8650
 			None,
-			// Token: 0x040021CB RID: 8651
 			VoxelsNormals,
-			// Token: 0x040021CC RID: 8652
 			SoftNormals
 		}
 	}

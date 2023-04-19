@@ -1,5 +1,4 @@
-﻿using System;
-using I2.Loc;
+﻿using I2.Loc;
 using RTM.UISystem;
 using RTM.Utilities;
 using UnityEngine;

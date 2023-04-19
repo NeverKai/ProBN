@@ -3,7 +3,6 @@ using System.Diagnostics;
 using I2.Loc;
 using RTM.Pools;
 using RTM.UISystem;
-using RTM.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,7 +69,7 @@ namespace Voxels.TowerDefense.UI
 		// Token: 0x140000CC RID: 204
 		// (add) Token: 0x06003C24 RID: 15396 RVA: 0x0010BC68 File Offset: 0x0010A068
 		// (remove) Token: 0x06003C25 RID: 15397 RVA: 0x0010BCA0 File Offset: 0x0010A0A0
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		
 		public event Action onHeroChanged = delegate()
 		{
 		};
@@ -320,7 +319,7 @@ namespace Voxels.TowerDefense.UI
 		private Action<LoadoutUIListBanner> closeAction;
 
 		// Token: 0x040029EE RID: 10734
-		private WeakReference<HeroDefinition> _heroDef = new WeakReference<HeroDefinition>(null);
+		private RTM.Utilities.WeakReference<HeroDefinition> _heroDef = new RTM.Utilities.WeakReference<HeroDefinition>(null);
 
 		// Token: 0x040029EF RID: 10735
 		private LocalPool<LoadoutUIUpgradeIcon> upgradeIcons = new LocalPool<LoadoutUIUpgradeIcon>();

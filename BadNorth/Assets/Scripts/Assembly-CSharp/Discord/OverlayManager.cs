@@ -39,7 +39,6 @@ namespace Discord
 		// Token: 0x1400004A RID: 74
 		// (add) Token: 0x060009C6 RID: 2502 RVA: 0x0001F010 File Offset: 0x0001D410
 		// (remove) Token: 0x060009C7 RID: 2503 RVA: 0x0001F048 File Offset: 0x0001D448
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public event OverlayManager.ToggleHandler OnToggle;
 
 		// Token: 0x060009C8 RID: 2504 RVA: 0x0001F07E File Offset: 0x0001D47E

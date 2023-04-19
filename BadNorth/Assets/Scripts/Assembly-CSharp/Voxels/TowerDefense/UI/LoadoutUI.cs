@@ -4,7 +4,6 @@ using I2.Loc;
 using Rewired;
 using RTM.Input;
 using RTM.UISystem;
-using RTM.Utilities;
 using UnityEngine;
 
 namespace Voxels.TowerDefense.UI
@@ -431,7 +430,7 @@ namespace Voxels.TowerDefense.UI
 		private List<HeroDefinition> heroListCache = new List<HeroDefinition>();
 
 		// Token: 0x040029D3 RID: 10707
-		private WeakReference<Island> island = new WeakReference<Island>(null);
+		private RTM.Utilities.WeakReference<Island> island = new RTM.Utilities.WeakReference<Island>(null);
 
 		// Token: 0x040029D4 RID: 10708
 		private LoadoutUIListBanner focusBanner;

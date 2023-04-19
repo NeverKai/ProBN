@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.Serialization;
-using UnityEngine;
+//using UnityEngine;
 
 namespace Voxels.TowerDefense.ProfileInternals
 {
@@ -12,25 +12,25 @@ namespace Voxels.TowerDefense.ProfileInternals
 	public class Color
 	{
 		// Token: 0x06002587 RID: 9607 RVA: 0x00076CCC File Offset: 0x000750CC
-		public Color() : this(Color.black)
+		public Color() : this(UnityEngine.Color.black)
 		{
 		}
 
 		// Token: 0x06002588 RID: 9608 RVA: 0x00076CDC File Offset: 0x000750DC
-		public Color(Color color)
+		public Color(UnityEngine.Color color)
 		{
 			this.uColor = color;
 			this.a = (this.b = (this.g = (this.r = -1f)));
 		}
 
 		// Token: 0x06002589 RID: 9609 RVA: 0x00076D1C File Offset: 0x0007511C
-		public static implicit operator Color(Color color)
-		{
-			return color.uColor;
-		}
+		// public static implicit operator Color(Color color)
+		// {
+		// 	return color.uColor;
+		// }
 
 		// Token: 0x0600258A RID: 9610 RVA: 0x00076D24 File Offset: 0x00075124
-		public static implicit operator Color(Color color)
+		public static implicit operator Color(UnityEngine.Color color)
 		{
 			return new Color(color);
 		}
@@ -49,7 +49,7 @@ namespace Voxels.TowerDefense.ProfileInternals
 		[OnDeserialized]
 		private void PostLoad(StreamingContext context)
 		{
-			this.uColor = new Color(this.r, this.g, this.b, this.a);
+			this.uColor = new UnityEngine.Color(this.r, this.g, this.b, this.a);
 		}
 
 		// Token: 0x0600258D RID: 9613 RVA: 0x00076DA2 File Offset: 0x000751A2
@@ -60,7 +60,7 @@ namespace Voxels.TowerDefense.ProfileInternals
 
 		// Token: 0x040017CF RID: 6095
 		[NonSerialized]
-		public Color uColor;
+		public UnityEngine.Color uColor;
 
 		// Token: 0x040017D0 RID: 6096
 		private float a;
